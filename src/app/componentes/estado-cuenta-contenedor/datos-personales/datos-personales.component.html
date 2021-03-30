@@ -1,0 +1,26 @@
+<div class="col-6">
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaUno" class="p-mb-1">
+      <i [class]="item.icono"></i>
+    </p>
+  </div>
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaUno" class="p-mb-1">
+      {{ item.valor }}
+    </p>
+  </div>
+</div>
+<div class="col-6">
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaDos" class="p-mb-1">
+      <b>
+        {{ item.titulo }}
+      </b>
+    </p>
+  </div>
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaDos" class="p-mb-1">
+      {{ item.valor }}
+    </p>
+  </div>
+</div>

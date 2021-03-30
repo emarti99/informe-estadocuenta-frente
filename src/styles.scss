@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Estilo general de la página */
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: var(--surface-b);
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+.estadoCuentaContenedor {
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
