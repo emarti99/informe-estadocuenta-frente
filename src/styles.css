@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* You can add global styles to this file, and also import other style files */
+/* Estilo general de la página */
+html,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--surface-b);
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+.estadoCuentaContenedor {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resumenGeneral .cajaDatosPersonales {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.resumenGeneral .cajaDatosPersonales .datosPersonales {
+  font-weight: bold;
+  text-align: right;
+}
+/*# sourceMappingURL=styles.css.map */

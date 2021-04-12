@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, RoutesRecognized } from '@angular/router';
-import { PrimeNgModule } from './prime-ng/prime-ng.module';
-import { EstadoCuentaContenedorComponent } from './componentes/estado-cuenta-contenedor/estado-cuenta-contenedor.component';
+import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 
 const routes: Routes = [
 ];

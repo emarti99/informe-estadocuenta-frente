@@ -10,7 +10,27 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/af305127/
 $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config\/schema.json",$/;"	s
+*	src/dist/styles.css	/^* {$/;"	s
+.aporteContenidoValor	src/styles.scss	/^    .aporteContenidoValor {$/;"	c
+.cajaAporte	src/styles.scss	/^    .cajaAporte {$/;"	c
+.cajaCalificacion	src/styles.scss	/^    .cajaCalificacion {$/;"	c
+.cajasResumenPersonal	src/styles.scss	/^  .cajasResumenPersonal {$/;"	c
+.datosPersonales	src/styles.scss	/^  .datosPersonales {$/;"	c
+.estadoCuentaContenedor	src/dist/styles.css	/^.estadoCuentaContenedor {$/;"	c
+.estadoCuentaContenedor	src/styles.css	/^.estadoCuentaContenedor {$/;"	c
 .estadoCuentaContenedor	src/styles.scss	/^.estadoCuentaContenedor {$/;"	c
+.promedioPrestamos	src/styles.scss	/^  .promedioPrestamos {$/;"	c
+.resumenGeneral	src/dist/styles.css	/^.resumenGeneral {$/;"	c
+.resumenGeneral	src/styles.scss	/^.resumenGeneral {$/;"	c
+.resumenGeneral .cajaDatosPersonales	src/styles.css	/^.resumenGeneral .cajaDatosPersonales {$/;"	c
+.resumenGeneral .cajaDatosPersonales .datosPersonales	src/styles.css	/^.resumenGeneral .cajaDatosPersonales .datosPersonales {$/;"	c
+.resumenGeneral .cajasResumenPersonal	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal {$/;"	c
+.resumenGeneral .cajasResumenPersonal .aporteContenidoValor	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .aporteContenidoValor {$/;"	c
+.resumenGeneral .cajasResumenPersonal .cajaAporte	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .cajaAporte {$/;"	c
+.resumenGeneral .cajasResumenPersonal .cajaCalificacion	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .cajaCalificacion {$/;"	c
+.resumenGeneral .cajasResumenPersonal .cajaCalificacion div	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .cajaCalificacion div {$/;"	s
+.resumenGeneral .datosPersonales	src/dist/styles.css	/^.resumenGeneral .datosPersonales {$/;"	c
+.resumenGeneral .promedioPrestamos	src/dist/styles.css	/^.resumenGeneral .promedioPrestamos {$/;"	c
 0	angular.json	/^                {$/;"	o	array:projects.estadoCuenta.architect.build.configurations.production.budgets
 0	angular.json	/^                {$/;"	o	array:projects.estadoCuenta.architect.build.configurations.production.fileReplacements
 0	angular.json	/^              "**\/node_modules\/**"$/;"	s	array:projects.estadoCuenta.architect.lint.options.exclude
@@ -140,9 +160,13 @@ $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config
 @angular/animations	package-lock.json	/^        "@angular\/animations": "~11.2.1",$/;"	s	object:packages..dependencies
 @angular/animations	package-lock.json	/^    "@angular\/animations": {$/;"	o	object:dependencies
 @angular/animations	package.json	/^    "@angular\/animations": "~11.2.1",$/;"	s	object:dependencies
+@angular/cdk	package-lock.json	/^        "@angular\/cdk": "^11.2.7",$/;"	s	object:packages..dependencies
+@angular/cdk	package-lock.json	/^    "@angular\/cdk": {$/;"	o	object:dependencies
+@angular/cdk	package.json	/^    "@angular\/cdk": "^11.2.7",$/;"	s	object:dependencies
 @angular/cli	package-lock.json	/^        "@angular\/cli": "~11.2.1",$/;"	s	object:packages..devDependencies
 @angular/cli	package-lock.json	/^    "@angular\/cli": {$/;"	o	object:dependencies
 @angular/cli	package.json	/^    "@angular\/cli": "~11.2.1",$/;"	s	object:devDependencies
+@angular/common	package-lock.json	/^        "@angular\/common": "^11.0.0 || ^12.0.0-0",$/;"	s	object:packages.node_modules/@angular/cdk.peerDependencies
 @angular/common	package-lock.json	/^        "@angular\/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",$/;"	s	object:packages.node_modules/primeng.peerDependencies
 @angular/common	package-lock.json	/^        "@angular\/common": "~11.2.1",$/;"	s	object:packages..dependencies
 @angular/common	package-lock.json	/^    "@angular\/common": {$/;"	o	object:dependencies
@@ -158,6 +182,8 @@ $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config
 @angular/compiler-cli	package.json	/^    "@angular\/compiler-cli": "~11.2.1",$/;"	s	object:devDependencies
 @angular/core	package-lock.json	/^        "@angular\/core": "9.0.0",$/;"	s	object:dependencies.codelyzer.requires
 @angular/core	package-lock.json	/^        "@angular\/core": "9.0.0",$/;"	s	object:packages.node_modules/codelyzer.dependencies
+@angular/core	package-lock.json	/^        "@angular\/core": "^11.0.0 || ^12.0.0-0"$/;"	s	object:packages.node_modules/@angular/cdk.peerDependencies
+@angular/core	package-lock.json	/^        "@angular\/core": "^11.0.0",$/;"	s	object:packages.node_modules/@fortawesome/angular-fontawesome.peerDependencies
 @angular/core	package-lock.json	/^        "@angular\/core": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",$/;"	s	object:packages.node_modules/primeng.peerDependencies
 @angular/core	package-lock.json	/^        "@angular\/core": "~11.2.1",$/;"	s	object:packages..dependencies
 @angular/core	package-lock.json	/^        "@angular\/core": {$/;"	o	object:dependencies.codelyzer.dependencies
@@ -791,6 +817,31 @@ $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config
 @discoveryjs/json-ext	package-lock.json	/^        "@discoveryjs\/json-ext": "0.5.2",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 @discoveryjs/json-ext	package-lock.json	/^        "@discoveryjs\/json-ext": "0.5.2",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
 @discoveryjs/json-ext	package-lock.json	/^    "@discoveryjs\/json-ext": {$/;"	o	object:dependencies
+@fortawesome/angular-fontawesome	package-lock.json	/^        "@fortawesome\/angular-fontawesome": "^0.8.2",$/;"	s	object:packages..dependencies
+@fortawesome/angular-fontawesome	package-lock.json	/^    "@fortawesome\/angular-fontawesome": {$/;"	o	object:dependencies
+@fortawesome/angular-fontawesome	package.json	/^    "@fortawesome\/angular-fontawesome": "^0.8.2",$/;"	s	object:dependencies
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:dependencies.@fortawesome/fontawesome-svg-core.requires
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:dependencies.@fortawesome/free-brands-svg-icons.requires
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:dependencies.@fortawesome/free-regular-svg-icons.requires
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:dependencies.@fortawesome/free-solid-svg-icons.requires
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:packages.node_modules/@fortawesome/fontawesome-svg-core.dependencies
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:packages.node_modules/@fortawesome/free-brands-svg-icons.dependencies
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:packages.node_modules/@fortawesome/free-regular-svg-icons.dependencies
+@fortawesome/fontawesome-common-types	package-lock.json	/^        "@fortawesome\/fontawesome-common-types": "^0.2.35"$/;"	s	object:packages.node_modules/@fortawesome/free-solid-svg-icons.dependencies
+@fortawesome/fontawesome-common-types	package-lock.json	/^    "@fortawesome\/fontawesome-common-types": {$/;"	o	object:dependencies
+@fortawesome/fontawesome-svg-core	package-lock.json	/^        "@fortawesome\/fontawesome-svg-core": "^1.2.27"$/;"	s	object:packages.node_modules/@fortawesome/angular-fontawesome.peerDependencies
+@fortawesome/fontawesome-svg-core	package-lock.json	/^        "@fortawesome\/fontawesome-svg-core": "^1.2.34",$/;"	s	object:packages..dependencies
+@fortawesome/fontawesome-svg-core	package-lock.json	/^    "@fortawesome\/fontawesome-svg-core": {$/;"	o	object:dependencies
+@fortawesome/fontawesome-svg-core	package.json	/^    "@fortawesome\/fontawesome-svg-core": "^1.2.34",$/;"	s	object:dependencies
+@fortawesome/free-brands-svg-icons	package-lock.json	/^        "@fortawesome\/free-brands-svg-icons": "^5.15.2",$/;"	s	object:packages..dependencies
+@fortawesome/free-brands-svg-icons	package-lock.json	/^    "@fortawesome\/free-brands-svg-icons": {$/;"	o	object:dependencies
+@fortawesome/free-brands-svg-icons	package.json	/^    "@fortawesome\/free-brands-svg-icons": "^5.15.2",$/;"	s	object:dependencies
+@fortawesome/free-regular-svg-icons	package-lock.json	/^        "@fortawesome\/free-regular-svg-icons": "^5.15.2",$/;"	s	object:packages..dependencies
+@fortawesome/free-regular-svg-icons	package-lock.json	/^    "@fortawesome\/free-regular-svg-icons": {$/;"	o	object:dependencies
+@fortawesome/free-regular-svg-icons	package.json	/^    "@fortawesome\/free-regular-svg-icons": "^5.15.2",$/;"	s	object:dependencies
+@fortawesome/free-solid-svg-icons	package-lock.json	/^        "@fortawesome\/free-solid-svg-icons": "^5.15.2",$/;"	s	object:packages..dependencies
+@fortawesome/free-solid-svg-icons	package-lock.json	/^    "@fortawesome\/free-solid-svg-icons": {$/;"	o	object:dependencies
+@fortawesome/free-solid-svg-icons	package.json	/^    "@fortawesome\/free-solid-svg-icons": "^5.15.2",$/;"	s	object:dependencies
 @istanbuljs/schema	package-lock.json	/^        "@istanbuljs\/schema": "^0.1.2",$/;"	s	object:dependencies.istanbul-lib-instrument.requires
 @istanbuljs/schema	package-lock.json	/^        "@istanbuljs\/schema": "^0.1.2",$/;"	s	object:packages.node_modules/istanbul-lib-instrument.dependencies
 @istanbuljs/schema	package-lock.json	/^    "@istanbuljs\/schema": {$/;"	o	object:dependencies
@@ -1042,34 +1093,99 @@ $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config
 @yarnpkg/lockfile	package-lock.json	/^        "@yarnpkg\/lockfile": "1.1.0",$/;"	s	object:packages.node_modules/@angular/cli.dependencies
 @yarnpkg/lockfile	package-lock.json	/^        "@yarnpkg\/lockfile": "1.1.0",$/;"	s	object:packages.node_modules/@schematics/update.dependencies
 @yarnpkg/lockfile	package-lock.json	/^    "@yarnpkg\/lockfile": {$/;"	o	object:dependencies
+AnonymousFunctione2d66b180100	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^        this._estadoCuenta.pideDatoUsuario().subscribe(function (data) {$/;"	f	function:_estadoCuenta
+Aportes	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^    <h3 class="p-col-12 p-mb-0">Aportes<\/h3>$/;"	j
 AppComponent	src/app/app.component.ts	/^export class AppComponent {$/;"	c
-AppModule	src/app/app.module.ts	/^export class AppModule { }$/;"	c
+AppModule	src/app/app.module.ts	/^export class AppModule {}$/;"	c
+AppModule	src/app/dist/app.module.js	/^    function AppModule() {$/;"	f	function:AppModule
+AppModule	src/app/dist/app.module.js	/^var AppModule = \/** @class *\/ (function () {$/;"	f
 AppPage	e2e/src/app.po.ts	/^export class AppPage {$/;"	c
 AppRoutingModule	src/app/app-routing.module.ts	/^export class AppRoutingModule {}$/;"	c
+AppRoutingModule	src/app/dist/app-routing.module.js	/^    function AppRoutingModule() {$/;"	f	function:AppRoutingModule
+AppRoutingModule	src/app/dist/app-routing.module.js	/^var AppRoutingModule = \/** @class *\/ (function () {$/;"	f
 Build	README.md	/^## Build$/;"	s	chapter:EstadoCuenta
 BuscadorComponent	src/app/componentes/buscador/buscador.component.ts	/^export class BuscadorComponent implements OnInit {$/;"	c
 Code scaffolding	README.md	/^## Code scaffolding$/;"	s	chapter:EstadoCuenta
+DALA_socio_direccion	src/app/interfaces/prototipo.ts	/^  DALA_socio_direccion: string;$/;"	p	interface:DatosLaborales
+DALA_socio_empresa	src/app/interfaces/prototipo.ts	/^  DALA_socio_empresa: string;$/;"	p	interface:DatosLaborales
+DALA_socio_fecha_egreso	src/app/interfaces/prototipo.ts	/^  DALA_socio_fecha_egreso: string;$/;"	p	interface:DatosLaborales
+DALA_socio_fecha_grabacion	src/app/interfaces/prototipo.ts	/^  DALA_socio_fecha_grabacion: string;$/;"	p	interface:DatosLaborales
+DALA_socio_fecha_ingreso	src/app/interfaces/prototipo.ts	/^  DALA_socio_fecha_ingreso: string;$/;"	p	interface:DatosLaborales
+DALA_socio_salario	src/app/interfaces/prototipo.ts	/^  DALA_socio_salario: number;$/;"	p	interface:DatosLaborales
+DALA_socio_telefono	src/app/interfaces/prototipo.ts	/^  DALA_socio_telefono: string;$/;"	p	interface:DatosLaborales
+DAPE_conyuge	src/app/interfaces/prototipo.ts	/^  DAPE_conyuge: string;$/;"	p	interface:DatosPersonales
+DAPE_direccion	src/app/interfaces/prototipo.ts	/^  DAPE_direccion: string;$/;"	p	interface:DatosPersonales
+DAPE_estado	src/app/interfaces/prototipo.ts	/^  DAPE_estado: string;$/;"	p	interface:DatosPersonales
+DAPE_fecha_ingreso	src/app/interfaces/prototipo.ts	/^  DAPE_fecha_ingreso: string;$/;"	p	interface:DatosPersonales
+DAPE_nombre	src/app/interfaces/prototipo.ts	/^  DAPE_nombre: string;$/;"	p	interface:DatosPersonales
+DAPE_socio_nro	src/app/interfaces/prototipo.ts	/^  DAPE_socio_nro: number;$/;"	p	interface:DatosPersonales
+DAPE_tasa_pref	src/app/interfaces/prototipo.ts	/^  DAPE_tasa_pref: number;$/;"	p	interface:DatosPersonales
+DAPE_telefono	src/app/interfaces/prototipo.ts	/^  DAPE_telefono: string;$/;"	p	interface:DatosPersonales
+DAPE_ultimo_antecedente	src/app/interfaces/prototipo.ts	/^  DAPE_ultimo_antecedente: string;$/;"	p	interface:DatosPersonales
+DatoPersonalColumnaDos	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  DatoPersonalColumnaDos: any[];$/;"	p	class:DatosPersonalesComponent
+DatoPersonalColumnaUno	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  DatoPersonalColumnaUno: any[];$/;"	p	class:DatosPersonalesComponent
+Datos laborales	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.html	/^<h3>Datos laborales<\/h3>$/;"	j
 DatosLaborales	src/app/interfaces/prototipo.ts	/^interface DatosLaborales {$/;"	i
 DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.ts	/^export class DatosLaboralesComponent implements OnInit {$/;"	c
-DatosPersonales	src/app/interfaces/prototipo.ts	/^export interface DatosPersonales {$/;"	i
-DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^export class DatosPersonalesComponent implements OnInit {$/;"	c
+DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    DatosLaboralesComponent.prototype.ngOnInit = function () { };$/;"	c
+DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    function DatosLaboralesComponent(_estadoCuenta) {$/;"	c	class:DatosLaboralesComponent
+DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^var DatosLaboralesComponent = \/** @class *\/ (function () {$/;"	f
+DatosPersonales	src/app/interfaces/prototipo.ts	/^interface DatosPersonales {$/;"	i
+DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^export class DatosPersonalesComponent implements OnInit {$/;"	c
+DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    DatosPersonalesComponent.prototype.ngOnInit = function () { };$/;"	c
+DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    function DatosPersonalesComponent() {$/;"	c	class:DatosPersonalesComponent
+DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^var DatosPersonalesComponent = \/** @class *\/ (function () {$/;"	f
 Development server	README.md	/^## Development server$/;"	s	chapter:EstadoCuenta
+Estado de prestamos	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^  <h3 class='p-mb-0 '>Estado de prestamos<\/h3>$/;"	j
 EstadoCuenta	README.md	/^# EstadoCuenta$/;"	c
 EstadoCuenta	src/app/interfaces/prototipo.ts	/^export interface EstadoCuenta {$/;"	i
-EstadoCuentaContenedorComponent	src/app/componentes/estado-cuenta-contenedor/estado-cuenta-contenedor.component.ts	/^export class EstadoCuentaContenedorComponent implements OnInit {$/;"	c
+EstadoCuentaService	src/app/servicios/dist/estado-cuenta.service.js	/^    function EstadoCuentaService(_http) {$/;"	c	class:EstadoCuentaService
+EstadoCuentaService	src/app/servicios/dist/estado-cuenta.service.js	/^var EstadoCuentaService = \/** @class *\/ (function () {$/;"	f
 EstadoCuentaService	src/app/servicios/estado-cuenta.service.ts	/^export class EstadoCuentaService {$/;"	c
+FondoService	src/app/servicios/dist/fondo.service.js	/^    FondoService.prototype.x = function (identificador) {$/;"	c
+FondoService	src/app/servicios/dist/fondo.service.js	/^    function FondoService(http) {$/;"	c	class:FondoService
+FondoService	src/app/servicios/dist/fondo.service.js	/^var FondoService = \/** @class *\/ (function () {$/;"	f
 FondoService	src/app/servicios/fondo.service.ts	/^export class FondoService {$/;"	c
 Further help	README.md	/^## Further help$/;"	s	chapter:EstadoCuenta
-OtrosDatos	src/app/interfaces/prototipo.ts	/^interface OtrosDatos {$/;"	i
+IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    IconoEstadoCuentaComponent.prototype.ngOnInit = function () { };$/;"	c
+IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    function IconoEstadoCuentaComponent() {$/;"	c	class:IconoEstadoCuentaComponent
+IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^var IconoEstadoCuentaComponent = \/** @class *\/ (function () {$/;"	f
+IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^export class IconoEstadoCuentaComponent implements OnInit {$/;"	c
 OtrosDatosComponent	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.ts	/^export class OtrosDatosComponent implements OnInit {$/;"	c
+PRDE_socio_adelantado	src/app/interfaces/prototipo.ts	/^  PRDE_socio_adelantado: number;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_en_fecha	src/app/interfaces/prototipo.ts	/^  PRDE_socio_en_fecha: number;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_fecha_vencimiento	src/app/interfaces/prototipo.ts	/^  PRDE_socio_fecha_vencimiento: string;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_max_dias_atraso	src/app/interfaces/prototipo.ts	/^  PRDE_socio_max_dias_atraso: number;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_nombre_garante	src/app/interfaces/prototipo.ts	/^  PRDE_socio_nombre_garante: string;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_nro_pmo	src/app/interfaces/prototipo.ts	/^  PRDE_socio_nro_pmo: number;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_observacion	src/app/interfaces/prototipo.ts	/^  PRDE_socio_observacion: string;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_saldo_restante	src/app/interfaces/prototipo.ts	/^  PRDE_socio_saldo_restante: number;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_sistema	src/app/interfaces/prototipo.ts	/^  PRDE_socio_sistema: string;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_situacion	src/app/interfaces/prototipo.ts	/^  PRDE_socio_situacion: string;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_socio_garante	src/app/interfaces/prototipo.ts	/^  PRDE_socio_socio_garante: string;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_tasa_interes	src/app/interfaces/prototipo.ts	/^  PRDE_socio_tasa_interes: number;$/;"	p	interface:PrestamosDetalles
+PRDE_socio_tipo_garantia	src/app/interfaces/prototipo.ts	/^  PRDE_socio_tipo_garantia: string;$/;"	p	interface:PrestamosDetalles
+PRES_socio_aprobado_fecha	src/app/interfaces/prototipo.ts	/^  PRES_socio_aprobado_fecha: string;$/;"	p	interface:Prestamos
+PRES_socio_atrasos	src/app/interfaces/prototipo.ts	/^  PRES_socio_atrasos: number;$/;"	p	interface:Prestamos
+PRES_socio_calificacion	src/app/interfaces/prototipo.ts	/^  PRES_socio_calificacion: string;$/;"	p	interface:Prestamos
+PRES_socio_cuotas	src/app/interfaces/prototipo.ts	/^  PRES_socio_cuotas: string;$/;"	p	interface:Prestamos
+PRES_socio_estado_pmo	src/app/interfaces/prototipo.ts	/^  PRES_socio_estado_pmo: string;$/;"	p	interface:Prestamos
+PRES_socio_mas_detalles	src/app/interfaces/prototipo.ts	/^  PRES_socio_mas_detalles: PrestamosDetalles;$/;"	p	interface:Prestamos
+PRES_socio_monto	src/app/interfaces/prototipo.ts	/^  PRES_socio_monto: number;$/;"	p	interface:Prestamos
+PRES_socio_tipo_pmo	src/app/interfaces/prototipo.ts	/^  PRES_socio_tipo_pmo: string;$/;"	p	interface:Prestamos
 Prestamos	src/app/interfaces/prototipo.ts	/^interface Prestamos {$/;"	i
+PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    PrestamosComponent.prototype.ngOnInit = function () { };$/;"	c
+PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    function PrestamosComponent() {$/;"	c	class:PrestamosComponent
+PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^var PrestamosComponent = \/** @class *\/ (function () {$/;"	f
 PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^export class PrestamosComponent implements OnInit {$/;"	c
-PrimeNgModule	src/app/prime-ng/prime-ng.module.ts	/^export class PrimeNgModule { }$/;"	c
+PrestamosDetalles	src/app/interfaces/prototipo.ts	/^interface PrestamosDetalles {$/;"	i
+PrimeNgModule	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    function PrimeNgModule() {$/;"	f	function:PrimeNgModule
+PrimeNgModule	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var PrimeNgModule = \/** @class *\/ (function () {$/;"	f
+PrimeNgModule	src/app/modulos/prime-ng/prime-ng.module.ts	/^export class PrimeNgModule { }$/;"	c
 ResumenGeneralComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^export class ResumenGeneralComponent implements OnInit {$/;"	c
 Running end-to-end tests	README.md	/^## Running end-to-end tests$/;"	s	chapter:EstadoCuenta
 Running unit tests	README.md	/^## Running unit tests$/;"	s	chapter:EstadoCuenta
 SELENIUM_PROMISE_MANAGER	e2e/protractor.conf.js	/^  SELENIUM_PROMISE_MANAGER: false,$/;"	p	class:exports.config
-Tarjetas	src/app/interfaces/prototipo.ts	/^interface Tarjetas {$/;"	i
 TarjetasComponent	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.ts	/^export class TarjetasComponent implements OnInit {$/;"	c
 abab	package-lock.json	/^        "abab": "^2.0.5",$/;"	s	object:dependencies.source-map-loader.requires
 abab	package-lock.json	/^        "abab": "^2.0.5",$/;"	s	object:packages.node_modules/source-map-loader.dependencies
@@ -1092,7 +1208,6 @@ acorn	package-lock.json	/^        "acorn": "^6.4.1",$/;"	s	object:dependencies.w
 acorn	package-lock.json	/^        "acorn": "^6.4.1",$/;"	s	object:packages.node_modules/webpack.dependencies
 acorn	package-lock.json	/^        "acorn": "bin\/acorn"$/;"	s	object:packages.node_modules/acorn.bin
 acorn	package-lock.json	/^    "acorn": {$/;"	o	object:dependencies
-adel	src/app/interfaces/prototipo.ts	/^    adel: number;$/;"	p	interface:Prestamos
 adjust-sourcemap-loader	package-lock.json	/^        "adjust-sourcemap-loader": "3.0.0",$/;"	s	object:dependencies.resolve-url-loader.requires
 adjust-sourcemap-loader	package-lock.json	/^        "adjust-sourcemap-loader": "3.0.0",$/;"	s	object:packages.node_modules/resolve-url-loader.dependencies
 adjust-sourcemap-loader	package-lock.json	/^    "adjust-sourcemap-loader": {$/;"	o	object:dependencies
@@ -1118,7 +1233,6 @@ agentkeepalive	package-lock.json	/^    "agentkeepalive": {$/;"	o	object:dependen
 aggregate-error	package-lock.json	/^        "aggregate-error": "^3.0.0"$/;"	s	object:dependencies.p-map.requires
 aggregate-error	package-lock.json	/^        "aggregate-error": "^3.0.0"$/;"	s	object:packages.node_modules/p-map.dependencies
 aggregate-error	package-lock.json	/^    "aggregate-error": {$/;"	o	object:dependencies
-ajusteMinTC	src/app/interfaces/prototipo.ts	/^    ajusteMinTC: any;$/;"	p	interface:Tarjetas
 ajv	package-lock.json	/^            "ajv": "^6.1.0",$/;"	s	object:dependencies.webpack-dev-server.dependencies.schema-utils.requires
 ajv	package-lock.json	/^            "ajv": "^6.1.0",$/;"	s	object:dependencies.webpack.dependencies.schema-utils.requires
 ajv	package-lock.json	/^            "ajv": "^6.12.5",$/;"	s	object:dependencies.copy-webpack-plugin.dependencies.schema-utils.requires
@@ -1205,6 +1319,8 @@ alphanum-sort	package-lock.json	/^        "alphanum-sort": "^1.0.0",$/;"	s	objec
 alphanum-sort	package-lock.json	/^    "alphanum-sort": {$/;"	o	object:dependencies
 angular.experimental-ivy	.vim/coc-settings.json	/^  "angular.experimental-ivy": true$/;"	b
 angularCompilerOptions	tsconfig.json	/^  "angularCompilerOptions": {$/;"	o
+angular_fontawesome_1	src/app/dist/app.module.js	/^var angular_fontawesome_1 = require("@fortawesome\/angular-fontawesome");$/;"	v
+animations_1	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^var animations_1 = require("@angular\/animations");$/;"	v
 anonymous	tslint.json	/^        "anonymous": "never",$/;"	s	object:rules.space-before-function-paren.options
 ansi-colors	package-lock.json	/^        "ansi-colors": "4.1.1",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 ansi-colors	package-lock.json	/^        "ansi-colors": "4.1.1",$/;"	s	object:dependencies.@angular/cli.requires
@@ -1296,10 +1412,13 @@ anymatch	package-lock.json	/^        "anymatch": {$/;"	o	object:dependencies.wat
 anymatch	package-lock.json	/^        "anymatch": {$/;"	o	object:dependencies.webpack-dev-server.dependencies
 anymatch	package-lock.json	/^    "anymatch": {$/;"	o	object:dependencies
 aot	angular.json	/^            "aot": true,$/;"	b	object:projects.estadoCuenta.architect.build.options
+aporteContenido	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  aporteContenido: any[];$/;"	p	class:ResumenGeneralComponent
 app	src/app/app.component.spec.ts	/^    const app = fixture.componentInstance;$/;"	C
 app-root-path	package-lock.json	/^        "app-root-path": "^3.0.0",$/;"	s	object:dependencies.codelyzer.requires
 app-root-path	package-lock.json	/^        "app-root-path": "^3.0.0",$/;"	s	object:packages.node_modules/codelyzer.dependencies
 app-root-path	package-lock.json	/^    "app-root-path": {$/;"	o	object:dependencies
+app_component_1	src/app/dist/app.module.js	/^var app_component_1 = require(".\/app.component");$/;"	v
+app_routing_module_1	src/app/dist/app.module.js	/^var app_routing_module_1 = require(".\/app-routing.module");$/;"	v
 aproba	package-lock.json	/^        "aproba": "^1.0.3",$/;"	s	object:dependencies.gauge.requires
 aproba	package-lock.json	/^        "aproba": "^1.0.3",$/;"	s	object:packages.node_modules/gauge.dependencies
 aproba	package-lock.json	/^        "aproba": "^1.1.1"$/;"	s	object:dependencies.run-queue.requires
@@ -1453,7 +1572,6 @@ atob	package-lock.json	/^        "atob": "^2.1.2",$/;"	s	object:packages.node_mo
 atob	package-lock.json	/^        "atob": "^2.1.2",$/;"	s	object:packages.node_modules/source-map-resolve.dependencies
 atob	package-lock.json	/^        "atob": "bin\/atob.js"$/;"	s	object:packages.node_modules/atob.bin
 atob	package-lock.json	/^    "atob": {$/;"	o	object:dependencies
-atraso	src/app/interfaces/prototipo.ts	/^    atraso: number;$/;"	p	interface:Prestamos
 autoprefixer	package-lock.json	/^        "autoprefixer": "10.2.4",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 autoprefixer	package-lock.json	/^        "autoprefixer": "10.2.4",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
 autoprefixer	package-lock.json	/^        "autoprefixer": "bin\/autoprefixer"$/;"	s	object:packages.node_modules/autoprefixer.bin
@@ -1651,6 +1769,8 @@ bn.js	package-lock.json	/^        "bn.js": {$/;"	o	object:dependencies.elliptic.
 bn.js	package-lock.json	/^        "bn.js": {$/;"	o	object:dependencies.miller-rabin.dependencies
 bn.js	package-lock.json	/^        "bn.js": {$/;"	o	object:dependencies.public-encrypt.dependencies
 bn.js	package-lock.json	/^    "bn.js": {$/;"	o	object:dependencies
+body	src/dist/styles.css	/^body {$/;"	s
+body	src/styles.css	/^body {$/;"	s
 body-parser	package-lock.json	/^        "body-parser": "1.19.0",$/;"	s	object:dependencies.express.requires
 body-parser	package-lock.json	/^        "body-parser": "1.19.0",$/;"	s	object:packages.node_modules/express.dependencies
 body-parser	package-lock.json	/^        "body-parser": "^1.19.0",$/;"	s	object:dependencies.karma.requires
@@ -1785,6 +1905,8 @@ builtin-status-codes	package-lock.json	/^    "builtin-status-codes": {$/;"	o	obj
 builtins	package-lock.json	/^        "builtins": "^1.0.3"$/;"	s	object:dependencies.validate-npm-package-name.requires
 builtins	package-lock.json	/^        "builtins": "^1.0.3"$/;"	s	object:packages.node_modules/validate-npm-package-name.dependencies
 builtins	package-lock.json	/^    "builtins": {$/;"	o	object:dependencies
+buscador_component_1	src/app/dist/app.module.js	/^var buscador_component_1 = require(".\/componentes\/buscador\/buscador.component");$/;"	v
+button_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var button_1 = require("primeng\/button");$/;"	v
 bytes	package-lock.json	/^        "bytes": "3.0.0",$/;"	s	object:dependencies.compression.requires
 bytes	package-lock.json	/^        "bytes": "3.0.0",$/;"	s	object:packages.node_modules/compression.dependencies
 bytes	package-lock.json	/^        "bytes": "3.1.0",$/;"	s	object:dependencies.body-parser.requires
@@ -1794,6 +1916,15 @@ bytes	package-lock.json	/^        "bytes": "3.1.0",$/;"	s	object:packages.node_m
 bytes	package-lock.json	/^        "bytes": {$/;"	o	object:dependencies.body-parser.dependencies
 bytes	package-lock.json	/^        "bytes": {$/;"	o	object:dependencies.raw-body.dependencies
 bytes	package-lock.json	/^    "bytes": {$/;"	o	object:dependencies
+c	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/dist/app-routing.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/dist/app.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/servicios/dist/estado-cuenta.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+c	src/app/servicios/dist/fondo.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
 cacache	package-lock.json	/^            "cacache": "^12.0.2",$/;"	s	object:dependencies.webpack.dependencies.terser-webpack-plugin.requires
 cacache	package-lock.json	/^        "cacache": "15.0.5",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 cacache	package-lock.json	/^        "cacache": "15.0.5",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
@@ -1811,7 +1942,6 @@ cacache	package-lock.json	/^    "cacache": {$/;"	o	object:dependencies
 cache-base	package-lock.json	/^        "cache-base": "^1.0.1",$/;"	s	object:dependencies.base.requires
 cache-base	package-lock.json	/^        "cache-base": "^1.0.1",$/;"	s	object:packages.node_modules/base.dependencies
 cache-base	package-lock.json	/^    "cache-base": {$/;"	o	object:dependencies
-calificacion	src/app/interfaces/prototipo.ts	/^    calificacion: string;$/;"	p	interface:Prestamos
 call-bind	package-lock.json	/^        "call-bind": "^1.0.0"$/;"	s	object:dependencies.is-arguments.requires
 call-bind	package-lock.json	/^        "call-bind": "^1.0.0"$/;"	s	object:dependencies.is-boolean-object.requires
 call-bind	package-lock.json	/^        "call-bind": "^1.0.0"$/;"	s	object:packages.node_modules/is-arguments.dependencies
@@ -1861,7 +1991,6 @@ camelcase	package-lock.json	/^        "camelcase": {$/;"	o	object:dependencies.p
 camelcase	package-lock.json	/^        "camelcase": {$/;"	o	object:dependencies.resolve-url-loader.dependencies
 camelcase	package-lock.json	/^        "camelcase": {$/;"	o	object:dependencies.yargs-parser.dependencies
 camelcase	package-lock.json	/^    "camelcase": {$/;"	o	object:dependencies
-cancFecha	src/app/interfaces/prototipo.ts	/^    cancFecha: number;$/;"	p	interface:Prestamos
 caniuse-api	package-lock.json	/^        "caniuse-api": "^3.0.0",$/;"	s	object:dependencies.postcss-merge-rules.requires
 caniuse-api	package-lock.json	/^        "caniuse-api": "^3.0.0",$/;"	s	object:dependencies.postcss-reduce-initial.requires
 caniuse-api	package-lock.json	/^        "caniuse-api": "^3.0.0",$/;"	s	object:packages.node_modules/postcss-merge-rules.dependencies
@@ -1879,8 +2008,6 @@ caniuse-lite	package-lock.json	/^    "caniuse-lite": {$/;"	o	object:dependencies
 canonical-path	package-lock.json	/^        "canonical-path": "1.0.0",$/;"	s	object:dependencies.@angular/compiler-cli.requires
 canonical-path	package-lock.json	/^        "canonical-path": "1.0.0",$/;"	s	object:packages.node_modules/@angular/compiler-cli.dependencies
 canonical-path	package-lock.json	/^    "canonical-path": {$/;"	o	object:dependencies
-cantCuo	src/app/interfaces/prototipo.ts	/^    cantCuo: number;$/;"	p	interface:Prestamos
-cantPag	src/app/interfaces/prototipo.ts	/^    cantPag: number;$/;"	p	interface:Prestamos
 capabilities	e2e/protractor.conf.js	/^  capabilities: {$/;"	c	class:exports.config
 caseless	package-lock.json	/^        "caseless": "~0.12.0",$/;"	s	object:dependencies.request.requires
 caseless	package-lock.json	/^        "caseless": "~0.12.0",$/;"	s	object:packages.node_modules/request.dependencies
@@ -2160,12 +2287,13 @@ commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:depen
 commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:packages.node_modules/terser.dependencies
 commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:packages.node_modules/webpack/node_modules/terser.dependencies
 commander	package-lock.json	/^    "commander": {$/;"	o	object:dependencies
+common_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var common_1 = require("@angular\/common");$/;"	v
 commondir	package-lock.json	/^            "commondir": "^1.0.1",$/;"	s	object:dependencies.webpack.dependencies.find-cache-dir.requires
 commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:dependencies.find-cache-dir.requires
 commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:packages.node_modules/find-cache-dir.dependencies
 commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:packages.node_modules/webpack/node_modules/find-cache-dir.dependencies
 commondir	package-lock.json	/^    "commondir": {$/;"	o	object:dependencies
-compile-hero.disable-compile-files-on-did-save-code	.vscode/settings.json	/^    "compile-hero.disable-compile-files-on-did-save-code": true$/;"	b
+compile-hero.disable-compile-files-on-did-save-code	.vscode/settings.json	/^    "compile-hero.disable-compile-files-on-did-save-code": false$/;"	b
 compileOnSave	tsconfig.json	/^  "compileOnSave": false,$/;"	b
 compiled	src/app/app.component.spec.ts	/^    const compiled = fixture.nativeElement;$/;"	C
 compilerOptions	e2e/tsconfig.json	/^  "compilerOptions": {$/;"	o
@@ -2173,11 +2301,11 @@ compilerOptions	tsconfig.app.json	/^  "compilerOptions": {$/;"	o
 compilerOptions	tsconfig.json	/^  "compilerOptions": {$/;"	o
 compilerOptions	tsconfig.spec.json	/^  "compilerOptions": {$/;"	o
 component	src/app/componentes/buscador/buscador.component.spec.ts	/^  let component: BuscadorComponent;$/;"	v
+component	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.spec.ts	/^  let component: IconoEstadoCuentaComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.spec.ts	/^  let component: DatosLaboralesComponent;$/;"	v
-component	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.spec.ts	/^  let component: DatosPersonalesComponent;$/;"	v
-component	src/app/componentes/estado-cuenta-contenedor/estado-cuenta-contenedor.component.spec.ts	/^  let component: EstadoCuentaContenedorComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.spec.ts	/^  let component: OtrosDatosComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.spec.ts	/^  let component: PrestamosComponent;$/;"	v
+component	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.spec.ts	/^  let component: DatosPersonalesComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.spec.ts	/^  let component: ResumenGeneralComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.spec.ts	/^  let component: TarjetasComponent;$/;"	v
 component-class-suffix	tslint.json	/^    "component-class-suffix": true,$/;"	b	object:rules
@@ -2226,14 +2354,12 @@ constants-browserify	package-lock.json	/^        "constants-browserify": "^1.0.0
 constants-browserify	package-lock.json	/^        "constants-browserify": "^1.0.0",$/;"	s	object:packages.node_modules/node-libs-browser.dependencies
 constants-browserify	package-lock.json	/^    "constants-browserify": {$/;"	o	object:dependencies
 constructor	src/app/componentes/buscador/buscador.component.ts	/^  constructor() { }$/;"	m	class:BuscadorComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.ts	/^  constructor() { }$/;"	m	class:DatosLaboralesComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^  constructor() {$/;"	m	class:DatosPersonalesComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/estado-cuenta-contenedor.component.ts	/^  constructor() { }$/;"	m	class:EstadoCuentaContenedorComponent
+constructor	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  constructor() {}$/;"	m	class:IconoEstadoCuentaComponent
 constructor	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.ts	/^  constructor() { }$/;"	m	class:OtrosDatosComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  constructor() { }$/;"	m	class:PrestamosComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  constructor() { }$/;"	m	class:ResumenGeneralComponent
+constructor	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  constructor() {}$/;"	m	class:PrestamosComponent
+constructor	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  constructor() {$/;"	m	class:DatosPersonalesComponent
+constructor	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  constructor() {$/;"	m	class:ResumenGeneralComponent
 constructor	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.ts	/^  constructor() { }$/;"	m	class:TarjetasComponent
-constructor	src/app/servicios/estado-cuenta.service.ts	/^  constructor() { }$/;"	m	class:EstadoCuentaService
 constructor	src/app/servicios/fondo.service.ts	/^  constructor(private http: HttpClient) {}$/;"	m	class:FondoService
 constructor	tslint.json	/^        "constructor": "never",$/;"	s	object:rules.space-before-function-paren.options
 content-disposition	package-lock.json	/^        "content-disposition": "0.5.3",$/;"	s	object:dependencies.express.requires
@@ -2258,8 +2384,6 @@ convert-source-map	package-lock.json	/^        "convert-source-map": "^1.7.0",$/
 convert-source-map	package-lock.json	/^        "convert-source-map": "^1.7.0",$/;"	s	object:packages.node_modules/@jsdevtools/coverage-istanbul-loader.dependencies
 convert-source-map	package-lock.json	/^        "convert-source-map": {$/;"	o	object:dependencies.rework.dependencies
 convert-source-map	package-lock.json	/^    "convert-source-map": {$/;"	o	object:dependencies
-conyugue	src/app/interfaces/prototipo.ts	/^  conyugue: string;$/;"	p	interface:DatosPersonales
-conyugue	src/app/interfaces/prototipo.ts	/^  conyugue: {$/;"	p	interface:OtrosDatos
 cookie	package-lock.json	/^        "cookie": "0.4.0",$/;"	s	object:dependencies.express.requires
 cookie	package-lock.json	/^        "cookie": "0.4.0",$/;"	s	object:packages.node_modules/express.dependencies
 cookie	package-lock.json	/^        "cookie": "~0.4.1",$/;"	s	object:dependencies.engine.io.requires
@@ -2324,6 +2448,15 @@ core-util-is	package-lock.json	/^        "core-util-is": "~1.0.0",$/;"	s	object:
 core-util-is	package-lock.json	/^        "core-util-is": "~1.0.0",$/;"	s	object:packages.node_modules/webpack-dev-server/node_modules/readable-stream.dependencies
 core-util-is	package-lock.json	/^        "core-util-is": "~1.0.0",$/;"	s	object:packages.node_modules/webpack/node_modules/readable-stream.dependencies
 core-util-is	package-lock.json	/^    "core-util-is": {$/;"	o	object:dependencies
+core_1	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/dist/app-routing.module.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/dist/app.module.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/servicios/dist/estado-cuenta.service.js	/^var core_1 = require("@angular\/core");$/;"	v
+core_1	src/app/servicios/dist/fondo.service.js	/^var core_1 = require("@angular\/core");$/;"	v
 cors	package-lock.json	/^        "cors": "~2.8.5",$/;"	s	object:dependencies.engine.io.requires
 cors	package-lock.json	/^        "cors": "~2.8.5",$/;"	s	object:packages.node_modules/engine.io.dependencies
 cors	package-lock.json	/^    "cors": {$/;"	o	object:dependencies
@@ -2452,7 +2585,6 @@ cssnano-util-same-parent	package-lock.json	/^    "cssnano-util-same-parent": {$/
 csso	package-lock.json	/^        "csso": "^4.0.2",$/;"	s	object:dependencies.svgo.requires
 csso	package-lock.json	/^        "csso": "^4.0.2",$/;"	s	object:packages.node_modules/svgo.dependencies
 csso	package-lock.json	/^    "csso": {$/;"	o	object:dependencies
-cuota	src/app/interfaces/prototipo.ts	/^    cuota: number;$/;"	p	interface:Prestamos
 curly	tslint.json	/^    "curly": true,$/;"	b	object:rules
 custom-event	package-lock.json	/^        "custom-event": "~1.0.0",$/;"	s	object:dependencies.dom-serialize.requires
 custom-event	package-lock.json	/^        "custom-event": "~1.0.0",$/;"	s	object:packages.node_modules/dom-serialize.dependencies
@@ -2465,6 +2597,15 @@ d	package-lock.json	/^        "d": "1",$/;"	s	object:packages.node_modules/es6-i
 d	package-lock.json	/^        "d": "^1.0.1",$/;"	s	object:dependencies.es6-symbol.requires
 d	package-lock.json	/^        "d": "^1.0.1",$/;"	s	object:packages.node_modules/es6-symbol.dependencies
 d	package-lock.json	/^    "d": {$/;"	o	object:dependencies
+d	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/dist/app-routing.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/dist/app.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/servicios/dist/estado-cuenta.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+d	src/app/servicios/dist/fondo.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
 damerau-levenshtein	package-lock.json	/^        "damerau-levenshtein": "^1.0.4",$/;"	s	object:dependencies.codelyzer.requires
 damerau-levenshtein	package-lock.json	/^        "damerau-levenshtein": "^1.0.4",$/;"	s	object:packages.node_modules/codelyzer.dependencies
 damerau-levenshtein	package-lock.json	/^    "damerau-levenshtein": {$/;"	o	object:dependencies
@@ -2477,10 +2618,11 @@ date-format	package-lock.json	/^        "date-format": "^3.0.0",$/;"	s	object:de
 date-format	package-lock.json	/^        "date-format": "^3.0.0",$/;"	s	object:packages.node_modules/log4js.dependencies
 date-format	package-lock.json	/^        "date-format": {$/;"	o	object:dependencies.streamroller.dependencies
 date-format	package-lock.json	/^    "date-format": {$/;"	o	object:dependencies
-datos	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^    datos : DatosPersonales[];$/;"	p	class:DatosPersonalesComponent
-datosLaborales	src/app/interfaces/prototipo.ts	/^  datosLaborales: DatosLaborales[];$/;"	p	interface:EstadoCuenta
-datosPersonales	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^    datosPersonales : DatosPersonales[] = [$/;"	p	class:DatosPersonalesComponent
-datosPersonales	src/app/interfaces/prototipo.ts	/^  datosPersonales: DatosPersonales;$/;"	p	interface:EstadoCuenta
+datosPersonales	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  datosPersonales: any[] = [$/;"	p	class:DatosPersonalesComponent
+datos_laborales	src/app/interfaces/prototipo.ts	/^  datos_laborales: DatosLaborales[];$/;"	p	interface:EstadoCuenta
+datos_laborales_component_1	src/app/dist/app.module.js	/^var datos_laborales_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/datos-labor/;"	v
+datos_personales	src/app/interfaces/prototipo.ts	/^  datos_personales: DatosPersonales;$/;"	p	interface:EstadoCuenta
+datos_personales_component_1	src/app/dist/app.module.js	/^var datos_personales_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/resumen-ge/;"	v
 debug	package-lock.json	/^            "debug": "^3.1.0"$/;"	s	object:dependencies.browserstack.dependencies.https-proxy-agent.requires
 debug	package-lock.json	/^            "debug": "^3.1.0"$/;"	s	object:dependencies.saucelabs.dependencies.https-proxy-agent.requires
 debug	package-lock.json	/^        "debug": "2.6.9",$/;"	s	object:dependencies.body-parser.requires
@@ -2699,6 +2841,7 @@ dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependenci
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@angular-devkit/build-webpack
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@angular-devkit/core
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@angular-devkit/schematics
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@angular/cdk
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@angular/cli
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@angular/compiler-cli
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:dependencies.@babel/core
@@ -2903,6 +3046,7 @@ dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.n
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular-devkit/schematics
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular-devkit/schematics/node_modules/rxjs
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular/animations
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular/cdk
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular/cli
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular/cli/node_modules/resolve
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@angular/common
@@ -3011,6 +3155,11 @@ dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.n
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@babel/traverse
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@babel/traverse/node_modules/@babel/generator
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@babel/types
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@fortawesome/angular-fontawesome
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@fortawesome/fontawesome-svg-core
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@fortawesome/free-brands-svg-icons
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@fortawesome/free-regular-svg-icons
+dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@fortawesome/free-solid-svg-icons
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@jsdevtools/coverage-istanbul-loader
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@ngtools/webpack
 dependencies	package-lock.json	/^      "dependencies": {$/;"	o	object:packages.node_modules/@nodelib/fs.scandir
@@ -7073,7 +7222,6 @@ devServerTarget	angular.json	/^            "devServerTarget": "estadoCuenta:serv
 di	package-lock.json	/^        "di": "^0.0.1",$/;"	s	object:dependencies.karma.requires
 di	package-lock.json	/^        "di": "^0.0.1",$/;"	s	object:packages.node_modules/karma.dependencies
 di	package-lock.json	/^    "di": {$/;"	o	object:dependencies
-diasVenc	src/app/interfaces/prototipo.ts	/^    diasVenc: number;$/;"	p	interface:Tarjetas
 diff	package-lock.json	/^        "diff": "^4.0.1",$/;"	s	object:dependencies.ts-node.requires
 diff	package-lock.json	/^        "diff": "^4.0.1",$/;"	s	object:dependencies.tslint.requires
 diff	package-lock.json	/^        "diff": "^4.0.1",$/;"	s	object:packages.node_modules/ts-node.dependencies
@@ -7085,7 +7233,6 @@ diffie-hellman	package-lock.json	/^    "diffie-hellman": {$/;"	o	object:dependen
 dir-glob	package-lock.json	/^        "dir-glob": "^3.0.1",$/;"	s	object:dependencies.globby.requires
 dir-glob	package-lock.json	/^        "dir-glob": "^3.0.1",$/;"	s	object:packages.node_modules/globby.dependencies
 dir-glob	package-lock.json	/^    "dir-glob": {$/;"	o	object:dependencies
-direccion	src/app/interfaces/prototipo.ts	/^  direccion: string;$/;"	p	interface:DatosLaborales
 directConnect	e2e/protractor.conf.js	/^  directConnect: true,$/;"	p	class:exports.config
 directive-class-suffix	tslint.json	/^    "directive-class-suffix": true,$/;"	b	object:rules
 directive-selector	tslint.json	/^    "directive-selector": [$/;"	a	object:rules
@@ -7113,7 +7260,6 @@ domelementtype	package-lock.json	/^        "domelementtype": "^2.0.1",$/;"	s	obj
 domelementtype	package-lock.json	/^        "domelementtype": "^2.0.1",$/;"	s	object:packages.node_modules/dom-serializer.dependencies
 domelementtype	package-lock.json	/^        "domelementtype": {$/;"	o	object:dependencies.dom-serializer.dependencies
 domelementtype	package-lock.json	/^    "domelementtype": {$/;"	o	object:dependencies
-domicilio	src/app/interfaces/prototipo.ts	/^  domicilio: string;$/;"	p	interface:DatosPersonales
 domutils	package-lock.json	/^        "domutils": "^1.7.0",$/;"	s	object:dependencies.css-select.requires
 domutils	package-lock.json	/^        "domutils": "^1.7.0",$/;"	s	object:packages.node_modules/css-select.dependencies
 domutils	package-lock.json	/^    "domutils": {$/;"	o	object:dependencies
@@ -7170,8 +7316,6 @@ emojis-list	package-lock.json	/^        "emojis-list": "^3.0.0",$/;"	s	object:pa
 emojis-list	package-lock.json	/^        "emojis-list": "^3.0.0",$/;"	s	object:packages.node_modules/worker-plugin/node_modules/loader-utils.dependencies
 emojis-list	package-lock.json	/^        "emojis-list": {$/;"	o	object:dependencies.resolve-url-loader.dependencies
 emojis-list	package-lock.json	/^    "emojis-list": {$/;"	o	object:dependencies
-empresa	src/app/interfaces/prototipo.ts	/^  empresa: string;$/;"	p	interface:DatosLaborales
-enFecha	src/app/interfaces/prototipo.ts	/^    enFecha: number;$/;"	p	interface:Prestamos
 enableI18nLegacyMessageIdFormat	tsconfig.json	/^    "enableI18nLegacyMessageIdFormat": false,$/;"	b	object:angularCompilerOptions
 encodeurl	package-lock.json	/^        "encodeurl": "~1.0.2",$/;"	s	object:dependencies.express.requires
 encodeurl	package-lock.json	/^        "encodeurl": "~1.0.2",$/;"	s	object:dependencies.finalhandler.requires
@@ -7235,6 +7379,11 @@ engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_module
 engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@babel/plugin-proposal-unicode-property-regex
 engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@babel/traverse/node_modules/source-map
 engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@discoveryjs/json-ext
+engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@fortawesome/fontawesome-common-types
+engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@fortawesome/fontawesome-svg-core
+engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@fortawesome/free-brands-svg-icons
+engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@fortawesome/free-regular-svg-icons
+engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@fortawesome/free-solid-svg-icons
 engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@istanbuljs/schema
 engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@ngtools/webpack
 engines	package-lock.json	/^      "engines": {$/;"	o	object:packages.node_modules/@nodelib/fs.scandir
@@ -8211,10 +8360,7 @@ esprima	package-lock.json	/^    "esprima": {$/;"	o	object:dependencies
 esrecurse	package-lock.json	/^        "esrecurse": "^4.1.0",$/;"	s	object:dependencies.eslint-scope.requires
 esrecurse	package-lock.json	/^        "esrecurse": "^4.1.0",$/;"	s	object:packages.node_modules/eslint-scope.dependencies
 esrecurse	package-lock.json	/^    "esrecurse": {$/;"	o	object:dependencies
-estado	src/app/interfaces/prototipo.ts	/^    estado: number;$/;"	p	interface:Tarjetas
-estado	src/app/interfaces/prototipo.ts	/^  estado: string;$/;"	p	interface:DatosPersonales
 estadoCuenta	angular.json	/^    "estadoCuenta": {$/;"	o	object:projects
-estadoPmo	src/app/interfaces/prototipo.ts	/^    estadoPmo: string;$/;"	p	interface:Prestamos
 estraverse	package-lock.json	/^        "estraverse": "^4.1.1"$/;"	s	object:dependencies.eslint-scope.requires
 estraverse	package-lock.json	/^        "estraverse": "^4.1.1"$/;"	s	object:packages.node_modules/eslint-scope.dependencies
 estraverse	package-lock.json	/^        "estraverse": "^5.2.0"$/;"	s	object:dependencies.esrecurse.requires
@@ -8345,6 +8491,9 @@ extsprintf	package-lock.json	/^        "extsprintf": "1.3.0",$/;"	s	object:packa
 extsprintf	package-lock.json	/^        "extsprintf": "^1.2.0"$/;"	s	object:dependencies.verror.requires
 extsprintf	package-lock.json	/^        "extsprintf": "^1.2.0"$/;"	s	object:packages.node_modules/verror.dependencies
 extsprintf	package-lock.json	/^    "extsprintf": {$/;"	o	object:dependencies
+faCalendar	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  faCalendar = faCalendarAlt;$/;"	p	class:IconoEstadoCuentaComponent
+faHandsHelping	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  faHandsHelping = faHandsHelping;$/;"	p	class:IconoEstadoCuentaComponent
+faUser	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  faUser = faUser;$/;"	p	class:IconoEstadoCuentaComponent
 fast-deep-equal	package-lock.json	/^        "fast-deep-equal": "^3.1.1",$/;"	s	object:dependencies.ajv.requires
 fast-deep-equal	package-lock.json	/^        "fast-deep-equal": "^3.1.1",$/;"	s	object:packages.node_modules/ajv.dependencies
 fast-deep-equal	package-lock.json	/^    "fast-deep-equal": {$/;"	o	object:dependencies
@@ -8371,13 +8520,6 @@ faye-websocket	package-lock.json	/^        "faye-websocket": "^0.11.3",$/;"	s	ob
 faye-websocket	package-lock.json	/^        "faye-websocket": "^0.11.3",$/;"	s	object:packages.node_modules/sockjs-client.dependencies
 faye-websocket	package-lock.json	/^        "faye-websocket": "^0.11.3",$/;"	s	object:packages.node_modules/sockjs.dependencies
 faye-websocket	package-lock.json	/^    "faye-websocket": {$/;"	o	object:dependencies
-fecApro	src/app/interfaces/prototipo.ts	/^    fecApro: number;$/;"	p	interface:Prestamos
-fecUIPag	src/app/interfaces/prototipo.ts	/^    fecUIPag: number;$/;"	p	interface:Tarjetas
-fechaEgreso	src/app/interfaces/prototipo.ts	/^  fechaEgreso: number;$/;"	p	interface:DatosLaborales
-fechaGrabacion	src/app/interfaces/prototipo.ts	/^  fechaGrabacion: number;$/;"	p	interface:DatosLaborales
-fechaIngreso	src/app/interfaces/prototipo.ts	/^  fechaIngreso: number;$/;"	p	interface:DatosLaborales
-fechaIngreso	src/app/interfaces/prototipo.ts	/^  fechaIngreso: string;$/;"	p	interface:DatosPersonales
-fechaVenc	src/app/interfaces/prototipo.ts	/^    fechaVenc: number;$/;"	p	interface:Tarjetas
 figgy-pudding	package-lock.json	/^            "figgy-pudding": "^3.5.1"$/;"	s	object:dependencies.webpack.dependencies.ssri.requires
 figgy-pudding	package-lock.json	/^            "figgy-pudding": "^3.5.1",$/;"	s	object:dependencies.webpack.dependencies.cacache.requires
 figgy-pudding	package-lock.json	/^        "figgy-pudding": "^3.5.1"$/;"	s	object:packages.node_modules/webpack/node_modules/ssri.dependencies
@@ -8440,11 +8582,11 @@ find-up	package-lock.json	/^        "find-up": {$/;"	o	object:dependencies.yargs
 find-up	package-lock.json	/^    "find-up": {$/;"	o	object:dependencies
 fixture	src/app/app.component.spec.ts	/^    const fixture = TestBed.createComponent(AppComponent);$/;"	C
 fixture	src/app/componentes/buscador/buscador.component.spec.ts	/^  let fixture: ComponentFixture<BuscadorComponent>;$/;"	v
+fixture	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.spec.ts	/^  let fixture: ComponentFixture<IconoEstadoCuentaComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.spec.ts	/^  let fixture: ComponentFixture<DatosLaboralesComponent>;$/;"	v
-fixture	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.spec.ts	/^  let fixture: ComponentFixture<DatosPersonalesComponent>;$/;"	v
-fixture	src/app/componentes/estado-cuenta-contenedor/estado-cuenta-contenedor.component.spec.ts	/^  let fixture: ComponentFixture<EstadoCuentaContenedorComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.spec.ts	/^  let fixture: ComponentFixture<OtrosDatosComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.spec.ts	/^  let fixture: ComponentFixture<PrestamosComponent>;$/;"	v
+fixture	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.spec.ts	/^  let fixture: ComponentFixture<DatosPersonalesComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.spec.ts	/^  let fixture: ComponentFixture<ResumenGeneralComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.spec.ts	/^  let fixture: ComponentFixture<TarjetasComponent>;$/;"	v
 flatted	package-lock.json	/^        "flatted": "^2.0.1",$/;"	s	object:dependencies.log4js.requires
@@ -8486,6 +8628,7 @@ fragment-cache	package-lock.json	/^        "fragment-cache": "^0.2.1",$/;"	s	obj
 fragment-cache	package-lock.json	/^        "fragment-cache": "^0.2.1",$/;"	s	object:packages.node_modules/webpack/node_modules/micromatch.dependencies
 fragment-cache	package-lock.json	/^    "fragment-cache": {$/;"	o	object:dependencies
 framework	e2e/protractor.conf.js	/^  framework: 'jasmine',$/;"	p	class:exports.config
+free_solid_svg_icons_1	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^var free_solid_svg_icons_1 = require("@fortawesome\/free-solid-svg-icons");$/;"	v
 fresh	package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:dependencies.express.requires
 fresh	package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:dependencies.send.requires
 fresh	package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:packages.node_modules/express.dependencies
@@ -8537,7 +8680,6 @@ function-bind	package-lock.json	/^        "function-bind": "^1.1.1",$/;"	s	objec
 function-bind	package-lock.json	/^        "function-bind": "^1.1.1",$/;"	s	object:packages.node_modules/get-intrinsic.dependencies
 function-bind	package-lock.json	/^        "function-bind": "^1.1.1",$/;"	s	object:packages.node_modules/unbox-primitive.dependencies
 function-bind	package-lock.json	/^    "function-bind": {$/;"	o	object:dependencies
-garante	src/app/interfaces/prototipo.ts	/^    garante: string;$/;"	p	interface:Prestamos
 gauge	package-lock.json	/^        "gauge": "~2.7.3",$/;"	s	object:dependencies.npmlog.requires
 gauge	package-lock.json	/^        "gauge": "~2.7.3",$/;"	s	object:packages.node_modules/npmlog.dependencies
 gauge	package-lock.json	/^    "gauge": {$/;"	o	object:dependencies
@@ -8827,6 +8969,11 @@ has-values	package-lock.json	/^        "has-values": "^1.0.0",$/;"	s	object:depe
 has-values	package-lock.json	/^        "has-values": "^1.0.0",$/;"	s	object:packages.node_modules/has-value.dependencies
 has-values	package-lock.json	/^        "has-values": {$/;"	o	object:dependencies.unset-value.dependencies
 has-values	package-lock.json	/^    "has-values": {$/;"	o	object:dependencies
+hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/@fortawesome/fontawesome-common-types
+hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/@fortawesome/fontawesome-svg-core
+hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/@fortawesome/free-brands-svg-icons
+hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/@fortawesome/free-regular-svg-icons
+hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/@fortawesome/free-solid-svg-icons
 hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/watchpack-chokidar2/node_modules/fsevents
 hasInstallScript	package-lock.json	/^      "hasInstallScript": true,$/;"	b	object:packages.node_modules/webpack-dev-server/node_modules/fsevents
 hash-base	package-lock.json	/^        "hash-base": "^3.0.0",$/;"	s	object:dependencies.md5.js.requires
@@ -8857,6 +9004,8 @@ hsl-regex	package-lock.json	/^    "hsl-regex": {$/;"	o	object:dependencies
 hsla-regex	package-lock.json	/^        "hsla-regex": "^1.0.0",$/;"	s	object:dependencies.is-color-stop.requires
 hsla-regex	package-lock.json	/^        "hsla-regex": "^1.0.0",$/;"	s	object:packages.node_modules/is-color-stop.dependencies
 hsla-regex	package-lock.json	/^    "hsla-regex": {$/;"	o	object:dependencies
+html	src/dist/styles.css	/^html,$/;"	s
+html	src/styles.css	/^html,$/;"	s
 html-comment-regex	package-lock.json	/^        "html-comment-regex": "^1.1.0"$/;"	s	object:dependencies.is-svg.requires
 html-comment-regex	package-lock.json	/^        "html-comment-regex": "^1.1.0"$/;"	s	object:packages.node_modules/is-svg.dependencies
 html-comment-regex	package-lock.json	/^    "html-comment-regex": {$/;"	o	object:dependencies
@@ -8900,6 +9049,7 @@ http-proxy-middleware	package-lock.json	/^    "http-proxy-middleware": {$/;"	o	o
 http-signature	package-lock.json	/^        "http-signature": "~1.2.0",$/;"	s	object:dependencies.request.requires
 http-signature	package-lock.json	/^        "http-signature": "~1.2.0",$/;"	s	object:packages.node_modules/request.dependencies
 http-signature	package-lock.json	/^    "http-signature": {$/;"	o	object:dependencies
+http_1	src/app/dist/app.module.js	/^var http_1 = require("@angular\/common\/http");$/;"	v
 https-browserify	package-lock.json	/^        "https-browserify": "^1.0.0",$/;"	s	object:dependencies.node-libs-browser.requires
 https-browserify	package-lock.json	/^        "https-browserify": "^1.0.0",$/;"	s	object:packages.node_modules/node-libs-browser.dependencies
 https-browserify	package-lock.json	/^    "https-browserify": {$/;"	o	object:dependencies
@@ -8917,6 +9067,7 @@ https-proxy-agent	package-lock.json	/^    "https-proxy-agent": {$/;"	o	object:de
 humanize-ms	package-lock.json	/^        "humanize-ms": "^1.2.1"$/;"	s	object:dependencies.agentkeepalive.requires
 humanize-ms	package-lock.json	/^        "humanize-ms": "^1.2.1"$/;"	s	object:packages.node_modules/agentkeepalive.dependencies
 humanize-ms	package-lock.json	/^    "humanize-ms": {$/;"	o	object:dependencies
+icono_estado_cuenta_component_1	src/app/dist/app.module.js	/^var icono_estado_cuenta_component_1 = require(".\/componentes\/compartido\/icono-estado-cuenta\//;"	v
 iconv-lite	package-lock.json	/^        "iconv-lite": "0.4.24",$/;"	s	object:dependencies.body-parser.requires
 iconv-lite	package-lock.json	/^        "iconv-lite": "0.4.24",$/;"	s	object:dependencies.raw-body.requires
 iconv-lite	package-lock.json	/^        "iconv-lite": "0.4.24",$/;"	s	object:packages.node_modules/body-parser.dependencies
@@ -9708,6 +9859,7 @@ integrity	package-lock.json	/^          "integrity": "sha512-uWjbaKIK3T1OSVptzX7
 integrity	package-lock.json	/^          "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnm/;"	s	object:dependencies.protractor.dependencies.rimraf
 integrity	package-lock.json	/^          "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnm/;"	s	object:dependencies.selenium-webdriver.dependencies.rimraf
 integrity	package-lock.json	/^          "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnm/;"	s	object:dependencies.webpack.dependencies.rimraf
+integrity	package-lock.json	/^          "integrity": "sha512-ugq4DFI0Ptb+WWjAdOK16+u\/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkX/;"	s	object:dependencies.@angular/cdk.dependencies.parse5
 integrity	package-lock.json	/^          "integrity": "sha512-vafcv6KjVZKSgz06oM\/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJ/;"	s	object:dependencies.cliui.dependencies.string-width
 integrity	package-lock.json	/^          "integrity": "sha512-vafcv6KjVZKSgz06oM\/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJ/;"	s	object:dependencies.wrap-ansi.dependencies.string-width
 integrity	package-lock.json	/^          "integrity": "sha512-vafcv6KjVZKSgz06oM\/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJ/;"	s	object:dependencies.yargs.dependencies.string-width
@@ -10356,6 +10508,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-0xxayXCNc8lPQhDj5q\/hAc
 integrity	package-lock.json	/^      "integrity": "sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O\/Oxi8AiNouAHvDSzHS0viUJc+V5/;"	s	object:dependencies.miller-rabin
 integrity	package-lock.json	/^      "integrity": "sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O\/Oxi8AiNouAHvDSzHS0viUJc+V5/;"	s	object:packages.node_modules/miller-rabin
 integrity	package-lock.json	/^      "integrity": "sha512-180WMDQaIMm3+7hGXWf12GtdniDEy7nYcyFMKJn\/eZz\/6tSLXrUN9V0wKSbMjej0I1W/;"	s	object:packages.node_modules/ext/node_modules/type
+integrity	package-lock.json	/^      "integrity": "sha512-18h7dyXHl\/h+rsXFoNpqxiFCDhqewXVPpLG\/WWeiFXKdtHeIk1yzfoSjo7nBzclicFF/;"	s	object:dependencies.@angular/cdk
+integrity	package-lock.json	/^      "integrity": "sha512-18h7dyXHl\/h+rsXFoNpqxiFCDhqewXVPpLG\/WWeiFXKdtHeIk1yzfoSjo7nBzclicFF/;"	s	object:packages.node_modules/@angular/cdk
 integrity	package-lock.json	/^      "integrity": "sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH\/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKj/;"	s	object:dependencies.@types/q
 integrity	package-lock.json	/^      "integrity": "sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH\/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKj/;"	s	object:packages.node_modules/@types/q
 integrity	package-lock.json	/^      "integrity": "sha512-1Ij4lOMPl\/xB5kBDn7I+b2ttPMKa8szhEIrXDuXQD\/oe3HJLTLhqhgGspwgyGd6MOyw/;"	s	object:dependencies.is-arguments
@@ -10375,6 +10529,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-1apePfXM1UOSqw0o9IiFAov
 integrity	package-lock.json	/^      "integrity": "sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p\/rmMueb7tWZjQ1rx4Loy1Ar/;"	s	object:packages.node_modules/yargs/node_modules/ansi-regex
 integrity	package-lock.json	/^      "integrity": "sha512-1bcDHDcSqeFtMr0JXI3xc\/CXX6c4p0wHHivJdru8W7waM7a1WjKMm4m\/Z5sY7CbVw4W/;"	s	object:dependencies.sass
 integrity	package-lock.json	/^      "integrity": "sha512-1bcDHDcSqeFtMr0JXI3xc\/CXX6c4p0wHHivJdru8W7waM7a1WjKMm4m\/Z5sY7CbVw4W/;"	s	object:packages.node_modules/sass
+integrity	package-lock.json	/^      "integrity": "sha512-1hirPcbjj72ZJtFvdnXGPbAbpn3Ox6mH3g5STbANFp3vGSiE5u5ingAKV06mK6ZVqNYxU/;"	s	object:dependencies.@fortawesome/free-brands-svg-icons
+integrity	package-lock.json	/^      "integrity": "sha512-1hirPcbjj72ZJtFvdnXGPbAbpn3Ox6mH3g5STbANFp3vGSiE5u5ingAKV06mK6ZVqNYxU/;"	s	object:packages.node_modules/@fortawesome/free-brands-svg-icons
 integrity	package-lock.json	/^      "integrity": "sha512-1lLKB2Mu3aGP1Q\/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7U/;"	s	object:dependencies.form-data
 integrity	package-lock.json	/^      "integrity": "sha512-1lLKB2Mu3aGP1Q\/2eCOx0fNbRMe7XdwktwOruhfqqd0rIJWwN4Dh+E3hrPSlDCXnSR7U/;"	s	object:packages.node_modules/form-data
 integrity	package-lock.json	/^      "integrity": "sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxc/;"	s	object:dependencies.nice-try
@@ -10925,6 +11081,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-IClj+Xz94+d7irH5qRyfJon
 integrity	package-lock.json	/^      "integrity": "sha512-IClj+Xz94+d7irH5qRyfJonOdfTzuDaifE6ZPWfx0N0+\/ATZCbuTPq2prFl526urkQd9/;"	s	object:packages.node_modules/infer-owner
 integrity	package-lock.json	/^      "integrity": "sha512-IHKT00mwUVYE0zzbkDgNRP6SRzvfGCYsOxIRz8KsiaaHCcT9BWIkO+H9QRJseHBLOGBZk/;"	s	object:dependencies.@babel/plugin-transform-for-of
 integrity	package-lock.json	/^      "integrity": "sha512-IHKT00mwUVYE0zzbkDgNRP6SRzvfGCYsOxIRz8KsiaaHCcT9BWIkO+H9QRJseHBLOGBZk/;"	s	object:packages.node_modules/@babel/plugin-transform-for-of
+integrity	package-lock.json	/^      "integrity": "sha512-IHUfxSEDS9dDGqYwIW7wTN6tn\/O8E0n5PcAHz9cAaBoZw6UpG20IG\/YM3NNLaGPwPqg/;"	s	object:dependencies.@fortawesome/fontawesome-common-types
+integrity	package-lock.json	/^      "integrity": "sha512-IHUfxSEDS9dDGqYwIW7wTN6tn\/O8E0n5PcAHz9cAaBoZw6UpG20IG\/YM3NNLaGPwPqg/;"	s	object:packages.node_modules/@fortawesome/fontawesome-common-types
 integrity	package-lock.json	/^      "integrity": "sha512-INAgtFo4OnLN3Y\/j0VwAgw3HDXcDtX+C\/erMvWzuV9v71r7urb6iyMXu7eM9IgLr1El/;"	s	object:dependencies.@babel/plugin-proposal-export-namespace-from
 integrity	package-lock.json	/^      "integrity": "sha512-INAgtFo4OnLN3Y\/j0VwAgw3HDXcDtX+C\/erMvWzuV9v71r7urb6iyMXu7eM9IgLr1El/;"	s	object:packages.node_modules/@babel/plugin-proposal-export-namespace-from
 integrity	package-lock.json	/^      "integrity": "sha512-IYY2bEDD7g1XM1IDEsUT4\/\/iEYCxAmP5oDSFMVU\/JVvT7gh+l4fmjciLqGgwjdWpQI/;"	s	object:dependencies.postcss-discard-overridden
@@ -11002,6 +11160,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-KWYVV1c4i+jbMpaBC+U++4V
 integrity	package-lock.json	/^      "integrity": "sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6/;"	s	object:packages.node_modules/jest-worker
 integrity	package-lock.json	/^      "integrity": "sha512-KXBr9d\/fO\/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnK/;"	s	object:dependencies.source-map-resolve
 integrity	package-lock.json	/^      "integrity": "sha512-KXBr9d\/fO\/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnK/;"	s	object:packages.node_modules/source-map-resolve
+integrity	package-lock.json	/^      "integrity": "sha512-K\/AiykA4YbHKE6XKEtZ0ZvVRQocUHyk+79HYWIfhGy3teHpzxsUqB\/UjDaxivgBd6dF/;"	s	object:dependencies.@fortawesome/angular-fontawesome
+integrity	package-lock.json	/^      "integrity": "sha512-K\/AiykA4YbHKE6XKEtZ0ZvVRQocUHyk+79HYWIfhGy3teHpzxsUqB\/UjDaxivgBd6dF/;"	s	object:packages.node_modules/@fortawesome/angular-fontawesome
 integrity	package-lock.json	/^      "integrity": "sha512-Key5NIsUxdqKg3vIsdw9dSuXpPCQ297y6wBjL30edxwPgt2E44WcWBZey\/ZvUc6sERLT/;"	s	object:dependencies.ext
 integrity	package-lock.json	/^      "integrity": "sha512-Key5NIsUxdqKg3vIsdw9dSuXpPCQ297y6wBjL30edxwPgt2E44WcWBZey\/ZvUc6sERLT/;"	s	object:packages.node_modules/ext
 integrity	package-lock.json	/^      "integrity": "sha512-Kisdo1y77KUC0Jmn0OXU\/COOJbzM8cImvw1ZFsBgBgMgb1iL23Zs\/LXRe3r+EZqM3vG/;"	s	object:dependencies.postcss-convert-values
@@ -11393,6 +11553,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-XBJbT3N4JhVumXE0eoLU9DC
 integrity	package-lock.json	/^      "integrity": "sha512-XBJbT3N4JhVumXE0eoLU9DCjcaF92KLNqTmFCnG1pf8duUxFGwtP6AD6nkjw9a3IdiRtL/;"	s	object:packages.node_modules/string-width
 integrity	package-lock.json	/^      "integrity": "sha512-XE6G4+YTTkT2a0UWb2kjZe8xNwf8bIbnqpc\/IS\/idOBVhyves0mK5OJgeocjx7q5pvX/;"	s	object:dependencies.p-retry
 integrity	package-lock.json	/^      "integrity": "sha512-XE6G4+YTTkT2a0UWb2kjZe8xNwf8bIbnqpc\/IS\/idOBVhyves0mK5OJgeocjx7q5pvX/;"	s	object:packages.node_modules/p-retry
+integrity	package-lock.json	/^      "integrity": "sha512-XPeeu1IlGYqz4VWGRAT5ukNMd4VHUEEJ7ysZ7pSSgaEtNvSo+FLurybGJVmiqkQdK50Ok/;"	s	object:dependencies.@fortawesome/free-solid-svg-icons
+integrity	package-lock.json	/^      "integrity": "sha512-XPeeu1IlGYqz4VWGRAT5ukNMd4VHUEEJ7ysZ7pSSgaEtNvSo+FLurybGJVmiqkQdK50Ok/;"	s	object:packages.node_modules/@fortawesome/free-solid-svg-icons
 integrity	package-lock.json	/^      "integrity": "sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK\/uNwMHhIkPWO0g8msXcbzLe+MpGoR9/;"	s	object:dependencies.is-core-module
 integrity	package-lock.json	/^      "integrity": "sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK\/uNwMHhIkPWO0g8msXcbzLe+MpGoR9/;"	s	object:packages.node_modules/is-core-module
 integrity	package-lock.json	/^      "integrity": "sha512-XRsRjdf+j5ml+y\/6GKHPZbrF\/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprV/;"	s	object:dependencies.punycode
@@ -12029,6 +12191,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-q0M\/9eZHzmr0AulXyPwNfZ
 integrity	package-lock.json	/^      "integrity": "sha512-q0M\/9eZHzmr0AulXyPwNfZjtwZ\/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt/;"	s	object:packages.node_modules/picomatch
 integrity	package-lock.json	/^      "integrity": "sha512-q1yR6bktd5p987gLEKiFY4CrHcmBxks9R6GcdgzGneQsucDtGESzEKdcJ0uaMXE+9teS+/;"	s	object:dependencies.@angular/common
 integrity	package-lock.json	/^      "integrity": "sha512-q1yR6bktd5p987gLEKiFY4CrHcmBxks9R6GcdgzGneQsucDtGESzEKdcJ0uaMXE+9teS+/;"	s	object:packages.node_modules/@angular/common
+integrity	package-lock.json	/^      "integrity": "sha512-q4\/p8Xehy9qiVTdDWHL4Z+o5PCLRChePGZRTXkl+\/Z7erDVL8VcZUuqzJjs6gUz6czs/;"	s	object:dependencies.@fortawesome/free-regular-svg-icons
+integrity	package-lock.json	/^      "integrity": "sha512-q4\/p8Xehy9qiVTdDWHL4Z+o5PCLRChePGZRTXkl+\/Z7erDVL8VcZUuqzJjs6gUz6czs/;"	s	object:packages.node_modules/@fortawesome/free-regular-svg-icons
 integrity	package-lock.json	/^      "integrity": "sha512-q5\/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrC/;"	s	object:dependencies.coa
 integrity	package-lock.json	/^      "integrity": "sha512-q5\/jG+YQnSy4nRTV4F7lPepBJZ8qBNJJDBuJdoejDyLXgmL7IEo+Le2JDZudFTFt7mrC/;"	s	object:packages.node_modules/coa
 integrity	package-lock.json	/^      "integrity": "sha512-qH0WSMBtn\/oHuwjy\/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfc/;"	s	object:packages.node_modules/babel-loader/node_modules/loader-utils
@@ -12214,6 +12378,8 @@ integrity	package-lock.json	/^      "integrity": "sha512-uB80kBFb\/tfd68bVleG9T5
 integrity	package-lock.json	/^      "integrity": "sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S\/pscIQYS5YDLxsQZ7D9jn5/;"	s	object:dependencies.primeicons
 integrity	package-lock.json	/^      "integrity": "sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S\/pscIQYS5YDLxsQZ7D9jn5/;"	s	object:packages.node_modules/primeicons
 integrity	package-lock.json	/^      "integrity": "sha512-uIFtJElxJo29QC753JzhidoAhvp\/e\/Exezkdhfmt8AymWT6\/5B7W1WmponYWkHk2eg/;"	s	object:packages.node_modules/resolve-url-loader/node_modules/postcss
+integrity	package-lock.json	/^      "integrity": "sha512-uLEXifXIL7hnh2sNZQrIJWNol7cTVIzwI+4qcBIq9QWaZqUblm0IDrtSqbNg+3SQf8SMG/;"	s	object:dependencies.@fortawesome/fontawesome-svg-core
+integrity	package-lock.json	/^      "integrity": "sha512-uLEXifXIL7hnh2sNZQrIJWNol7cTVIzwI+4qcBIq9QWaZqUblm0IDrtSqbNg+3SQf8SMG/;"	s	object:packages.node_modules/@fortawesome/fontawesome-svg-core
 integrity	package-lock.json	/^      "integrity": "sha512-uUQBt3H\/cSIVfch6i1EuPNy\/YsRSOUBXTVfZ+yR7Zjez3qjBz6i9+i4zjNaoqcoFVI4/;"	s	object:dependencies.http-errors
 integrity	package-lock.json	/^      "integrity": "sha512-uUQBt3H\/cSIVfch6i1EuPNy\/YsRSOUBXTVfZ+yR7Zjez3qjBz6i9+i4zjNaoqcoFVI4/;"	s	object:packages.node_modules/http-errors
 integrity	package-lock.json	/^      "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVd/;"	s	object:packages.node_modules/copy-concurrently/node_modules/rimraf
@@ -12222,6 +12388,7 @@ integrity	package-lock.json	/^      "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6P
 integrity	package-lock.json	/^      "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVd/;"	s	object:packages.node_modules/protractor/node_modules/rimraf
 integrity	package-lock.json	/^      "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVd/;"	s	object:packages.node_modules/selenium-webdriver/node_modules/rimraf
 integrity	package-lock.json	/^      "integrity": "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVd/;"	s	object:packages.node_modules/webpack/node_modules/rimraf
+integrity	package-lock.json	/^      "integrity": "sha512-ugq4DFI0Ptb+WWjAdOK16+u\/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQ/;"	s	object:packages.node_modules/@angular/cdk/node_modules/parse5
 integrity	package-lock.json	/^      "integrity": "sha512-ujTwrevgMRNyWir4IdnJEdDRkVSLqugRpL6cU9OeqGn6Bu+zEzZQokLkMZvbw00eEKlf5/;"	s	object:dependencies.@angular-devkit/build-optimizer
 integrity	package-lock.json	/^      "integrity": "sha512-ujTwrevgMRNyWir4IdnJEdDRkVSLqugRpL6cU9OeqGn6Bu+zEzZQokLkMZvbw00eEKlf5/;"	s	object:packages.node_modules/@angular-devkit/build-optimizer
 integrity	package-lock.json	/^      "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVG/;"	s	object:dependencies.lodash
@@ -13057,8 +13224,6 @@ license-webpack-plugin	package-lock.json	/^    "license-webpack-plugin": {$/;"	o
 lie	package-lock.json	/^        "lie": "~3.3.0",$/;"	s	object:dependencies.jszip.requires
 lie	package-lock.json	/^        "lie": "~3.3.0",$/;"	s	object:packages.node_modules/jszip.dependencies
 lie	package-lock.json	/^    "lie": {$/;"	o	object:dependencies
-lineaCred	src/app/interfaces/prototipo.ts	/^    lineaCred: any;$/;"	p	interface:Tarjetas
-lineaEsp	src/app/interfaces/prototipo.ts	/^    lineaEsp: any;$/;"	p	interface:Tarjetas
 lines-and-columns	package-lock.json	/^            "lines-and-columns": "^1.1.6"$/;"	s	object:dependencies.postcss-loader.dependencies.parse-json.requires
 lines-and-columns	package-lock.json	/^        "lines-and-columns": "^1.1.6"$/;"	s	object:packages.node_modules/postcss-loader/node_modules/parse-json.dependencies
 lines-and-columns	package-lock.json	/^    "lines-and-columns": {$/;"	o	object:dependencies
@@ -13206,7 +13371,6 @@ map-visit	package-lock.json	/^        "map-visit": "^1.0.0",$/;"	s	object:packag
 map-visit	package-lock.json	/^    "map-visit": {$/;"	o	object:dependencies
 max-classes-per-file	tslint.json	/^    "max-classes-per-file": false,$/;"	b	object:rules
 max-line-length	tslint.json	/^    "max-line-length": [$/;"	a	object:rules
-maxDiasAtraso	src/app/interfaces/prototipo.ts	/^    maxDiasAtraso: number;$/;"	p	interface:Prestamos
 maximumError	angular.json	/^                  "maximumError": "1mb"$/;"	s	object:projects.estadoCuenta.architect.build.configurations.production.budgets.0
 maximumError	angular.json	/^                  "maximumError": "4kb"$/;"	s	object:projects.estadoCuenta.architect.build.configurations.production.budgets.1
 maximumWarning	angular.json	/^                  "maximumWarning": "2kb",$/;"	s	object:projects.estadoCuenta.architect.build.configurations.production.budgets.1
@@ -13488,10 +13652,6 @@ mkdirp	package-lock.json	/^    "mkdirp": {$/;"	o	object:dependencies
 module	e2e/tsconfig.json	/^    "module": "commonjs",$/;"	s	object:compilerOptions
 module	tsconfig.json	/^    "module": "es2020",$/;"	s	object:compilerOptions
 moduleResolution	tsconfig.json	/^    "moduleResolution": "node",$/;"	s	object:compilerOptions
-monto	src/app/interfaces/prototipo.ts	/^    monto: number;$/;"	p	interface:Prestamos
-montoUltPag	src/app/interfaces/prototipo.ts	/^    montoUltPag: number;$/;"	p	interface:Tarjetas
-mostrarDatosPersonalesColumnaDos	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^    mostrarDatosPersonalesColumnaDos : any[];$/;"	p	class:DatosPersonalesComponent
-mostrarDatosPersonalesColumnaUno	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^    mostrarDatosPersonalesColumnaUno : any[];$/;"	p	class:DatosPersonalesComponent
 move-concurrently	package-lock.json	/^            "move-concurrently": "^1.0.1",$/;"	s	object:dependencies.webpack.dependencies.cacache.requires
 move-concurrently	package-lock.json	/^        "move-concurrently": "^1.0.1",$/;"	s	object:packages.node_modules/webpack/node_modules/cacache.dependencies
 move-concurrently	package-lock.json	/^    "move-concurrently": {$/;"	o	object:dependencies
@@ -13594,11 +13754,14 @@ ng	package-lock.json	/^        "ng": "bin\/ng"$/;"	s	object:packages.node_module
 ng	package.json	/^    "ng": "ng",$/;"	s	object:scripts
 ng-xi18n	package-lock.json	/^        "ng-xi18n": "src\/extract_i18n.js",$/;"	s	object:packages.node_modules/@angular/compiler-cli.bin
 ngOnInit	src/app/componentes/buscador/buscador.component.ts	/^  ngOnInit(): void {$/;"	m	class:BuscadorComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.ts	/^  ngOnInit(): void {$/;"	m	class:DatosLaboralesComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/datos-personales/datos-personales.component.ts	/^  ngOnInit(): void {$/;"	m	class:DatosPersonalesComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/estado-cuenta-contenedor.component.ts	/^  ngOnInit(): void {$/;"	m	class:EstadoCuentaContenedorComponent
+ngOnInit	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    IconoEstadoCuentaComponent.prototype.ngOnInit = function () { };$/;"	m	class:IconoEstadoCuentaComponent
+ngOnInit	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  ngOnInit(): void {}$/;"	m	class:IconoEstadoCuentaComponent
+ngOnInit	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    DatosLaboralesComponent.prototype.ngOnInit = function () { };$/;"	m	class:DatosLaboralesComponent
 ngOnInit	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.ts	/^  ngOnInit(): void {$/;"	m	class:OtrosDatosComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  ngOnInit(): void {$/;"	m	class:PrestamosComponent
+ngOnInit	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    PrestamosComponent.prototype.ngOnInit = function () { };$/;"	m	class:PrestamosComponent
+ngOnInit	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  ngOnInit(): void {}$/;"	m	class:PrestamosComponent
+ngOnInit	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  ngOnInit(): void {}$/;"	m	class:DatosPersonalesComponent
+ngOnInit	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    DatosPersonalesComponent.prototype.ngOnInit = function () { };$/;"	m	class:DatosPersonalesComponent
 ngOnInit	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  ngOnInit(): void {$/;"	m	class:ResumenGeneralComponent
 ngOnInit	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.ts	/^  ngOnInit(): void {$/;"	m	class:TarjetasComponent
 ngc	package-lock.json	/^        "ngc": "src\/main.js",$/;"	s	object:packages.node_modules/@angular/compiler-cli.bin
@@ -14217,6 +14380,11 @@ node	package-lock.json	/^        "node": ">=4.3.0 <5.0.0 || >=5.10"$/;"	s	object
 node	package-lock.json	/^        "node": ">=4.8"$/;"	s	object:packages.node_modules/cross-spawn.engines
 node	package-lock.json	/^        "node": ">=4.8.0"$/;"	s	object:packages.node_modules/tslint.engines
 node	package-lock.json	/^        "node": ">=6 <7 || >=8"$/;"	s	object:packages.node_modules/streamroller/node_modules/fs-extra.engines
+node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/@fortawesome/fontawesome-common-types.engines
+node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/@fortawesome/fontawesome-svg-core.engines
+node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/@fortawesome/free-brands-svg-icons.engines
+node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/@fortawesome/free-regular-svg-icons.engines
+node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/@fortawesome/free-solid-svg-icons.engines
 node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/ansi-colors.engines
 node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/clean-stack.engines
 node	package-lock.json	/^        "node": ">=6"$/;"	s	object:packages.node_modules/cli-spinners.engines
@@ -14543,6 +14711,8 @@ node_modules/@angular-devkit/schematics	package-lock.json	/^    "node_modules\/@
 node_modules/@angular-devkit/schematics/node_modules/rxjs	package-lock.json	/^    "node_modules\/@angular-devkit\/schematics\/node_modules\/rxjs": {$/;"	o	object:packages
 node_modules/@angular-devkit/schematics/node_modules/tslib	package-lock.json	/^    "node_modules\/@angular-devkit\/schematics\/node_modules\/tslib": {$/;"	o	object:packages
 node_modules/@angular/animations	package-lock.json	/^    "node_modules\/@angular\/animations": {$/;"	o	object:packages
+node_modules/@angular/cdk	package-lock.json	/^    "node_modules\/@angular\/cdk": {$/;"	o	object:packages
+node_modules/@angular/cdk/node_modules/parse5	package-lock.json	/^    "node_modules\/@angular\/cdk\/node_modules\/parse5": {$/;"	o	object:packages
 node_modules/@angular/cli	package-lock.json	/^    "node_modules\/@angular\/cli": {$/;"	o	object:packages
 node_modules/@angular/cli/node_modules/resolve	package-lock.json	/^    "node_modules\/@angular\/cli\/node_modules\/resolve": {$/;"	o	object:packages
 node_modules/@angular/cli/node_modules/uuid	package-lock.json	/^    "node_modules\/@angular\/cli\/node_modules\/uuid": {$/;"	o	object:packages
@@ -14670,6 +14840,12 @@ node_modules/@babel/traverse/node_modules/@babel/generator	package-lock.json	/^ 
 node_modules/@babel/traverse/node_modules/source-map	package-lock.json	/^    "node_modules\/@babel\/traverse\/node_modules\/source-map": {$/;"	o	object:packages
 node_modules/@babel/types	package-lock.json	/^    "node_modules\/@babel\/types": {$/;"	o	object:packages
 node_modules/@discoveryjs/json-ext	package-lock.json	/^    "node_modules\/@discoveryjs\/json-ext": {$/;"	o	object:packages
+node_modules/@fortawesome/angular-fontawesome	package-lock.json	/^    "node_modules\/@fortawesome\/angular-fontawesome": {$/;"	o	object:packages
+node_modules/@fortawesome/fontawesome-common-types	package-lock.json	/^    "node_modules\/@fortawesome\/fontawesome-common-types": {$/;"	o	object:packages
+node_modules/@fortawesome/fontawesome-svg-core	package-lock.json	/^    "node_modules\/@fortawesome\/fontawesome-svg-core": {$/;"	o	object:packages
+node_modules/@fortawesome/free-brands-svg-icons	package-lock.json	/^    "node_modules\/@fortawesome\/free-brands-svg-icons": {$/;"	o	object:packages
+node_modules/@fortawesome/free-regular-svg-icons	package-lock.json	/^    "node_modules\/@fortawesome\/free-regular-svg-icons": {$/;"	o	object:packages
+node_modules/@fortawesome/free-solid-svg-icons	package-lock.json	/^    "node_modules\/@fortawesome\/free-solid-svg-icons": {$/;"	o	object:packages
 node_modules/@istanbuljs/schema	package-lock.json	/^    "node_modules\/@istanbuljs\/schema": {$/;"	o	object:packages
 node_modules/@jsdevtools/coverage-istanbul-loader	package-lock.json	/^    "node_modules\/@jsdevtools\/coverage-istanbul-loader": {$/;"	o	object:packages
 node_modules/@ngtools/webpack	package-lock.json	/^    "node_modules\/@ngtools\/webpack": {$/;"	o	object:packages
@@ -16141,7 +16317,6 @@ node_modules/yargs/node_modules/strip-ansi	package-lock.json	/^    "node_modules
 node_modules/yn	package-lock.json	/^    "node_modules\/yn": {$/;"	o	object:packages
 node_modules/yocto-queue	package-lock.json	/^    "node_modules\/yocto-queue": {$/;"	o	object:packages
 node_modules/zone.js	package-lock.json	/^    "node_modules\/zone.js": {$/;"	o	object:packages
-nombre	src/app/interfaces/prototipo.ts	/^  nombre: string;$/;"	p	interface:DatosPersonales
 nopt	package-lock.json	/^        "nopt": "^5.0.0",$/;"	s	object:dependencies.node-gyp.requires
 nopt	package-lock.json	/^        "nopt": "^5.0.0",$/;"	s	object:packages.node_modules/node-gyp.dependencies
 nopt	package-lock.json	/^        "nopt": "bin\/nopt.js"$/;"	s	object:packages.node_modules/nopt.bin
@@ -16247,7 +16422,6 @@ nth-check	package-lock.json	/^    "nth-check": {$/;"	o	object:dependencies
 number-is-nan	package-lock.json	/^            "number-is-nan": "^1.0.0"$/;"	s	object:dependencies.gauge.dependencies.is-fullwidth-code-point.requires
 number-is-nan	package-lock.json	/^        "number-is-nan": "^1.0.0"$/;"	s	object:packages.node_modules/gauge/node_modules/is-fullwidth-code-point.dependencies
 number-is-nan	package-lock.json	/^    "number-is-nan": {$/;"	o	object:dependencies
-numero	src/app/interfaces/prototipo.ts	/^    numero: number;$/;"	p	interface:Prestamos
 oauth-sign	package-lock.json	/^        "oauth-sign": "~0.9.0",$/;"	s	object:dependencies.request.requires
 oauth-sign	package-lock.json	/^        "oauth-sign": "~0.9.0",$/;"	s	object:packages.node_modules/request.dependencies
 oauth-sign	package-lock.json	/^    "oauth-sign": {$/;"	o	object:dependencies
@@ -16356,6 +16530,7 @@ optional	package-lock.json	/^              "optional": true,$/;"	b	object:depend
 optional	package-lock.json	/^              "optional": true,$/;"	b	object:dependencies.watchpack-chokidar2.dependencies.fill-range.dependencies.extend-shallow
 optional	package-lock.json	/^              "optional": true,$/;"	b	object:dependencies.watchpack-chokidar2.dependencies.glob-parent.dependencies.is-glob
 optional	package-lock.json	/^              "optional": true,$/;"	b	object:dependencies.watchpack-chokidar2.dependencies.is-number.dependencies.kind-of
+optional	package-lock.json	/^          "optional": true$/;"	b	object:dependencies.@angular/cdk.dependencies.parse5
 optional	package-lock.json	/^          "optional": true$/;"	b	object:dependencies.less.dependencies.semver
 optional	package-lock.json	/^          "optional": true$/;"	b	object:dependencies.less.dependencies.source-map
 optional	package-lock.json	/^          "optional": true$/;"	b	object:dependencies.watchpack-chokidar2.dependencies.binary-extensions
@@ -16378,6 +16553,7 @@ optional	package-lock.json	/^          "optional": true,$/;"	b	object:dependenci
 optional	package-lock.json	/^          "optional": true,$/;"	b	object:dependencies.watchpack-chokidar2.dependencies.to-regex-range
 optional	package-lock.json	/^      "optional": true$/;"	b	object:dependencies.fsevents
 optional	package-lock.json	/^      "optional": true$/;"	b	object:dependencies.image-size
+optional	package-lock.json	/^      "optional": true$/;"	b	object:packages.node_modules/@angular/cdk/node_modules/parse5
 optional	package-lock.json	/^      "optional": true,$/;"	b	object:dependencies.encoding
 optional	package-lock.json	/^      "optional": true,$/;"	b	object:dependencies.needle
 optional	package-lock.json	/^      "optional": true,$/;"	b	object:dependencies.watchpack-chokidar2
@@ -16411,6 +16587,7 @@ optional	package-lock.json	/^      "optional": true,$/;"	b	object:packages.node_
 optional	package-lock.json	/^      "optional": true,$/;"	b	object:packages.node_modules/watchpack-chokidar2/node_modules/string_decoder
 optional	package-lock.json	/^      "optional": true,$/;"	b	object:packages.node_modules/watchpack-chokidar2/node_modules/to-regex-range
 optional	package-lock.json	/^      "optional": true,$/;"	b	object:packages.node_modules/webpack-dev-server/node_modules/fsevents
+optionalDependencies	package-lock.json	/^      "optionalDependencies": {$/;"	o	object:packages.node_modules/@angular/cdk
 optionalDependencies	package-lock.json	/^      "optionalDependencies": {$/;"	o	object:packages.node_modules/chokidar
 optionalDependencies	package-lock.json	/^      "optionalDependencies": {$/;"	o	object:packages.node_modules/less
 optionalDependencies	package-lock.json	/^      "optionalDependencies": {$/;"	o	object:packages.node_modules/minipass-fetch
@@ -16452,7 +16629,7 @@ os-tmpdir	package-lock.json	/^        "os-tmpdir": "~1.0.1"$/;"	s	object:package
 os-tmpdir	package-lock.json	/^        "os-tmpdir": "~1.0.2"$/;"	s	object:dependencies.tmp.requires
 os-tmpdir	package-lock.json	/^        "os-tmpdir": "~1.0.2"$/;"	s	object:packages.node_modules/tmp.dependencies
 os-tmpdir	package-lock.json	/^    "os-tmpdir": {$/;"	o	object:dependencies
-otrosDatos	src/app/interfaces/prototipo.ts	/^  otrosDatos: OtrosDatos;$/;"	p	interface:EstadoCuenta
+otros_datos_component_1	src/app/dist/app.module.js	/^var otros_datos_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/otros-datos\/ot/;"	v
 outDir	e2e/tsconfig.json	/^    "outDir": "..\/out-tsc\/e2e",$/;"	s	object:compilerOptions
 outDir	tsconfig.app.json	/^    "outDir": ".\/out-tsc\/app",$/;"	s	object:compilerOptions
 outDir	tsconfig.json	/^    "outDir": ".\/dist\/out-tsc",$/;"	s	object:compilerOptions
@@ -16509,7 +16686,6 @@ pacote	package-lock.json	/^        "pacote": "11.2.4",$/;"	s	object:packages.nod
 pacote	package-lock.json	/^        "pacote": "lib\/bin.js"$/;"	s	object:packages.node_modules/pacote.bin
 pacote	package-lock.json	/^    "pacote": {$/;"	o	object:dependencies
 page	e2e/src/app.e2e-spec.ts	/^  let page: AppPage;$/;"	v
-pagoMin	src/app/interfaces/prototipo.ts	/^    pagoMin: number;$/;"	p	interface:Tarjetas
 pako	package-lock.json	/^        "pako": "~1.0.2",$/;"	s	object:dependencies.jszip.requires
 pako	package-lock.json	/^        "pako": "~1.0.2",$/;"	s	object:packages.node_modules/jszip.dependencies
 pako	package-lock.json	/^        "pako": "~1.0.5"$/;"	s	object:dependencies.browserify-zlib.requires
@@ -16537,6 +16713,8 @@ parse-json	package-lock.json	/^    "parse-json": {$/;"	o	object:dependencies
 parse-node-version	package-lock.json	/^        "parse-node-version": "^1.0.1",$/;"	s	object:dependencies.less.requires
 parse-node-version	package-lock.json	/^        "parse-node-version": "^1.0.1",$/;"	s	object:packages.node_modules/less.dependencies
 parse-node-version	package-lock.json	/^    "parse-node-version": {$/;"	o	object:dependencies
+parse5	package-lock.json	/^        "parse5": "^5.0.0"$/;"	s	object:packages.node_modules/@angular/cdk.optionalDependencies
+parse5	package-lock.json	/^        "parse5": "^5.0.0",$/;"	s	object:dependencies.@angular/cdk.requires
 parse5	package-lock.json	/^        "parse5": "^6.0.1"$/;"	s	object:dependencies.parse5-htmlparser2-tree-adapter.requires
 parse5	package-lock.json	/^        "parse5": "^6.0.1"$/;"	s	object:dependencies.parse5-sax-parser.requires
 parse5	package-lock.json	/^        "parse5": "^6.0.1"$/;"	s	object:packages.node_modules/parse5-htmlparser2-tree-adapter.dependencies
@@ -16545,6 +16723,7 @@ parse5	package-lock.json	/^        "parse5": "^6.0.1",$/;"	s	object:dependencies
 parse5	package-lock.json	/^        "parse5": "^6.0.1",$/;"	s	object:dependencies.parse5-html-rewriting-stream.requires
 parse5	package-lock.json	/^        "parse5": "^6.0.1",$/;"	s	object:packages.node_modules/critters.dependencies
 parse5	package-lock.json	/^        "parse5": "^6.0.1",$/;"	s	object:packages.node_modules/parse5-html-rewriting-stream.dependencies
+parse5	package-lock.json	/^        "parse5": {$/;"	o	object:dependencies.@angular/cdk.dependencies
 parse5	package-lock.json	/^    "parse5": {$/;"	o	object:dependencies
 parse5-html-rewriting-stream	package-lock.json	/^        "parse5-html-rewriting-stream": "6.0.1",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 parse5-html-rewriting-stream	package-lock.json	/^        "parse5-html-rewriting-stream": "6.0.1",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
@@ -16625,6 +16804,8 @@ pbkdf2	package-lock.json	/^        "pbkdf2": "^3.0.3",$/;"	s	object:dependencies
 pbkdf2	package-lock.json	/^        "pbkdf2": "^3.0.3",$/;"	s	object:packages.node_modules/crypto-browserify.dependencies
 pbkdf2	package-lock.json	/^        "pbkdf2": "^3.0.3",$/;"	s	object:packages.node_modules/parse-asn1.dependencies
 pbkdf2	package-lock.json	/^    "pbkdf2": {$/;"	o	object:dependencies
+peerDependencies	package-lock.json	/^      "peerDependencies": {$/;"	o	object:packages.node_modules/@angular/cdk
+peerDependencies	package-lock.json	/^      "peerDependencies": {$/;"	o	object:packages.node_modules/@fortawesome/angular-fontawesome
 peerDependencies	package-lock.json	/^      "peerDependencies": {$/;"	o	object:packages.node_modules/primeng
 performance-now	package-lock.json	/^        "performance-now": "^2.1.0",$/;"	s	object:dependencies.request.requires
 performance-now	package-lock.json	/^        "performance-now": "^2.1.0",$/;"	s	object:packages.node_modules/request.dependencies
@@ -16638,7 +16819,8 @@ picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:depende
 picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:packages.node_modules/fast-glob.dependencies
 picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:packages.node_modules/readdirp.dependencies
 picomatch	package-lock.json	/^    "picomatch": {$/;"	o	object:dependencies
-pideDatosUsuario	src/app/servicios/fondo.service.ts	/^  pideDatosUsuario(identificador: number) {$/;"	m	class:FondoService
+pideDatoUsuario	src/app/servicios/dist/fondo.service.js	/^    FondoService.prototype.pideDatoUsuario = function () {$/;"	m	class:FondoService
+pideDatoUsuario	src/app/servicios/fondo.service.ts	/^  pideDatoUsuario(): Observable<EstadoCuenta> {$/;"	m	class:FondoService
 pify	package-lock.json	/^            "pify": "^2.0.0",$/;"	s	object:dependencies.del.dependencies.globby.requires
 pify	package-lock.json	/^            "pify": "^2.0.0",$/;"	s	object:dependencies.protractor.dependencies.del.requires
 pify	package-lock.json	/^            "pify": "^2.0.0",$/;"	s	object:dependencies.protractor.dependencies.globby.requires
@@ -16676,6 +16858,7 @@ pkg-dir	package-lock.json	/^        "pkg-dir": "^4.1.0"$/;"	s	object:packages.no
 pkg-dir	package-lock.json	/^        "pkg-dir": {$/;"	o	object:dependencies.import-local.dependencies
 pkg-dir	package-lock.json	/^        "pkg-dir": {$/;"	o	object:dependencies.webpack.dependencies
 pkg-dir	package-lock.json	/^    "pkg-dir": {$/;"	o	object:dependencies
+platform_browser_1	src/app/dist/app.module.js	/^var platform_browser_1 = require("@angular\/platform-browser");$/;"	v
 pnp-webpack-plugin	package-lock.json	/^        "pnp-webpack-plugin": "1.6.4",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 pnp-webpack-plugin	package-lock.json	/^        "pnp-webpack-plugin": "1.6.4",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
 pnp-webpack-plugin	package-lock.json	/^    "pnp-webpack-plugin": {$/;"	o	object:dependencies
@@ -16970,9 +17153,12 @@ postcss-value-parser	package-lock.json	/^        "postcss-value-parser": {$/;"	o
 postcss-value-parser	package-lock.json	/^    "postcss-value-parser": {$/;"	o	object:dependencies
 prefix	angular.json	/^      "prefix": "app",$/;"	s	object:projects.estadoCuenta
 prestamos	src/app/interfaces/prototipo.ts	/^  prestamos: Prestamos[];$/;"	p	interface:EstadoCuenta
+prestamos_component_1	src/app/dist/app.module.js	/^var prestamos_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/prestamos\/presta/;"	v
 pretty-bytes	package-lock.json	/^        "pretty-bytes": "^5.3.0"$/;"	s	object:dependencies.critters.requires
 pretty-bytes	package-lock.json	/^        "pretty-bytes": "^5.3.0"$/;"	s	object:packages.node_modules/critters.dependencies
 pretty-bytes	package-lock.json	/^    "pretty-bytes": {$/;"	o	object:dependencies
+prime_ng_module_1	src/app/dist/app-routing.module.js	/^var prime_ng_module_1 = require(".\/modulos\/prime-ng\/prime-ng.module");$/;"	v
+prime_ng_module_1	src/app/dist/app.module.js	/^var prime_ng_module_1 = require(".\/modulos\/prime-ng\/prime-ng.module");$/;"	v
 primeflex	package-lock.json	/^        "primeflex": "^2.0.0",$/;"	s	object:packages..dependencies
 primeflex	package-lock.json	/^    "primeflex": {$/;"	o	object:dependencies
 primeflex	package.json	/^    "primeflex": "^2.0.0",$/;"	s	object:dependencies
@@ -17025,9 +17211,10 @@ process-nextick-args	package-lock.json	/^    "process-nextick-args": {$/;"	o	obj
 production	angular.json	/^            "production": {$/;"	o	object:projects.estadoCuenta.architect.build.configurations
 production	angular.json	/^            "production": {$/;"	o	object:projects.estadoCuenta.architect.e2e.configurations
 production	angular.json	/^            "production": {$/;"	o	object:projects.estadoCuenta.architect.serve.configurations
+products	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.ts	/^  products: any[] = [$/;"	p	class:DatosLaboralesComponent
+products	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  products: any[] = [$/;"	p	class:PrestamosComponent
 projectType	angular.json	/^      "projectType": "application",$/;"	s	object:projects.estadoCuenta
 projects	angular.json	/^  "projects": {$/;"	o
-promedio	src/app/interfaces/prototipo.ts	/^    promedio: number;$/;"	p	interface:Prestamos
 promise-inflight	package-lock.json	/^            "promise-inflight": "^1.0.1",$/;"	s	object:dependencies.webpack.dependencies.cacache.requires
 promise-inflight	package-lock.json	/^        "promise-inflight": "^1.0.1",$/;"	s	object:dependencies.@npmcli/git.requires
 promise-inflight	package-lock.json	/^        "promise-inflight": "^1.0.1",$/;"	s	object:dependencies.cacache.requires
@@ -17117,6 +17304,15 @@ queue-microtask	package-lock.json	/^        "queue-microtask": "^1.2.2"$/;"	s	ob
 queue-microtask	package-lock.json	/^        "queue-microtask": "^1.2.2"$/;"	s	object:packages.node_modules/run-parallel.dependencies
 queue-microtask	package-lock.json	/^    "queue-microtask": {$/;"	o	object:dependencies
 quotemark	tslint.json	/^    "quotemark": [$/;"	a	object:rules
+r	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/dist/app-routing.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/dist/app.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/servicios/dist/estado-cuenta.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
+r	src/app/servicios/dist/fondo.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
 randombytes	package-lock.json	/^            "randombytes": "^2.1.0"$/;"	s	object:dependencies.webpack.dependencies.serialize-javascript.requires
 randombytes	package-lock.json	/^        "randombytes": "^2.0.0"$/;"	s	object:dependencies.diffie-hellman.requires
 randombytes	package-lock.json	/^        "randombytes": "^2.0.0"$/;"	s	object:packages.node_modules/diffie-hellman.dependencies
@@ -17228,7 +17424,6 @@ readdirp	package-lock.json	/^        "readdirp": "~3.5.0"$/;"	s	object:packages.
 readdirp	package-lock.json	/^        "readdirp": {$/;"	o	object:dependencies.watchpack-chokidar2.dependencies
 readdirp	package-lock.json	/^        "readdirp": {$/;"	o	object:dependencies.webpack-dev-server.dependencies
 readdirp	package-lock.json	/^    "readdirp": {$/;"	o	object:dependencies
-refPend	src/app/interfaces/prototipo.ts	/^    refPend: any;$/;"	p	interface:Tarjetas
 reflect-metadata	package-lock.json	/^        "reflect-metadata": "^0.1.2",$/;"	s	object:dependencies.@angular/compiler-cli.requires
 reflect-metadata	package-lock.json	/^        "reflect-metadata": "^0.1.2",$/;"	s	object:packages.node_modules/@angular/compiler-cli.dependencies
 reflect-metadata	package-lock.json	/^    "reflect-metadata": {$/;"	o	object:dependencies
@@ -17709,6 +17904,7 @@ requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angu
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular-devkit/core
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular-devkit/schematics
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular/animations
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular/cdk
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular/cli
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular/common
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@angular/compiler
@@ -17806,6 +18002,11 @@ requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@babe
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@babel/template
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@babel/traverse
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@babel/types
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@fortawesome/angular-fontawesome
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@fortawesome/fontawesome-svg-core
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@fortawesome/free-brands-svg-icons
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@fortawesome/free-regular-svg-icons
+requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@fortawesome/free-solid-svg-icons
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@jsdevtools/coverage-istanbul-loader
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@ngtools/webpack
 requires	package-lock.json	/^      "requires": {$/;"	o	object:dependencies.@nodelib/fs.scandir
@@ -18603,6 +18804,7 @@ resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org
 resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/p-locate\/-\/p-locate-3.0.0.tgz",$/;"	s	object:dependencies.yargs.dependencies.p-locate
 resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/p-map\/-\/p-map-2.1.0.tgz",$/;"	s	object:dependencies.del.dependencies.p-map
 resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/parse-json\/-\/parse-json-5.2.0.tgz",$/;"	s	object:dependencies.postcss-loader.dependencies.parse-json
+resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/parse5\/-\/parse5-5.1.1.tgz",$/;"	s	object:dependencies.@angular/cdk.dependencies.parse5
 resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/path-exists\/-\/path-exists-3.0.0.tgz",$/;"	s	object:dependencies.import-local.dependencies.path-exists
 resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/path-exists\/-\/path-exists-3.0.0.tgz",$/;"	s	object:dependencies.webpack.dependencies.path-exists
 resolved	package-lock.json	/^          "resolved": "https:\/\/registry.npmjs.org\/path-exists\/-\/path-exists-3.0.0.tgz",$/;"	s	object:dependencies.yargs.dependencies.path-exists
@@ -18936,6 +19138,8 @@ resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@a
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular-devkit\/schematics\/-\/schematics-11.2/;"	s	object:packages.node_modules/@angular-devkit/schematics
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/animations\/-\/animations-11.2.6.tgz"/;"	s	object:dependencies.@angular/animations
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/animations\/-\/animations-11.2.6.tgz"/;"	s	object:packages.node_modules/@angular/animations
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/cdk\/-\/cdk-11.2.7.tgz",$/;"	s	object:dependencies.@angular/cdk
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/cdk\/-\/cdk-11.2.7.tgz",$/;"	s	object:packages.node_modules/@angular/cdk
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/cli\/-\/cli-11.2.5.tgz",$/;"	s	object:dependencies.@angular/cli
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/cli\/-\/cli-11.2.5.tgz",$/;"	s	object:packages.node_modules/@angular/cli
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@angular\/common\/-\/common-11.2.6.tgz",$/;"	s	object:dependencies.@angular/common
@@ -19149,6 +19353,18 @@ resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@b
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@babel\/types\/-\/types-7.13.12.tgz",$/;"	s	object:packages.node_modules/@babel/types
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@discoveryjs\/json-ext\/-\/json-ext-0.5.2.tgz",$/;"	s	object:dependencies.@discoveryjs/json-ext
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@discoveryjs\/json-ext\/-\/json-ext-0.5.2.tgz",$/;"	s	object:packages.node_modules/@discoveryjs/json-ext
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/angular-fontawesome\/-\/angular-f/;"	s	object:dependencies.@fortawesome/angular-fontawesome
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/angular-fontawesome\/-\/angular-f/;"	s	object:packages.node_modules/@fortawesome/angular-fontawesome
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/fontawesome-common-types\/-\/font/;"	s	object:dependencies.@fortawesome/fontawesome-common-types
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/fontawesome-common-types\/-\/font/;"	s	object:packages.node_modules/@fortawesome/fontawesome-common-types
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/fontawesome-svg-core\/-\/fontawes/;"	s	object:dependencies.@fortawesome/fontawesome-svg-core
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/fontawesome-svg-core\/-\/fontawes/;"	s	object:packages.node_modules/@fortawesome/fontawesome-svg-core
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/free-brands-svg-icons\/-\/free-br/;"	s	object:dependencies.@fortawesome/free-brands-svg-icons
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/free-brands-svg-icons\/-\/free-br/;"	s	object:packages.node_modules/@fortawesome/free-brands-svg-icons
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/free-regular-svg-icons\/-\/free-r/;"	s	object:dependencies.@fortawesome/free-regular-svg-icons
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/free-regular-svg-icons\/-\/free-r/;"	s	object:packages.node_modules/@fortawesome/free-regular-svg-icons
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/free-solid-svg-icons\/-\/free-sol/;"	s	object:dependencies.@fortawesome/free-solid-svg-icons
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@fortawesome\/free-solid-svg-icons\/-\/free-sol/;"	s	object:packages.node_modules/@fortawesome/free-solid-svg-icons
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@istanbuljs\/schema\/-\/schema-0.1.3.tgz",$/;"	s	object:dependencies.@istanbuljs/schema
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@istanbuljs\/schema\/-\/schema-0.1.3.tgz",$/;"	s	object:packages.node_modules/@istanbuljs/schema
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/@jsdevtools\/coverage-istanbul-loader\/-\/cover/;"	s	object:dependencies.@jsdevtools/coverage-istanbul-loader
@@ -20626,6 +20842,7 @@ resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/pa
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parse5-htmlparser2-tree-adapter\/-\/parse5-html/;"	s	object:packages.node_modules/parse5-htmlparser2-tree-adapter
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parse5-sax-parser\/-\/parse5-sax-parser-6.0.1.t/;"	s	object:dependencies.parse5-sax-parser
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parse5-sax-parser\/-\/parse5-sax-parser-6.0.1.t/;"	s	object:packages.node_modules/parse5-sax-parser
+resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parse5\/-\/parse5-5.1.1.tgz",$/;"	s	object:packages.node_modules/@angular/cdk/node_modules/parse5
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parse5\/-\/parse5-6.0.1.tgz",$/;"	s	object:dependencies.parse5
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parse5\/-\/parse5-6.0.1.tgz",$/;"	s	object:packages.node_modules/parse5
 resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/parseurl\/-\/parseurl-1.3.3.tgz",$/;"	s	object:dependencies.parseurl
@@ -21564,6 +21781,7 @@ resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/zo
 restore-cursor	package-lock.json	/^        "restore-cursor": "^3.1.0"$/;"	s	object:dependencies.cli-cursor.requires
 restore-cursor	package-lock.json	/^        "restore-cursor": "^3.1.0"$/;"	s	object:packages.node_modules/cli-cursor.dependencies
 restore-cursor	package-lock.json	/^    "restore-cursor": {$/;"	o	object:dependencies
+resumen_general_component_1	src/app/dist/app.module.js	/^var resumen_general_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/resumen-gen/;"	v
 ret	package-lock.json	/^        "ret": "~0.1.10"$/;"	s	object:dependencies.safe-regex.requires
 ret	package-lock.json	/^        "ret": "~0.1.10"$/;"	s	object:packages.node_modules/safe-regex.dependencies
 ret	package-lock.json	/^    "ret": {$/;"	o	object:dependencies
@@ -21651,7 +21869,9 @@ rollup	package-lock.json	/^        "rollup": "2.38.4",$/;"	s	object:packages.nod
 rollup	package-lock.json	/^        "rollup": "dist\/bin\/rollup"$/;"	s	object:packages.node_modules/rollup.bin
 rollup	package-lock.json	/^    "rollup": {$/;"	o	object:dependencies
 root	angular.json	/^      "root": "",$/;"	s	object:projects.estadoCuenta
+router_1	src/app/dist/app-routing.module.js	/^var router_1 = require("@angular\/router");$/;"	v
 routes	src/app/app-routing.module.ts	/^const routes: Routes = [$/;"	C
+routes	src/app/dist/app-routing.module.js	/^var routes = [];$/;"	v
 rules	tslint.json	/^  "rules": {$/;"	o
 rulesDirectory	tslint.json	/^  "rulesDirectory": [$/;"	a
 run-async	package-lock.json	/^        "run-async": "^2.4.0",$/;"	s	object:dependencies.inquirer.requires
@@ -21688,6 +21908,7 @@ rxjs	package-lock.json	/^        "rxjs": {$/;"	o	object:dependencies.@angular-de
 rxjs	package-lock.json	/^        "rxjs": {$/;"	o	object:dependencies.@angular-devkit/schematics.dependencies
 rxjs	package-lock.json	/^    "rxjs": {$/;"	o	object:dependencies
 rxjs	package.json	/^    "rxjs": "~6.6.0",$/;"	s	object:dependencies
+rxjs_1	src/app/servicios/dist/fondo.service.js	/^var rxjs_1 = require("rxjs");$/;"	v
 safe-buffer	package-lock.json	/^                "safe-buffer": "~5.1.0"$/;"	s	object:dependencies.node-libs-browser.dependencies.readable-stream.dependencies.string_decoder.requires
 safe-buffer	package-lock.json	/^            "safe-buffer": "~5.1.0"$/;"	s	object:dependencies.are-we-there-yet.dependencies.string_decoder.requires
 safe-buffer	package-lock.json	/^            "safe-buffer": "~5.1.0"$/;"	s	object:dependencies.concat-stream.dependencies.string_decoder.requires
@@ -21828,10 +22049,6 @@ safer-buffer	package-lock.json	/^        "safer-buffer": "^2.1.2",$/;"	s	object:
 safer-buffer	package-lock.json	/^        "safer-buffer": "~2.1.0"$/;"	s	object:dependencies.asn1.requires
 safer-buffer	package-lock.json	/^        "safer-buffer": "~2.1.0"$/;"	s	object:packages.node_modules/asn1.dependencies
 safer-buffer	package-lock.json	/^    "safer-buffer": {$/;"	o	object:dependencies
-salario	src/app/interfaces/prototipo.ts	/^  salario: number;$/;"	p	interface:DatosLaborales
-saldo	src/app/interfaces/prototipo.ts	/^    saldo: number;$/;"	p	interface:Prestamos
-saldo	src/app/interfaces/prototipo.ts	/^    saldo: number;$/;"	p	interface:Tarjetas
-saldoCuota	src/app/interfaces/prototipo.ts	/^    saldoCuota: number;$/;"	p	interface:Tarjetas
 sass	package-lock.json	/^        "sass": "1.32.6",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 sass	package-lock.json	/^        "sass": "1.32.6",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
 sass	package-lock.json	/^        "sass": "sass.js"$/;"	s	object:packages.node_modules/sass.bin
@@ -22090,8 +22307,6 @@ signal-exit	package-lock.json	/^    "signal-exit": {$/;"	o	object:dependencies
 simple-swizzle	package-lock.json	/^        "simple-swizzle": "^0.2.2"$/;"	s	object:dependencies.color-string.requires
 simple-swizzle	package-lock.json	/^        "simple-swizzle": "^0.2.2"$/;"	s	object:packages.node_modules/color-string.dependencies
 simple-swizzle	package-lock.json	/^    "simple-swizzle": {$/;"	o	object:dependencies
-sistema	src/app/interfaces/prototipo.ts	/^    sistema: string;$/;"	p	interface:Prestamos
-situacion	src/app/interfaces/prototipo.ts	/^    situacion: string;$/;"	p	interface:Prestamos
 slash	package-lock.json	/^        "slash": "^3.0.0"$/;"	s	object:dependencies.globby.requires
 slash	package-lock.json	/^        "slash": "^3.0.0"$/;"	s	object:packages.node_modules/globby.dependencies
 slash	package-lock.json	/^    "slash": {$/;"	o	object:dependencies
@@ -22133,8 +22348,6 @@ snapdragon-node	package-lock.json	/^    "snapdragon-node": {$/;"	o	object:depend
 snapdragon-util	package-lock.json	/^        "snapdragon-util": "^3.0.1"$/;"	s	object:dependencies.snapdragon-node.requires
 snapdragon-util	package-lock.json	/^        "snapdragon-util": "^3.0.1"$/;"	s	object:packages.node_modules/snapdragon-node.dependencies
 snapdragon-util	package-lock.json	/^    "snapdragon-util": {$/;"	o	object:dependencies
-socio	src/app/interfaces/prototipo.ts	/^  socio: number;$/;"	p	interface:DatosPersonales
-socio	src/app/interfaces/prototipo.ts	/^  socio: {$/;"	p	interface:OtrosDatos
 socket.io	package-lock.json	/^        "socket.io": "^3.1.0",$/;"	s	object:dependencies.karma.requires
 socket.io	package-lock.json	/^        "socket.io": "^3.1.0",$/;"	s	object:packages.node_modules/karma.dependencies
 socket.io	package-lock.json	/^    "socket.io": {$/;"	o	object:dependencies
@@ -22799,8 +23012,7 @@ svgo	package-lock.json	/^    "svgo": {$/;"	o	object:dependencies
 symbol-observable	package-lock.json	/^        "symbol-observable": "3.0.0",$/;"	s	object:dependencies.@angular/cli.requires
 symbol-observable	package-lock.json	/^        "symbol-observable": "3.0.0",$/;"	s	object:packages.node_modules/@angular/cli.dependencies
 symbol-observable	package-lock.json	/^    "symbol-observable": {$/;"	o	object:dependencies
-tGar	src/app/interfaces/prototipo.ts	/^    tGar: string;$/;"	p	interface:Prestamos
-tPmo	src/app/interfaces/prototipo.ts	/^    tPmo: string;$/;"	p	interface:Prestamos
+table_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var table_1 = require("primeng\/table");$/;"	v
 tapable	package-lock.json	/^            "tapable": "^1.0.0"$/;"	s	object:dependencies.webpack.dependencies.enhanced-resolve.requires
 tapable	package-lock.json	/^        "tapable": "^1.0.0"$/;"	s	object:packages.node_modules/webpack/node_modules/enhanced-resolve.dependencies
 tapable	package-lock.json	/^        "tapable": "^1.1.3",$/;"	s	object:dependencies.webpack.requires
@@ -22818,11 +23030,7 @@ tar	package-lock.json	/^        "tar": "^6.1.0"$/;"	s	object:packages.node_modul
 tar	package-lock.json	/^    "tar": {$/;"	o	object:dependencies
 target	e2e/tsconfig.json	/^    "target": "es2018",$/;"	s	object:compilerOptions
 target	tsconfig.json	/^    "target": "es2015",$/;"	s	object:compilerOptions
-tarjetas	src/app/interfaces/prototipo.ts	/^  tarjetas: Tarjetas[];$/;"	p	interface:EstadoCuenta
-tasaInt	src/app/interfaces/prototipo.ts	/^    tasaInt: number;$/;"	p	interface:Prestamos
-tasaPref	src/app/interfaces/prototipo.ts	/^  tasaPref: number;$/;"	p	interface:DatosPersonales
-telefono	src/app/interfaces/prototipo.ts	/^  telefono: number;$/;"	p	interface:DatosPersonales
-telefono	src/app/interfaces/prototipo.ts	/^  telefono: string;$/;"	p	interface:DatosLaborales
+tarjetas_component_1	src/app/dist/app.module.js	/^var tarjetas_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/tarjetas\/tarjetas/;"	v
 teleport	package-lock.json	/^        "teleport": ">=0.2.0"$/;"	s	object:packages.node_modules/protractor/node_modules/q.engines
 teleport	package-lock.json	/^        "teleport": ">=0.2.0"$/;"	s	object:packages.node_modules/q.engines
 template-banana-in-box	tslint.json	/^    "template-banana-in-box": true,$/;"	b	object:rules
@@ -22968,6 +23176,7 @@ tslib	package-lock.json	/^        "tslib": "^1.9.0"$/;"	s	object:packages.node_m
 tslib	package-lock.json	/^        "tslib": "^1.9.0"$/;"	s	object:packages.node_modules/chrome-trace-event.dependencies
 tslib	package-lock.json	/^        "tslib": "^1.9.0"$/;"	s	object:packages.node_modules/rxjs.dependencies
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.@angular/animations.requires
+tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.@angular/cdk.requires
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.@angular/common.requires
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.@angular/compiler.requires
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.@angular/core.requires
@@ -22978,6 +23187,7 @@ tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.@a
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.primeng.requires
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:dependencies.zone.js.requires
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:packages.node_modules/@angular/animations.dependencies
+tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:packages.node_modules/@angular/cdk.dependencies
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:packages.node_modules/@angular/common.dependencies
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:packages.node_modules/@angular/compiler.dependencies
 tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:packages.node_modules/@angular/core.dependencies
@@ -22990,6 +23200,8 @@ tslib	package-lock.json	/^        "tslib": "^2.0.0"$/;"	s	object:packages.node_m
 tslib	package-lock.json	/^        "tslib": "^2.0.0",$/;"	s	object:dependencies.@angular/compiler-cli.requires
 tslib	package-lock.json	/^        "tslib": "^2.0.0",$/;"	s	object:packages..dependencies
 tslib	package-lock.json	/^        "tslib": "^2.0.0",$/;"	s	object:packages.node_modules/@angular/compiler-cli.dependencies
+tslib	package-lock.json	/^        "tslib": "^2.1.0"$/;"	s	object:dependencies.@fortawesome/angular-fontawesome.requires
+tslib	package-lock.json	/^        "tslib": "^2.1.0"$/;"	s	object:packages.node_modules/@fortawesome/angular-fontawesome.dependencies
 tslib	package-lock.json	/^        "tslib": {$/;"	o	object:dependencies.@angular-devkit/architect.dependencies
 tslib	package-lock.json	/^        "tslib": {$/;"	o	object:dependencies.@angular-devkit/build-angular.dependencies
 tslib	package-lock.json	/^        "tslib": {$/;"	o	object:dependencies.@angular-devkit/build-webpack.dependencies
@@ -23054,7 +23266,6 @@ typescript	package.json	/^    "typescript": "~4.1.2"$/;"	s	object:devDependencie
 ua-parser-js	package-lock.json	/^        "ua-parser-js": "^0.7.23",$/;"	s	object:dependencies.karma.requires
 ua-parser-js	package-lock.json	/^        "ua-parser-js": "^0.7.23",$/;"	s	object:packages.node_modules/karma.dependencies
 ua-parser-js	package-lock.json	/^    "ua-parser-js": {$/;"	o	object:dependencies
-ultimoAntecedente	src/app/interfaces/prototipo.ts	/^  ultimoAntecedente: string;$/;"	p	interface:DatosPersonales
 unbox-primitive	package-lock.json	/^        "unbox-primitive": "^1.0.0"$/;"	s	object:dependencies.es-abstract.requires
 unbox-primitive	package-lock.json	/^        "unbox-primitive": "^1.0.0"$/;"	s	object:packages.node_modules/es-abstract.dependencies
 unbox-primitive	package-lock.json	/^    "unbox-primitive": {$/;"	o	object:dependencies
@@ -23151,7 +23362,7 @@ use	package-lock.json	/^        "use": "^3.1.0"$/;"	s	object:packages.node_modul
 use	package-lock.json	/^    "use": {$/;"	o	object:dependencies
 use-lifecycle-interface	tslint.json	/^    "use-lifecycle-interface": true,$/;"	b	object:rules
 use-pipe-transform-interface	tslint.json	/^    "use-pipe-transform-interface": true,$/;"	b	object:rules
-usuario	src/app/servicios/fondo.service.ts	/^    const usuario = identificador.toString();$/;"	C	method:FondoService.pideDatosUsuario
+usuario	src/app/servicios/fondo.service.ts	/^    const usuario = identificador.toString();$/;"	C	method:FondoService.x
 util	package-lock.json	/^        "util": "0.10.3"$/;"	s	object:dependencies.assert.requires
 util	package-lock.json	/^        "util": "0.10.3"$/;"	s	object:packages.node_modules/assert.dependencies
 util	package-lock.json	/^        "util": "^0.11.0",$/;"	s	object:dependencies.node-libs-browser.requires
@@ -23700,6 +23911,7 @@ version	package-lock.json	/^          "version": "5.0.0",$/;"	s	object:dependenc
 version	package-lock.json	/^          "version": "5.0.5",$/;"	s	object:dependencies.@angular/compiler-cli.dependencies.y18n
 version	package-lock.json	/^          "version": "5.0.5",$/;"	s	object:dependencies.karma.dependencies.y18n
 version	package-lock.json	/^          "version": "5.1.0",$/;"	s	object:dependencies.is-descriptor.dependencies.kind-of
+version	package-lock.json	/^          "version": "5.1.1",$/;"	s	object:dependencies.@angular/cdk.dependencies.parse5
 version	package-lock.json	/^          "version": "5.1.1",$/;"	s	object:dependencies.webpack.dependencies.lru-cache
 version	package-lock.json	/^          "version": "5.2.0",$/;"	s	object:dependencies.cliui.dependencies.strip-ansi
 version	package-lock.json	/^          "version": "5.2.0",$/;"	s	object:dependencies.esrecurse.dependencies.estraverse
@@ -23997,6 +24209,8 @@ version	package-lock.json	/^      "version": "0.2.2",$/;"	s	object:packages.node
 version	package-lock.json	/^      "version": "0.2.2",$/;"	s	object:packages.node_modules/simple-swizzle
 version	package-lock.json	/^      "version": "0.2.3",$/;"	s	object:dependencies.json-schema
 version	package-lock.json	/^      "version": "0.2.3",$/;"	s	object:packages.node_modules/json-schema
+version	package-lock.json	/^      "version": "0.2.35",$/;"	s	object:dependencies.@fortawesome/fontawesome-common-types
+version	package-lock.json	/^      "version": "0.2.35",$/;"	s	object:packages.node_modules/@fortawesome/fontawesome-common-types
 version	package-lock.json	/^      "version": "0.2.4",$/;"	s	object:dependencies.asn1
 version	package-lock.json	/^      "version": "0.2.4",$/;"	s	object:packages.node_modules/asn1
 version	package-lock.json	/^      "version": "0.2.5",$/;"	s	object:packages.node_modules/class-utils/node_modules/define-property
@@ -24163,7 +24377,9 @@ version	package-lock.json	/^      "version": "0.7.3",$/;"	s	object:packages.node
 version	package-lock.json	/^      "version": "0.7.3",$/;"	s	object:packages.node_modules/source-map
 version	package-lock.json	/^      "version": "0.7.4",$/;"	s	object:dependencies.websocket-driver
 version	package-lock.json	/^      "version": "0.7.4",$/;"	s	object:packages.node_modules/websocket-driver
+version	package-lock.json	/^      "version": "0.8.2",$/;"	s	object:dependencies.@fortawesome/angular-fontawesome
 version	package-lock.json	/^      "version": "0.8.2",$/;"	s	object:dependencies.snapdragon
+version	package-lock.json	/^      "version": "0.8.2",$/;"	s	object:packages.node_modules/@fortawesome/angular-fontawesome
 version	package-lock.json	/^      "version": "0.8.2",$/;"	s	object:packages.node_modules/snapdragon
 version	package-lock.json	/^      "version": "0.9.0",$/;"	s	object:dependencies.oauth-sign
 version	package-lock.json	/^      "version": "0.9.0",$/;"	s	object:packages.node_modules/oauth-sign
@@ -24737,6 +24953,8 @@ version	package-lock.json	/^      "version": "1.2.3",$/;"	s	object:packages.node
 version	package-lock.json	/^      "version": "1.2.3",$/;"	s	object:packages.node_modules/queue-microtask
 version	package-lock.json	/^      "version": "1.2.3",$/;"	s	object:packages.node_modules/resolve-url-loader/node_modules/loader-utils
 version	package-lock.json	/^      "version": "1.2.3",$/;"	s	object:packages.node_modules/stream-each
+version	package-lock.json	/^      "version": "1.2.35",$/;"	s	object:dependencies.@fortawesome/fontawesome-svg-core
+version	package-lock.json	/^      "version": "1.2.35",$/;"	s	object:packages.node_modules/@fortawesome/fontawesome-svg-core
 version	package-lock.json	/^      "version": "1.2.4",$/;"	s	object:dependencies.minipass-pipeline
 version	package-lock.json	/^      "version": "1.2.4",$/;"	s	object:dependencies.sax
 version	package-lock.json	/^      "version": "1.2.4",$/;"	s	object:packages.node_modules/minipass-pipeline
@@ -24982,6 +25200,8 @@ version	package-lock.json	/^      "version": "11.2.6",$/;"	s	object:packages.nod
 version	package-lock.json	/^      "version": "11.2.6",$/;"	s	object:packages.node_modules/@angular/platform-browser
 version	package-lock.json	/^      "version": "11.2.6",$/;"	s	object:packages.node_modules/@angular/platform-browser-dynamic
 version	package-lock.json	/^      "version": "11.2.6",$/;"	s	object:packages.node_modules/@angular/router
+version	package-lock.json	/^      "version": "11.2.7",$/;"	s	object:dependencies.@angular/cdk
+version	package-lock.json	/^      "version": "11.2.7",$/;"	s	object:packages.node_modules/@angular/cdk
 version	package-lock.json	/^      "version": "11.3.1",$/;"	s	object:dependencies.primeng
 version	package-lock.json	/^      "version": "11.3.1",$/;"	s	object:packages.node_modules/primeng
 version	package-lock.json	/^      "version": "12.0.4",$/;"	s	object:packages.node_modules/webpack/node_modules/cacache
@@ -26020,6 +26240,7 @@ version	package-lock.json	/^      "version": "5.1.0",$/;"	s	object:dependencies.
 version	package-lock.json	/^      "version": "5.1.0",$/;"	s	object:packages.node_modules/icss-utils
 version	package-lock.json	/^      "version": "5.1.0",$/;"	s	object:packages.node_modules/is-descriptor/node_modules/kind-of
 version	package-lock.json	/^      "version": "5.1.0",$/;"	s	object:packages.node_modules/wrap-ansi
+version	package-lock.json	/^      "version": "5.1.1",$/;"	s	object:packages.node_modules/@angular/cdk/node_modules/parse5
 version	package-lock.json	/^      "version": "5.1.1",$/;"	s	object:packages.node_modules/webpack/node_modules/lru-cache
 version	package-lock.json	/^      "version": "5.1.2",$/;"	s	object:dependencies.glob-parent
 version	package-lock.json	/^      "version": "5.1.2",$/;"	s	object:dependencies.onetime
@@ -26033,6 +26254,12 @@ version	package-lock.json	/^      "version": "5.1.6",$/;"	s	object:dependencies.
 version	package-lock.json	/^      "version": "5.1.6",$/;"	s	object:packages.node_modules/parse-asn1
 version	package-lock.json	/^      "version": "5.1.8",$/;"	s	object:dependencies.ignore
 version	package-lock.json	/^      "version": "5.1.8",$/;"	s	object:packages.node_modules/ignore
+version	package-lock.json	/^      "version": "5.15.3",$/;"	s	object:dependencies.@fortawesome/free-brands-svg-icons
+version	package-lock.json	/^      "version": "5.15.3",$/;"	s	object:dependencies.@fortawesome/free-regular-svg-icons
+version	package-lock.json	/^      "version": "5.15.3",$/;"	s	object:dependencies.@fortawesome/free-solid-svg-icons
+version	package-lock.json	/^      "version": "5.15.3",$/;"	s	object:packages.node_modules/@fortawesome/free-brands-svg-icons
+version	package-lock.json	/^      "version": "5.15.3",$/;"	s	object:packages.node_modules/@fortawesome/free-regular-svg-icons
+version	package-lock.json	/^      "version": "5.15.3",$/;"	s	object:packages.node_modules/@fortawesome/free-solid-svg-icons
 version	package-lock.json	/^      "version": "5.2.0",$/;"	s	object:dependencies.bn.js
 version	package-lock.json	/^      "version": "5.2.0",$/;"	s	object:packages.node_modules/bn.js
 version	package-lock.json	/^      "version": "5.2.0",$/;"	s	object:packages.node_modules/cliui/node_modules/strip-ansi
@@ -26620,6 +26847,8 @@ ws	package-lock.json	/^        "ws": "~7.4.2"$/;"	s	object:dependencies.engine.i
 ws	package-lock.json	/^        "ws": "~7.4.2"$/;"	s	object:packages.node_modules/engine.io.dependencies
 ws	package-lock.json	/^        "ws": {$/;"	o	object:dependencies.engine.io.dependencies
 ws	package-lock.json	/^    "ws": {$/;"	o	object:dependencies
+x	src/app/servicios/dist/fondo.service.js	/^    FondoService.prototype.x = function (identificador) {$/;"	m	class:FondoService
+x	src/app/servicios/fondo.service.ts	/^  x(identificador: number) {$/;"	m	class:FondoService
 xml2js	package-lock.json	/^            "xml2js": "^0.4.17"$/;"	s	object:dependencies.protractor.dependencies.webdriver-manager.requires
 xml2js	package-lock.json	/^        "xml2js": "^0.4.17"$/;"	s	object:dependencies.selenium-webdriver.requires
 xml2js	package-lock.json	/^        "xml2js": "^0.4.17"$/;"	s	object:packages.node_modules/protractor/node_modules/webdriver-manager.dependencies

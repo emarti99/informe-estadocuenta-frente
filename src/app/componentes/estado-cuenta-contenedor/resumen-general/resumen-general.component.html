@@ -1,3 +1,25 @@
-<app-datos-personales
-  class="p-grid col-4 p-jc-between p-shadow-2 p-mb-4"
-></app-datos-personales>
+<app-datos-personales [estadoCuenta]="estadoCuenta" class="p-grid p-col-6 p-shadow-2 p-mb-0 cajasResumenPersonal">
+</app-datos-personales>
+<section class="p-grid p-col-2  p-shadow-2 p-jc-center p-mb-0 cajasResumenPersonal promedioPrestamos">
+  <h2 class='p-mb-0 '>Estado de prestamos</h2>
+  <p class='p-mb-0 p-mt-0'>No esta al día</p>
+</section>
+<section class="p-grid p-col-4 p-mb-0 cajasResumenPersonal">
+  <div class="p-grid p-col-12 p-mb-3 p-shadow-2 cajaAporte">
+    <h2 class="p-col-12 p-mb-0">Aportes</h2>
+    <div class="p-col-4 " *ngFor="let item of aporteContenido">
+      <p class="p-mb-1 p-mt-0"> {{ item.titulo }} </p>
+      <p class="aporteContenidoValor p-mb-1"> {{ item.valor }} </p>
+    </div>
+  </div>
+  <div class="p-grid p-col p-jc-between cajaCalificacion">
+    <div class="p-d-inline-flex p-flex-column p-col-5 p-shadow-3 p-ai-center">
+      <p>Ultima Calificación</p>
+      <p class='p-mb-1 p-mt-1'>B3</p>
+    </div>
+    <div class="p-d-inline-flex p-flex-column p-col-5 p-shadow-3 p-ai-center">
+      <p>Promedio de Calificación</p>
+      <p class='p-mb-1 p-mt-1'>1.77</p>
+    </div>
+  </div>
+</section>

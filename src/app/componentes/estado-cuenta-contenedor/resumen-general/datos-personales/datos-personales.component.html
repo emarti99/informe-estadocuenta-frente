@@ -1,0 +1,24 @@
+<div class="p-col p-grid p-jc-between">
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaUno" class="p-mb-2">
+      {{ item.titulo }}
+    </p>
+  </div>
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaUno" class="p-mb-1 datosPersonales">
+      {{ item.valor }}
+    </p>
+  </div>
+</div>
+<div class="p-col p-grid p-jc-between">
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaDos" class="p-mb-2">
+      {{ item.titulo }}
+    </p>
+  </div>
+  <div class="box p-col p-d-inline-flex p-flex-column">
+    <p *ngFor="let item of DatoPersonalColumnaDos" class="p-mb-1 datosPersonales">
+      {{ item.valor }}
+    </p>
+  </div>
+</div>
