@@ -1,11 +1,24 @@
-<app-buscador class="p-grid col-12 p-jc-center p-mb-5 p-shadow-2"></app-buscador>
-<!-- <app-estado-cuenta-contenedor class="p-d-flex p-flex-column p-col-12 p-mb-2 p-jc-center estadoCuentaContenedor" ></app-estado-cuenta-contenedor> -->
-<app-resumen-general [estadoCuenta]="estadoCuenta" class="p-grid p-jc-between p-mb-5 resumenGeneral vertical-container">
-</app-resumen-general>
-<app-datos-laborales [estadoCuenta]="estadoCuenta" class="p-grid p-jc-center p-mb-5 p-shadow-2 resumenGeneral vertical-container">
-</app-datos-laborales>
-<app-prestamos [estadoCuenta]="estadoCuenta"
-  class="p-grid p-shadow-2 p-mb-5 p-jc-center resumenGeneral" ></app-prestamos>
-<app-tarjetas></app-tarjetas>
-<app-otros-datos></app-otros-datos>
-<app-icono-estado-cuenta></app-icono-estado-cuenta>
+<app-buscador class="p-grid col-12 p-jc-center p-mb-2 p-shadow-2"></app-buscador>
+
+<p-scrollTop [threshold]="2"></p-scrollTop>
+
+<div class="contenedor-principal p-grid p-dir-col p-m-auto">
+
+  <app-resumen-general *ngIf="estadoCuenta" [estadoCuenta]="estadoCuenta"
+    class="p-grid p-jc-between p-mb-4 p-mt-4 vertical-container resumenGeneral">
+  </app-resumen-general>
+
+  <app-datos-laborales [estadoCuenta]="estadoCuenta"
+    class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
+  </app-datos-laborales>
+
+
+  <app-prestamos [prestamos]="estadoCuenta.prestamos"
+    class="p-d-inline-flex p-flex-column p-ai-center p-shadow-2 p-mb-4 resumenGeneral">
+  </app-prestamos>
+
+  <app-tarjetas *ngIf="estadoCuenta" [tarjetas]="estadoCuenta.tarjetas"
+    class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2"></app-tarjetas>
+  <app-otros-datos></app-otros-datos>
+
+</div>

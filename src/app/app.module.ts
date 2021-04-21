@@ -5,6 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import localePy from '@angular/common/locales/es-PY';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePy, 'py');
+
+
 import { AppComponent } from './app.component';
 import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { DatosPersonalesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component';
@@ -13,7 +18,7 @@ import { PrestamosComponent } from './componentes/estado-cuenta-contenedor/prest
 import { TarjetasComponent } from './componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component';
 import { OtrosDatosComponent } from './componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component';
 import { ResumenGeneralComponent } from './componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component';
-import { IconoEstadoCuentaComponent } from './componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component';
+
 
 
 @NgModule({
@@ -26,7 +31,6 @@ import { IconoEstadoCuentaComponent } from './componentes/compartido/icono-estad
     TarjetasComponent,
     OtrosDatosComponent,
     ResumenGeneralComponent,
-    IconoEstadoCuentaComponent,
   ],
   imports: [
     BrowserModule,

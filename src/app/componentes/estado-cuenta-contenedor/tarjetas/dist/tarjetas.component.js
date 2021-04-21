@@ -6,25 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.DatosPersonalesComponent = void 0;
+exports.TarjetasComponent = void 0;
 var core_1 = require("@angular/core");
-var DatosPersonalesComponent = /** @class */ (function () {
-    function DatosPersonalesComponent() {
+var TarjetasComponent = /** @class */ (function () {
+    function TarjetasComponent() {
     }
-    DatosPersonalesComponent.prototype.ngOnInit = function () { };
+    TarjetasComponent.prototype.ngOnInit = function () {
+    };
     __decorate([
         core_1.Input()
-    ], DatosPersonalesComponent.prototype, "datosPersonales");
-    __decorate([
-        core_1.Input()
-    ], DatosPersonalesComponent.prototype, "estado");
-    DatosPersonalesComponent = __decorate([
+    ], TarjetasComponent.prototype, "tarjetas");
+    TarjetasComponent = __decorate([
         core_1.Component({
-            selector: 'app-datos-personales',
-            templateUrl: './datos-personales.component.html',
-            styleUrls: ['./datos-personales.component.scss']
+            selector: 'app-tarjetas',
+            templateUrl: './tarjetas.component.html',
+            styleUrls: ['./tarjetas.component.scss']
         })
-    ], DatosPersonalesComponent);
-    return DatosPersonalesComponent;
+    ], TarjetasComponent);
+    return TarjetasComponent;
 }());
-exports.DatosPersonalesComponent = DatosPersonalesComponent;
+exports.TarjetasComponent = TarjetasComponent;

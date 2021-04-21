@@ -1,0 +1,20 @@
+.contenedor-principal {
+  width: clamp(50vw, 1280px, 95vw);
+}
+.contenedor-principal .resumenGeneral {
+  margin: 0;
+}
+
+:host ::ng-deep .custom-scrolltop {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+}
+:host ::ng-deep .custom-scrolltop:hover {
+  background-color: var(--primary-color);
+}
+:host ::ng-deep .custom-scrolltop .p-scrolltop-icon {
+  font-size: 1rem;
+  color: var(--primary-color-text);
+}

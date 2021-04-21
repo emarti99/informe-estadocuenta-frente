@@ -10,39 +10,12 @@ exports.PrestamosComponent = void 0;
 var core_1 = require("@angular/core");
 var animations_1 = require("@angular/animations");
 var PrestamosComponent = /** @class */ (function () {
-    // products: any[] = [
-    //   {
-    //     fechaAprobacion: '27/03/2020',
-    //     monto: 35000000,
-    //     cuota: '20 / 30',
-    //     tipoPrestamo: 'Emergencia',
-    //     calificacion: 'B3',
-    //     presentaAtraso: 'No',
-    //     estadoPrestamo: 'terminado',
-    //     orders: [{
-    //       numero : 14,
-    //       saldoRestante: 2500000,
-    //       sistema: 'Alemán',
-    //       interes: 21,
-    //       tipoGarantia: 'x',
-    //       situacion: 'Y',
-    //       adelantado: '350000',
-    //       enFecha: '12/04/2020',
-    //       atrasoMax: 3,
-    //       vencimiento: 'mañana',
-    //       observacion: 'Hola que tal como estas',
-    //       socioGarante: 23424,
-    //       nombreGarante: 'Zulma Gomez'
-    //     }]
-    //   },
-    // ];
     function PrestamosComponent() {
     }
-    PrestamosComponent.prototype.ngOnInit = function () {
-    };
+    PrestamosComponent.prototype.ngOnInit = function () { };
     __decorate([
         core_1.Input()
-    ], PrestamosComponent.prototype, "estadoCuenta");
+    ], PrestamosComponent.prototype, "prestamos");
     PrestamosComponent = __decorate([
         core_1.Component({
             selector: 'app-prestamos',

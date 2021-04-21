@@ -1,23 +1,37 @@
-<h2>Prestamos</h2>
-<p-table *ngIf="estadoCuenta" [value]="estadoCuenta.prestamos" dataKey="fechaAprobacion">
+<h2>Préstamos</h2>
+<p-table [value]="prestamos" dataKey="PRES_socio_nro_pmo" styleClass="p-datatable-sm">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="PRES_socio_aprobado_fecha">Fecha aprobación <p-sortIcon field="PRES_socio_aprobado_fecha">
+      <th pSortableColumn="PRES_socio_aprobado_fecha" style="width: 12rem">Fecha aprobación <p-sortIcon
+          field="PRES_socio_aprobado_fecha">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="PRES_socio_monto">Monto <p-sortIcon field="PRES_socio_monto"></p-sortIcon>
-      </th>
-      <th pSortableColumn="PRES_socio_cuotas">Cuotas <p-sortIcon field="PRES_socio_cuotas"></p-sortIcon>
-      </th>
-      <th pSortableColumn="PRES_socio_tipo_pmo">Tipo de prestamo <p-sortIcon field="PRES_socio_tipo_pmo"></p-sortIcon>
-      </th>
-      <th pSortableColumn="PRES_socio_calificacion">Calificación <p-sortIcon field="PRES_socio_calificacion">
+      <th pSortableColumn="PRES_socio_monto" style="width: 7rem">Monto <p-sortIcon field="PRES_socio_monto">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="PRES_socio_atrasos">Presenta atrasos <p-sortIcon field="PRES_socio_atrasos"></p-sortIcon>
+      <th pSortableColumn="PRES_socio_sistema" style="width: 7rem">Sistema <p-sortIcon field="PRES_socio_sistema">
+        </p-sortIcon>
       </th>
-      <th pSortableColumn="inventoryStatus">Estado <p-sortIcon field="inventoryStatus"></p-sortIcon>
+      <th pSortableColumn="PRES_socio_cuotas" style="width: 7rem">Cuotas <p-sortIcon field="PRES_socio_cuotas">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="PRES_socio_tipo_pmo" style="width: 8rem">Tipo <p-sortIcon field="PRES_socio_tipo_pmo">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="PRES_socio_calificacion" style="width: 9rem">Calificación <p-sortIcon
+          field="PRES_socio_calificacion">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="PRES_socio_atrasos" style="width: 7rem">Atrasos <p-sortIcon field="PRES_socio_atrasos">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="PRES_socio_fecha_vencimiento" style="width: 9rem">Vencimiento <p-sortIcon
+          field="PRES_socio_fecha_vencimiento">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="PRES_socio_estado_pmo" style="width: 7rem">Estado <p-sortIcon field="PRES_socio_estado_pmo">
+        </p-sortIcon>
       </th>
     </tr>
   </ng-template>
@@ -29,11 +43,13 @@
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
       <td>{{product.PRES_socio_aprobado_fecha}}</td>
-      <td>{{product.PRES_socio_monto | currency:'PYG'}}</td>
+      <td>{{product.PRES_socio_monto | number:'1.0':'py'}}</td>
+      <td>{{product.PRES_socio_sistema}}</td>
       <td>{{product.PRES_socio_cuotas}}</td>
       <td>{{product.PRES_socio_tipo_pmo}}</td>
       <td>{{product.PRES_socio_calificacion}}</td>
-      <td>{{product.PRES_socio_atrasos}}</td>  
+      <td>{{product.PRES_socio_atrasos}}</td>
+      <td>{{product.PRES_socio_fecha_vencimiento}}</td>
       <td><span
           [class]="'product-badge status-' + product.PRES_socio_estado_pmo.toLowerCase()">{{product.PRES_socio_estado_pmo}}</span>
       </td>
@@ -41,61 +57,47 @@
   </ng-template>
   <ng-template pTemplate="rowexpansion" let-product>
     <tr>
-      <td colspan="12">
+      <td colspan="10">
         <div class="p-p-3">
-          <p-table [value]="estadoCuenta.prestamos" dataKey="PRES_socio_mas_detalles">
+          <p-table [value]="prestamos" dataKey="PRES_socio_mas_detalles.PRDE_socio_nro_pmo" styleClass="p-datatable-sm">
             <ng-template pTemplate="header">
     <tr>
-      <th pSortableColumn="numero">Numero 
+      <th pSortableColumn="saldo restante">Saldo restante
       </th>
-      <th pSortableColumn="saldoRestante">Saldo restante 
+      <th pSortableColumn="interes">Tasa de interes
       </th>
-      <th pSortableColumn="sistema">Sistema 
+      <th pSortableColumn="situacion">Situación
       </th>
-      <th pSortableColumn="interes">Tasa de interes 
+      <th pSortableColumn="adelantado">Cuotas adelantadas
       </th>
-      <th pSortableColumn="tipoGarantia">Tipo de Garantía 
+      <th pSortableColumn="enFecha">Cuotas en fecha
       </th>
-      <th pSortableColumn="situacion">Situación 
+      <th pSortableColumn="maxAtraso">Max días de atraso
       </th>
-      <th pSortableColumn="adelantado">Adelantado 
+      <th pSortableColumn="tipoGarantia">Tipo de Garantía
       </th>
-      <th pSortableColumn="enFecha">En fecha 
+      <th pSortableColumn="socioGarante">Socio garante
       </th>
-      <th pSortableColumn="maxAtraso">Maximos días de atraso 
+      <th style="width: 10rem" pSortableColumn="observacion">Observación
       </th>
-      <th pSortableColumn="vencimiento">Vencimiento 
-      </th>
-      <th pSortableColumn="observacion">Observación 
-      </th>
-      <th pSortableColumn="socioGarante">Socio garante 
-      </th>
-      <th pSortableColumn="nombreGarante">Nombre garante 
-      </th>
-      <!-- <th style="width: 4rem"></th> -->
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr *ngIf="rowIndex == 1">
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_nro_pmo}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_saldo_restante}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_sistema}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_tasa_interes}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_tipo_garantia}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_situacion}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_adelantado}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_en_fecha}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_max_dias_atraso}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_fecha_vencimiento}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_observacion}}</td>
+      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_tipo_garantia}}</td>
       <td>{{product.PRES_socio_mas_detalles.PRDE_socio_socio_garante}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_nombre_garante}}</td>
-     
+      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_observacion}}</td>
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">
     <tr>
-      <td colspan="6">There are no order for this product yet.</td>
+      <td colspan="6">No hay datos.</td>
     </tr>
   </ng-template>
 </p-table>

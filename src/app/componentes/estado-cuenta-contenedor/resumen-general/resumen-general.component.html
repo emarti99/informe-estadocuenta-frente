@@ -1,25 +1,48 @@
-<app-datos-personales [estadoCuenta]="estadoCuenta" class="p-grid p-col-6 p-shadow-2 p-mb-0 cajasResumenPersonal">
+<!-- Seccion/informacion del socio -->
+<app-datos-personales [datosPersonales]="estadoCuenta.datos_personales.DAPG_socio_datos" [estado]="true"
+  class="p-d-flex p-col-12 p-mb-3 p-jc-between">
 </app-datos-personales>
-<section class="p-grid p-col-2  p-shadow-2 p-jc-center p-mb-0 cajasResumenPersonal promedioPrestamos">
-  <h2 class='p-mb-0 '>Estado de prestamos</h2>
-  <p class='p-mb-0 p-mt-0'>No esta al día</p>
+
+<!-- Seccion/informacion del conyuge -->
+<app-datos-personales [datosPersonales]="estadoCuenta.datos_personales.DAPG_conyuge_datos" [estado]="false"
+  class="p-d-flex p-col-12 p-mb-3 p-jc-between">
+</app-datos-personales>
+
+<!-- Seccion/Tasa preferida -->
+<section class="p-inline-d-flex p-col-2 p-shadow-2">
+  <h2>Tasa preferida</h2>
+  <p class="datos-primarios">-2</p>
+  <p class="datos-secundarios p-mb-0 p-mt-0">sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
 </section>
-<section class="p-grid p-col-4 p-mb-0 cajasResumenPersonal">
-  <div class="p-grid p-col-12 p-mb-3 p-shadow-2 cajaAporte">
-    <h2 class="p-col-12 p-mb-0">Aportes</h2>
+
+<!-- Seccion/Prestamos al día -->
+<section class="p-inline-d-flex p-col-1.1 p-shadow-2 estadoPrestamo">
+  <h2>Préstamos al día</h2>
+  <p class="datos-primarios">Sí</p>
+</section>
+
+<!-- Seccion/Aportes -->
+<section class="p-inline-d-flex p-col-5 p-shadow-2">
+  <h2>Aportes</h2>
+  <div class="p-grid p-col-12">
     <div class="p-col-4 " *ngFor="let item of aporteContenido">
-      <p class="p-mb-1 p-mt-0"> {{ item.titulo }} </p>
-      <p class="aporteContenidoValor p-mb-1"> {{ item.valor }} </p>
+      <p class="p-mt-0"> {{ item.titulo }} </p>
+      <p class="datos-primarios p-mb-0"> {{ item.valor }} </p>
     </div>
   </div>
-  <div class="p-grid p-col p-jc-between cajaCalificacion">
-    <div class="p-d-inline-flex p-flex-column p-col-5 p-shadow-3 p-ai-center">
-      <p>Ultima Calificación</p>
-      <p class='p-mb-1 p-mt-1'>B3</p>
+</section>
+
+<!-- Seccion/Calificaciones -->
+<section class="p-inline-d-flex p-col-3 p-shadow-2">
+  <h2>Calificaciones</h2>
+  <div class="p-grid p-col-12 p-jc-between">
+    <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
+      <p class="p-mt-0">Ultima</p>
+      <p class="calificaciones p-mb-0 p-mt-0">B3</p>
     </div>
-    <div class="p-d-inline-flex p-flex-column p-col-5 p-shadow-3 p-ai-center">
-      <p>Promedio de Calificación</p>
-      <p class='p-mb-1 p-mt-1'>1.77</p>
+    <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
+      <p class="p-mt-0">Promedio</p>
+      <p class="calificaciones p-mb-0 p-mt-0">1.77</p>
     </div>
   </div>
 </section>

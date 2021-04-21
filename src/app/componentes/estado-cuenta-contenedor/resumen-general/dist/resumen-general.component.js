@@ -17,6 +17,17 @@ var ResumenGeneralComponent = /** @class */ (function () {
         ];
     }
     ResumenGeneralComponent.prototype.ngOnInit = function () {
+        console.log(this.estadoCuenta);
+        // this.socioDatos?.push(
+        //   [this.estadoCuenta?.datos_personales].map((elm: any) => {
+        //     return {
+        //       DAPE_nombre: elm.DAPE_nombre,
+        //       DAPE_cedula_nro: elm.DAPE_cedula_nro,
+        //       DAPE_direccion: elm.DAPE_direccion,
+        //       DAPE_telefono: elm.DAPE_telefono,
+        //     };
+        //   })
+        // );
     };
     __decorate([
         core_1.Input()

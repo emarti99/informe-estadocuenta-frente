@@ -8,41 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.DatosLaboralesComponent = void 0;
 var core_1 = require("@angular/core");
+var animations_1 = require("@angular/animations");
 var DatosLaboralesComponent = /** @class */ (function () {
     function DatosLaboralesComponent(_estadoCuenta) {
         this._estadoCuenta = _estadoCuenta;
     }
     DatosLaboralesComponent.prototype.ngOnInit = function () {
-        this.columnas = [
-            {
-                field: 'DALA_socio_empresa',
-                header: 'Empresa'
-            },
-            {
-                field: 'DALA_socio_direccion',
-                header: 'Dirección'
-            },
-            {
-                field: 'DALA_socio_telefono',
-                header: 'Telefono'
-            },
-            {
-                field: 'DALA_socio_salario',
-                header: 'Salario'
-            },
-            {
-                field: 'DALA_socio_fecha_ingreso',
-                header: 'Fech. Ingreso'
-            },
-            {
-                field: 'DALA_socio_fecha_egreso',
-                header: 'Fech. Egreso'
-            },
-            {
-                field: 'DALA_socio_fecha_grabacion',
-                header: 'Fecha. Grabación'
-            },
-        ];
     };
     __decorate([
         core_1.Input()
@@ -51,7 +22,20 @@ var DatosLaboralesComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'app-datos-laborales',
             templateUrl: './datos-laborales.component.html',
-            styleUrls: ['./datos-laborales.component.scss']
+            styleUrls: ['./datos-laborales.component.scss'],
+            animations: [
+                animations_1.trigger('rowExpansionTrigger', [
+                    animations_1.state('void', animations_1.style({
+                        transform: 'translateX(-10%)',
+                        opacity: 0
+                    })),
+                    animations_1.state('active', animations_1.style({
+                        transform: 'translateX(0)',
+                        opacity: 1
+                    })),
+                    animations_1.transition('* <=> *', animations_1.animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')),
+                ]),
+            ]
         })
     ], DatosLaboralesComponent);
     return DatosLaboralesComponent;

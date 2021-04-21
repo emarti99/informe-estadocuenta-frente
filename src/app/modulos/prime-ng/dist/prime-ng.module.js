@@ -12,21 +12,25 @@ var common_1 = require("@angular/common");
 var table_1 = require("primeng/table");
 var button_1 = require("primeng/button");
 var card_1 = require("primeng/card");
+var scrolltop_1 = require("primeng/scrolltop");
 var badge_1 = require("primeng/badge");
+var animations_1 = require("@angular/platform-browser/animations");
+var tooltip_1 = require("primeng/tooltip");
 var PrimeNgModule = /** @class */ (function () {
     function PrimeNgModule() {
     }
     PrimeNgModule = __decorate([
         core_1.NgModule({
             declarations: [],
-            imports: [
-                common_1.CommonModule,
-            ],
+            imports: [common_1.CommonModule],
             exports: [
                 table_1.TableModule,
                 button_1.ButtonModule,
                 card_1.CardModule,
-                badge_1.BadgeModule
+                badge_1.BadgeModule,
+                scrolltop_1.ScrollTopModule,
+                animations_1.BrowserAnimationsModule,
+                tooltip_1.TooltipModule,
             ]
         })
     ], PrimeNgModule);

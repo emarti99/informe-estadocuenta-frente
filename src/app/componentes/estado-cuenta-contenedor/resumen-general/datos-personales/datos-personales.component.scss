@@ -1,0 +1,61 @@
+.conyuge {
+  background: #EEEEEE;
+  border-radius: 5px;
+
+  .numero-socio {
+    color: #c63737;
+  }
+}
+
+.socio {
+  border-radius: 5px;
+
+  .numero-socio {
+    color: #256029;
+  }
+}
+
+.datos-personales {
+  flex-direction: column;
+
+  .nombre-apellido {
+    font-style: italic;
+    font-size: 1.8rem;
+  }
+
+  .datos-primarios {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .datos-secundarios {
+    font-size: small;
+  }
+
+  .caja-inferior {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    justify-content: flex-end;
+  }
+
+  .caja-superior {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    justify-content: flex-start;
+  }
+
+  .caja-derecha {
+    align-items: flex-end;
+  }
+
+  .caja-izquierda {
+    align-items: flex-start;
+  }
+
+  p {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+}

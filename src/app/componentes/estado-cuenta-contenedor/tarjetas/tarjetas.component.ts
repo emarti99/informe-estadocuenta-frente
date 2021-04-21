@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tarjetas } from 'src/app/interfaces/prototipo';
 
 @Component({
   selector: 'app-tarjetas',
   templateUrl: './tarjetas.component.html',
-  styleUrls: ['./tarjetas.component.scss']
+  styleUrls: ['./tarjetas.component.scss'],
 })
 export class TarjetasComponent implements OnInit {
+  @Input() tarjetas!: Tarjetas[];
 
-  constructor() { }
+
+  constructor() {}
 
   ngOnInit(): void {
+  
   }
-
 }

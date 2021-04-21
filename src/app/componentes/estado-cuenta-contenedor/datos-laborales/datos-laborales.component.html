@@ -1,20 +1,60 @@
 <h2>Datos laborales</h2>
-<div class="p-col-12">
-  <p-table *ngIf="estadoCuenta" [columns]="columnas" [value]="estadoCuenta.datos_laborales" 
-    styleClass="p-datatable-sm">
-    <ng-template pTemplate="header" let-columns>
-      <tr>
-        <th *ngFor="let col of columns">
-          {{col.header}}
-        </th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
-      <tr>
-        <td *ngFor="let col of columns">
-          {{rowData[col.field]}}
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
+<p-table *ngIf="estadoCuenta" [value]="estadoCuenta.datos_laborales" dataKey="DALA_socio_empresa"
+  styleClass="p-datatable-sm">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 2rem"></th>
+      <th pSortableColumn="DALA_socio_empresa">Empresa </th>
+      <th pSortableColumn="DALA_socio_salario">Salario <p-sortIcon field="DALA_socio_salario">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="DALA_socio_fecha_ingreso">Fecha de ingreso <p-sortIcon field="DALA_socio_fecha_ingreso">
+        </p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product let-expanded="expanded">
+    <tr>
+      <td>
+        <button type="button" pButton pRipple [pRowToggler]="product"
+          class="p-button-text p-button-rounded p-button-plain"
+          [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+      </td>
+      <td>{{product.DALA_socio_empresa}}</td>
+      <td>{{product.DALA_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+      <td>{{product.DALA_socio_fecha_ingreso}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="rowexpansion" let-product>
+    <tr>
+      <td colspan="4">
+        <div class="p-p-3">
+          <p-table [value]="estadoCuenta.datos_laborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm">
+            <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="DALA_socio_direccion">Dirección
+      </th>
+      <th pSortableColumn="DALA_socio_telefono">Teléfono
+      </th>
+      <th pSortableColumn="DALA_socio_fecha_egreso">Fecha de egreso
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowIndex="rowIndex">
+    <tr *ngIf="rowIndex == 1">
+      <td>{{product.DALA_socio_direccion}}</td>
+      <td>{{product.DALA_socio_telefono}}</td>
+      <td>{{product.DALA_socio_fecha_egreso}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="6">No hay datos.</td>
+    </tr>
+  </ng-template>
+</p-table>
 </div>
+</td>
+</tr>
+</ng-template>
+</p-table>

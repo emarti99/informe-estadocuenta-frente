@@ -13,6 +13,9 @@ var app_routing_module_1 = require("./app-routing.module");
 var http_1 = require("@angular/common/http");
 var prime_ng_module_1 = require("./modulos/prime-ng/prime-ng.module");
 var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
+var es_PY_1 = require("@angular/common/locales/es-PY");
+var common_1 = require("@angular/common");
+common_1.registerLocaleData(es_PY_1["default"], 'py');
 var app_component_1 = require("./app.component");
 var buscador_component_1 = require("./componentes/buscador/buscador.component");
 var datos_personales_component_1 = require("./componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component");
@@ -21,7 +24,6 @@ var prestamos_component_1 = require("./componentes/estado-cuenta-contenedor/pres
 var tarjetas_component_1 = require("./componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component");
 var otros_datos_component_1 = require("./componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component");
 var resumen_general_component_1 = require("./componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component");
-var icono_estado_cuenta_component_1 = require("./componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -36,7 +38,6 @@ var AppModule = /** @class */ (function () {
                 tarjetas_component_1.TarjetasComponent,
                 otros_datos_component_1.OtrosDatosComponent,
                 resumen_general_component_1.ResumenGeneralComponent,
-                icono_estado_cuenta_component_1.IconoEstadoCuentaComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

@@ -7,7 +7,7 @@ body {
   background-color: var(--surface-b);
   font-family: var(--font-family);
   color: var(--text-color);
-  padding: 0.8rem;
+  // padding: 0.2rem;
 }
 
 * {
@@ -19,36 +19,6 @@ body {
 .estadoCuentaContenedor {
   box-sizing: border-box;
   align-items: center;
-}
-
-.resumenGeneral {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-
-  .cajasResumenPersonal {
-    // text-align: center;
-    padding-bottom: 0;
-
-    .aporteContenidoValor {
-      font-weight: bold;
-    }
-
-
-    .cajaAporte {
-      padding: 0;
-      width: 103%;
-      text-align: center;
-    }
-
-    .cajaCalificacion {
-      padding: 0;
-
-      div {
-        text-align: center;
-        background-color: #feedaf;
-      }
-    }
-  }
 
   .promedioPrestamos {
     text-align: center;

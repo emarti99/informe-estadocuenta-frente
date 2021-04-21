@@ -1,1 +1,83 @@
-<p>tarjetas works!</p>
+<h2>Tarjetas</h2>
+<p-table  [value]="tarjetas" styleClass="p-datatable-sm">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th pTooltip="Linea de crédito">
+        Lin. Crédito
+      </th>
+      <th pTooltip="Linea especial">
+        Lin. Especial
+      </th>
+      <th pTooltip="Saldo">
+        Saldo
+      </th>
+      <th pTooltip="Pago Mínimo">
+        Pag. Mínimo
+      </th>
+      <th pTooltip="Ultimo pago">
+        Ult. Pago
+      </th>
+      <th pTooltip="Días de vencimiento">
+        Días de Venc.
+      </th>
+      <th pTooltip="Saldo cuota">
+        Saldo cuota
+      </th>
+      <th pTooltip="Fecha de vencimiento">
+        Fecha Venc.
+      </th>
+      <th pTooltip="Estado">
+        Estado
+      </th>
+      <th pTooltip="Refinanciación pendiente">
+        Ref. pendiente
+      </th>
+      <th pTooltip="Monto último pago">
+        Monto Ult. pago
+      </th>
+      <th pTooltip="Ajuste mínimo TC">
+        Ajuste Min. TC
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body"  let-campo>
+    <tr>
+      <td >
+        {{ campo.TARJ_linea_credito | number:'1.0':'py' }}
+      </td>
+      <td >
+        {{ campo.TARJ_linea_especial | number:'1.0':'py' }}
+      </td>
+      <td >
+        {{ campo.TARJ_saldo | number:'1.0':'py' }}
+      </td>
+      <td >
+        {{ campo.TARJ_pago_minimo | number:'1.0':'py' }}
+      </td>
+      <td >
+        {{ campo.TARJ_fecha_ultimo_pago }}
+      </td>
+      <td >
+        {{ campo.TARJ_dias_vencimiento }}
+      </td>
+      <td >
+        {{ campo.TARJ_saldo_cuota }}
+      </td>
+      <td >
+        {{ campo.TARJ_fecha_vencimiento }}
+      </td>
+      <td >
+        {{ campo.TARJ_estado }}
+      </td>
+      <td >
+        {{ campo.TARJ_refinanciamiento_pendiente | number:'1.0':'py' }}
+      </td>
+      <td >
+        {{ campo.TARJ_monto_ultimo_pago | number:'1.0':'py' }}
+      </td>
+      <td >
+        {{ campo.TARJ_ajuste_TCR }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
