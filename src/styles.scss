@@ -7,25 +7,9 @@ body {
   background-color: var(--surface-b);
   font-family: var(--font-family);
   color: var(--text-color);
-  // padding: 0.2rem;
 }
-
-* {
-
-  box-sizing: border-box;
-}
-
 
 .estadoCuentaContenedor {
   box-sizing: border-box;
   align-items: center;
-
-  .promedioPrestamos {
-    text-align: center;
-  }
-
-  .datosPersonales {
-    font-weight: bold;
-    text-align: right;
-  }
 }

@@ -9,8 +9,7 @@ exports.__esModule = true;
 exports.EstadoCuentaService = void 0;
 var core_1 = require("@angular/core");
 var EstadoCuentaService = /** @class */ (function () {
-    function EstadoCuentaService(_http) {
-        this._http = _http;
+    function EstadoCuentaService() {
     }
     EstadoCuentaService = __decorate([
         core_1.Injectable({

@@ -43,16 +43,16 @@
   <ng-template pTemplate="body"  let-campo>
     <tr>
       <td >
-        {{ campo.TARJ_linea_credito | number:'1.0':'py' }}
+        {{ campo.TARJ_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td >
-        {{ campo.TARJ_linea_especial | number:'1.0':'py' }}
+        {{ campo.TARJ_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td >
-        {{ campo.TARJ_saldo | number:'1.0':'py' }}
+        {{ campo.TARJ_saldo | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td >
-        {{ campo.TARJ_pago_minimo | number:'1.0':'py' }}
+        {{ campo.TARJ_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td >
         {{ campo.TARJ_fecha_ultimo_pago }}
@@ -70,10 +70,10 @@
         {{ campo.TARJ_estado }}
       </td>
       <td >
-        {{ campo.TARJ_refinanciamiento_pendiente | number:'1.0':'py' }}
+        {{ campo.TARJ_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td >
-        {{ campo.TARJ_monto_ultimo_pago | number:'1.0':'py' }}
+        {{ campo.TARJ_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td >
         {{ campo.TARJ_ajuste_TCR }}

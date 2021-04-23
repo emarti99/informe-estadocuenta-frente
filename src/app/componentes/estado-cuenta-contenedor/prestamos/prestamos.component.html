@@ -1,4 +1,7 @@
 <h2>Préstamos</h2>
+
+<!-- Tabla principal -->
+
 <p-table [value]="prestamos" dataKey="PRES_socio_nro_pmo" styleClass="p-datatable-sm">
   <ng-template pTemplate="header">
     <tr>
@@ -43,7 +46,7 @@
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
       <td>{{product.PRES_socio_aprobado_fecha}}</td>
-      <td>{{product.PRES_socio_monto | number:'1.0':'py'}}</td>
+      <td>{{product.PRES_socio_monto | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
       <td>{{product.PRES_socio_sistema}}</td>
       <td>{{product.PRES_socio_cuotas}}</td>
       <td>{{product.PRES_socio_tipo_pmo}}</td>
@@ -59,27 +62,21 @@
     <tr>
       <td colspan="10">
         <div class="p-p-3">
+
+          <!-- Tabla secundaria ( desplegable ) -->
+
           <p-table [value]="prestamos" dataKey="PRES_socio_mas_detalles.PRDE_socio_nro_pmo" styleClass="p-datatable-sm">
             <ng-template pTemplate="header">
     <tr>
-      <th pSortableColumn="saldo restante">Saldo restante
-      </th>
-      <th pSortableColumn="interes">Tasa de interes
-      </th>
-      <th pSortableColumn="situacion">Situación
-      </th>
-      <th pSortableColumn="adelantado">Cuotas adelantadas
-      </th>
-      <th pSortableColumn="enFecha">Cuotas en fecha
-      </th>
-      <th pSortableColumn="maxAtraso">Max días de atraso
-      </th>
-      <th pSortableColumn="tipoGarantia">Tipo de Garantía
-      </th>
-      <th pSortableColumn="socioGarante">Socio garante
-      </th>
-      <th style="width: 10rem" pSortableColumn="observacion">Observación
-      </th>
+      <th>Saldo restante </th>
+      <th>Tasa de interes </th>
+      <th>Situación </th>
+      <th>Cuotas adelantadas </th>
+      <th>Cuotas en fecha </th>
+      <th>Max días de atraso </th>
+      <th>Tipo de Garantía </th>
+      <th>Socio garante </th>
+      <th style="width: 10rem">Observación </th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">

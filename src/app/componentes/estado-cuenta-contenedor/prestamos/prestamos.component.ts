@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EstadoCuenta, Prestamos } from '../../../interfaces/prototipo';
+import { Prestamos } from '../../../interfaces/estadoCuenta.interface';
 import {
   trigger,
   state,

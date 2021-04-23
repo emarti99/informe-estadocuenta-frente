@@ -14,9 +14,10 @@
     color: #256029;
   }
 }
-
+.datos-personales-contenedor {
+  padding: 1rem;
+}
 .datos-personales {
-  flex-direction: column;
 
   .nombre-apellido {
     font-style: italic;

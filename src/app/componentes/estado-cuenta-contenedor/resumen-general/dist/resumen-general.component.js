@@ -8,30 +8,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ResumenGeneralComponent = void 0;
 var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var ResumenGeneralComponent = /** @class */ (function () {
     function ResumenGeneralComponent() {
-        this.aporteContenido = [
-            { titulo: 'Cant aporte', valor: '1.200.000' },
-            { titulo: 'Ult. Pagado', valor: '2/04/2021' },
-            { titulo: 'Cant Pendiente', valor: '540.000' },
-        ];
     }
     ResumenGeneralComponent.prototype.ngOnInit = function () {
-        console.log(this.estadoCuenta);
-        // this.socioDatos?.push(
-        //   [this.estadoCuenta?.datos_personales].map((elm: any) => {
-        //     return {
-        //       DAPE_nombre: elm.DAPE_nombre,
-        //       DAPE_cedula_nro: elm.DAPE_cedula_nro,
-        //       DAPE_direccion: elm.DAPE_direccion,
-        //       DAPE_telefono: elm.DAPE_telefono,
-        //     };
-        //   })
-        // );
+        this.aporteContenido = [
+            {
+                titulo: 'Cant aporte',
+                valor: common_1.formatCurrency(this.datosAnaliticos.DAAN_aportes_monto, 'py', '₲', 'PYG', '1.0')
+            },
+            {
+                titulo: 'Ult. Pagado',
+                valor: this.datosAnaliticos.DAAN_aportes_ult_pag
+            },
+            {
+                titulo: 'Cant Pendiente',
+                valor: common_1.formatCurrency(this.datosAnaliticos.DAAN_aportes_cant_pend, 'py', '₲', 'PYG', '1.0')
+            },
+        ];
     };
     __decorate([
         core_1.Input()
-    ], ResumenGeneralComponent.prototype, "estadoCuenta");
+    ], ResumenGeneralComponent.prototype, "datosPersonales");
+    __decorate([
+        core_1.Input()
+    ], ResumenGeneralComponent.prototype, "datosAnaliticos");
     ResumenGeneralComponent = __decorate([
         core_1.Component({
             selector: 'app-resumen-general',

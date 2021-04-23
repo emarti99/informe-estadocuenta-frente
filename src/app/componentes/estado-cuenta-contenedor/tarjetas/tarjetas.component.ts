@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Tarjetas } from 'src/app/interfaces/prototipo';
+import { Tarjetas } from 'src/app/interfaces/estadoCuenta.interface';
 
 @Component({
   selector: 'app-tarjetas',
@@ -8,7 +8,6 @@ import { Tarjetas } from 'src/app/interfaces/prototipo';
 })
 export class TarjetasComponent implements OnInit {
   @Input() tarjetas!: Tarjetas[];
-
 
   constructor() {}
 

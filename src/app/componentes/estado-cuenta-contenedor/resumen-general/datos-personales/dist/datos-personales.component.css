@@ -13,9 +13,10 @@
   color: #256029;
 }
 
-.datos-personales {
-  flex-direction: column;
+.datos-personales-contenedor {
+  padding: 1rem;
 }
+
 .datos-personales .nombre-apellido {
   font-style: italic;
   font-size: 1.8rem;

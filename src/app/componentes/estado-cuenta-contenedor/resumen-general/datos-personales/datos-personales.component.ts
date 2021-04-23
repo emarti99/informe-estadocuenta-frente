@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DatosPersonales } from 'src/app/interfaces/prototipo';
+import { DatosPersonales } from 'src/app/interfaces/estadoCuenta.interface';
 
 @Component({
   selector: 'app-datos-personales',

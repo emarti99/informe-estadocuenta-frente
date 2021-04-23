@@ -4,11 +4,12 @@
 
 <div class="contenedor-principal p-grid p-dir-col p-m-auto">
 
-  <app-resumen-general *ngIf="estadoCuenta" [estadoCuenta]="estadoCuenta"
+  <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
+    [datosAnaliticos]="estadoCuenta.datos_analiticos"
     class="p-grid p-jc-between p-mb-4 p-mt-4 vertical-container resumenGeneral">
   </app-resumen-general>
 
-  <app-datos-laborales [estadoCuenta]="estadoCuenta"
+  <app-datos-laborales [datosLaborales]="estadoCuenta.datos_laborales"
     class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
   </app-datos-laborales>
 
@@ -17,8 +18,11 @@
     class="p-d-inline-flex p-flex-column p-ai-center p-shadow-2 p-mb-4 resumenGeneral">
   </app-prestamos>
 
-  <app-tarjetas *ngIf="estadoCuenta" [tarjetas]="estadoCuenta.tarjetas"
-    class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2"></app-tarjetas>
-  <app-otros-datos></app-otros-datos>
+  <app-tarjetas [tarjetas]="estadoCuenta.tarjetas"
+    class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
+  </app-tarjetas>
 
+  <app-ahorros-gestion-cobranza [ahorros]="estadoCuenta.ahorros" [gestionCobranza]="estadoCuenta.gestion_cobranza"
+    class="p-d-inline-flex p-flex-column">
+  </app-ahorros-gestion-cobranza>
 </div>

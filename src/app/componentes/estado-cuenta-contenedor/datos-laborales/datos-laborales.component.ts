@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EstadoCuenta } from '../../../interfaces/prototipo';
-import { FondoService } from '../../../servicios/fondo.service';
+import { DatosLaborales } from '../../../interfaces/estadoCuenta.interface';
 import {
   trigger,
   state,
@@ -34,10 +33,10 @@ import {
 })
 export class DatosLaboralesComponent implements OnInit {
 
-  @Input() estadoCuenta?: EstadoCuenta;
+  @Input() datosLaborales!: DatosLaborales[];
 
 
-  constructor(private _estadoCuenta: FondoService) {}
+  constructor() {}
 
   ngOnInit(): void {
 

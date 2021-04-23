@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EstadoCuenta, Tarjetas } from './interfaces/prototipo';
+import { EstadoCuenta, Tarjetas } from './interfaces/estadoCuenta.interface';
 import { FondoService } from './servicios/fondo.service';
 
 @Component({
@@ -17,6 +17,4 @@ export class AppComponent implements OnInit {
       this.estadoCuenta = data;
     }).unsubscribe;
   }
- 
- 
 }

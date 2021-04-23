@@ -1,9 +1,8 @@
 <h2>Datos laborales</h2>
-<p-table *ngIf="estadoCuenta" [value]="estadoCuenta.datos_laborales" dataKey="DALA_socio_empresa"
-  styleClass="p-datatable-sm">
+<p-table [value]="datosLaborales" dataKey="DALA_socio_empresa" styleClass="p-datatable-sm">
   <ng-template pTemplate="header">
     <tr>
-      <th style="width: 2rem"></th>
+      <th style="width: 3rem"></th>
       <th pSortableColumn="DALA_socio_empresa">Empresa </th>
       <th pSortableColumn="DALA_socio_salario">Salario <p-sortIcon field="DALA_socio_salario">
         </p-sortIcon>
@@ -29,15 +28,12 @@
     <tr>
       <td colspan="4">
         <div class="p-p-3">
-          <p-table [value]="estadoCuenta.datos_laborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm">
+          <p-table [value]="datosLaborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm">
             <ng-template pTemplate="header">
     <tr>
-      <th pSortableColumn="DALA_socio_direccion">Dirección
-      </th>
-      <th pSortableColumn="DALA_socio_telefono">Teléfono
-      </th>
-      <th pSortableColumn="DALA_socio_fecha_egreso">Fecha de egreso
-      </th>
+      <th>Dirección</th>
+      <th>Teléfono</th>
+      <th>Fecha de egreso</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">

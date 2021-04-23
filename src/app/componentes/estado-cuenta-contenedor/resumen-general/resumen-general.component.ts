@@ -1,33 +1,47 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EstadoCuenta } from '../../../interfaces/prototipo';
+import {
+  DatosAnaliticos,
+  DatosPersonalesGeneral,
+} from '../../../interfaces/estadoCuenta.interface';
+import { formatCurrency } from '@angular/common';
 @Component({
   selector: 'app-resumen-general',
   templateUrl: './resumen-general.component.html',
   styleUrls: ['./resumen-general.component.scss'],
 })
 export class ResumenGeneralComponent implements OnInit {
-  @Input() estadoCuenta!: EstadoCuenta;
+  @Input() datosPersonales!: DatosPersonalesGeneral;
+  @Input() datosAnaliticos!: DatosAnaliticos;
 
-  aporteContenido: any[];
-  constructor() {
-    this.aporteContenido = [
-      { titulo: 'Cant aporte', valor: '1.200.000' },
-      { titulo: 'Ult. Pagado', valor: '2/04/2021' },
-      { titulo: 'Cant Pendiente', valor: '540.000' },
-    ];
-  }
+  aporteContenido!: any[];
+  constructor() {}
 
   ngOnInit(): void {
-    console.log( this.estadoCuenta )
-    // this.socioDatos?.push(
-    //   [this.estadoCuenta?.datos_personales].map((elm: any) => {
-    //     return {
-    //       DAPE_nombre: elm.DAPE_nombre,
-    //       DAPE_cedula_nro: elm.DAPE_cedula_nro,
-    //       DAPE_direccion: elm.DAPE_direccion,
-    //       DAPE_telefono: elm.DAPE_telefono,
-    //     };
-    //   })
-    // );
+    this.aporteContenido = [
+      {
+        titulo: 'Cant aporte',
+        valor: formatCurrency(
+          this.datosAnaliticos.DAAN_aportes_monto,
+          'py',
+          '₲',
+          'PYG',
+          '1.0'
+        ),
+      },
+      {
+        titulo: 'Ult. Pagado',
+        valor: this.datosAnaliticos.DAAN_aportes_ult_pag,
+      },
+      {
+        titulo: 'Cant Pendiente',
+        valor: formatCurrency(
+          this.datosAnaliticos.DAAN_aportes_cant_pend,
+          'py',
+          '₲',
+          'PYG',
+          '1.0'
+        ),
+      },
+    ];
   }
 }

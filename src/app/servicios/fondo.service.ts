@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
-import { EstadoCuenta } from '../interfaces/prototipo';
+import { EstadoCuenta } from '../interfaces/estadoCuenta.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -49,7 +49,7 @@ export class FondoService {
         },
         datos_analiticos: {
           DAAN_tasa_pref: -2,
-          DAAN_prestamos_al_dia: '',
+          DAAN_prestamos_al_dia: 'Sí',
           DAAN_aportes_monto: 2642000,
           DAAN_aportes_cant_pend: 24000,
           DAAN_aportes_ult_pag: '24-02-2021',

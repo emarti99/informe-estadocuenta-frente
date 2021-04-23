@@ -1,0 +1,63 @@
+<!-- Seccion ahorros -->
+<section class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
+  <h2>Ahorros</h2>
+  <p-table [columns]="colsAhorros" [value]="ahorros" styleClass="p-datatable-sm">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.cabecera}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>
+          {{ item.AHOR_cuenta_nro }}
+        </td>
+        <td>
+          {{ item.AHOR_tipo_cuenta }}
+        </td>
+        <td>
+          {{ item.AHOR_cantidad | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</section>
+
+<!-- Seccion Gestion cobranza -->
+<section class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
+  <h2>Gestion cobranza</h2>
+  <p-table [columns]="colsGestion" [value]="gestionCobranza" styleClass="p-datatable-sm">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.cabecera}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>
+          {{ item.GECO_sistema }}
+        </td>
+        <td>
+          {{ item.GECO_capital | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </td>
+        <td>
+          {{ item.GECO_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </td>
+        <td>
+          {{ item.GECO_honorarios | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </td>
+        <td>
+          {{ item.GECO_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </td>
+        <td>
+          {{ item.GECO_tipo }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</section>

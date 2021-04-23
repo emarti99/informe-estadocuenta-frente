@@ -10,14 +10,13 @@ exports.DatosLaboralesComponent = void 0;
 var core_1 = require("@angular/core");
 var animations_1 = require("@angular/animations");
 var DatosLaboralesComponent = /** @class */ (function () {
-    function DatosLaboralesComponent(_estadoCuenta) {
-        this._estadoCuenta = _estadoCuenta;
+    function DatosLaboralesComponent() {
     }
     DatosLaboralesComponent.prototype.ngOnInit = function () {
     };
     __decorate([
         core_1.Input()
-    ], DatosLaboralesComponent.prototype, "estadoCuenta");
+    ], DatosLaboralesComponent.prototype, "datosLaborales");
     DatosLaboralesComponent = __decorate([
         core_1.Component({
             selector: 'app-datos-laborales',

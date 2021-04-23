@@ -1,24 +1,24 @@
 <!-- Seccion/informacion del socio -->
-<app-datos-personales [datosPersonales]="estadoCuenta.datos_personales.DAPG_socio_datos" [estado]="true"
+<app-datos-personales [datosPersonales]="datosPersonales.DAPG_socio_datos" [estado]="true"
   class="p-d-flex p-col-12 p-mb-3 p-jc-between">
 </app-datos-personales>
 
 <!-- Seccion/informacion del conyuge -->
-<app-datos-personales [datosPersonales]="estadoCuenta.datos_personales.DAPG_conyuge_datos" [estado]="false"
+<app-datos-personales [datosPersonales]="datosPersonales.DAPG_conyuge_datos" [estado]="false"
   class="p-d-flex p-col-12 p-mb-3 p-jc-between">
 </app-datos-personales>
 
 <!-- Seccion/Tasa preferida -->
 <section class="p-inline-d-flex p-col-2 p-shadow-2">
   <h2>Tasa preferida</h2>
-  <p class="datos-primarios">-2</p>
+  <p class="datos-primarios resaltado p-mb-0">{{ datosAnaliticos.DAAN_tasa_pref }}</p>
   <p class="datos-secundarios p-mb-0 p-mt-0">sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
 </section>
 
 <!-- Seccion/Prestamos al día -->
 <section class="p-inline-d-flex p-col-1.1 p-shadow-2 estadoPrestamo">
   <h2>Préstamos al día</h2>
-  <p class="datos-primarios">Sí</p>
+    <p class="datos-primarios resaltado">{{ datosAnaliticos.DAAN_prestamos_al_dia }} </p>
 </section>
 
 <!-- Seccion/Aportes -->
@@ -38,11 +38,11 @@
   <div class="p-grid p-col-12 p-jc-between">
     <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
       <p class="p-mt-0">Ultima</p>
-      <p class="calificaciones p-mb-0 p-mt-0">B3</p>
+      <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_calif_ult }}</p>
     </div>
     <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
       <p class="p-mt-0">Promedio</p>
-      <p class="calificaciones p-mb-0 p-mt-0">1.77</p>
+      <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_promedio }}</p>
     </div>
   </div>
 </section>

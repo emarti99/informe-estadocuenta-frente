@@ -8,18 +8,7 @@ body {
   color: var(--text-color);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .estadoCuentaContenedor {
   box-sizing: border-box;
   align-items: center;
-}
-.estadoCuentaContenedor .promedioPrestamos {
-  text-align: center;
-}
-.estadoCuentaContenedor .datosPersonales {
-  font-weight: bold;
-  text-align: right;
 }

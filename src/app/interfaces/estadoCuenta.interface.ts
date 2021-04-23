@@ -8,7 +8,7 @@ export interface EstadoCuenta {
   gestion_cobranza: GestionCobranza[];
 }
 
-interface DatosPersonalesGeneral {
+export interface DatosPersonalesGeneral {
   DAPG_socio_datos: DatosPersonales;
   DAPG_conyuge_datos: DatosPersonales;
 }
@@ -84,13 +84,13 @@ export interface Tarjetas {
   TARJ_ajuste_TCR: number;
 }
 
-interface Ahorros {
+export interface Ahorros {
   AHOR_cuenta_nro: number;
   AHOR_tipo_cuenta: string;
   AHOR_cantidad: number;
 }
 
-interface GestionCobranza {
+export interface GestionCobranza {
   GECO_sistema: string;
   GECO_capital: number;
   GECO_gastos_judiciales: number;
