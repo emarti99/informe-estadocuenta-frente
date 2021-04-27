@@ -6,6 +6,12 @@
     margin: 0;
   }
 }
+
+:host ::ng-deep .p-datatable-sm td,
+:host ::ng-deep .p-datatable-sm th {
+  text-align: right !important;
+}
+
 :host ::ng-deep .custom-scrolltop {
   width: 2rem;
   height: 2rem;
