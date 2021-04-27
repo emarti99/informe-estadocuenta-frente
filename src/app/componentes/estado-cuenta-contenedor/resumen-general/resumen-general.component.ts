@@ -4,6 +4,7 @@ import {
   DatosPersonalesGeneral,
 } from '../../../interfaces/estadoCuenta.interface';
 import { formatCurrency } from '@angular/common';
+import * as moment from 'moment';
 @Component({
   selector: 'app-resumen-general',
   templateUrl: './resumen-general.component.html',
@@ -14,12 +15,14 @@ export class ResumenGeneralComponent implements OnInit {
   @Input() datosAnaliticos!: DatosAnaliticos;
 
   aporteContenido!: any[];
+  position!: string;
+  displayPosition!: boolean;
   constructor() {}
 
   ngOnInit(): void {
     this.aporteContenido = [
       {
-        titulo: 'Cant aporte',
+        titulo: 'Cant. aporte',
         valor: formatCurrency(
           this.datosAnaliticos.DAAN_aportes_monto,
           'py',
@@ -29,11 +32,11 @@ export class ResumenGeneralComponent implements OnInit {
         ),
       },
       {
-        titulo: 'Ult. Pagado',
-        valor: this.datosAnaliticos.DAAN_aportes_ult_pag,
+        titulo: 'Últ. Pagado',
+        valor: moment(this.datosAnaliticos.DAAN_aportes_ult_pag, 'YYYY-MM-DD').format('DD-MM-YYYY'),
       },
       {
-        titulo: 'Cant Pendiente',
+        titulo: 'Cant. Pendiente',
         valor: formatCurrency(
           this.datosAnaliticos.DAAN_aportes_cant_pend,
           'py',
@@ -43,5 +46,9 @@ export class ResumenGeneralComponent implements OnInit {
         ),
       },
     ];
+  }
+  showPositionDialog(position: string) {
+    this.position = position;
+    this.displayPosition = true;
   }
 }

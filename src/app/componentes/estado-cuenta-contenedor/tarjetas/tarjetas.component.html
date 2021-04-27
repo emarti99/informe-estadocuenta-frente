@@ -1,5 +1,79 @@
-<h2>Tarjetas</h2>
-<p-table  [value]="tarjetas" styleClass="p-datatable-sm">
+<!-- <h2>Tarjetas</h2> -->
+<p-table [value]="tarjetas" dataKey="TARJ_fecha_ultimo_pago" styleClass="p-datatable-sm">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 3rem"></th>
+      <th pSortableColumn="DALA_socio_empresa">Fecha último pago <p-sortIcon field="TARJ_fecha_ultimo_pago">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="DALA_socio_salario">Monto último pago <p-sortIcon field="TARJ_monto_ultimo_pago">
+        </p-sortIcon>
+      </th>
+      <th pSortableColumn="DALA_socio_fecha_ingreso">Saldo cuota <p-sortIcon field="TARJ_saldo_cuota">
+        </p-sortIcon>
+      <th pSortableColumn="DALA_socio_fecha_ingreso">Días de vencimiento <p-sortIcon field="TARJ_dias_vencimiento">
+        </p-sortIcon>
+      <th pSortableColumn="DALA_socio_fecha_ingreso">Refinanciación pendiente <p-sortIcon
+          field="TARJ_refinanciamiento_pendiente">
+        </p-sortIcon>
+      <th pSortableColumn="DALA_socio_fecha_ingreso">Estado <p-sortIcon field="TARJ_estado">
+        </p-sortIcon>
+      <th pSortableColumn="DALA_socio_fecha_ingreso">Fecha de vencimiento <p-sortIcon field="TARJ_fecha_vencimiento">
+        </p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-campo let-expanded="expanded">
+    <tr class="campos">
+      <td>
+        <button type="button" pButton pRipple [pRowToggler]="campo"
+          class="p-button-text p-button-rounded p-button-plain"
+          [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+      </td>
+      <td [pRowToggler]="campo">{{campo.TARJ_fecha_ultimo_pago | formatoFecha}}</td>
+      <td [pRowToggler]="campo">{{campo.TARJ_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}</td>
+      <td [pRowToggler]="campo">{{campo.TARJ_saldo_cuota}}</td>
+      <td [pRowToggler]="campo">{{campo.TARJ_dias_vencimiento | formatoFecha}}</td>
+      <td [pRowToggler]="campo">{{campo.TARJ_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+      <td [pRowToggler]="campo">{{campo.TARJ_estado}}</td>
+      <td [pRowToggler]="campo">{{campo.TARJ_fecha_vencimiento | formatoFecha}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="rowexpansion" let-campo>
+    <tr>
+      <td colspan="6">
+        <div class="p-p-3">
+          <p-table [value]="tarjetas" dataKey="TARJ_linea_credito" styleClass="p-datatable-sm">
+            <ng-template pTemplate="header">
+    <tr>
+      <th>Línea de crédito</th>
+      <th>Pago mínimo</th>
+      <th>Saldo</th>
+      <th>Ajuste mínimo. TC</th>
+      <th>Línea especial</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowIndex="rowIndex">
+    <tr>
+      <td>{{campo.TARJ_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+      <td>{{campo.TARJ_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+      <td>{{campo.TARJ_saldo | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+      <td>{{campo.TARJ_ajuste_TCR}}</td>
+      <td>{{campo.TARJ_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="6">No hay datos.</td>
+    </tr>
+  </ng-template>
+</p-table>
+</div>
+</td>
+</tr>
+</ng-template>
+</p-table>
+ <!-- <p-table  [value]="tarjetas" styleClass="p-datatable-sm">
   <ng-template pTemplate="header" let-columns>
     <tr>
       <th pTooltip="Linea de crédito">
@@ -80,4 +154,4 @@
       </td>
     </tr>
   </ng-template>
-</p-table>
+</p-table>  -->

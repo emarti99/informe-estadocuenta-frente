@@ -4,23 +4,29 @@
 
 <div class="contenedor-principal p-grid p-dir-col p-m-auto">
 
-  <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
-    [datosAnaliticos]="estadoCuenta.datos_analiticos"
-    class="p-grid p-jc-between p-mb-4 p-mt-4 vertical-container resumenGeneral">
-  </app-resumen-general>
 
-  <app-datos-laborales [datosLaborales]="estadoCuenta.datos_laborales"
-    class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
-  </app-datos-laborales>
+    <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
+      [datosAnaliticos]="estadoCuenta.datos_analiticos"
+      class="p-grid p-jc-between p-mb-4 p-mt-4 vertical-container resumenGeneral">
+    </app-resumen-general>
 
+  <p-fieldset legend="Datos Laborales" [toggleable]="true">
+    <app-datos-laborales [datosLaborales]="estadoCuenta.datos_laborales"
+      class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
+    </app-datos-laborales>
+  </p-fieldset>
 
-  <app-prestamos [prestamos]="estadoCuenta.prestamos"
-    class="p-d-inline-flex p-flex-column p-ai-center p-shadow-2 p-mb-4 resumenGeneral">
-  </app-prestamos>
+  <p-fieldset legend="Prestamos" [toggleable]="true">
+    <app-prestamos [prestamos]="estadoCuenta.prestamos"
+      class="p-d-inline-flex p-flex-column p-ai-center p-shadow-2 p-mb-4 resumenGeneral">
+    </app-prestamos>
+  </p-fieldset>
 
-  <app-tarjetas [tarjetas]="estadoCuenta.tarjetas"
-    class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
-  </app-tarjetas>
+  <p-fieldset legend="Tarjetas" [toggleable]="true">
+    <app-tarjetas [tarjetas]="estadoCuenta.tarjetas"
+      class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
+    </app-tarjetas>
+  </p-fieldset>
 
   <app-ahorros-gestion-cobranza [ahorros]="estadoCuenta.ahorros" [gestionCobranza]="estadoCuenta.gestion_cobranza"
     class="p-d-inline-flex p-flex-column">

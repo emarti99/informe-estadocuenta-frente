@@ -24,6 +24,7 @@ var datos_personales_component_1 = require("./componentes/estado-cuenta-contened
 var prestamos_component_1 = require("./componentes/estado-cuenta-contenedor/prestamos/prestamos.component");
 var resumen_general_component_1 = require("./componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component");
 var tarjetas_component_1 = require("./componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component");
+var formato_fecha_pipe_1 = require("./pipes/formato-fecha.pipe");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -38,6 +39,7 @@ var AppModule = /** @class */ (function () {
                 prestamos_component_1.PrestamosComponent,
                 resumen_general_component_1.ResumenGeneralComponent,
                 tarjetas_component_1.TarjetasComponent,
+                formato_fecha_pipe_1.FormatoFechaPipe,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

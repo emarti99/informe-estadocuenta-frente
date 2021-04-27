@@ -7,6 +7,8 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { BadgeModule } from 'primeng/badge';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipModule } from 'primeng/tooltip';
+import { FieldsetModule } from 'primeng/fieldset';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [],
@@ -19,6 +21,8 @@ import { TooltipModule } from 'primeng/tooltip';
     ScrollTopModule,
     BrowserAnimationsModule,
     TooltipModule,
+    FieldsetModule,
+    DialogModule,
   ],
 })
 export class PrimeNgModule {}

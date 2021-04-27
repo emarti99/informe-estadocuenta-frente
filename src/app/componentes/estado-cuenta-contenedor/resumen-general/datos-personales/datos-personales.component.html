@@ -30,7 +30,7 @@
     </div>
     <div class="caja-inferior caja-izquierda">
       <p class="datos-secundarios">Ingreso</p>
-      <p class="datos-primarios">{{ datosPersonales.DAPE_fecha_ingreso }}</p>
+      <p class="datos-primarios">{{ datosPersonales.DAPE_fecha_ingreso | formatoFecha}}</p>
     </div>
   </div>
   <div class="datos-personales">
@@ -39,7 +39,7 @@
       <p class="datos-secundarios">Socio N॰</p>
     </div>
     <div class="caja-inferior caja-derecha">
-      <p class="datos-secundarios">Ultimo antecedente</p>
+      <p class="datos-secundarios">Último antecedente</p>
       <p class="datos-primarios">{{ datosPersonales.DAPE_ultimo_antecedente }}</p>
     </div>
   </div>

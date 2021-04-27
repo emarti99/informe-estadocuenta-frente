@@ -16,6 +16,8 @@ var scrolltop_1 = require("primeng/scrolltop");
 var badge_1 = require("primeng/badge");
 var animations_1 = require("@angular/platform-browser/animations");
 var tooltip_1 = require("primeng/tooltip");
+var fieldset_1 = require("primeng/fieldset");
+var dialog_1 = require("primeng/dialog");
 var PrimeNgModule = /** @class */ (function () {
     function PrimeNgModule() {
     }
@@ -31,6 +33,8 @@ var PrimeNgModule = /** @class */ (function () {
                 scrolltop_1.ScrollTopModule,
                 animations_1.BrowserAnimationsModule,
                 tooltip_1.TooltipModule,
+                fieldset_1.FieldsetModule,
+                dialog_1.DialogModule,
             ]
         })
     ], PrimeNgModule);

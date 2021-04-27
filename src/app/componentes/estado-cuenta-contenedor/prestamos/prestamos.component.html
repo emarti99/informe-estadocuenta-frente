@@ -1,8 +1,8 @@
-<h2>Préstamos</h2>
+<!-- <h2>Préstamos</h2> -->
 
 <!-- Tabla principal -->
 
-<p-table [value]="prestamos" dataKey="PRES_socio_nro_pmo" styleClass="p-datatable-sm">
+<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha" styleClass="p-datatable-sm">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -38,27 +38,27 @@
       </th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-product let-expanded="expanded">
-    <tr>
+  <ng-template pTemplate="body" let-campo let-expanded="expanded">
+    <tr class="campos" >
       <td>
-        <button type="button" pButton pRipple [pRowToggler]="product"
+        <button type="button" pButton pRipple [pRowToggler]="campo"
           class="p-button-text p-button-rounded p-button-plain"
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
-      <td>{{product.PRES_socio_aprobado_fecha}}</td>
-      <td>{{product.PRES_socio_monto | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
-      <td>{{product.PRES_socio_sistema}}</td>
-      <td>{{product.PRES_socio_cuotas}}</td>
-      <td>{{product.PRES_socio_tipo_pmo}}</td>
-      <td>{{product.PRES_socio_calificacion}}</td>
-      <td>{{product.PRES_socio_atrasos}}</td>
-      <td>{{product.PRES_socio_fecha_vencimiento}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_aprobado_fecha | formatoFecha}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_monto | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_sistema}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_cuotas}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_tipo_pmo}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_calificacion}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_atrasos}}</td>
+      <td [pRowToggler]="campo">{{campo.PRES_socio_fecha_vencimiento | formatoFecha}}</td>
       <td><span
-          [class]="'product-badge status-' + product.PRES_socio_estado_pmo.toLowerCase()">{{product.PRES_socio_estado_pmo}}</span>
+          [class]="'product-badge status-' + campo.PRES_socio_estado_pmo.toLowerCase()">{{campo.PRES_socio_estado_pmo}}</span>
       </td>
     </tr>
   </ng-template>
-  <ng-template pTemplate="rowexpansion" let-product>
+  <ng-template pTemplate="rowexpansion" let-campo>
     <tr>
       <td colspan="10">
         <div class="p-p-3">
@@ -69,7 +69,7 @@
             <ng-template pTemplate="header">
     <tr>
       <th>Saldo restante </th>
-      <th>Tasa de interes </th>
+      <th>Tasa de interés </th>
       <th>Situación </th>
       <th>Cuotas adelantadas </th>
       <th>Cuotas en fecha </th>
@@ -81,15 +81,15 @@
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr *ngIf="rowIndex == 1">
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_saldo_restante}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_tasa_interes}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_situacion}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_adelantado}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_en_fecha}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_max_dias_atraso}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_tipo_garantia}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_socio_garante}}</td>
-      <td>{{product.PRES_socio_mas_detalles.PRDE_socio_observacion}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_saldo_restante}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_tasa_interes}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_situacion}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_adelantado}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_en_fecha}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_max_dias_atraso}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_tipo_garantia}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_socio_garante}}</td>
+      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_observacion}}</td>
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">
