@@ -8,52 +8,30 @@
   class="p-d-flex p-col-12 p-mb-3 p-jc-between">
 </app-datos-personales>
 
-<!-- Seccion/Tasa preferida -->
-<section class="p-inline-d-flex p-col-2 p-shadow-2">
-  <h2>Tasa preferida</h2>
-  <p class="datos-primarios resaltado p-mb-0">{{ datosAnaliticos.DAAN_tasa_pref }}</p>
-  <p-button (click)="showPositionDialog('bottom-left')" icon="pi pi-info"
-    styleClass="p-button-rounded p-button-info p-button-outlined"></p-button>
-  <p-dialog [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '30vw'}"
-    [baseZIndex]="10000" [draggable]="false" [resizable]="false">
-    <p>Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
-    <ng-template pTemplate="footer">
-      <p-button icon="pi pi-check" (click)="displayPosition=false" label="Ok" styleClass="p-button-text"></p-button>
-    </ng-template>
-  </p-dialog>
-
-</section>
-
-<!-- Seccion/Prestamos al día -->
-<section class="p-inline-d-flex p-flex-column p-col-1.1 p-shadow-2 estadoPrestamo">
-  <h2>Préstamos al día</h2>
-  <p class="datos-primarios resaltado">{{ datosAnaliticos.DAAN_prestamos_al_dia }} </p>
-  <!-- <h2>Cobranzas pendientes</h2>
-  <p class="datos-primarios resaltado">No</p> -->
-</section>
-
-<!-- Seccion/Aportes -->
-<section class="p-d-flex p-flex-column p-col-5 p-shadow-2">
-  <h2>Aportes</h2>
-  <div class="p-d-flex p-col-12">
-    <div class="p-col-4" *ngFor="let item of aporteContenido">
-      <p class="p-mt-0"> {{ item.titulo }} </p>
-      <p class="datos-primarios p-mb-0"> {{ item.valor }} </p>
+  <!-- Seccion/Tasa preferida -->
+  <section class="p-d-flex p-flex-column p-col-2 p-shadow-2">
+    <h2>Tasa preferida</h2>
+    <p class="datos-primarios resaltado p-mb-0">{{ datosAnaliticos.DAAN_tasa_pref }}</p>
+    <p class="datos-secundarios">Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
+  
+  </section>
+  
+ <app-cajas-centrales class="p-d-flex p-flex-column p-col-4 p-shadow-2"></app-cajas-centrales>
+  
+  <!-- Seccion/Aportes -->
+ <app-cajas-centrales class="p-d-flex p-flex-column p-col-4 p-shadow-2"></app-cajas-centrales>
+  
+  <!-- Seccion/Calificaciones -->
+  <section class="p-inline-d-flex p-col-1.9 p-shadow-2">
+    <h2>Calificaciones</h2>
+    <div class="p-d-flex p-col-12 p-jc-between">
+      <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
+        <p class="p-mt-0">Última</p>
+        <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_calif_ult }}</p>
+      </div>
+      <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
+        <p class="p-mt-0">Promedio</p>
+        <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_promedio }}</p>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- Seccion/Calificaciones -->
-<section class="p-inline-d-flex p-col-3 p-shadow-2">
-  <h2>Calificaciones</h2>
-  <div class="p-grid p-col-12 p-jc-between">
-    <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
-      <p class="p-mt-0">Última</p>
-      <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_calif_ult }}</p>
-    </div>
-    <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
-      <p class="p-mt-0">Promedio</p>
-      <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_promedio }}</p>
-    </div>
-  </div>
-</section>
+  </section>

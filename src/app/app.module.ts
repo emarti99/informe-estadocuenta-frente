@@ -19,6 +19,7 @@ import { PrestamosComponent } from './componentes/estado-cuenta-contenedor/prest
 import { ResumenGeneralComponent } from './componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component';
 import { TarjetasComponent } from './componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component';
 import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
+import { CajasCentralesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component';
 
 
 
@@ -33,6 +34,7 @@ import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
     ResumenGeneralComponent,
     TarjetasComponent,
     FormatoFechaPipe,
+    CajasCentralesComponent,
   ],
   imports: [
     BrowserModule,

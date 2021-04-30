@@ -14,10 +14,12 @@ h2 {
     font-size: smaller;
     
 }
-section {
+section, .cajas {
     padding: 0.5rem;
 }
-
+.hola{
+    flex-wrap: wrap;
+}
 .resaltado {
     font-weight: bold;
     font-size: 1.5rem;

@@ -5,10 +5,10 @@
 <div class="contenedor-principal p-grid p-dir-col p-m-auto">
 
 
-    <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
-      [datosAnaliticos]="estadoCuenta.datos_analiticos"
-      class="p-grid p-jc-between p-mb-4 p-mt-4 vertical-container resumenGeneral">
-    </app-resumen-general>
+  <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
+    [datosAnaliticos]="estadoCuenta.datos_analiticos"
+    class="p-grid p-jc-between p-mb-4 p-mt-4 ">
+  </app-resumen-general>
 
   <p-fieldset legend="Datos Laborales" [toggleable]="true">
     <app-datos-laborales [datosLaborales]="estadoCuenta.datos_laborales"
@@ -18,7 +18,7 @@
 
   <p-fieldset legend="Prestamos" [toggleable]="true">
     <app-prestamos [prestamos]="estadoCuenta.prestamos"
-      class="p-d-inline-flex p-flex-column p-ai-center p-shadow-2 p-mb-4 resumenGeneral">
+      class="p-d-inline-flex p-flex-column p-ai-center p-shadow-2 p-mb-4">
     </app-prestamos>
   </p-fieldset>
 

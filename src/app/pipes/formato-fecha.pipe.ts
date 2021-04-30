@@ -7,7 +7,10 @@ import * as moment from 'moment';
 export class FormatoFechaPipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): string {
-    return moment(value, "YYYY-MM-DD").format("DD-MM-YYYY");
+    if (value == '-') {
+      return '-';
+    }else {
+      return moment(value, "YYYY-MM-DD").format("DD-MM-YYYY");
+    }
   }
-
 }

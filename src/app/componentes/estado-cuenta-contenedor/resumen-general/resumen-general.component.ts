@@ -15,8 +15,7 @@ export class ResumenGeneralComponent implements OnInit {
   @Input() datosAnaliticos!: DatosAnaliticos;
 
   aporteContenido!: any[];
-  position!: string;
-  displayPosition!: boolean;
+
   constructor() {}
 
   ngOnInit(): void {
@@ -47,8 +46,5 @@ export class ResumenGeneralComponent implements OnInit {
       },
     ];
   }
-  showPositionDialog(position: string) {
-    this.position = position;
-    this.displayPosition = true;
-  }
+  
 }

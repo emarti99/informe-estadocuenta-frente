@@ -11,6 +11,10 @@
 :host ::ng-deep .p-datatable-sm th {
   text-align: right !important;
 }
+:host ::ng-deep .desplegable td,
+:host ::ng-deep .desplegable th {
+  background-color: #e9ecef !important;
+}
 
 :host ::ng-deep .custom-scrolltop {
   width: 2rem;

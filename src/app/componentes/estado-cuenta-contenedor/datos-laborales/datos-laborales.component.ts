@@ -32,13 +32,18 @@ import {
   ],
 })
 export class DatosLaboralesComponent implements OnInit {
-
   @Input() datosLaborales!: DatosLaborales[];
-
+  datosLaborales1!: any;
 
   constructor() {}
 
   ngOnInit(): void {
-
+    this.datosLaborales.sort((a, b) => {
+      if (a.DALA_socio_fecha_ingreso > b.DALA_socio_fecha_ingreso) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
   }
 }

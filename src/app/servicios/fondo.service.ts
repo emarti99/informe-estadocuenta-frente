@@ -89,7 +89,7 @@ export class FondoService {
             DALA_socio_direccion: 'Mcal. López y R.I Curupayty',
             DALA_socio_telefono: '600755',
             DALA_socio_salario: 10000000,
-            DALA_socio_fecha_ingreso: '2013-01-03-',
+            DALA_socio_fecha_ingreso: '2013-01-03',
             DALA_socio_fecha_egreso: '2017-12-31',
             DALA_socio_fecha_grabacion: '2013-04-01',
           },

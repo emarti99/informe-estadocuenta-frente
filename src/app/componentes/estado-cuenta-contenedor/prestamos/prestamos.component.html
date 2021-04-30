@@ -2,7 +2,8 @@
 
 <!-- Tabla principal -->
 
-<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha" styleClass="p-datatable-sm">
+<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha" styleClass="p-datatable-sm"
+  sortField="PRES_socio_aprobado_fecha" [sortOrder]="-1">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
