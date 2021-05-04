@@ -1,6 +1,5 @@
 <!-- <h2>Datos laborales</h2> -->
-<p-table [value]="datosLaborales" dataKey="DALA_socio_fecha_ingreso" 
-  styleClass="p-datatable-sm">
+<p-table [value]="datosLaborales" dataKey="DALA_socio_empresa" styleClass="p-datatable-sm">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -29,10 +28,7 @@
     <tr>
       <td colspan="4">
         <div class="p-p-3">
-
-          <!-- Tabla secundaria -->
-
-          <p-table [value]="datosLaborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm desplegable">
+          <p-table [value]="datosLaborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm">
             <ng-template pTemplate="header">
     <tr>
       <th>Dirección</th>

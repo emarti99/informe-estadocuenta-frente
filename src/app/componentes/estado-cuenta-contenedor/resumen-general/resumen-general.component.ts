@@ -14,37 +14,63 @@ export class ResumenGeneralComponent implements OnInit {
   @Input() datosPersonales!: DatosPersonalesGeneral;
   @Input() datosAnaliticos!: DatosAnaliticos;
 
-  aporteContenido!: any[];
-
+  aportesContenido!: any[];
+  saldosContenido!: any[]
   constructor() {}
 
   ngOnInit(): void {
-    this.aporteContenido = [
+    this.aportesContenido = [
       {
-        titulo: 'Cant. aporte',
-        valor: formatCurrency(
-          this.datosAnaliticos.DAAN_aportes_monto,
+        subTitulo1: 'Total',
+        valor1: formatCurrency(
+          this.datosAnaliticos.DAAN_aportes.APOR_monto,
           'py',
-          '₲',
+          '',
+          'PYG',
+          '1.0'
+        ),
+        subTitulo2: 'Últ. Pagado',
+        valor2: moment(
+          this.datosAnaliticos.DAAN_aportes.APOR_ult_pag,
+          'YYYY-MM-DD'
+        ).format('DD-MM-YYYY'),
+        subTitulo3: 'Pendiente',
+        valor3: formatCurrency(
+          this.datosAnaliticos.DAAN_aportes.APOR_cant_pend,
+          'py',
+          '',
           'PYG',
           '1.0'
         ),
       },
+    ];
+    this.saldosContenido = [
       {
-        titulo: 'Últ. Pagado',
-        valor: moment(this.datosAnaliticos.DAAN_aportes_ult_pag, 'YYYY-MM-DD').format('DD-MM-YYYY'),
-      },
-      {
-        titulo: 'Cant. Pendiente',
-        valor: formatCurrency(
-          this.datosAnaliticos.DAAN_aportes_cant_pend,
+        subTitulo1: 'Préstamos',
+        valor1: formatCurrency(
+          this.datosAnaliticos.DAAN_saldos_pendientes.SAPE_prestamos,
           'py',
-          '₲',
+          '',
+          'PYG',
+          '1.0'
+        ),
+        subTitulo2: 'Cobranzas',
+        valor2: formatCurrency(
+          this.datosAnaliticos.DAAN_saldos_pendientes.SAPE_cobranzas,
+          'py',
+          '',
+          'PYG',
+          '1.0'
+        ),
+        subTitulo3: 'Tarjeta de crédito',
+        valor3: formatCurrency(
+          this.datosAnaliticos.DAAN_saldos_pendientes.SAPE_tarjetas,
+          'py',
+          '',
           'PYG',
           '1.0'
         ),
       },
     ];
   }
-  
 }

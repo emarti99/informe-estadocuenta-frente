@@ -2,8 +2,7 @@
 
 <!-- Tabla principal -->
 
-<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha" styleClass="p-datatable-sm"
-  sortField="PRES_socio_aprobado_fecha" [sortOrder]="-1">
+<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha" styleClass="p-datatable-sm">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -66,7 +65,7 @@
 
           <!-- Tabla secundaria ( desplegable ) -->
 
-          <p-table [value]="prestamos" dataKey="PRES_socio_mas_detalles.PRDE_socio_nro_pmo" styleClass="p-datatable-sm">
+          <p-table [value]="prestamos" dataKey="PRES_socio_mas_detalles.PRDE_socio_nro_pmo" styleClass="p-datatable-sm desplegable">
             <ng-template pTemplate="header">
     <tr>
       <th>Saldo restante </th>
@@ -82,15 +81,15 @@
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr *ngIf="rowIndex == 1">
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_saldo_restante}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_tasa_interes}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_situacion}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_adelantado}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_en_fecha}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_max_dias_atraso}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_tipo_garantia}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_socio_garante}}</td>
-      <td>{{campo.PRES_socio_mas_detalles.PRDE_socio_observacion}}</td>
+      <td>{{campo.PRES_socio_saldo_restante}}</td>
+      <td>{{campo.PRES_socio_tasa_interes}}</td>
+      <td>{{campo.PRES_socio_situacion}}</td>
+      <td>{{campo.PRES_socio_adelantado}}</td>
+      <td>{{campo.PRES_socio_en_fecha}}</td>
+      <td>{{campo.PRES_socio_max_dias_atraso}}</td>
+      <td>{{campo.PRES_socio_tipo_garantia}}</td>
+      <td>{{campo.PRES_socio_socio_garante}}</td>
+      <td>{{campo.PRES_socio_observacion}}</td>
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">

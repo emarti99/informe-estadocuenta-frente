@@ -26,12 +26,32 @@ export interface DatosPersonales {
 
 export interface DatosAnaliticos {
   DAAN_tasa_pref: number;
-  DAAN_prestamos_al_dia: string;
-  DAAN_aportes_monto: number;
-  DAAN_aportes_cant_pend: number;
-  DAAN_aportes_ult_pag: string;
-  DAAN_calif_ult: string;
-  DAAN_promedio: number;
+  DAAN_aportes: Aportes;
+  DAAN_solidaridad: Solidaridad;
+  DAAN_saldos_pendientes: SaldosPendientes;
+  DAAN_calificaciones: Calificaciones;
+}
+
+export interface Aportes {
+  APOR_monto: number;
+  APOR_cant_pend: number;
+  APOR_ult_pag: string;
+}
+
+export interface Solidaridad{
+  SOLI_cant_pend: number;
+  SOLI_ult_pag: string;
+}
+
+export interface SaldosPendientes {
+  SAPE_prestamos: number;
+  SAPE_cobranzas: number;
+  SAPE_tarjetas: number;
+}
+
+export interface Calificaciones {
+  CALI_calif_ult: string;
+  CALI_promedio: number;
 }
 
 export interface DatosLaborales {
@@ -54,19 +74,17 @@ export interface Prestamos {
   PRES_socio_atrasos: number;
   PRES_socio_fecha_vencimiento: string;
   PRES_socio_estado_pmo: string;
-  PRES_socio_mas_detalles: PrestamosDetalles;
-}
-interface PrestamosDetalles {
-  PRDE_socio_saldo_restante: number;
-  PRDE_socio_tasa_interes: number;
-  PRDE_socio_tipo_garantia: string;
-  PRDE_socio_situacion: string;
-  PRDE_socio_adelantado: number;
-  PRDE_socio_en_fecha: number;
-  PRDE_socio_max_dias_atraso: number;
-  PRDE_socio_observacion: string;
-  PRDE_socio_socio_garante: string;
-  PRDE_socio_nombre_garante: string; //No se muestra
+  PRES_socio_saldo_restante: number;
+  PRES_socio_tasa_interes: number;
+  PRES_socio_tipo_garantia: string;
+  PRES_socio_situacion: string;
+  PRES_socio_adelantado: number;
+  PRES_socio_en_fecha: number;
+  PRES_socio_max_dias_atraso: number;
+  PRES_socio_promedio: number;
+  PRES_socio_socio_garante: string;
+  PRES_socio_observacion: string;
+
 }
 
 export interface Tarjetas {
@@ -98,5 +116,3 @@ export interface GestionCobranza {
   GECO_gastos_administrativos: number;
   GECO_tipo: string;
 }
-
-

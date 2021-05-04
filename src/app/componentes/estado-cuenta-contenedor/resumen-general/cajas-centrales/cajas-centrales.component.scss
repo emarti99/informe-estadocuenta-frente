@@ -1,0 +1,28 @@
+    h2 {
+      text-align: center;
+           font-size: 1.3rem;
+           font-weight: 500;
+    }
+p {
+    margin: 0;
+}
+
+.datos-primarios {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.datos-secundarios {
+  font-size: smaller;
+
+}
+.caja-izquierda {
+    div {
+        text-align: left;
+    }
+}
+.caja-derecha {
+    div {
+        text-align: right;
+    }
+}
