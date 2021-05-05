@@ -1,5 +1,5 @@
 <!-- <h2>Datos laborales</h2> -->
-<p-table [value]="datosLaborales" dataKey="DALA_socio_empresa" styleClass="p-datatable-sm">
+<p-table [value]="datosLaborales" dataKey="DALA_socio_empresa" styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -19,16 +19,26 @@
           class="p-button-text p-button-rounded p-button-plain"
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
-      <td [pRowToggler]="campo">{{campo.DALA_socio_empresa}}</td>
-      <td [pRowToggler]="campo">{{campo.DALA_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
-      <td [pRowToggler]="campo">{{campo.DALA_socio_fecha_ingreso | formatoFecha }}</td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Cuenta N॰</span>
+        {{ campo.DALA_socio_empresa }}</td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Cuenta N॰</span>
+        {{ campo.DALA_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}</td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Cuenta N॰</span>
+        {{ campo.DALA_socio_fecha_ingreso | formatoFecha }}</td>
     </tr>
   </ng-template>
   <ng-template pTemplate="rowexpansion" let-campo>
     <tr>
       <td colspan="4">
-        <div class="p-p-3">
-          <p-table [value]="datosLaborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm">
+        <div class="p-p-0">
+
+          <!-- Tabla secundaria -->
+
+          <p-table [value]="datosLaborales" dataKey="DALA_socio_direccion" styleClass="p-datatable-sm desplegable p-datatable-responsive-demo
+          ">
             <ng-template pTemplate="header">
     <tr>
       <th>Dirección</th>
@@ -38,9 +48,18 @@
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr *ngIf="rowIndex == 1">
-      <td>{{campo.DALA_socio_direccion}}</td>
-      <td>{{campo.DALA_socio_telefono}}</td>
-      <td>{{campo.DALA_socio_fecha_egreso | formatoFecha}}</td>
+      <td>
+        <span class="p-column-title">Cuenta N॰</span>
+        {{ campo.DALA_socio_direccion  }}
+      </td>
+      <td>
+        <span class="p-column-title">Cuenta N॰</span>
+        {{ campo.DALA_socio_telefono  }}
+      </td>
+      <td>
+        <span class="p-column-title">Cuenta N॰</span>
+        {{ campo.DALA_socio_fecha_egreso | formatoFecha  }}
+      </td>
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">

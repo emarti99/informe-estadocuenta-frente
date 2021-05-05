@@ -1,32 +1,25 @@
-.conyuge {
-  background: #EEEEEE;
-  border-radius: 5px;
+// .datos-personales-contenedor {
+//   // padding: 1rem;
+//   // flex-flow: row wrap;
+//   // box-sizing: border-box;
+// }
 
-  .numero-socio {
-    color: #256029;
-  }
-}
-
-.socio {
-  border-radius: 5px;
-
-  .numero-socio {
-    color: #256029;
-  }
-}
-.datos-personales-contenedor {
-  padding: 1rem;
-}
 .datos-personales {
-
+ 
   .nombre-apellido {
     font-style: italic;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  .direccion {
+    color: black;
   }
 
   .datos-primarios {
     font-weight: bold;
     font-size: 1.3rem;
+    color: black;
   }
 
   .datos-secundarios {
@@ -58,5 +51,22 @@
   p {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
+  }
+}
+
+.conyuge {
+  background: #EEEEEE;
+  border-radius: 5px;
+
+  .numero-socio {
+    color: black;
+  }
+}
+
+.socio {
+  border-radius: 5px;
+
+  .numero-socio {
+    color: black;
   }
 }

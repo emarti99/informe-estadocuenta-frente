@@ -10,27 +10,42 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	/af305127/
 $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config\/schema.json",$/;"	s
-*	src/dist/styles.css	/^* {$/;"	s
-.aporteContenidoValor	src/styles.scss	/^    .aporteContenidoValor {$/;"	c
-.cajaAporte	src/styles.scss	/^    .cajaAporte {$/;"	c
-.cajaCalificacion	src/styles.scss	/^    .cajaCalificacion {$/;"	c
-.cajasResumenPersonal	src/styles.scss	/^  .cajasResumenPersonal {$/;"	c
-.datosPersonales	src/styles.scss	/^  .datosPersonales {$/;"	c
-.estadoCuentaContenedor	src/dist/styles.css	/^.estadoCuentaContenedor {$/;"	c
+.caja-derecha	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.scss	/^.caja-derecha {$/;"	c
+.caja-derecha	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .caja-derecha {$/;"	c
+.caja-inferior	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .caja-inferior {$/;"	c
+.caja-izquierda	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.scss	/^.caja-izquierda {$/;"	c
+.caja-izquierda	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .caja-izquierda {$/;"	c
+.caja-superior	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .caja-superior {$/;"	c
+.cajas	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.scss	/^section, .cajas {$/;"	c
+.campos	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.scss	/^.campos {$/;"	c
+.campos	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.scss	/^.campos {$/;"	c
+.campos	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.scss	/^.campos {$/;"	c
+.campos:hover	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.scss	/^.campos:hover {$/;"	c
+.campos:hover	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.scss	/^.campos:hover {$/;"	c
+.campos:hover	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.scss	/^.campos:hover {$/;"	c
+.contenedor-principal	src/app/app.component.scss	/^.contenedor-principal {$/;"	c
+.conyuge	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^.conyuge {$/;"	c
+.datos-personales	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^.datos-personales {$/;"	c
+.datos-personales-contenedor	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^.datos-personales-contenedor {$/;"	c
+.datos-primarios	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.scss	/^.datos-primarios {$/;"	c
+.datos-primarios	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .datos-primarios {$/;"	c
+.datos-primarios	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.scss	/^.datos-primarios {$/;"	c
+.datos-secundarios	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.scss	/^.datos-secundarios {$/;"	c
+.datos-secundarios	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .datos-secundarios {$/;"	c
+.datos-secundarios	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.scss	/^.datos-secundarios {$/;"	c
+.direccion	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .direccion {$/;"	c
 .estadoCuentaContenedor	src/styles.css	/^.estadoCuentaContenedor {$/;"	c
 .estadoCuentaContenedor	src/styles.scss	/^.estadoCuentaContenedor {$/;"	c
-.promedioPrestamos	src/styles.scss	/^  .promedioPrestamos {$/;"	c
-.resumenGeneral	src/dist/styles.css	/^.resumenGeneral {$/;"	c
-.resumenGeneral	src/styles.scss	/^.resumenGeneral {$/;"	c
+.nombre-apellido	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .nombre-apellido {$/;"	c
+.numero-socio	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^  .numero-socio {$/;"	c
+.p-p-3	src/app/app.component.scss	/^.p-p-3 {$/;"	c
+.p-scrolltop-icon	src/app/app.component.scss	/^  .p-scrolltop-icon {$/;"	c
+.prueba	src/styles.scss	/^.prueba {$/;"	c
+.resaltado	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.scss	/^.resaltado {$/;"	c
+.resumenGeneral	src/app/app.component.scss	/^  .resumenGeneral {$/;"	c
 .resumenGeneral .cajaDatosPersonales	src/styles.css	/^.resumenGeneral .cajaDatosPersonales {$/;"	c
 .resumenGeneral .cajaDatosPersonales .datosPersonales	src/styles.css	/^.resumenGeneral .cajaDatosPersonales .datosPersonales {$/;"	c
-.resumenGeneral .cajasResumenPersonal	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal {$/;"	c
-.resumenGeneral .cajasResumenPersonal .aporteContenidoValor	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .aporteContenidoValor {$/;"	c
-.resumenGeneral .cajasResumenPersonal .cajaAporte	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .cajaAporte {$/;"	c
-.resumenGeneral .cajasResumenPersonal .cajaCalificacion	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .cajaCalificacion {$/;"	c
-.resumenGeneral .cajasResumenPersonal .cajaCalificacion div	src/dist/styles.css	/^.resumenGeneral .cajasResumenPersonal .cajaCalificacion div {$/;"	s
-.resumenGeneral .datosPersonales	src/dist/styles.css	/^.resumenGeneral .datosPersonales {$/;"	c
-.resumenGeneral .promedioPrestamos	src/dist/styles.css	/^.resumenGeneral .promedioPrestamos {$/;"	c
+.socio	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.scss	/^.socio {$/;"	c
 0	angular.json	/^                {$/;"	o	array:projects.estadoCuenta.architect.build.configurations.production.budgets
 0	angular.json	/^                {$/;"	o	array:projects.estadoCuenta.architect.build.configurations.production.fileReplacements
 0	angular.json	/^              "**\/node_modules\/**"$/;"	s	array:projects.estadoCuenta.architect.lint.options.exclude
@@ -1093,100 +1108,122 @@ $schema	angular.json	/^  "$schema": ".\/node_modules\/@angular\/cli\/lib\/config
 @yarnpkg/lockfile	package-lock.json	/^        "@yarnpkg\/lockfile": "1.1.0",$/;"	s	object:packages.node_modules/@angular/cli.dependencies
 @yarnpkg/lockfile	package-lock.json	/^        "@yarnpkg\/lockfile": "1.1.0",$/;"	s	object:packages.node_modules/@schematics/update.dependencies
 @yarnpkg/lockfile	package-lock.json	/^    "@yarnpkg\/lockfile": {$/;"	o	object:dependencies
-AnonymousFunctione2d66b180100	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^        this._estadoCuenta.pideDatoUsuario().subscribe(function (data) {$/;"	f	function:_estadoCuenta
-Aportes	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^    <h3 class="p-col-12 p-mb-0">Aportes<\/h3>$/;"	j
-AppComponent	src/app/app.component.ts	/^export class AppComponent {$/;"	c
+AHOR_cantidad	src/app/interfaces/estadoCuenta.interface.ts	/^  AHOR_cantidad: number;$/;"	p	interface:Ahorros
+AHOR_cuenta_nro	src/app/interfaces/estadoCuenta.interface.ts	/^  AHOR_cuenta_nro: number;$/;"	p	interface:Ahorros
+AHOR_tipo_cuenta	src/app/interfaces/estadoCuenta.interface.ts	/^  AHOR_tipo_cuenta: string;$/;"	p	interface:Ahorros
+APOR_cant_pend	src/app/interfaces/estadoCuenta.interface.ts	/^  APOR_cant_pend: number;$/;"	p	interface:Aportes
+APOR_monto	src/app/interfaces/estadoCuenta.interface.ts	/^  APOR_monto: number;$/;"	p	interface:Aportes
+APOR_ult_pag	src/app/interfaces/estadoCuenta.interface.ts	/^  APOR_ult_pag: string;$/;"	p	interface:Aportes
+Ahorros	src/app/interfaces/estadoCuenta.interface.ts	/^export interface Ahorros {$/;"	i
+AhorrosGestionCobranzaComponent	src/app/componentes/estado-cuenta-contenedor/ahorros-gestion-cobranza/ahorros-gestion-cobranza.component.ts	/^export class AhorrosGestionCobranzaComponent implements OnInit {$/;"	c
+Aportes	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.html	/^<h2 *ngIf="estado == true" class="titulo p-mb-0">Aportes<\/h2>$/;"	i
+Aportes	src/app/interfaces/estadoCuenta.interface.ts	/^export interface Aportes {$/;"	i
+AppComponent	src/app/app.component.ts	/^export class AppComponent implements OnInit {$/;"	c
 AppModule	src/app/app.module.ts	/^export class AppModule {}$/;"	c
-AppModule	src/app/dist/app.module.js	/^    function AppModule() {$/;"	f	function:AppModule
-AppModule	src/app/dist/app.module.js	/^var AppModule = \/** @class *\/ (function () {$/;"	f
 AppPage	e2e/src/app.po.ts	/^export class AppPage {$/;"	c
 AppRoutingModule	src/app/app-routing.module.ts	/^export class AppRoutingModule {}$/;"	c
-AppRoutingModule	src/app/dist/app-routing.module.js	/^    function AppRoutingModule() {$/;"	f	function:AppRoutingModule
-AppRoutingModule	src/app/dist/app-routing.module.js	/^var AppRoutingModule = \/** @class *\/ (function () {$/;"	f
 Build	README.md	/^## Build$/;"	s	chapter:EstadoCuenta
 BuscadorComponent	src/app/componentes/buscador/buscador.component.ts	/^export class BuscadorComponent implements OnInit {$/;"	c
+CALI_calif_ult	src/app/interfaces/estadoCuenta.interface.ts	/^  CALI_calif_ult: string;$/;"	p	interface:Calificaciones
+CALI_promedio	src/app/interfaces/estadoCuenta.interface.ts	/^  CALI_promedio: number;$/;"	p	interface:Calificaciones
+CajasCentralesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.ts	/^export class CajasCentralesComponent implements OnInit {$/;"	c
+Calificaciones	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^  <h2>Calificaciones<\/h2>$/;"	i
+Calificaciones	src/app/interfaces/estadoCuenta.interface.ts	/^export interface Calificaciones {$/;"	i
 Code scaffolding	README.md	/^## Code scaffolding$/;"	s	chapter:EstadoCuenta
-DALA_socio_direccion	src/app/interfaces/prototipo.ts	/^  DALA_socio_direccion: string;$/;"	p	interface:DatosLaborales
-DALA_socio_empresa	src/app/interfaces/prototipo.ts	/^  DALA_socio_empresa: string;$/;"	p	interface:DatosLaborales
-DALA_socio_fecha_egreso	src/app/interfaces/prototipo.ts	/^  DALA_socio_fecha_egreso: string;$/;"	p	interface:DatosLaborales
-DALA_socio_fecha_grabacion	src/app/interfaces/prototipo.ts	/^  DALA_socio_fecha_grabacion: string;$/;"	p	interface:DatosLaborales
-DALA_socio_fecha_ingreso	src/app/interfaces/prototipo.ts	/^  DALA_socio_fecha_ingreso: string;$/;"	p	interface:DatosLaborales
-DALA_socio_salario	src/app/interfaces/prototipo.ts	/^  DALA_socio_salario: number;$/;"	p	interface:DatosLaborales
-DALA_socio_telefono	src/app/interfaces/prototipo.ts	/^  DALA_socio_telefono: string;$/;"	p	interface:DatosLaborales
-DAPE_conyuge	src/app/interfaces/prototipo.ts	/^  DAPE_conyuge: string;$/;"	p	interface:DatosPersonales
-DAPE_direccion	src/app/interfaces/prototipo.ts	/^  DAPE_direccion: string;$/;"	p	interface:DatosPersonales
-DAPE_estado	src/app/interfaces/prototipo.ts	/^  DAPE_estado: string;$/;"	p	interface:DatosPersonales
-DAPE_fecha_ingreso	src/app/interfaces/prototipo.ts	/^  DAPE_fecha_ingreso: string;$/;"	p	interface:DatosPersonales
-DAPE_nombre	src/app/interfaces/prototipo.ts	/^  DAPE_nombre: string;$/;"	p	interface:DatosPersonales
-DAPE_socio_nro	src/app/interfaces/prototipo.ts	/^  DAPE_socio_nro: number;$/;"	p	interface:DatosPersonales
-DAPE_tasa_pref	src/app/interfaces/prototipo.ts	/^  DAPE_tasa_pref: number;$/;"	p	interface:DatosPersonales
-DAPE_telefono	src/app/interfaces/prototipo.ts	/^  DAPE_telefono: string;$/;"	p	interface:DatosPersonales
-DAPE_ultimo_antecedente	src/app/interfaces/prototipo.ts	/^  DAPE_ultimo_antecedente: string;$/;"	p	interface:DatosPersonales
-DatoPersonalColumnaDos	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  DatoPersonalColumnaDos: any[];$/;"	p	class:DatosPersonalesComponent
-DatoPersonalColumnaUno	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  DatoPersonalColumnaUno: any[];$/;"	p	class:DatosPersonalesComponent
-Datos laborales	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.html	/^<h3>Datos laborales<\/h3>$/;"	j
-DatosLaborales	src/app/interfaces/prototipo.ts	/^interface DatosLaborales {$/;"	i
+DAAN_aportes	src/app/interfaces/estadoCuenta.interface.ts	/^  DAAN_aportes: Aportes;$/;"	p	interface:DatosAnaliticos
+DAAN_calificaciones	src/app/interfaces/estadoCuenta.interface.ts	/^  DAAN_calificaciones: Calificaciones;$/;"	p	interface:DatosAnaliticos
+DAAN_saldos_pendientes	src/app/interfaces/estadoCuenta.interface.ts	/^  DAAN_saldos_pendientes: SaldosPendientes;$/;"	p	interface:DatosAnaliticos
+DAAN_solidaridad	src/app/interfaces/estadoCuenta.interface.ts	/^  DAAN_solidaridad: Solidaridad;$/;"	p	interface:DatosAnaliticos
+DAAN_tasa_pref	src/app/interfaces/estadoCuenta.interface.ts	/^  DAAN_tasa_pref: number;$/;"	p	interface:DatosAnaliticos
+DALA_socio_direccion	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_direccion: string;$/;"	p	interface:DatosLaborales
+DALA_socio_empresa	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_empresa: string;$/;"	p	interface:DatosLaborales
+DALA_socio_fecha_egreso	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_fecha_egreso: string;$/;"	p	interface:DatosLaborales
+DALA_socio_fecha_grabacion	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_fecha_grabacion: string;$/;"	p	interface:DatosLaborales
+DALA_socio_fecha_ingreso	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_fecha_ingreso: string;$/;"	p	interface:DatosLaborales
+DALA_socio_salario	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_salario: number;$/;"	p	interface:DatosLaborales
+DALA_socio_telefono	src/app/interfaces/estadoCuenta.interface.ts	/^  DALA_socio_telefono: string;$/;"	p	interface:DatosLaborales
+DAPE_apellido	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_apellido: string;$/;"	p	interface:DatosPersonales
+DAPE_cedula_nro	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_cedula_nro: number;$/;"	p	interface:DatosPersonales
+DAPE_direccion	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_direccion: string;$/;"	p	interface:DatosPersonales
+DAPE_estado	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_estado: string;$/;"	p	interface:DatosPersonales
+DAPE_fecha_ingreso	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_fecha_ingreso: string;$/;"	p	interface:DatosPersonales
+DAPE_nombre	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_nombre: string;$/;"	p	interface:DatosPersonales
+DAPE_socio_nro	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_socio_nro: number;$/;"	p	interface:DatosPersonales
+DAPE_telefono	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_telefono: string;$/;"	p	interface:DatosPersonales
+DAPE_ultimo_antecedente	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPE_ultimo_antecedente: string;$/;"	p	interface:DatosPersonales
+DAPG_conyuge_datos	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPG_conyuge_datos: DatosPersonales;$/;"	p	interface:DatosPersonalesGeneral
+DAPG_socio_datos	src/app/interfaces/estadoCuenta.interface.ts	/^  DAPG_socio_datos: DatosPersonales;$/;"	p	interface:DatosPersonalesGeneral
+DatosAnaliticos	src/app/interfaces/estadoCuenta.interface.ts	/^export interface DatosAnaliticos {$/;"	i
+DatosLaborales	src/app/interfaces/estadoCuenta.interface.ts	/^export interface DatosLaborales {$/;"	i
 DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.ts	/^export class DatosLaboralesComponent implements OnInit {$/;"	c
-DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    DatosLaboralesComponent.prototype.ngOnInit = function () { };$/;"	c
-DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    function DatosLaboralesComponent(_estadoCuenta) {$/;"	c	class:DatosLaboralesComponent
-DatosLaboralesComponent	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^var DatosLaboralesComponent = \/** @class *\/ (function () {$/;"	f
-DatosPersonales	src/app/interfaces/prototipo.ts	/^interface DatosPersonales {$/;"	i
+DatosPersonales	src/app/interfaces/estadoCuenta.interface.ts	/^export interface DatosPersonales {$/;"	i
 DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^export class DatosPersonalesComponent implements OnInit {$/;"	c
-DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    DatosPersonalesComponent.prototype.ngOnInit = function () { };$/;"	c
-DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    function DatosPersonalesComponent() {$/;"	c	class:DatosPersonalesComponent
-DatosPersonalesComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^var DatosPersonalesComponent = \/** @class *\/ (function () {$/;"	f
+DatosPersonalesGeneral	src/app/interfaces/estadoCuenta.interface.ts	/^export interface DatosPersonalesGeneral {$/;"	i
 Development server	README.md	/^## Development server$/;"	s	chapter:EstadoCuenta
-Estado de prestamos	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^  <h3 class='p-mb-0 '>Estado de prestamos<\/h3>$/;"	j
 EstadoCuenta	README.md	/^# EstadoCuenta$/;"	c
-EstadoCuenta	src/app/interfaces/prototipo.ts	/^export interface EstadoCuenta {$/;"	i
-EstadoCuentaService	src/app/servicios/dist/estado-cuenta.service.js	/^    function EstadoCuentaService(_http) {$/;"	c	class:EstadoCuentaService
-EstadoCuentaService	src/app/servicios/dist/estado-cuenta.service.js	/^var EstadoCuentaService = \/** @class *\/ (function () {$/;"	f
+EstadoCuenta	src/app/interfaces/estadoCuenta.interface.ts	/^export interface EstadoCuenta {$/;"	i
 EstadoCuentaService	src/app/servicios/estado-cuenta.service.ts	/^export class EstadoCuentaService {$/;"	c
-FondoService	src/app/servicios/dist/fondo.service.js	/^    FondoService.prototype.x = function (identificador) {$/;"	c
-FondoService	src/app/servicios/dist/fondo.service.js	/^    function FondoService(http) {$/;"	c	class:FondoService
-FondoService	src/app/servicios/dist/fondo.service.js	/^var FondoService = \/** @class *\/ (function () {$/;"	f
 FondoService	src/app/servicios/fondo.service.ts	/^export class FondoService {$/;"	c
+FormatoFechaPipe	src/app/pipes/formato-fecha.pipe.ts	/^export class FormatoFechaPipe implements PipeTransform {$/;"	c
 Further help	README.md	/^## Further help$/;"	s	chapter:EstadoCuenta
-IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    IconoEstadoCuentaComponent.prototype.ngOnInit = function () { };$/;"	c
-IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    function IconoEstadoCuentaComponent() {$/;"	c	class:IconoEstadoCuentaComponent
-IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^var IconoEstadoCuentaComponent = \/** @class *\/ (function () {$/;"	f
-IconoEstadoCuentaComponent	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^export class IconoEstadoCuentaComponent implements OnInit {$/;"	c
-OtrosDatosComponent	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.ts	/^export class OtrosDatosComponent implements OnInit {$/;"	c
-PRDE_socio_adelantado	src/app/interfaces/prototipo.ts	/^  PRDE_socio_adelantado: number;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_en_fecha	src/app/interfaces/prototipo.ts	/^  PRDE_socio_en_fecha: number;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_fecha_vencimiento	src/app/interfaces/prototipo.ts	/^  PRDE_socio_fecha_vencimiento: string;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_max_dias_atraso	src/app/interfaces/prototipo.ts	/^  PRDE_socio_max_dias_atraso: number;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_nombre_garante	src/app/interfaces/prototipo.ts	/^  PRDE_socio_nombre_garante: string;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_nro_pmo	src/app/interfaces/prototipo.ts	/^  PRDE_socio_nro_pmo: number;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_observacion	src/app/interfaces/prototipo.ts	/^  PRDE_socio_observacion: string;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_saldo_restante	src/app/interfaces/prototipo.ts	/^  PRDE_socio_saldo_restante: number;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_sistema	src/app/interfaces/prototipo.ts	/^  PRDE_socio_sistema: string;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_situacion	src/app/interfaces/prototipo.ts	/^  PRDE_socio_situacion: string;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_socio_garante	src/app/interfaces/prototipo.ts	/^  PRDE_socio_socio_garante: string;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_tasa_interes	src/app/interfaces/prototipo.ts	/^  PRDE_socio_tasa_interes: number;$/;"	p	interface:PrestamosDetalles
-PRDE_socio_tipo_garantia	src/app/interfaces/prototipo.ts	/^  PRDE_socio_tipo_garantia: string;$/;"	p	interface:PrestamosDetalles
-PRES_socio_aprobado_fecha	src/app/interfaces/prototipo.ts	/^  PRES_socio_aprobado_fecha: string;$/;"	p	interface:Prestamos
-PRES_socio_atrasos	src/app/interfaces/prototipo.ts	/^  PRES_socio_atrasos: number;$/;"	p	interface:Prestamos
-PRES_socio_calificacion	src/app/interfaces/prototipo.ts	/^  PRES_socio_calificacion: string;$/;"	p	interface:Prestamos
-PRES_socio_cuotas	src/app/interfaces/prototipo.ts	/^  PRES_socio_cuotas: string;$/;"	p	interface:Prestamos
-PRES_socio_estado_pmo	src/app/interfaces/prototipo.ts	/^  PRES_socio_estado_pmo: string;$/;"	p	interface:Prestamos
-PRES_socio_mas_detalles	src/app/interfaces/prototipo.ts	/^  PRES_socio_mas_detalles: PrestamosDetalles;$/;"	p	interface:Prestamos
-PRES_socio_monto	src/app/interfaces/prototipo.ts	/^  PRES_socio_monto: number;$/;"	p	interface:Prestamos
-PRES_socio_tipo_pmo	src/app/interfaces/prototipo.ts	/^  PRES_socio_tipo_pmo: string;$/;"	p	interface:Prestamos
-Prestamos	src/app/interfaces/prototipo.ts	/^interface Prestamos {$/;"	i
-PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    PrestamosComponent.prototype.ngOnInit = function () { };$/;"	c
-PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    function PrestamosComponent() {$/;"	c	class:PrestamosComponent
-PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^var PrestamosComponent = \/** @class *\/ (function () {$/;"	f
+GECO_capital	src/app/interfaces/estadoCuenta.interface.ts	/^  GECO_capital: number;$/;"	p	interface:GestionCobranza
+GECO_gastos_administrativos	src/app/interfaces/estadoCuenta.interface.ts	/^  GECO_gastos_administrativos: number;$/;"	p	interface:GestionCobranza
+GECO_gastos_judiciales	src/app/interfaces/estadoCuenta.interface.ts	/^  GECO_gastos_judiciales: number;$/;"	p	interface:GestionCobranza
+GECO_honorarios	src/app/interfaces/estadoCuenta.interface.ts	/^  GECO_honorarios: number;$/;"	p	interface:GestionCobranza
+GECO_sistema	src/app/interfaces/estadoCuenta.interface.ts	/^  GECO_sistema: string;$/;"	p	interface:GestionCobranza
+GECO_tipo	src/app/interfaces/estadoCuenta.interface.ts	/^  GECO_tipo: string;$/;"	p	interface:GestionCobranza
+GestionCobranza	src/app/interfaces/estadoCuenta.interface.ts	/^export interface GestionCobranza {$/;"	i
+PRES_socio_adelantado	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_adelantado: number;$/;"	p	interface:Prestamos
+PRES_socio_aprobado_fecha	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_aprobado_fecha: string;$/;"	p	interface:Prestamos
+PRES_socio_atrasos	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_atrasos: number;$/;"	p	interface:Prestamos
+PRES_socio_calificacion	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_calificacion: string;$/;"	p	interface:Prestamos
+PRES_socio_cuotas	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_cuotas: string;$/;"	p	interface:Prestamos
+PRES_socio_en_fecha	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_en_fecha: number;$/;"	p	interface:Prestamos
+PRES_socio_estado_pmo	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_estado_pmo: string;$/;"	p	interface:Prestamos
+PRES_socio_fecha_vencimiento	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_fecha_vencimiento: string;$/;"	p	interface:Prestamos
+PRES_socio_max_dias_atraso	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_max_dias_atraso: number;$/;"	p	interface:Prestamos
+PRES_socio_monto	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_monto: number;$/;"	p	interface:Prestamos
+PRES_socio_nro_pmo	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_nro_pmo: number;$/;"	p	interface:Prestamos
+PRES_socio_observacion	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_observacion: string;$/;"	p	interface:Prestamos
+PRES_socio_promedio	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_promedio: number;$/;"	p	interface:Prestamos
+PRES_socio_saldo_restante	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_saldo_restante: number;$/;"	p	interface:Prestamos
+PRES_socio_sistema	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_sistema: string;$/;"	p	interface:Prestamos
+PRES_socio_situacion	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_situacion: string;$/;"	p	interface:Prestamos
+PRES_socio_socio_garante	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_socio_garante: string;$/;"	p	interface:Prestamos
+PRES_socio_tasa_interes	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_tasa_interes: number;$/;"	p	interface:Prestamos
+PRES_socio_tipo_garantia	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_tipo_garantia: string;$/;"	p	interface:Prestamos
+PRES_socio_tipo_pmo	src/app/interfaces/estadoCuenta.interface.ts	/^  PRES_socio_tipo_pmo: string;$/;"	p	interface:Prestamos
+Prestamos	src/app/interfaces/estadoCuenta.interface.ts	/^export interface Prestamos {$/;"	i
 PrestamosComponent	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^export class PrestamosComponent implements OnInit {$/;"	c
-PrestamosDetalles	src/app/interfaces/prototipo.ts	/^interface PrestamosDetalles {$/;"	i
-PrimeNgModule	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    function PrimeNgModule() {$/;"	f	function:PrimeNgModule
-PrimeNgModule	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var PrimeNgModule = \/** @class *\/ (function () {$/;"	f
-PrimeNgModule	src/app/modulos/prime-ng/prime-ng.module.ts	/^export class PrimeNgModule { }$/;"	c
+PrimeNgModule	src/app/modulos/prime-ng/prime-ng.module.ts	/^export class PrimeNgModule {}$/;"	c
 ResumenGeneralComponent	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^export class ResumenGeneralComponent implements OnInit {$/;"	c
 Running end-to-end tests	README.md	/^## Running end-to-end tests$/;"	s	chapter:EstadoCuenta
 Running unit tests	README.md	/^## Running unit tests$/;"	s	chapter:EstadoCuenta
+SAPE_cobranzas	src/app/interfaces/estadoCuenta.interface.ts	/^  SAPE_cobranzas: number;$/;"	p	interface:SaldosPendientes
+SAPE_prestamos	src/app/interfaces/estadoCuenta.interface.ts	/^  SAPE_prestamos: number;$/;"	p	interface:SaldosPendientes
+SAPE_tarjetas	src/app/interfaces/estadoCuenta.interface.ts	/^  SAPE_tarjetas: number;$/;"	p	interface:SaldosPendientes
 SELENIUM_PROMISE_MANAGER	e2e/protractor.conf.js	/^  SELENIUM_PROMISE_MANAGER: false,$/;"	p	class:exports.config
+SOLI_cant_pend	src/app/interfaces/estadoCuenta.interface.ts	/^  SOLI_cant_pend: number;$/;"	p	interface:Solidaridad
+SOLI_ult_pag	src/app/interfaces/estadoCuenta.interface.ts	/^  SOLI_ult_pag: string;$/;"	p	interface:Solidaridad
+Saldos Pendientes	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.html	/^<h2 *ngIf="estado == false" class="titulo p-mb-0">Saldos Pendientes<\/h2>$/;"	i
+SaldosPendientes	src/app/interfaces/estadoCuenta.interface.ts	/^export interface SaldosPendientes {$/;"	i
+Solidaridad	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^  <h2 class="p-mb-0">Solidaridad<\/h2>$/;"	i
+Solidaridad	src/app/interfaces/estadoCuenta.interface.ts	/^export interface Solidaridad{$/;"	i
+TARJ_ajuste_TCR	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_ajuste_TCR: number;$/;"	p	interface:Tarjetas
+TARJ_dias_vencimiento	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_dias_vencimiento: number;$/;"	p	interface:Tarjetas
+TARJ_estado	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_estado: string;$/;"	p	interface:Tarjetas
+TARJ_fecha_ultimo_pago	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_fecha_ultimo_pago: string;$/;"	p	interface:Tarjetas
+TARJ_fecha_vencimiento	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_fecha_vencimiento: string;$/;"	p	interface:Tarjetas
+TARJ_linea_credito	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_linea_credito: number;$/;"	p	interface:Tarjetas
+TARJ_linea_especial	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_linea_especial: number;$/;"	p	interface:Tarjetas
+TARJ_monto_ultimo_pago	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_monto_ultimo_pago: number;$/;"	p	interface:Tarjetas
+TARJ_pago_minimo	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_pago_minimo: number;$/;"	p	interface:Tarjetas
+TARJ_refinanciamiento_pendiente	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_refinanciamiento_pendiente: number;$/;"	p	interface:Tarjetas
+TARJ_saldo	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_saldo: number;$/;"	p	interface:Tarjetas
+TARJ_saldo_cuota	src/app/interfaces/estadoCuenta.interface.ts	/^  TARJ_saldo_cuota: number;$/;"	p	interface:Tarjetas
+Tarjetas	src/app/interfaces/estadoCuenta.interface.ts	/^export interface Tarjetas {$/;"	i
 TarjetasComponent	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.ts	/^export class TarjetasComponent implements OnInit {$/;"	c
+Tasa preferida	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.html	/^  <h2>Tasa preferida<\/h2>$/;"	i
 abab	package-lock.json	/^        "abab": "^2.0.5",$/;"	s	object:dependencies.source-map-loader.requires
 abab	package-lock.json	/^        "abab": "^2.0.5",$/;"	s	object:packages.node_modules/source-map-loader.dependencies
 abab	package-lock.json	/^    "abab": {$/;"	o	object:dependencies
@@ -1233,6 +1270,7 @@ agentkeepalive	package-lock.json	/^    "agentkeepalive": {$/;"	o	object:dependen
 aggregate-error	package-lock.json	/^        "aggregate-error": "^3.0.0"$/;"	s	object:dependencies.p-map.requires
 aggregate-error	package-lock.json	/^        "aggregate-error": "^3.0.0"$/;"	s	object:packages.node_modules/p-map.dependencies
 aggregate-error	package-lock.json	/^    "aggregate-error": {$/;"	o	object:dependencies
+ahorros	src/app/interfaces/estadoCuenta.interface.ts	/^  ahorros: Ahorros[];$/;"	p	interface:EstadoCuenta
 ajv	package-lock.json	/^            "ajv": "^6.1.0",$/;"	s	object:dependencies.webpack-dev-server.dependencies.schema-utils.requires
 ajv	package-lock.json	/^            "ajv": "^6.1.0",$/;"	s	object:dependencies.webpack.dependencies.schema-utils.requires
 ajv	package-lock.json	/^            "ajv": "^6.12.5",$/;"	s	object:dependencies.copy-webpack-plugin.dependencies.schema-utils.requires
@@ -1319,8 +1357,6 @@ alphanum-sort	package-lock.json	/^        "alphanum-sort": "^1.0.0",$/;"	s	objec
 alphanum-sort	package-lock.json	/^    "alphanum-sort": {$/;"	o	object:dependencies
 angular.experimental-ivy	.vim/coc-settings.json	/^  "angular.experimental-ivy": true$/;"	b
 angularCompilerOptions	tsconfig.json	/^  "angularCompilerOptions": {$/;"	o
-angular_fontawesome_1	src/app/dist/app.module.js	/^var angular_fontawesome_1 = require("@fortawesome\/angular-fontawesome");$/;"	v
-animations_1	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^var animations_1 = require("@angular\/animations");$/;"	v
 anonymous	tslint.json	/^        "anonymous": "never",$/;"	s	object:rules.space-before-function-paren.options
 ansi-colors	package-lock.json	/^        "ansi-colors": "4.1.1",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 ansi-colors	package-lock.json	/^        "ansi-colors": "4.1.1",$/;"	s	object:dependencies.@angular/cli.requires
@@ -1412,13 +1448,10 @@ anymatch	package-lock.json	/^        "anymatch": {$/;"	o	object:dependencies.wat
 anymatch	package-lock.json	/^        "anymatch": {$/;"	o	object:dependencies.webpack-dev-server.dependencies
 anymatch	package-lock.json	/^    "anymatch": {$/;"	o	object:dependencies
 aot	angular.json	/^            "aot": true,$/;"	b	object:projects.estadoCuenta.architect.build.options
-aporteContenido	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  aporteContenido: any[];$/;"	p	class:ResumenGeneralComponent
 app	src/app/app.component.spec.ts	/^    const app = fixture.componentInstance;$/;"	C
 app-root-path	package-lock.json	/^        "app-root-path": "^3.0.0",$/;"	s	object:dependencies.codelyzer.requires
 app-root-path	package-lock.json	/^        "app-root-path": "^3.0.0",$/;"	s	object:packages.node_modules/codelyzer.dependencies
 app-root-path	package-lock.json	/^    "app-root-path": {$/;"	o	object:dependencies
-app_component_1	src/app/dist/app.module.js	/^var app_component_1 = require(".\/app.component");$/;"	v
-app_routing_module_1	src/app/dist/app.module.js	/^var app_routing_module_1 = require(".\/app-routing.module");$/;"	v
 aproba	package-lock.json	/^        "aproba": "^1.0.3",$/;"	s	object:dependencies.gauge.requires
 aproba	package-lock.json	/^        "aproba": "^1.0.3",$/;"	s	object:packages.node_modules/gauge.dependencies
 aproba	package-lock.json	/^        "aproba": "^1.1.1"$/;"	s	object:dependencies.run-queue.requires
@@ -1769,7 +1802,6 @@ bn.js	package-lock.json	/^        "bn.js": {$/;"	o	object:dependencies.elliptic.
 bn.js	package-lock.json	/^        "bn.js": {$/;"	o	object:dependencies.miller-rabin.dependencies
 bn.js	package-lock.json	/^        "bn.js": {$/;"	o	object:dependencies.public-encrypt.dependencies
 bn.js	package-lock.json	/^    "bn.js": {$/;"	o	object:dependencies
-body	src/dist/styles.css	/^body {$/;"	s
 body	src/styles.css	/^body {$/;"	s
 body-parser	package-lock.json	/^        "body-parser": "1.19.0",$/;"	s	object:dependencies.express.requires
 body-parser	package-lock.json	/^        "body-parser": "1.19.0",$/;"	s	object:packages.node_modules/express.dependencies
@@ -1905,8 +1937,6 @@ builtin-status-codes	package-lock.json	/^    "builtin-status-codes": {$/;"	o	obj
 builtins	package-lock.json	/^        "builtins": "^1.0.3"$/;"	s	object:dependencies.validate-npm-package-name.requires
 builtins	package-lock.json	/^        "builtins": "^1.0.3"$/;"	s	object:packages.node_modules/validate-npm-package-name.dependencies
 builtins	package-lock.json	/^    "builtins": {$/;"	o	object:dependencies
-buscador_component_1	src/app/dist/app.module.js	/^var buscador_component_1 = require(".\/componentes\/buscador\/buscador.component");$/;"	v
-button_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var button_1 = require("primeng\/button");$/;"	v
 bytes	package-lock.json	/^        "bytes": "3.0.0",$/;"	s	object:dependencies.compression.requires
 bytes	package-lock.json	/^        "bytes": "3.0.0",$/;"	s	object:packages.node_modules/compression.dependencies
 bytes	package-lock.json	/^        "bytes": "3.1.0",$/;"	s	object:dependencies.body-parser.requires
@@ -1916,15 +1946,6 @@ bytes	package-lock.json	/^        "bytes": "3.1.0",$/;"	s	object:packages.node_m
 bytes	package-lock.json	/^        "bytes": {$/;"	o	object:dependencies.body-parser.dependencies
 bytes	package-lock.json	/^        "bytes": {$/;"	o	object:dependencies.raw-body.dependencies
 bytes	package-lock.json	/^    "bytes": {$/;"	o	object:dependencies
-c	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/dist/app-routing.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/dist/app.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/servicios/dist/estado-cuenta.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-c	src/app/servicios/dist/fondo.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
 cacache	package-lock.json	/^            "cacache": "^12.0.2",$/;"	s	object:dependencies.webpack.dependencies.terser-webpack-plugin.requires
 cacache	package-lock.json	/^        "cacache": "15.0.5",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 cacache	package-lock.json	/^        "cacache": "15.0.5",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
@@ -2287,13 +2308,12 @@ commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:depen
 commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:packages.node_modules/terser.dependencies
 commander	package-lock.json	/^        "commander": "^2.20.0",$/;"	s	object:packages.node_modules/webpack/node_modules/terser.dependencies
 commander	package-lock.json	/^    "commander": {$/;"	o	object:dependencies
-common_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var common_1 = require("@angular\/common");$/;"	v
 commondir	package-lock.json	/^            "commondir": "^1.0.1",$/;"	s	object:dependencies.webpack.dependencies.find-cache-dir.requires
 commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:dependencies.find-cache-dir.requires
 commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:packages.node_modules/find-cache-dir.dependencies
 commondir	package-lock.json	/^        "commondir": "^1.0.1",$/;"	s	object:packages.node_modules/webpack/node_modules/find-cache-dir.dependencies
 commondir	package-lock.json	/^    "commondir": {$/;"	o	object:dependencies
-compile-hero.disable-compile-files-on-did-save-code	.vscode/settings.json	/^    "compile-hero.disable-compile-files-on-did-save-code": false$/;"	b
+compile-hero.disable-compile-files-on-did-save-code	.vscode/settings.json	/^    "compile-hero.disable-compile-files-on-did-save-code": true$/;"	b
 compileOnSave	tsconfig.json	/^  "compileOnSave": false,$/;"	b
 compiled	src/app/app.component.spec.ts	/^    const compiled = fixture.nativeElement;$/;"	C
 compilerOptions	e2e/tsconfig.json	/^  "compilerOptions": {$/;"	o
@@ -2301,10 +2321,10 @@ compilerOptions	tsconfig.app.json	/^  "compilerOptions": {$/;"	o
 compilerOptions	tsconfig.json	/^  "compilerOptions": {$/;"	o
 compilerOptions	tsconfig.spec.json	/^  "compilerOptions": {$/;"	o
 component	src/app/componentes/buscador/buscador.component.spec.ts	/^  let component: BuscadorComponent;$/;"	v
-component	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.spec.ts	/^  let component: IconoEstadoCuentaComponent;$/;"	v
+component	src/app/componentes/estado-cuenta-contenedor/ahorros-gestion-cobranza/ahorros-gestion-cobranza.component.spec.ts	/^  let component: AhorrosGestionCobranzaComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.spec.ts	/^  let component: DatosLaboralesComponent;$/;"	v
-component	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.spec.ts	/^  let component: OtrosDatosComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.spec.ts	/^  let component: PrestamosComponent;$/;"	v
+component	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.spec.ts	/^  let component: CajasCentralesComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.spec.ts	/^  let component: DatosPersonalesComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.spec.ts	/^  let component: ResumenGeneralComponent;$/;"	v
 component	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.spec.ts	/^  let component: TarjetasComponent;$/;"	v
@@ -2354,12 +2374,7 @@ constants-browserify	package-lock.json	/^        "constants-browserify": "^1.0.0
 constants-browserify	package-lock.json	/^        "constants-browserify": "^1.0.0",$/;"	s	object:packages.node_modules/node-libs-browser.dependencies
 constants-browserify	package-lock.json	/^    "constants-browserify": {$/;"	o	object:dependencies
 constructor	src/app/componentes/buscador/buscador.component.ts	/^  constructor() { }$/;"	m	class:BuscadorComponent
-constructor	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  constructor() {}$/;"	m	class:IconoEstadoCuentaComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.ts	/^  constructor() { }$/;"	m	class:OtrosDatosComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  constructor() {}$/;"	m	class:PrestamosComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  constructor() {$/;"	m	class:DatosPersonalesComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  constructor() {$/;"	m	class:ResumenGeneralComponent
-constructor	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.ts	/^  constructor() { }$/;"	m	class:TarjetasComponent
+constructor	src/app/servicios/estado-cuenta.service.ts	/^  constructor() {}$/;"	m	class:EstadoCuentaService
 constructor	src/app/servicios/fondo.service.ts	/^  constructor(private http: HttpClient) {}$/;"	m	class:FondoService
 constructor	tslint.json	/^        "constructor": "never",$/;"	s	object:rules.space-before-function-paren.options
 content-disposition	package-lock.json	/^        "content-disposition": "0.5.3",$/;"	s	object:dependencies.express.requires
@@ -2448,15 +2463,6 @@ core-util-is	package-lock.json	/^        "core-util-is": "~1.0.0",$/;"	s	object:
 core-util-is	package-lock.json	/^        "core-util-is": "~1.0.0",$/;"	s	object:packages.node_modules/webpack-dev-server/node_modules/readable-stream.dependencies
 core-util-is	package-lock.json	/^        "core-util-is": "~1.0.0",$/;"	s	object:packages.node_modules/webpack/node_modules/readable-stream.dependencies
 core-util-is	package-lock.json	/^    "core-util-is": {$/;"	o	object:dependencies
-core_1	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/dist/app-routing.module.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/dist/app.module.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/servicios/dist/estado-cuenta.service.js	/^var core_1 = require("@angular\/core");$/;"	v
-core_1	src/app/servicios/dist/fondo.service.js	/^var core_1 = require("@angular\/core");$/;"	v
 cors	package-lock.json	/^        "cors": "~2.8.5",$/;"	s	object:dependencies.engine.io.requires
 cors	package-lock.json	/^        "cors": "~2.8.5",$/;"	s	object:packages.node_modules/engine.io.dependencies
 cors	package-lock.json	/^    "cors": {$/;"	o	object:dependencies
@@ -2597,15 +2603,6 @@ d	package-lock.json	/^        "d": "1",$/;"	s	object:packages.node_modules/es6-i
 d	package-lock.json	/^        "d": "^1.0.1",$/;"	s	object:dependencies.es6-symbol.requires
 d	package-lock.json	/^        "d": "^1.0.1",$/;"	s	object:packages.node_modules/es6-symbol.dependencies
 d	package-lock.json	/^    "d": {$/;"	o	object:dependencies
-d	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/dist/app-routing.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/dist/app.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/servicios/dist/estado-cuenta.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-d	src/app/servicios/dist/fondo.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
 damerau-levenshtein	package-lock.json	/^        "damerau-levenshtein": "^1.0.4",$/;"	s	object:dependencies.codelyzer.requires
 damerau-levenshtein	package-lock.json	/^        "damerau-levenshtein": "^1.0.4",$/;"	s	object:packages.node_modules/codelyzer.dependencies
 damerau-levenshtein	package-lock.json	/^    "damerau-levenshtein": {$/;"	o	object:dependencies
@@ -2618,11 +2615,9 @@ date-format	package-lock.json	/^        "date-format": "^3.0.0",$/;"	s	object:de
 date-format	package-lock.json	/^        "date-format": "^3.0.0",$/;"	s	object:packages.node_modules/log4js.dependencies
 date-format	package-lock.json	/^        "date-format": {$/;"	o	object:dependencies.streamroller.dependencies
 date-format	package-lock.json	/^    "date-format": {$/;"	o	object:dependencies
-datosPersonales	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  datosPersonales: any[] = [$/;"	p	class:DatosPersonalesComponent
-datos_laborales	src/app/interfaces/prototipo.ts	/^  datos_laborales: DatosLaborales[];$/;"	p	interface:EstadoCuenta
-datos_laborales_component_1	src/app/dist/app.module.js	/^var datos_laborales_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/datos-labor/;"	v
-datos_personales	src/app/interfaces/prototipo.ts	/^  datos_personales: DatosPersonales;$/;"	p	interface:EstadoCuenta
-datos_personales_component_1	src/app/dist/app.module.js	/^var datos_personales_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/resumen-ge/;"	v
+datos_analiticos	src/app/interfaces/estadoCuenta.interface.ts	/^  datos_analiticos: DatosAnaliticos;$/;"	p	interface:EstadoCuenta
+datos_laborales	src/app/interfaces/estadoCuenta.interface.ts	/^  datos_laborales: DatosLaborales[];$/;"	p	interface:EstadoCuenta
+datos_personales	src/app/interfaces/estadoCuenta.interface.ts	/^  datos_personales: DatosPersonalesGeneral;$/;"	p	interface:EstadoCuenta
 debug	package-lock.json	/^            "debug": "^3.1.0"$/;"	s	object:dependencies.browserstack.dependencies.https-proxy-agent.requires
 debug	package-lock.json	/^            "debug": "^3.1.0"$/;"	s	object:dependencies.saucelabs.dependencies.https-proxy-agent.requires
 debug	package-lock.json	/^        "debug": "2.6.9",$/;"	s	object:dependencies.body-parser.requires
@@ -8491,9 +8486,6 @@ extsprintf	package-lock.json	/^        "extsprintf": "1.3.0",$/;"	s	object:packa
 extsprintf	package-lock.json	/^        "extsprintf": "^1.2.0"$/;"	s	object:dependencies.verror.requires
 extsprintf	package-lock.json	/^        "extsprintf": "^1.2.0"$/;"	s	object:packages.node_modules/verror.dependencies
 extsprintf	package-lock.json	/^    "extsprintf": {$/;"	o	object:dependencies
-faCalendar	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  faCalendar = faCalendarAlt;$/;"	p	class:IconoEstadoCuentaComponent
-faHandsHelping	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  faHandsHelping = faHandsHelping;$/;"	p	class:IconoEstadoCuentaComponent
-faUser	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  faUser = faUser;$/;"	p	class:IconoEstadoCuentaComponent
 fast-deep-equal	package-lock.json	/^        "fast-deep-equal": "^3.1.1",$/;"	s	object:dependencies.ajv.requires
 fast-deep-equal	package-lock.json	/^        "fast-deep-equal": "^3.1.1",$/;"	s	object:packages.node_modules/ajv.dependencies
 fast-deep-equal	package-lock.json	/^    "fast-deep-equal": {$/;"	o	object:dependencies
@@ -8582,10 +8574,10 @@ find-up	package-lock.json	/^        "find-up": {$/;"	o	object:dependencies.yargs
 find-up	package-lock.json	/^    "find-up": {$/;"	o	object:dependencies
 fixture	src/app/app.component.spec.ts	/^    const fixture = TestBed.createComponent(AppComponent);$/;"	C
 fixture	src/app/componentes/buscador/buscador.component.spec.ts	/^  let fixture: ComponentFixture<BuscadorComponent>;$/;"	v
-fixture	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.spec.ts	/^  let fixture: ComponentFixture<IconoEstadoCuentaComponent>;$/;"	v
+fixture	src/app/componentes/estado-cuenta-contenedor/ahorros-gestion-cobranza/ahorros-gestion-cobranza.component.spec.ts	/^  let fixture: ComponentFixture<AhorrosGestionCobranzaComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.spec.ts	/^  let fixture: ComponentFixture<DatosLaboralesComponent>;$/;"	v
-fixture	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.spec.ts	/^  let fixture: ComponentFixture<OtrosDatosComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.spec.ts	/^  let fixture: ComponentFixture<PrestamosComponent>;$/;"	v
+fixture	src/app/componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component.spec.ts	/^  let fixture: ComponentFixture<CajasCentralesComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.spec.ts	/^  let fixture: ComponentFixture<DatosPersonalesComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.spec.ts	/^  let fixture: ComponentFixture<ResumenGeneralComponent>;$/;"	v
 fixture	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.spec.ts	/^  let fixture: ComponentFixture<TarjetasComponent>;$/;"	v
@@ -8628,7 +8620,6 @@ fragment-cache	package-lock.json	/^        "fragment-cache": "^0.2.1",$/;"	s	obj
 fragment-cache	package-lock.json	/^        "fragment-cache": "^0.2.1",$/;"	s	object:packages.node_modules/webpack/node_modules/micromatch.dependencies
 fragment-cache	package-lock.json	/^    "fragment-cache": {$/;"	o	object:dependencies
 framework	e2e/protractor.conf.js	/^  framework: 'jasmine',$/;"	p	class:exports.config
-free_solid_svg_icons_1	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^var free_solid_svg_icons_1 = require("@fortawesome\/free-solid-svg-icons");$/;"	v
 fresh	package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:dependencies.express.requires
 fresh	package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:dependencies.send.requires
 fresh	package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:packages.node_modules/express.dependencies
@@ -8686,6 +8677,7 @@ gauge	package-lock.json	/^    "gauge": {$/;"	o	object:dependencies
 gensync	package-lock.json	/^        "gensync": "^1.0.0-beta.1",$/;"	s	object:dependencies.@babel/core.requires
 gensync	package-lock.json	/^        "gensync": "^1.0.0-beta.1",$/;"	s	object:packages.node_modules/@babel/core.dependencies
 gensync	package-lock.json	/^    "gensync": {$/;"	o	object:dependencies
+gestion_cobranza	src/app/interfaces/estadoCuenta.interface.ts	/^  gestion_cobranza: GestionCobranza[];$/;"	p	interface:EstadoCuenta
 get-caller-file	package-lock.json	/^            "get-caller-file": "^2.0.1",$/;"	s	object:dependencies.protractor.dependencies.yargs.requires
 get-caller-file	package-lock.json	/^            "get-caller-file": "^2.0.5",$/;"	s	object:dependencies.@angular/compiler-cli.dependencies.yargs.requires
 get-caller-file	package-lock.json	/^            "get-caller-file": "^2.0.5",$/;"	s	object:dependencies.karma.dependencies.yargs.requires
@@ -9004,7 +8996,6 @@ hsl-regex	package-lock.json	/^    "hsl-regex": {$/;"	o	object:dependencies
 hsla-regex	package-lock.json	/^        "hsla-regex": "^1.0.0",$/;"	s	object:dependencies.is-color-stop.requires
 hsla-regex	package-lock.json	/^        "hsla-regex": "^1.0.0",$/;"	s	object:packages.node_modules/is-color-stop.dependencies
 hsla-regex	package-lock.json	/^    "hsla-regex": {$/;"	o	object:dependencies
-html	src/dist/styles.css	/^html,$/;"	s
 html	src/styles.css	/^html,$/;"	s
 html-comment-regex	package-lock.json	/^        "html-comment-regex": "^1.1.0"$/;"	s	object:dependencies.is-svg.requires
 html-comment-regex	package-lock.json	/^        "html-comment-regex": "^1.1.0"$/;"	s	object:packages.node_modules/is-svg.dependencies
@@ -9049,7 +9040,6 @@ http-proxy-middleware	package-lock.json	/^    "http-proxy-middleware": {$/;"	o	o
 http-signature	package-lock.json	/^        "http-signature": "~1.2.0",$/;"	s	object:dependencies.request.requires
 http-signature	package-lock.json	/^        "http-signature": "~1.2.0",$/;"	s	object:packages.node_modules/request.dependencies
 http-signature	package-lock.json	/^    "http-signature": {$/;"	o	object:dependencies
-http_1	src/app/dist/app.module.js	/^var http_1 = require("@angular\/common\/http");$/;"	v
 https-browserify	package-lock.json	/^        "https-browserify": "^1.0.0",$/;"	s	object:dependencies.node-libs-browser.requires
 https-browserify	package-lock.json	/^        "https-browserify": "^1.0.0",$/;"	s	object:packages.node_modules/node-libs-browser.dependencies
 https-browserify	package-lock.json	/^    "https-browserify": {$/;"	o	object:dependencies
@@ -9067,7 +9057,6 @@ https-proxy-agent	package-lock.json	/^    "https-proxy-agent": {$/;"	o	object:de
 humanize-ms	package-lock.json	/^        "humanize-ms": "^1.2.1"$/;"	s	object:dependencies.agentkeepalive.requires
 humanize-ms	package-lock.json	/^        "humanize-ms": "^1.2.1"$/;"	s	object:packages.node_modules/agentkeepalive.dependencies
 humanize-ms	package-lock.json	/^    "humanize-ms": {$/;"	o	object:dependencies
-icono_estado_cuenta_component_1	src/app/dist/app.module.js	/^var icono_estado_cuenta_component_1 = require(".\/componentes\/compartido\/icono-estado-cuenta\//;"	v
 iconv-lite	package-lock.json	/^        "iconv-lite": "0.4.24",$/;"	s	object:dependencies.body-parser.requires
 iconv-lite	package-lock.json	/^        "iconv-lite": "0.4.24",$/;"	s	object:dependencies.raw-body.requires
 iconv-lite	package-lock.json	/^        "iconv-lite": "0.4.24",$/;"	s	object:packages.node_modules/body-parser.dependencies
@@ -13754,16 +13743,6 @@ ng	package-lock.json	/^        "ng": "bin\/ng"$/;"	s	object:packages.node_module
 ng	package.json	/^    "ng": "ng",$/;"	s	object:scripts
 ng-xi18n	package-lock.json	/^        "ng-xi18n": "src\/extract_i18n.js",$/;"	s	object:packages.node_modules/@angular/compiler-cli.bin
 ngOnInit	src/app/componentes/buscador/buscador.component.ts	/^  ngOnInit(): void {$/;"	m	class:BuscadorComponent
-ngOnInit	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    IconoEstadoCuentaComponent.prototype.ngOnInit = function () { };$/;"	m	class:IconoEstadoCuentaComponent
-ngOnInit	src/app/componentes/compartido/icono-estado-cuenta/icono-estado-cuenta.component.ts	/^  ngOnInit(): void {}$/;"	m	class:IconoEstadoCuentaComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    DatosLaboralesComponent.prototype.ngOnInit = function () { };$/;"	m	class:DatosLaboralesComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/otros-datos/otros-datos.component.ts	/^  ngOnInit(): void {$/;"	m	class:OtrosDatosComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    PrestamosComponent.prototype.ngOnInit = function () { };$/;"	m	class:PrestamosComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  ngOnInit(): void {}$/;"	m	class:PrestamosComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component.ts	/^  ngOnInit(): void {}$/;"	m	class:DatosPersonalesComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    DatosPersonalesComponent.prototype.ngOnInit = function () { };$/;"	m	class:DatosPersonalesComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/resumen-general/resumen-general.component.ts	/^  ngOnInit(): void {$/;"	m	class:ResumenGeneralComponent
-ngOnInit	src/app/componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component.ts	/^  ngOnInit(): void {$/;"	m	class:TarjetasComponent
 ngc	package-lock.json	/^        "ngc": "src\/main.js",$/;"	s	object:packages.node_modules/@angular/compiler-cli.bin
 ngcc	package-lock.json	/^        "ngcc": "ngcc\/main-ngcc.js"$/;"	s	object:packages.node_modules/@angular/compiler-cli.bin
 nice-try	package-lock.json	/^        "nice-try": "^1.0.4",$/;"	s	object:dependencies.cross-spawn.requires
@@ -16629,7 +16608,6 @@ os-tmpdir	package-lock.json	/^        "os-tmpdir": "~1.0.1"$/;"	s	object:package
 os-tmpdir	package-lock.json	/^        "os-tmpdir": "~1.0.2"$/;"	s	object:dependencies.tmp.requires
 os-tmpdir	package-lock.json	/^        "os-tmpdir": "~1.0.2"$/;"	s	object:packages.node_modules/tmp.dependencies
 os-tmpdir	package-lock.json	/^    "os-tmpdir": {$/;"	o	object:dependencies
-otros_datos_component_1	src/app/dist/app.module.js	/^var otros_datos_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/otros-datos\/ot/;"	v
 outDir	e2e/tsconfig.json	/^    "outDir": "..\/out-tsc\/e2e",$/;"	s	object:compilerOptions
 outDir	tsconfig.app.json	/^    "outDir": ".\/out-tsc\/app",$/;"	s	object:compilerOptions
 outDir	tsconfig.json	/^    "outDir": ".\/dist\/out-tsc",$/;"	s	object:compilerOptions
@@ -16819,7 +16797,6 @@ picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:depende
 picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:packages.node_modules/fast-glob.dependencies
 picomatch	package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	object:packages.node_modules/readdirp.dependencies
 picomatch	package-lock.json	/^    "picomatch": {$/;"	o	object:dependencies
-pideDatoUsuario	src/app/servicios/dist/fondo.service.js	/^    FondoService.prototype.pideDatoUsuario = function () {$/;"	m	class:FondoService
 pideDatoUsuario	src/app/servicios/fondo.service.ts	/^  pideDatoUsuario(): Observable<EstadoCuenta> {$/;"	m	class:FondoService
 pify	package-lock.json	/^            "pify": "^2.0.0",$/;"	s	object:dependencies.del.dependencies.globby.requires
 pify	package-lock.json	/^            "pify": "^2.0.0",$/;"	s	object:dependencies.protractor.dependencies.del.requires
@@ -16849,6 +16826,7 @@ pinkie-promise	package-lock.json	/^        "pinkie-promise": "^2.0.0"$/;"	s	obje
 pinkie-promise	package-lock.json	/^        "pinkie-promise": "^2.0.0"$/;"	s	object:packages.node_modules/protractor/node_modules/globby.dependencies
 pinkie-promise	package-lock.json	/^        "pinkie-promise": "^2.0.0",$/;"	s	object:packages.node_modules/protractor/node_modules/del.dependencies
 pinkie-promise	package-lock.json	/^    "pinkie-promise": {$/;"	o	object:dependencies
+pipe	src/app/pipes/formato-fecha.pipe.spec.ts	/^    const pipe = new FormatoFechaPipe();$/;"	C
 pkg-dir	package-lock.json	/^            "pkg-dir": "^3.0.0"$/;"	s	object:dependencies.webpack.dependencies.find-cache-dir.requires
 pkg-dir	package-lock.json	/^        "pkg-dir": "^3.0.0"$/;"	s	object:packages.node_modules/webpack/node_modules/find-cache-dir.dependencies
 pkg-dir	package-lock.json	/^        "pkg-dir": "^3.0.0",$/;"	s	object:dependencies.import-local.requires
@@ -16858,7 +16836,6 @@ pkg-dir	package-lock.json	/^        "pkg-dir": "^4.1.0"$/;"	s	object:packages.no
 pkg-dir	package-lock.json	/^        "pkg-dir": {$/;"	o	object:dependencies.import-local.dependencies
 pkg-dir	package-lock.json	/^        "pkg-dir": {$/;"	o	object:dependencies.webpack.dependencies
 pkg-dir	package-lock.json	/^    "pkg-dir": {$/;"	o	object:dependencies
-platform_browser_1	src/app/dist/app.module.js	/^var platform_browser_1 = require("@angular\/platform-browser");$/;"	v
 pnp-webpack-plugin	package-lock.json	/^        "pnp-webpack-plugin": "1.6.4",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 pnp-webpack-plugin	package-lock.json	/^        "pnp-webpack-plugin": "1.6.4",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
 pnp-webpack-plugin	package-lock.json	/^    "pnp-webpack-plugin": {$/;"	o	object:dependencies
@@ -17152,13 +17129,10 @@ postcss-value-parser	package-lock.json	/^        "postcss-value-parser": {$/;"	o
 postcss-value-parser	package-lock.json	/^        "postcss-value-parser": {$/;"	o	object:dependencies.postcss-svgo.dependencies
 postcss-value-parser	package-lock.json	/^    "postcss-value-parser": {$/;"	o	object:dependencies
 prefix	angular.json	/^      "prefix": "app",$/;"	s	object:projects.estadoCuenta
-prestamos	src/app/interfaces/prototipo.ts	/^  prestamos: Prestamos[];$/;"	p	interface:EstadoCuenta
-prestamos_component_1	src/app/dist/app.module.js	/^var prestamos_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/prestamos\/presta/;"	v
+prestamos	src/app/interfaces/estadoCuenta.interface.ts	/^  prestamos: Prestamos[];$/;"	p	interface:EstadoCuenta
 pretty-bytes	package-lock.json	/^        "pretty-bytes": "^5.3.0"$/;"	s	object:dependencies.critters.requires
 pretty-bytes	package-lock.json	/^        "pretty-bytes": "^5.3.0"$/;"	s	object:packages.node_modules/critters.dependencies
 pretty-bytes	package-lock.json	/^    "pretty-bytes": {$/;"	o	object:dependencies
-prime_ng_module_1	src/app/dist/app-routing.module.js	/^var prime_ng_module_1 = require(".\/modulos\/prime-ng\/prime-ng.module");$/;"	v
-prime_ng_module_1	src/app/dist/app.module.js	/^var prime_ng_module_1 = require(".\/modulos\/prime-ng\/prime-ng.module");$/;"	v
 primeflex	package-lock.json	/^        "primeflex": "^2.0.0",$/;"	s	object:packages..dependencies
 primeflex	package-lock.json	/^    "primeflex": {$/;"	o	object:dependencies
 primeflex	package.json	/^    "primeflex": "^2.0.0",$/;"	s	object:dependencies
@@ -17211,8 +17185,6 @@ process-nextick-args	package-lock.json	/^    "process-nextick-args": {$/;"	o	obj
 production	angular.json	/^            "production": {$/;"	o	object:projects.estadoCuenta.architect.build.configurations
 production	angular.json	/^            "production": {$/;"	o	object:projects.estadoCuenta.architect.e2e.configurations
 production	angular.json	/^            "production": {$/;"	o	object:projects.estadoCuenta.architect.serve.configurations
-products	src/app/componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component.ts	/^  products: any[] = [$/;"	p	class:DatosLaboralesComponent
-products	src/app/componentes/estado-cuenta-contenedor/prestamos/prestamos.component.ts	/^  products: any[] = [$/;"	p	class:PrestamosComponent
 projectType	angular.json	/^      "projectType": "application",$/;"	s	object:projects.estadoCuenta
 projects	angular.json	/^  "projects": {$/;"	o
 promise-inflight	package-lock.json	/^            "promise-inflight": "^1.0.1",$/;"	s	object:dependencies.webpack.dependencies.cacache.requires
@@ -17304,15 +17276,6 @@ queue-microtask	package-lock.json	/^        "queue-microtask": "^1.2.2"$/;"	s	ob
 queue-microtask	package-lock.json	/^        "queue-microtask": "^1.2.2"$/;"	s	object:packages.node_modules/run-parallel.dependencies
 queue-microtask	package-lock.json	/^    "queue-microtask": {$/;"	o	object:dependencies
 quotemark	tslint.json	/^    "quotemark": [$/;"	a	object:rules
-r	src/app/componentes/compartido/icono-estado-cuenta/dist/icono-estado-cuenta.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/componentes/estado-cuenta-contenedor/datos-laborales/dist/datos-laborales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/componentes/estado-cuenta-contenedor/prestamos/dist/prestamos.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/componentes/estado-cuenta-contenedor/resumen-general/datos-personales/dist/datos-personales.component.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/dist/app-routing.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/dist/app.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/servicios/dist/estado-cuenta.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
-r	src/app/servicios/dist/fondo.service.js	/^    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyD/;"	v
 randombytes	package-lock.json	/^            "randombytes": "^2.1.0"$/;"	s	object:dependencies.webpack.dependencies.serialize-javascript.requires
 randombytes	package-lock.json	/^        "randombytes": "^2.0.0"$/;"	s	object:dependencies.diffie-hellman.requires
 randombytes	package-lock.json	/^        "randombytes": "^2.0.0"$/;"	s	object:packages.node_modules/diffie-hellman.dependencies
@@ -21781,7 +21744,6 @@ resolved	package-lock.json	/^      "resolved": "https:\/\/registry.npmjs.org\/zo
 restore-cursor	package-lock.json	/^        "restore-cursor": "^3.1.0"$/;"	s	object:dependencies.cli-cursor.requires
 restore-cursor	package-lock.json	/^        "restore-cursor": "^3.1.0"$/;"	s	object:packages.node_modules/cli-cursor.dependencies
 restore-cursor	package-lock.json	/^    "restore-cursor": {$/;"	o	object:dependencies
-resumen_general_component_1	src/app/dist/app.module.js	/^var resumen_general_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/resumen-gen/;"	v
 ret	package-lock.json	/^        "ret": "~0.1.10"$/;"	s	object:dependencies.safe-regex.requires
 ret	package-lock.json	/^        "ret": "~0.1.10"$/;"	s	object:packages.node_modules/safe-regex.dependencies
 ret	package-lock.json	/^    "ret": {$/;"	o	object:dependencies
@@ -21869,9 +21831,7 @@ rollup	package-lock.json	/^        "rollup": "2.38.4",$/;"	s	object:packages.nod
 rollup	package-lock.json	/^        "rollup": "dist\/bin\/rollup"$/;"	s	object:packages.node_modules/rollup.bin
 rollup	package-lock.json	/^    "rollup": {$/;"	o	object:dependencies
 root	angular.json	/^      "root": "",$/;"	s	object:projects.estadoCuenta
-router_1	src/app/dist/app-routing.module.js	/^var router_1 = require("@angular\/router");$/;"	v
 routes	src/app/app-routing.module.ts	/^const routes: Routes = [$/;"	C
-routes	src/app/dist/app-routing.module.js	/^var routes = [];$/;"	v
 rules	tslint.json	/^  "rules": {$/;"	o
 rulesDirectory	tslint.json	/^  "rulesDirectory": [$/;"	a
 run-async	package-lock.json	/^        "run-async": "^2.4.0",$/;"	s	object:dependencies.inquirer.requires
@@ -21908,7 +21868,6 @@ rxjs	package-lock.json	/^        "rxjs": {$/;"	o	object:dependencies.@angular-de
 rxjs	package-lock.json	/^        "rxjs": {$/;"	o	object:dependencies.@angular-devkit/schematics.dependencies
 rxjs	package-lock.json	/^    "rxjs": {$/;"	o	object:dependencies
 rxjs	package.json	/^    "rxjs": "~6.6.0",$/;"	s	object:dependencies
-rxjs_1	src/app/servicios/dist/fondo.service.js	/^var rxjs_1 = require("rxjs");$/;"	v
 safe-buffer	package-lock.json	/^                "safe-buffer": "~5.1.0"$/;"	s	object:dependencies.node-libs-browser.dependencies.readable-stream.dependencies.string_decoder.requires
 safe-buffer	package-lock.json	/^            "safe-buffer": "~5.1.0"$/;"	s	object:dependencies.are-we-there-yet.dependencies.string_decoder.requires
 safe-buffer	package-lock.json	/^            "safe-buffer": "~5.1.0"$/;"	s	object:dependencies.concat-stream.dependencies.string_decoder.requires
@@ -23012,7 +22971,6 @@ svgo	package-lock.json	/^    "svgo": {$/;"	o	object:dependencies
 symbol-observable	package-lock.json	/^        "symbol-observable": "3.0.0",$/;"	s	object:dependencies.@angular/cli.requires
 symbol-observable	package-lock.json	/^        "symbol-observable": "3.0.0",$/;"	s	object:packages.node_modules/@angular/cli.dependencies
 symbol-observable	package-lock.json	/^    "symbol-observable": {$/;"	o	object:dependencies
-table_1	src/app/modulos/prime-ng/dist/prime-ng.module.js	/^var table_1 = require("primeng\/table");$/;"	v
 tapable	package-lock.json	/^            "tapable": "^1.0.0"$/;"	s	object:dependencies.webpack.dependencies.enhanced-resolve.requires
 tapable	package-lock.json	/^        "tapable": "^1.0.0"$/;"	s	object:packages.node_modules/webpack/node_modules/enhanced-resolve.dependencies
 tapable	package-lock.json	/^        "tapable": "^1.1.3",$/;"	s	object:dependencies.webpack.requires
@@ -23030,7 +22988,7 @@ tar	package-lock.json	/^        "tar": "^6.1.0"$/;"	s	object:packages.node_modul
 tar	package-lock.json	/^    "tar": {$/;"	o	object:dependencies
 target	e2e/tsconfig.json	/^    "target": "es2018",$/;"	s	object:compilerOptions
 target	tsconfig.json	/^    "target": "es2015",$/;"	s	object:compilerOptions
-tarjetas_component_1	src/app/dist/app.module.js	/^var tarjetas_component_1 = require(".\/componentes\/estado-cuenta-contenedor\/tarjetas\/tarjetas/;"	v
+tarjetas	src/app/interfaces/estadoCuenta.interface.ts	/^  tarjetas: Tarjetas[];$/;"	p	interface:EstadoCuenta
 teleport	package-lock.json	/^        "teleport": ">=0.2.0"$/;"	s	object:packages.node_modules/protractor/node_modules/q.engines
 teleport	package-lock.json	/^        "teleport": ">=0.2.0"$/;"	s	object:packages.node_modules/q.engines
 template-banana-in-box	tslint.json	/^    "template-banana-in-box": true,$/;"	b	object:rules
@@ -23136,6 +23094,7 @@ toidentifier	package-lock.json	/^    "toidentifier": {$/;"	o	object:dependencies
 tough-cookie	package-lock.json	/^        "tough-cookie": "~2.5.0",$/;"	s	object:dependencies.request.requires
 tough-cookie	package-lock.json	/^        "tough-cookie": "~2.5.0",$/;"	s	object:packages.node_modules/request.dependencies
 tough-cookie	package-lock.json	/^    "tough-cookie": {$/;"	o	object:dependencies
+transform	src/app/pipes/formato-fecha.pipe.ts	/^  transform(value: string, ...args: unknown[]): string {$/;"	m	class:FormatoFechaPipe
 tree-kill	package-lock.json	/^        "tree-kill": "1.2.2",$/;"	s	object:dependencies.@angular-devkit/build-angular.requires
 tree-kill	package-lock.json	/^        "tree-kill": "1.2.2",$/;"	s	object:packages.node_modules/@angular-devkit/build-angular.dependencies
 tree-kill	package-lock.json	/^        "tree-kill": "cli.js"$/;"	s	object:packages.node_modules/tree-kill.bin
@@ -26847,7 +26806,6 @@ ws	package-lock.json	/^        "ws": "~7.4.2"$/;"	s	object:dependencies.engine.i
 ws	package-lock.json	/^        "ws": "~7.4.2"$/;"	s	object:packages.node_modules/engine.io.dependencies
 ws	package-lock.json	/^        "ws": {$/;"	o	object:dependencies.engine.io.dependencies
 ws	package-lock.json	/^    "ws": {$/;"	o	object:dependencies
-x	src/app/servicios/dist/fondo.service.js	/^    FondoService.prototype.x = function (identificador) {$/;"	m	class:FondoService
 x	src/app/servicios/fondo.service.ts	/^  x(identificador: number) {$/;"	m	class:FondoService
 xml2js	package-lock.json	/^            "xml2js": "^0.4.17"$/;"	s	object:dependencies.protractor.dependencies.webdriver-manager.requires
 xml2js	package-lock.json	/^        "xml2js": "^0.4.17"$/;"	s	object:dependencies.selenium-webdriver.requires

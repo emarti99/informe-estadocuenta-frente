@@ -1,8 +1,27 @@
 <!-- Seccion ahorros -->
-<p-fieldset legend="Ahorros" [toggleable]="true">
+<p-fieldset [toggleable]="true">
+  <ng-template pTemplate="header" class="sumatoria">
+    <p>Ahorros</p>
+    <p-table [columns]="sumatoria" [value]="sumatoria" styleClass="p-datatable-sm">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>
+            Total
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td>
+            {{ item.sumatoria | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+          </td>
+      </ng-template>
+    </p-table>
+    
+  </ng-template>
   <section class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
-    <!-- <h2>Ahorros</h2> -->
-    <p-table [columns]="colsAhorros" [value]="ahorros" styleClass="p-datatable-sm">
+
+    <p-table [columns]="colsAhorros" [value]="ahorros" styleClass="p-datatable-sm p-datatable-responsive-demo">
       <ng-template pTemplate="header" let-columns>
         <tr>
           <th *ngFor="let col of columns">
@@ -13,12 +32,15 @@
       <ng-template pTemplate="body" let-item>
         <tr>
           <td>
+            <span class="p-column-title">Cuenta N॰</span>
             {{ item.AHOR_cuenta_nro }}
           </td>
           <td>
+            <span class="p-column-title">Tipo de cuenta</span>
             {{ item.AHOR_tipo_cuenta }}
           </td>
           <td>
+            <span class="p-column-title">Cantidad</span>
             {{ item.AHOR_cantidad | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
         </tr>
@@ -30,8 +52,8 @@
 <!-- Seccion Gestion cobranza -->
 <p-fieldset legend="Gestión cobranza" [toggleable]="true">
   <section class="p-d-inline-flex p-flex-column p-ai-center p-mb-4 p-shadow-2">
-    <!-- <h2>Gestion cobranza</h2> -->
-    <p-table [columns]="colsGestion" [value]="gestionCobranza" styleClass="p-datatable-sm">
+
+    <p-table [columns]="colsGestion" [value]="gestionCobranza" styleClass="p-datatable-sm p-datatable-responsive-demo">
       <ng-template pTemplate="header" let-columns>
         <tr>
           <th *ngFor="let col of columns">
@@ -42,21 +64,27 @@
       <ng-template pTemplate="body" let-item>
         <tr>
           <td>
+            <span class="p-column-title">Sistema</span>
             {{ item.GECO_sistema }}
           </td>
           <td>
+            <span class="p-column-title">Capital</span>
             {{ item.GECO_capital | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
+            <span class="p-column-title">Gastos Judiciales</span>
             {{ item.GECO_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
+            <span class="p-column-title">Honorarios</span>
             {{ item.GECO_honorarios | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
+            <span class="p-column-title">Gastos admin</span>
             {{ item.GECO_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
+            <span class="p-column-title">Tipo</span>
             {{ item.GECO_tipo }}
           </td>
         </tr>

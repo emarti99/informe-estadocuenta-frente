@@ -33,7 +33,6 @@ import {
 })
 export class DatosLaboralesComponent implements OnInit {
   @Input() datosLaborales!: DatosLaborales[];
-  datosLaborales1!: any;
 
   constructor() {}
 

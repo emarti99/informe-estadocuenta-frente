@@ -1,12 +1,12 @@
-<section class="p-col-6 p-grid  p-shadow-2 p-jc-between datos-personales-contenedor"
+<section class="p-col-12 p-md-12 p-lg-6 p-grid p-shadow-2 p-jc-between datos-personales-contenedor"
   [class]="{socio: estado==true, conyuge: estado==false}">
   <div class="datos-personales">
-    <div class="caja-superior caja-izquierda">
+    <div class="caja-superior caja-izquierda ">
       <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.DAPE_nombre }}</p>
       <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.DAPE_apellido }}</p>
     </div>
-    <div class="caja-inferior caja-izquierda">
-      <p class="datos-secundarios">{{ datosPersonales.DAPE_direccion }}</p>
+    <div class="caja-inferior caja-izquierda p-col">
+      <p class="datos-secundarios direccion">{{ datosPersonales.DAPE_direccion }}</p>
     </div>
   </div>
   <div class="datos-personales">
@@ -21,7 +21,7 @@
 </section>
 
 
-<section class="p-col-6 p-grid p-shadow-2 p-jc-between datos-personales-contenedor"
+<section class="p-col-12 p-md-12 p-lg-6 p-grid p-shadow-2 p-jc-between datos-personales-contenedor"
   [class]="{socio: estado==true, conyuge: estado==false}">
   <div class="datos-personales">
     <div class="caja-superior caja-izquierda">

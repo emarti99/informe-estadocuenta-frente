@@ -2,7 +2,8 @@
 
 <!-- Tabla principal -->
 
-<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha" styleClass="p-datatable-sm">
+<p-table [value]="prestamos" dataKey="PRES_socio_aprobado_fecha"
+  styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -39,21 +40,44 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-campo let-expanded="expanded">
-    <tr class="campos" >
+    <tr class="campos">
       <td>
         <button type="button" pButton pRipple [pRowToggler]="campo"
           class="p-button-text p-button-rounded p-button-plain"
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_aprobado_fecha | formatoFecha}}</td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>{{campo.PRES_socio_aprobado_fecha | formatoFecha}}
+      </td>
       <td [pRowToggler]="campo">{{campo.PRES_socio_monto | currency:'PYG':'symbol-narrow':'1.0':'py'}}</td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_sistema}}</td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_cuotas}}</td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_tipo_pmo}}</td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_calificacion}}</td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_atrasos}}</td>
-      <td [pRowToggler]="campo">{{campo.PRES_socio_fecha_vencimiento | formatoFecha}}</td>
-      <td><span
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_sistema}}
+      </td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_cuotas}}
+      </td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_tipo_pmo}}
+      </td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_calificacion}}
+      </td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_atrasos}}
+      </td>
+      <td [pRowToggler]="campo">
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_fecha_vencimiento | formatoFecha}}
+      </td>
+      <td>
+
+        <span class="p-column-title">Tipo de cuenta</span>
+        <span
           [class]="'product-badge status-' + campo.PRES_socio_estado_pmo.toLowerCase()">{{campo.PRES_socio_estado_pmo}}</span>
       </td>
     </tr>
@@ -61,11 +85,12 @@
   <ng-template pTemplate="rowexpansion" let-campo>
     <tr>
       <td colspan="10">
-        <div class="p-p-3">
+        <div class="p-p-0">
 
           <!-- Tabla secundaria ( desplegable ) -->
 
-          <p-table [value]="prestamos" dataKey="PRES_socio_mas_detalles.PRDE_socio_nro_pmo" styleClass="p-datatable-sm desplegable">
+          <p-table [value]="prestamos" dataKey="PRES_socio_mas_detalles.PRDE_socio_nro_pmo"
+            styleClass="p-datatable-sm desplegable p-datatable-responsive-demo">
             <ng-template pTemplate="header">
     <tr>
       <th>Saldo restante </th>
@@ -76,20 +101,47 @@
       <th>Max días de atraso </th>
       <th>Tipo de Garantía </th>
       <th>Socio garante </th>
-      <th style="width: 10rem">Observación </th>
+      <th>Observación </th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr *ngIf="rowIndex == 1">
-      <td>{{campo.PRES_socio_saldo_restante}}</td>
-      <td>{{campo.PRES_socio_tasa_interes}}</td>
-      <td>{{campo.PRES_socio_situacion}}</td>
-      <td>{{campo.PRES_socio_adelantado}}</td>
-      <td>{{campo.PRES_socio_en_fecha}}</td>
-      <td>{{campo.PRES_socio_max_dias_atraso}}</td>
-      <td>{{campo.PRES_socio_tipo_garantia}}</td>
-      <td>{{campo.PRES_socio_socio_garante}}</td>
-      <td>{{campo.PRES_socio_observacion}}</td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_saldo_restante}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_tasa_interes}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_situacion}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_adelantado}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_en_fecha}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_max_dias_atraso}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_tipo_garantia}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_socio_garante}}
+      </td>
+      <td>
+        <span class="p-column-title">Tipo de cuenta</span>
+        {{campo.PRES_socio_observacion}}
+      </td>
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">

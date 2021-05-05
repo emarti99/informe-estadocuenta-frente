@@ -13,6 +13,7 @@ export class AhorrosGestionCobranzaComponent implements OnInit {
 
   colsAhorros!: any[];
   colsGestion!: any[];
+  sumatoria!: any[];
 
   constructor() {}
 
@@ -31,5 +32,11 @@ export class AhorrosGestionCobranzaComponent implements OnInit {
       { cabecera: 'Gastos admin' },
       { cabecera: 'Tipo' },
     ];
+
+    this.sumatoria = [
+      {
+        cabecera: "Total", sumatoria:'15500000'
+      }
+    ]
   }
 }

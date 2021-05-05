@@ -1,6 +1,6 @@
 <!-- Seccion/informacion del socio -->
 <app-datos-personales [datosPersonales]="datosPersonales.DAPG_socio_datos" [estado]="true"
-  class="p-d-flex p-col-12 p-mb-3 p-jc-between">
+  class="p-d-flex p-col-12 p-mb-3 p-jc-between p-flex-wrap">
 </app-datos-personales>
 <!-- 
 <i class="pi pi-chevron-circle-down
@@ -8,7 +8,7 @@
 
 <!-- Seccion/informacion del conyuge -->
 <app-datos-personales [datosPersonales]="datosPersonales.DAPG_conyuge_datos" [estado]="false"
-  class="p-d-flex p-col-12 p-mb-3 p-jc-between">
+  class="p-d-flex p-col-12 p-mb-3 p-jc-between p-flex-wrap">
 </app-datos-personales>
 
 <!-- Seccion/Tasa preferida -->
@@ -25,11 +25,11 @@
 <!-- Seccion/Solidaridad -->
 <div class="p-d-flex p-flex-column p-jc-center p-col-2 p-shadow-2">
   <h2 class="p-mb-0">Solidaridad</h2>
-  <div class="p-col">
+  <div class="p-col p-mt-2">
     <p class="datos-primarios">{{ datosAnaliticos.DAAN_solidaridad.SOLI_cant_pend | number:'1.0':'py' }}</p>
     <p class="datos-secundarios">Cantidad pendiente</p>
   </div>
-  <div class="p-col">
+  <div class="p-col p-mb-2">
     <p class="datos-primarios">{{ datosAnaliticos.DAAN_solidaridad.SOLI_ult_pag | formatoFecha }}</p>
   <p class="datos-secundarios">Últ. Pagado</p>
   </div>

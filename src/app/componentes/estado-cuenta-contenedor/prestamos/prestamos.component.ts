@@ -37,5 +37,13 @@ export class PrestamosComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+     this.prestamos.sort((a, b) => {
+       if (a.PRES_socio_aprobado_fecha > b.PRES_socio_aprobado_fecha) {
+         return -1;
+       } else {
+         return 1;
+       }
+     });
+  }
 }
