@@ -1,55 +1,62 @@
 <!-- Seccion/informacion del socio -->
 <app-datos-personales [datosPersonales]="datosPersonales.DAPG_socio_datos" [estado]="true"
-  class="p-d-flex p-col-12 p-mb-3 p-jc-between p-flex-wrap">
+  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap">
 </app-datos-personales>
-<!-- 
-<i class="pi pi-chevron-circle-down
-" style="font-size: 2rem; margin: 0 auto"></i> -->
+
 
 <!-- Seccion/informacion del conyuge -->
 <app-datos-personales [datosPersonales]="datosPersonales.DAPG_conyuge_datos" [estado]="false"
-  class="p-d-flex p-col-12 p-mb-3 p-jc-between p-flex-wrap">
+  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap">
 </app-datos-personales>
 
-<!-- Seccion/Tasa preferida -->
-<section class="p-d-flex p-flex-column p-col-2 p-shadow-2">
-  <h2>Tasa preferida</h2>
-  <p class="datos-primarios resaltado p-mb-0">{{ datosAnaliticos.DAAN_tasa_pref }}</p>
-  <p class="datos-secundarios p-mt-2">Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
 
-</section>
+<!-- Seccion/Tasa preferida -->
+<p-card class="p-d-flex p-flex-column p-col-2 p-shadow-2 p-mt-2">
+  <!-- <p-card class="p-d-flex p-flex-column p-col-12 p-md-12 p-lg-2 p-shadow-2"> -->
+  <h2>Tasa preferida</h2>
+  <p class="datos-primarios resaltado p-mb-0 p-mt-2">{{ datosAnaliticos.DAAN_tasa_pref }}</p>
+  <p class="datos-secundarios p-mt-2">Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
+</p-card>
 
 <!-- Seccion/Aportes -->
-<app-cajas-centrales [contenido]="aportesContenido" [estado]="true" class="p-col-3 p-shadow-2"></app-cajas-centrales>
+<p-card class="p-col-3 p-shadow-2 p-mt-2">
+  <app-cajas-centrales [contenido]="aportesContenido" [estado]="true"></app-cajas-centrales>
+</p-card>
 
 <!-- Seccion/Solidaridad -->
-<div class="p-d-flex p-flex-column p-jc-center p-col-2 p-shadow-2">
-  <h2 class="p-mb-0">Solidaridad</h2>
+<p-card class="p-d-flex p-flex-column p-col-2 p-shadow-2 p-mt-2">
+  <!-- <p-card class="p-d-flex p-flex-column p-jc-center p-col-12 p-md-12 p-lg-2 p-shadow-2"> -->
+  <h2>Solidaridad</h2>
   <div class="p-col p-mt-2">
     <p class="datos-primarios">{{ datosAnaliticos.DAAN_solidaridad.SOLI_cant_pend | number:'1.0':'py' }}</p>
     <p class="datos-secundarios">Cantidad pendiente</p>
   </div>
   <div class="p-col p-mb-2">
     <p class="datos-primarios">{{ datosAnaliticos.DAAN_solidaridad.SOLI_ult_pag | formatoFecha }}</p>
-  <p class="datos-secundarios">Últ. Pagado</p>
+    <p class="datos-secundarios">Últ. Pagado</p>
   </div>
-</div>
+</p-card>
 
 <!-- Seccion/Saldos pendientes -->
-<app-cajas-centrales [contenido]="saldosContenido" [estado]="false" class="p-d-flex p-flex-column p-col-3 p-shadow-2">
-</app-cajas-centrales>
+<!-- class="p-col-12 p-md-12 p-lg-3 p-shadow-2" -->
+<p-card class="p-col-3 p-shadow-2 p-mt-2">
+  <app-cajas-centrales [contenido]="saldosContenido" [estado]="false">
+  </app-cajas-centrales>
+</p-card>
 
 <!-- Seccion/Calificaciones -->
-<section class="p-inline-d-flex p-col-1.9 p-shadow-2">
+<p-card class="p-d-flex p-flex-column p-col-2 p-shadow-2 p-mt-2">
+
+  <!-- <p-card class="p-d-flex p-flex-column p-col-1.9 p-shadow-2"> -->
   <h2>Calificaciones</h2>
-  <div class="p-d-flex p-col-12 p-jc-between">
-    <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
+  <div class="p-d-flex p-col">
+    <div class="p-d-flex p-flex-column p-col">
       <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_calificaciones.CALI_calif_ult }}</p>
       <p class="p-mt-0">Última</p>
     </div>
-    <div class="p-d-inline-flex p-flex-column p-col p-ai-center">
+    <div class="p-d-flex p-flex-column p-col">
       <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.DAAN_calificaciones.CALI_promedio }}</p>
       <p class="p-mt-0">Promedio</p>
     </div>
   </div>
-</section>
+</p-card>

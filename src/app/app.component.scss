@@ -1,26 +1,16 @@
 
 .contenedor-principal {
-  width: clamp(50vw, 1280px, 95vw);
+  width: clamp(50vw, 1280px, 97vw);
   flex-flow: column wrap;
 
   .resumenGeneral {
     flex-flow: row wrap;
-    margin: 0;
+    // margin: 0;
+    // gap: 1;
   }
 }
 
-
-:host ::ng-deep .p-datatable-sm td,
-:host ::ng-deep .p-datatable-sm th {
-  text-align: right !important;
-}
-:host ::ng-deep .desplegable td,
-:host ::ng-deep .desplegable th {
-  background-color: #e9ecef !important;
-}
-.p-p-3 {
-  background-color: #e9ecef !important;
-}
+// scrolltop
 
 :host ::ng-deep .custom-scrolltop {
   width: 2rem;
@@ -38,9 +28,33 @@
   }
 }
 
+// Acordeon
+
+:host ::ng-deep .p-fieldset {
+  margin: 0;
+}
 :host ::ng-deep .p-fieldset .p-fieldset-content {
   padding: 0;
 }
+
+// Tablas
+
+:host ::ng-deep .p-datatable-sm td,
+:host ::ng-deep .p-datatable-sm th {
+  text-align: right !important;
+}
+
+:host ::ng-deep .desplegable td,
+:host ::ng-deep .desplegable th {
+  background-color: #e9ecef !important;
+}
+
+.p-p-3 {
+  background-color: #e9ecef !important;
+}
+
+
+// Responsive de las tablas
 
 :host ::ng-deep {
   .p-datatable-responsive-demo .p-datatable-tbody>tr>td .p-column-title {
@@ -60,7 +74,8 @@
 
         .p-datatable-tbody>tr>td {
           text-align: left;
-          display: block;
+          display: flex;
+          justify-content: space-between;
           width: 100%;
           float: left;
           clear: left;

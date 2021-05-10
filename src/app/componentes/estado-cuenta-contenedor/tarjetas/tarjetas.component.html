@@ -31,31 +31,31 @@
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Fecha últ. pago</span>
         {{campo.TARJ_fecha_ultimo_pago | formatoFecha}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Monto últ. pago</span>
         {{campo.TARJ_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Saldo cuota</span>
         {{campo.TARJ_saldo_cuota}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Días de venc.</span>
         {{campo.TARJ_dias_vencimiento | formatoFecha}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Ref. Pendiente</span>
         {{campo.TARJ_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Estado</span>
         {{campo.TARJ_estado}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Fecha de venc.</span>
         {{campo.TARJ_fecha_vencimiento | formatoFecha}}
       </td>
     </tr>
@@ -74,30 +74,30 @@
       <th>Línea de crédito</th>
       <th>Pago mínimo</th>
       <th>Saldo</th>
-      <th>Ajuste mínimo. TC</th>
+      <th>Ajuste mínimo TC</th>
       <th>Línea especial</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Línea de crédito</span>
         {{campo.TARJ_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Pago mínimo</span>
         {{campo.TARJ_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Saldo</span>
         {{campo.TARJ_saldo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Ajuste mínimo TC</span>
         {{campo.TARJ_ajuste_TCR}}
       </td>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Línea especial</span>
         {{campo.TARJ_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
     </tr>

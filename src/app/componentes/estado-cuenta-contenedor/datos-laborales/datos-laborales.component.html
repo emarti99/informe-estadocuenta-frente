@@ -20,13 +20,13 @@
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Empresa</span>
         {{ campo.DALA_socio_empresa }}</td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Salario</span>
         {{ campo.DALA_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}</td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Fecha de ingreso</span>
         {{ campo.DALA_socio_fecha_ingreso | formatoFecha }}</td>
     </tr>
   </ng-template>
@@ -49,15 +49,15 @@
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
     <tr *ngIf="rowIndex == 1">
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Dirección</span>
         {{ campo.DALA_socio_direccion  }}
       </td>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Teléfono</span>
         {{ campo.DALA_socio_telefono  }}
       </td>
       <td>
-        <span class="p-column-title">Cuenta N॰</span>
+        <span class="p-column-title">Fecha de egreso</span>
         {{ campo.DALA_socio_fecha_egreso | formatoFecha  }}
       </td>
     </tr>
