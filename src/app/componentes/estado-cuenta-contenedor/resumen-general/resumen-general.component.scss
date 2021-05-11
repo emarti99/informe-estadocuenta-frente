@@ -4,13 +4,14 @@ p {
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0;
 }
 
+
 .datos-primarios {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
   color: black
@@ -23,18 +24,16 @@ h2 {
 
 .resaltado {
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   color: black
 }
 
-.calificaciones {
-  align-items: center;
-}
 
 :host ::ng-deep .p-card {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  background-color: #f8f9fa;
 }
 
 :host ::ng-deep .p-card .p-card-content {
@@ -48,4 +47,12 @@ h2 {
 
 :host ::ng-deep .p-card .p-card-body {
   width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .datos-personales {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
 }

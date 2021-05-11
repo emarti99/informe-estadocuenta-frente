@@ -1,12 +1,9 @@
-
 .contenedor-principal {
-  width: clamp(50vw, 1280px, 97vw);
+  width: clamp(50vw, 1285px, 97vw);
   flex-flow: column wrap;
 
   .resumenGeneral {
     flex-flow: row wrap;
-    // margin: 0;
-    // gap: 1;
   }
 }
 
@@ -33,6 +30,7 @@
 :host ::ng-deep .p-fieldset {
   margin: 0;
 }
+
 :host ::ng-deep .p-fieldset .p-fieldset-content {
   padding: 0;
 }
@@ -96,4 +94,6 @@
       }
     }
   }
+
+
 }

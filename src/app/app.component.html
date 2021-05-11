@@ -2,11 +2,12 @@
 
 <p-scrollTop [threshold]="2"></p-scrollTop>
 
-<div class="contenedor-principal p-d-flex p-m-auto">
+<div class="contenedor-principal p-grid p-m-auto">
+
 
   <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
     [datosAnaliticos]="estadoCuenta.datos_analiticos"
-    class="p-d-flex p-mb-4 p-mt-4 resumenGeneral">
+    class="p-d-flex p-jc-center p-mb-4 p-mt-4 resumenGeneral">
   </app-resumen-general>
 
   <p-fieldset legend="Datos Laborales" [toggleable]="true">

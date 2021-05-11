@@ -1,24 +1,24 @@
 <!-- <h2>Tarjetas</h2> -->
-<p-table [value]="tarjetas" dataKey="TARJ_fecha_ultimo_pago" styleClass="p-datatable-sm p-datatable-responsive-demo">
+<p-table [value]="tarjetas" dataKey="tarj_fecha_ultimo_pago" styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="TARJ_fecha_ultimo_pago">Fecha últ. pago <p-sortIcon field="TARJ_fecha_ultimo_pago">
+      <th pSortableColumn="tarj_fecha_ultimo_pago">Fecha últ. pago <p-sortIcon field="tarj_fecha_ultimo_pago">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="TARJ_monto_ultimo_pago">Monto últ. pago <p-sortIcon field="TARJ_monto_ultimo_pago">
+      <th pSortableColumn="tarj_monto_ultimo_pago">Monto últ. pago <p-sortIcon field="tarj_monto_ultimo_pago">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="TARJ_saldo_cuota">Saldo cuota <p-sortIcon field="TARJ_saldo_cuota">
+      <th pSortableColumn="tarj_saldo_cuota">Saldo cuota <p-sortIcon field="tarj_saldo_cuota">
         </p-sortIcon>
-      <th pSortableColumn="TARJ_dias_vencimiento">Días de venc. <p-sortIcon field="TARJ_dias_vencimiento">
+      <th pSortableColumn="tarj_dias_vencimiento">Días de venc. <p-sortIcon field="tarj_dias_vencimiento">
         </p-sortIcon>
-      <th pSortableColumn="TARJ_refinanciamiento_pendiente">Ref. Pendiente <p-sortIcon
-          field="TARJ_refinanciamiento_pendiente">
+      <th pSortableColumn="tarj_refinanciamiento_pendiente">Ref. Pendiente <p-sortIcon
+          field="tarj_refinanciamiento_pendiente">
         </p-sortIcon>
-      <th pSortableColumn="TARJ_estado">Estado <p-sortIcon field="TARJ_estado">
+      <th pSortableColumn="tarj_estado">Estado <p-sortIcon field="tarj_estado">
         </p-sortIcon>
-      <th pSortableColumn="TARJ_fecha_vencimiento">Fecha de venc. <p-sortIcon field="TARJ_fecha_vencimiento">
+      <th pSortableColumn="tarj_fecha_vencimiento">Fecha de venc. <p-sortIcon field="tarj_fecha_vencimiento">
         </p-sortIcon>
       </th>
     </tr>
@@ -32,31 +32,31 @@
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha últ. pago</span>
-        {{campo.TARJ_fecha_ultimo_pago | formatoFecha}}
+        {{campo.tarj_fecha_ultimo_pago | formatoFecha}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Monto últ. pago</span>
-        {{campo.TARJ_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        {{campo.tarj_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Saldo cuota</span>
-        {{campo.TARJ_saldo_cuota}}
+        {{campo.tarj_saldo_cuota}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Días de venc.</span>
-        {{campo.TARJ_dias_vencimiento | formatoFecha}}
+        {{campo.tarj_dias_vencimiento}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Ref. Pendiente</span>
-        {{campo.TARJ_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarj_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Estado</span>
-        {{campo.TARJ_estado}}
+        {{campo.tarj_estado}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha de venc.</span>
-        {{campo.TARJ_fecha_vencimiento | formatoFecha}}
+        {{campo.tarj_fecha_vencimiento | formatoFecha}}
       </td>
     </tr>
   </ng-template>
@@ -67,7 +67,7 @@
 
           <!-- Tabla secundaria -->
 
-          <p-table [value]="tarjetas" dataKey="TARJ_linea_credito"
+          <p-table [value]="tarjetas" dataKey="tarj_linea_credito"
             styleClass="p-datatable-sm desplegable p-datatable-responsive-demo">
             <ng-template pTemplate="header">
     <tr>
@@ -82,23 +82,23 @@
     <tr>
       <td>
         <span class="p-column-title">Línea de crédito</span>
-        {{campo.TARJ_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarj_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Pago mínimo</span>
-        {{campo.TARJ_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarj_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Saldo</span>
-        {{campo.TARJ_saldo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarj_saldo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Ajuste mínimo TC</span>
-        {{campo.TARJ_ajuste_TCR}}
+        {{campo.tarj_ajuste_TCR}}
       </td>
       <td>
         <span class="p-column-title">Línea especial</span>
-        {{campo.TARJ_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarj_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
     </tr>
   </ng-template>

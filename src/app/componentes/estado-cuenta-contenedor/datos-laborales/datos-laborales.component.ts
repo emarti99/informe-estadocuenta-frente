@@ -38,7 +38,7 @@ export class DatosLaboralesComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosLaborales.sort((a, b) => {
-      if (a.DALA_socio_fecha_ingreso > b.DALA_socio_fecha_ingreso) {
+      if (a.dala_socio_fecha_ingreso > b.dala_socio_fecha_ingreso) {
         return -1;
       } else {
         return 1;

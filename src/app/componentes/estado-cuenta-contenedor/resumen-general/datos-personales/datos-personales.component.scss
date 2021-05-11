@@ -1,11 +1,6 @@
-// .datos-personales-contenedor {
-//   // padding: 1rem;
-//   // flex-flow: row wrap;
-//   // box-sizing: border-box;
-// }
 
 .datos-personales {
- 
+
   .nombre-apellido {
     font-style: italic;
     font-size: 1.5rem;
@@ -36,7 +31,7 @@
   .caja-superior {
     display: flex;
     flex-direction: column;
-    height: 4rem;
+    max-height: 4.5rem;
     justify-content: flex-start;
   }
 

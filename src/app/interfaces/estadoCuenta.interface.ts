@@ -9,110 +9,109 @@ export interface EstadoCuenta {
 }
 
 export interface DatosPersonalesGeneral {
-  DAPG_socio_datos: DatosPersonales;
-  DAPG_conyuge_datos: DatosPersonales;
+  dapg_socio_datos: DatosPersonales;
+  dapg_conyuge_datos: DatosPersonales;
 }
 export interface DatosPersonales {
-  DAPE_nombre: string;
-  DAPE_apellido: string;
-  DAPE_cedula_nro: number;
-  DAPE_direccion: string;
-  DAPE_telefono: string;
-  DAPE_estado: string;
-  DAPE_socio_nro: number;
-  DAPE_fecha_ingreso: string;
-  DAPE_ultimo_antecedente: string;
+  dape_nombre: string;
+  dape_apellido: string;
+  dape_cedula_nro: number;
+  dape_direccion: string;
+  dape_telefono: string;
+  dape_estado: string;
+  dape_socio_nro: number;
+  dape_fecha_ingreso: string;
+  dape_ultimo_antecedente: string;
 }
 
 export interface DatosAnaliticos {
-  DAAN_tasa_pref: number;
-  DAAN_aportes: Aportes;
-  DAAN_solidaridad: Solidaridad;
-  DAAN_saldos_pendientes: SaldosPendientes;
-  DAAN_calificaciones: Calificaciones;
+  daan_tasa_pref: number;
+  daan_aportes: Aportes;
+  daan_solidaridad: Solidaridad;
+  daan_saldos_pendientes: SaldosPendientes;
+  daan_calificaciones: Calificaciones;
 }
 
 export interface Aportes {
-  APOR_monto: number;
-  APOR_cant_pend: number;
-  APOR_ult_pag: string;
+  apor_monto: number;
+  apor_cant_pend: number;
+  apor_ult_pag: string;
 }
 
-export interface Solidaridad{
-  SOLI_cant_pend: number;
-  SOLI_ult_pag: string;
+export interface Solidaridad {
+  soli_cant_pend: number;
+  soli_ult_pag: string;
 }
 
 export interface SaldosPendientes {
-  SAPE_prestamos: number;
-  SAPE_cobranzas: number;
-  SAPE_tarjetas: number;
+  sape_prestamos: number;
+  sape_cobranzas: number;
+  sape_tarjetas: number;
 }
 
 export interface Calificaciones {
-  CALI_calif_ult: string;
-  CALI_promedio: number;
+  cali_calif_ult: string;
+  cali_promedio: number;
 }
 
 export interface DatosLaborales {
-  DALA_socio_empresa: string;
-  DALA_socio_direccion: string;
-  DALA_socio_telefono: string;
-  DALA_socio_salario: number;
-  DALA_socio_fecha_ingreso: string;
-  DALA_socio_fecha_egreso: string;
-  DALA_socio_fecha_grabacion: string;
+  dala_socio_empresa: string;
+  dala_socio_direccion: string;
+ dala_socio_telefono: string;
+ dala_socio_salario: number;
+ dala_socio_fecha_ingreso: string;
+ dala_socio_fecha_egreso: string;
+ dala_socio_fecha_grabacion: string;
 }
 export interface Prestamos {
-  PRES_socio_nro_pmo: number;
-  PRES_socio_aprobado_fecha: string;
-  PRES_socio_monto: number;
-  PRES_socio_sistema: string;
-  PRES_socio_cuotas: string;
-  PRES_socio_tipo_pmo: string;
-  PRES_socio_calificacion: string;
-  PRES_socio_atrasos: number;
-  PRES_socio_fecha_vencimiento: string;
-  PRES_socio_estado_pmo: string;
-  PRES_socio_saldo_restante: number;
-  PRES_socio_tasa_interes: number;
-  PRES_socio_tipo_garantia: string;
-  PRES_socio_situacion: string;
-  PRES_socio_adelantado: number;
-  PRES_socio_en_fecha: number;
-  PRES_socio_max_dias_atraso: number;
-  PRES_socio_promedio: number;
-  PRES_socio_socio_garante: string;
-  PRES_socio_observacion: string;
-
+  pres_socio_nro_pmo: number;
+  pres_socio_aprobado_fecha: string;
+  pres_socio_monto: number;
+  pres_socio_sistema: string;
+  pres_socio_cuotas: string;
+  pres_socio_tipo_pmo: string;
+  pres_socio_calificacion: string;
+  pres_socio_atrasos: number;
+  pres_socio_fecha_vencimiento: string;
+  pres_socio_estado_pmo: string;
+  pres_socio_saldo_restante: number;
+  pres_socio_tasa_interes: number;
+  pres_socio_tipo_garantia: string;
+  pres_socio_situacion: string;
+  pres_socio_adelantado: number;
+  pres_socio_en_fecha: number;
+  pres_socio_max_dias_atraso: number;
+  pres_socio_promedio: number;
+  pres_socio_socio_garante: string;
+  pres_socio_observacion: string;
 }
 
 export interface Tarjetas {
-  TARJ_linea_credito: number;
-  TARJ_linea_especial: number;
-  TARJ_saldo: number;
-  TARJ_pago_minimo: number;
-  TARJ_fecha_ultimo_pago: string;
-  TARJ_dias_vencimiento: number;
-  TARJ_saldo_cuota: number;
-  TARJ_fecha_vencimiento: string;
-  TARJ_estado: string;
-  TARJ_refinanciamiento_pendiente: number;
-  TARJ_monto_ultimo_pago: number;
-  TARJ_ajuste_TCR: number;
+  tarj_linea_credito: number;
+  tarj_linea_especial: number;
+  tarj_saldo: number;
+  tarj_pago_minimo: number;
+  tarj_fecha_ultimo_pago: string;
+  tarj_dias_vencimiento: number;
+  tarj_saldo_cuota: number;
+  tarj_fecha_vencimiento: string;
+  tarj_estado: string;
+  tarj_refinanciamiento_pendiente: number;
+  tarj_monto_ultimo_pago: number;
+  tarj_ajuste_TCR: number;
 }
 
 export interface Ahorros {
-  AHOR_cuenta_nro: number;
-  AHOR_tipo_cuenta: string;
-  AHOR_cantidad: number;
+  ahor_cuenta_nro: number;
+  ahor_tipo_cuenta: string;
+  ahor_cantidad: number;
 }
 
 export interface GestionCobranza {
-  GECO_sistema: string;
-  GECO_capital: number;
-  GECO_gastos_judiciales: number;
-  GECO_honorarios: number;
-  GECO_gastos_administrativos: number;
-  GECO_tipo: string;
+  geco_sistema: string;
+  geco_capital: number;
+  geco_gastos_judiciales: number;
+  geco_honorarios: number;
+  geco_gastos_administrativos: number;
+  geco_tipo: string;
 }

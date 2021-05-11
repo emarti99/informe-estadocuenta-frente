@@ -10,11 +10,11 @@ import { FondoService } from './servicios/fondo.service';
 export class AppComponent implements OnInit {
   title = 'estadoCuenta';
   estadoCuenta!: EstadoCuenta;
-  tarjetas!: Tarjetas;
   constructor(private _estadoCuenta: FondoService) {}
   ngOnInit(): void {
     this._estadoCuenta.pideDatoUsuario().subscribe((data: EstadoCuenta) => {
       this.estadoCuenta = data;
+      console.log( data )
     }).unsubscribe;
   }
 }

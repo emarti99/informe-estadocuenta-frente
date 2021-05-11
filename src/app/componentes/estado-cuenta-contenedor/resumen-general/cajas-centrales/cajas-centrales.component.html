@@ -1,7 +1,7 @@
   <h2 *ngIf="estado == true" class="titulo">Aportes</h2>
   <h2 *ngIf="estado == false" class="titulo">Saldos Pendientes</h2>
 
-  <div class="p-d-flex" *ngFor="let item of contenido">
+  <div class="p-d-flex saldos-aportes" *ngFor="let item of contenido">
     <div class="p-col p-as-end caja-izquierda">
       <div *ngIf="estado == true" class="p-col">
         <p class="datos-primarios">{{ item.valor1 }}</p>
