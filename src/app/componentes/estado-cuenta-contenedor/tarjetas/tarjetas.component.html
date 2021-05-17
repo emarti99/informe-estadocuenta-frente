@@ -24,7 +24,7 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-campo let-expanded="expanded">
-    <tr class="campos">
+    <tr class="resalta-filas">
       <td>
         <button type="button" pButton pRipple [pRowToggler]="campo"
           class="p-button-text p-button-rounded p-button-plain"
@@ -51,7 +51,7 @@
         {{campo.tarj_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Estado</span>
+        <span class="p-column-title">Estado | tittlecase</span>
         {{campo.tarj_estado}}
       </td>
       <td [pRowToggler]="campo">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EstadoCuenta, Tarjetas } from './interfaces/estadoCuenta.interface';
+import { EstadoCuenta } from './interfaces/estadoCuenta.interface';
 import { FondoService } from './servicios/fondo.service';
 
 @Component({
@@ -12,9 +12,9 @@ export class AppComponent implements OnInit {
   estadoCuenta!: EstadoCuenta;
   constructor(private _estadoCuenta: FondoService) {}
   ngOnInit(): void {
-    this._estadoCuenta.pideDatoUsuario().subscribe((data: EstadoCuenta) => {
-      this.estadoCuenta = data;
-      console.log( data )
+    this._estadoCuenta.pideDatoUsuario()
+    .subscribe( ( resp ) => {
+      this.estadoCuenta = resp;
     }).unsubscribe;
   }
 }

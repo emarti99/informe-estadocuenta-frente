@@ -21,6 +21,7 @@ export interface DatosPersonales {
   dape_estado: string;
   dape_socio_nro: number;
   dape_fecha_ingreso: string;
+  dape_antiguedad: string;
   dape_ultimo_antecedente: string;
 }
 
@@ -30,6 +31,8 @@ export interface DatosAnaliticos {
   daan_solidaridad: Solidaridad;
   daan_saldos_pendientes: SaldosPendientes;
   daan_calificaciones: Calificaciones;
+  daan_total_ahorros: number;
+  daan_salario_actual: number;
 }
 
 export interface Aportes {
@@ -60,7 +63,7 @@ export interface DatosLaborales {
  dala_socio_telefono: string;
  dala_socio_salario: number;
  dala_socio_fecha_ingreso: string;
- dala_socio_fecha_egreso: string;
+ dala_socio_fecha_egreso: string | null;
  dala_socio_fecha_grabacion: string;
 }
 export interface Prestamos {

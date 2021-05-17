@@ -11,7 +11,6 @@ registerLocaleData(localePy, 'py');
 
 
 import { AppComponent } from './app.component';
-import { AhorrosGestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/ahorros-gestion-cobranza/ahorros-gestion-cobranza.component';
 import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { DatosLaboralesComponent } from './componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component';
 import { DatosPersonalesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component';
@@ -20,13 +19,13 @@ import { ResumenGeneralComponent } from './componentes/estado-cuenta-contenedor/
 import { TarjetasComponent } from './componentes/estado-cuenta-contenedor/tarjetas/tarjetas.component';
 import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 import { CajasCentralesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component';
-
+import { AhorrosComponent } from './componentes/estado-cuenta-contenedor/ahorros/ahorros.component';
+import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/gestion-cobranza/gestion-cobranza.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AhorrosGestionCobranzaComponent,
     BuscadorComponent,
     DatosLaboralesComponent,
     DatosPersonalesComponent,
@@ -35,6 +34,8 @@ import { CajasCentralesComponent } from './componentes/estado-cuenta-contenedor/
     TarjetasComponent,
     FormatoFechaPipe,
     CajasCentralesComponent,
+    AhorrosComponent,
+    GestionCobranzaComponent
   ],
   imports: [
     BrowserModule,

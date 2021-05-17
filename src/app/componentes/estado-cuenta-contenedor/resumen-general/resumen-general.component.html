@@ -1,36 +1,26 @@
 <!-- Seccion/informacion del socio -->
+
 <app-datos-personales [datosPersonales]="datosPersonales.dapg_socio_datos" [estado]="true"
   class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap datos-personales">
 </app-datos-personales>
 
-
 <!-- Seccion/informacion del conyuge -->
-<app-datos-personales *ngIf="datosPersonales.dapg_conyuge_datos.dape_estado" [datosPersonales]="datosPersonales.dapg_conyuge_datos" [estado]="false"
-  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap datos-personales"   >
+<app-datos-personales *ngIf="datosPersonales.dapg_conyuge_datos.dape_estado"
+  [datosPersonales]="datosPersonales.dapg_conyuge_datos" [estado]="false"
+  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap datos-personales">
 </app-datos-personales>
 
 
 <!-- Contenedor del tercer -->
 <div class="p-grid p-mt-2 p-mb-2">
 
-  <!-- Seccion/Tasa preferida -->
-  <p-card class="p-col-12 p-md-4 p-lg-2">
-    <h2>Tasa preferida</h2>
-
-    <div class="p-d-flex p-flex-column p-m-auto">
-      <p class="datos-primarios resaltado p-mb-0 p-mt-2">{{ datosAnaliticos.daan_tasa_pref }}</p>
-      <p class="datos-secundarios p-mt-2 p-mb-1">Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
-    </div>
-
-  </p-card>
-
   <!-- Seccion/Aportes -->
-  <p-card class="p-col-12 p-md-8 p-lg-3">
+  <p-card class="p-col-12 p-md-6 p-lg-4">
     <app-cajas-centrales [contenido]="aportesContenido" [estado]="true"></app-cajas-centrales>
   </p-card>
 
   <!-- Seccion/Solidaridad -->
-  <p-card class="p-col-12 p-md-4 p-lg-2">
+  <p-card class="p-col-12 p-md-6 p-lg-4">
     <h2>Solidaridad</h2>
 
     <div class="p-col p-mt-0">
@@ -46,23 +36,44 @@
   </p-card>
 
   <!-- Seccion/Saldos pendientes -->
-  <p-card class="p-col-12 p-md-8 p-lg-3">
+  <p-card class="p-col-12 p-md-6 p-lg-4">
     <app-cajas-centrales [contenido]="saldosContenido" [estado]="false">
     </app-cajas-centrales>
   </p-card>
 
+  <!-- Seccion/Tasa preferida -->
+  <p-card class="p-col-12 p-md-6 p-lg-4">
+    <h2>Tasa preferida</h2>
+
+    <div class="p-d-flex p-flex-column p-m-auto">
+      <p class="resaltado p-m-0">{{ datosAnaliticos.daan_tasa_pref }}</p>
+      <p class="datos-secundarios p-m-0">Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
+    </div>
+
+  </p-card>
+
+  <!-- Seccion/ahorro -->
+  <p-card class="p-col-12 p-md-6 p-lg-4">
+    <h2>Ahorros</h2>
+    <div class="p-d-flex p-flex-column p-m-auto">
+      <p class="resaltado p-mb-0 p-mt-0">{{ datosAnaliticos.daan_total_ahorros | number:'1.0':'py'
+ }}</p>
+      <p class="datos-secundarios p-mt-0 p-mb-0">Total</p>
+    </div>
+  </p-card>
+
   <!-- Seccion/Calificaciones -->
-  <p-card class="p-col-12 p-md-4 p-lg-2">
+  <p-card class="p-col-12 p-md-6 p-lg-4">
     <h2>Calificaciones</h2>
 
-    <div class="p-d-flex p-flex-wrap p-mt-4">
+    <div class="p-d-flex p-flex-wrap">
       <div class="p-d-flex p-flex-column p-col">
-        <p class="resaltado  p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_calif_ult }}</p>
+        <p class="resaltado p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_calif_ult }}</p>
         <p class="datos-secundarios p-m-0">Última</p>
       </div>
       <div class="p-d-flex p-flex-column p-col">
         <p class="resaltado p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_promedio }}</p>
-        <p class="datos-secundarios p-mb-1 p-mt-0">Promedio</p>
+        <p class="datos-secundarios p-m-0">Promedio</p>
       </div>
     </div>
 

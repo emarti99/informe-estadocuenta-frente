@@ -4,31 +4,63 @@
 
 <div class="contenedor-principal p-grid p-m-auto">
 
-
   <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
-    [datosAnaliticos]="estadoCuenta.datos_analiticos"
-    class="p-d-flex p-jc-center p-mb-4 p-mt-4 resumenGeneral">
+    [datosAnaliticos]="estadoCuenta.datos_analiticos" class="p-d-flex p-jc-center p-mb-4 p-mt-4 resumenGeneral">
   </app-resumen-general>
 
-  <p-fieldset legend="Datos Laborales" [toggleable]="true">
+
+  <p-fieldset [toggleable]="true">
+    <ng-template pTemplate="header"  class="sumatoria">
+      <p class="p-mr-2">Datos Laborales</p>
+      <p pTooltip="Salario actual">
+        {{ estadoCuenta.datos_analiticos.daan_salario_actual | currency:'PYG':'symbol-narrow':'1.0':'py' }}</p>
+    </ng-template>
     <app-datos-laborales [datosLaborales]="estadoCuenta.datos_laborales"
       class="p-d-flex p-flex-column p-ai-center p-shadow-2">
     </app-datos-laborales>
   </p-fieldset>
 
-  <p-fieldset legend="Préstamos" [toggleable]="true">
-    <app-prestamos [prestamos]="estadoCuenta.prestamos"
-      class="p-d-flex p-flex-column p-ai-center p-shadow-2">
+  <p-fieldset [toggleable]="true">
+    <ng-template pTemplate="header" class="sumatoria">
+      <p class="p-mr-2">Préstamos</p>
+      <p pTooltip="Total saldo restante">
+        {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_prestamos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+      </p>
+    </ng-template>
+    <app-prestamos [prestamos]="estadoCuenta.prestamos" class="p-d-flex p-flex-column p-ai-center p-shadow-2">
     </app-prestamos>
   </p-fieldset>
 
-  <p-fieldset legend="Tarjetas" [toggleable]="true">
-    <app-tarjetas [tarjetas]="estadoCuenta.tarjetas"
-      class="p-d-flex p-flex-column p-ai-center p-shadow-2">
+  <p-fieldset [toggleable]="true">
+     <ng-template pTemplate="header" class="sumatoria">
+       <p class="p-mr-2">Tarjetas</p>
+       <p pTooltip="Total saldo restante">
+         {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_tarjetas | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+       </p>
+     </ng-template>
+    <app-tarjetas [tarjetas]="estadoCuenta.tarjetas" class="p-d-flex p-flex-column p-ai-center p-shadow-2">
     </app-tarjetas>
   </p-fieldset>
 
-  <app-ahorros-gestion-cobranza [ahorros]="estadoCuenta.ahorros" [gestionCobranza]="estadoCuenta.gestion_cobranza"
-    class="p-d-flex p-flex-column">
-  </app-ahorros-gestion-cobranza>
+  <p-fieldset [toggleable]="true">
+    <ng-template pTemplate="header" class="sumatoria">
+      <p class="p-mr-2">Ahorros</p>
+      <p pTooltip="Total">
+        {{ estadoCuenta.datos_analiticos.daan_total_ahorros | currency:'PYG':'symbol-narrow':'1.0':'py' }}</p>
+  </ng-template>
+    <app-ahorros [ahorros]="estadoCuenta.ahorros" class="p-d-flex p-flex-column p-ai-center p-shadow-2">></app-ahorros>
+  </p-fieldset>
+
+  <p-fieldset [toggleable]="true">
+    <ng-template pTemplate="header" class="sumatoria">
+      <p class="p-mr-2">Gestión cobranza</p>
+      <p pTooltip="Total cobranza restante">
+        {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_cobranzas | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+      </p>
+  </ng-template>
+    <app-gestion-cobranza [gestionCobranza]="estadoCuenta.gestion_cobranza" class="p-d-flex p-flex-column p-ai-center p-shadow-2">
+    </app-gestion-cobranza>
+  </p-fieldset>
+
+  
 </div>

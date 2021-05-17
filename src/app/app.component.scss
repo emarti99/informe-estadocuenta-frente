@@ -1,7 +1,7 @@
 .contenedor-principal {
-  width: clamp(50vw, 1285px, 97vw);
+  width: clamp(50vw, 1300px, 97vw);
   flex-flow: column wrap;
-
+  
   .resumenGeneral {
     flex-flow: row wrap;
   }
@@ -60,7 +60,7 @@
   }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 991px) {
   :host ::ng-deep {
     .p-datatable {
       &.p-datatable-responsive-demo {
@@ -95,5 +95,5 @@
     }
   }
 
-
 }
+

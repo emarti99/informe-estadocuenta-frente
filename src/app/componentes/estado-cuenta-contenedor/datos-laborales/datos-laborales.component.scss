@@ -1,7 +1,11 @@
-.campos {
-    cursor: pointer;
+.resalta-filas {
+  cursor: pointer;
 }
 
-.campos:hover {
-    background-color: #a6d5fa;
+.resalta-filas:hover {
+  background-color: #a6d5fa;
+}  
+
+.estado {
+    background-color: #c8e6c9 !important;
 }

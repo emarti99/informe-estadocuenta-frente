@@ -40,7 +40,9 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-campo let-expanded="expanded">
-    <tr class="campos">
+    <tr class="resalta-filas"
+      [class]="campo.pres_socio_estado_pmo == 'Cobro normal' && campo.pres_socio_aprobado_fecha != null ? 'verde' : campo.pres_socio_estado_pmo ==
+      'Juicio/Cob' ? 'rojo' :  campo.pres_socio_estado_pmo == 'Solicitud' ? 'amarillo' : '' ">
       <td>
         <button type="button" pButton pRipple [pRowToggler]="campo"
           class="p-button-text p-button-rounded p-button-plain"
