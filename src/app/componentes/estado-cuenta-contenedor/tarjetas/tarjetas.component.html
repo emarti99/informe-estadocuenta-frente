@@ -51,8 +51,8 @@
         {{campo.tarj_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Estado | tittlecase</span>
-        {{campo.tarj_estado}}
+        <span class="p-column-title">Estado</span>
+        {{campo.tarj_estado | titlecase}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha de venc.</span>

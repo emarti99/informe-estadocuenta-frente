@@ -1,16 +1,24 @@
-<app-buscador class="p-grid col-12 p-jc-center p-mb-2 p-shadow-2"></app-buscador>
+<!-- <app-buscador class=""></app-buscador> -->
+<div class="p-grid col-12 p-jc-center p-mb-2 p-shadow-2">
+  <p-inputNumber #identificador (keyup.enter)="buscar(identificador.value)"></p-inputNumber>
+</div>
 
 <p-scrollTop [threshold]="2"></p-scrollTop>
 
-<div class="contenedor-principal p-grid p-m-auto">
+<!-- Cargando -->
+<div *ngIf="!cargando" class="contenedor-spinner">
+  <i class="pi pi-spin pi-spinner"></i>
+</div>
+
+<div *ngIf="cargando" class="contenedor-principal p-grid p-m-auto">
 
   <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
     [datosAnaliticos]="estadoCuenta.datos_analiticos" class="p-d-flex p-jc-center p-mb-4 p-mt-4 resumenGeneral">
   </app-resumen-general>
 
-
+  <!-- Datos laborales  -->
   <p-fieldset [toggleable]="true">
-    <ng-template pTemplate="header"  class="sumatoria">
+    <ng-template pTemplate="header" class="sumatoria">
       <p class="p-mr-2">Datos Laborales</p>
       <p pTooltip="Salario actual">
         {{ estadoCuenta.datos_analiticos.daan_salario_actual | currency:'PYG':'symbol-narrow':'1.0':'py' }}</p>
@@ -20,47 +28,59 @@
     </app-datos-laborales>
   </p-fieldset>
 
+  <!-- Préstamos -->
   <p-fieldset [toggleable]="true">
     <ng-template pTemplate="header" class="sumatoria">
-      <p class="p-mr-2">Préstamos</p>
-      <p pTooltip="Total saldo restante">
-        {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_prestamos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
-      </p>
+      <div class="p-d-flex" pTooltip="Total saldo restante">
+        <p class="p-mr-2">Préstamos</p>
+        <p>
+          {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_prestamos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </p>
+      </div>
     </ng-template>
     <app-prestamos [prestamos]="estadoCuenta.prestamos" class="p-d-flex p-flex-column p-ai-center p-shadow-2">
     </app-prestamos>
   </p-fieldset>
 
+  <!-- Tarjetas -->
   <p-fieldset [toggleable]="true">
-     <ng-template pTemplate="header" class="sumatoria">
-       <p class="p-mr-2">Tarjetas</p>
-       <p pTooltip="Total saldo restante">
-         {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_tarjetas | currency:'PYG':'symbol-narrow':'1.0':'py' }}
-       </p>
-     </ng-template>
+    <ng-template pTemplate="header" class="sumatoria">
+      <div class="p-d-flex" pTooltip="Total saldo restante">
+        <p class="p-mr-2">Tarjetas</p>
+        <p>
+          {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_tarjetas | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </p>
+      </div>
+    </ng-template>
     <app-tarjetas [tarjetas]="estadoCuenta.tarjetas" class="p-d-flex p-flex-column p-ai-center p-shadow-2">
     </app-tarjetas>
   </p-fieldset>
 
+  <!-- Ahorros -->
   <p-fieldset [toggleable]="true">
     <ng-template pTemplate="header" class="sumatoria">
-      <p class="p-mr-2">Ahorros</p>
-      <p pTooltip="Total">
-        {{ estadoCuenta.datos_analiticos.daan_total_ahorros | currency:'PYG':'symbol-narrow':'1.0':'py' }}</p>
-  </ng-template>
+      <div class="p-d-flex" pTooltip="Total">
+        <p class="p-mr-2">Ahorros</p>
+        <p>
+          {{ estadoCuenta.datos_analiticos.daan_total_ahorros | currency:'PYG':'symbol-narrow':'1.0':'py' }}</p>
+      </div>
+    </ng-template>
     <app-ahorros [ahorros]="estadoCuenta.ahorros" class="p-d-flex p-flex-column p-ai-center p-shadow-2">></app-ahorros>
   </p-fieldset>
 
+  <!-- Gestión cobranza -->
   <p-fieldset [toggleable]="true">
     <ng-template pTemplate="header" class="sumatoria">
-      <p class="p-mr-2">Gestión cobranza</p>
-      <p pTooltip="Total cobranza restante">
-        {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_cobranzas | currency:'PYG':'symbol-narrow':'1.0':'py' }}
-      </p>
-  </ng-template>
-    <app-gestion-cobranza [gestionCobranza]="estadoCuenta.gestion_cobranza" class="p-d-flex p-flex-column p-ai-center p-shadow-2">
+      <div class="p-d-flex" pTooltip="Total cobranza restante">
+        <p class="p-mr-2">Gestión cobranza</p>
+        <p>
+          {{ estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_cobranzas | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        </p>
+      </div>
+    </ng-template>
+    <app-gestion-cobranza [gestionCobranza]="estadoCuenta.gestion_cobranza"
+      class="p-d-flex p-flex-column p-ai-center p-shadow-2">
     </app-gestion-cobranza>
   </p-fieldset>
 
-  
 </div>

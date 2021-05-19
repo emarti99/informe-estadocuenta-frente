@@ -7,21 +7,35 @@ import { EstadoCuenta } from '../interfaces/estadoCuenta.interface';
   providedIn: 'root',
 })
 export class FondoService {
-  constructor(private http: HttpClient) { }
 
-  urlBase: string = 'https://778cce145bb3.ngrok.io/?';
+  estadoCuenta!: EstadoCuenta;
+  hayError!: boolean;
 
-  x(): Observable<EstadoCuenta> {
-    // const usuario = identificador.toString();
+  constructor(private http: HttpClient) {}
+
+  identificador!: number;
+  urlBase: string = 'https://5329f8730b87.ngrok.io/?';
+
+  devuelveIdentificador(termino: number) {
+    this.identificador = termino;
+  }
+
+  devuelveEstado() {
+    // return this.pideDatoUsuario(this.identificador);
+    return this.pideDatoUsuariox();
+  }
+
+  pideDatoUsuario(identificador: number): Observable<EstadoCuenta> {
+    const usuario = identificador.toString();
     const usuarioPrueba = '2198598';
 
-    return this.http.get<EstadoCuenta>( this.urlBase, {
+    return this.http.get<EstadoCuenta>(this.urlBase, {
       headers: { 'Content-Type': 'application/json' },
-      params: { ci: usuarioPrueba },
+      params: { ci: usuario },
     });
   }
-  
-  pideDatoUsuario(): Observable<EstadoCuenta> {
+
+  pideDatoUsuariox(): Observable<EstadoCuenta> {
     return from([
       {
         datos_personales: {
@@ -332,4 +346,3 @@ export class FondoService {
     ]);
   }
 }
-

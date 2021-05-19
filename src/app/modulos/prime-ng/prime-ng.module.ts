@@ -11,6 +11,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import { FieldsetModule } from 'primeng/fieldset';
 import { DialogModule } from 'primeng/dialog';
 import { SkeletonModule } from 'primeng/skeleton';
+import { InputNumberModule } from 'primeng/inputnumber';
+
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -25,6 +27,7 @@ import { SkeletonModule } from 'primeng/skeleton';
     FieldsetModule,
     DialogModule,
     SkeletonModule,
+    InputNumberModule,
   ],
 })
 export class PrimeNgModule {}

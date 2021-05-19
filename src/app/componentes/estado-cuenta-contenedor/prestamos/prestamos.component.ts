@@ -32,6 +32,7 @@ import {
     ]),
   ],
 })
+
 export class PrestamosComponent implements OnInit {
   @Input() prestamos!: Prestamos[];
 

@@ -1,7 +1,7 @@
 .contenedor-principal {
   width: clamp(50vw, 1300px, 97vw);
   flex-flow: column wrap;
-  
+
   .resumenGeneral {
     flex-flow: row wrap;
   }
@@ -60,6 +60,24 @@
   }
 }
 
+// spinner
+.contenedor-spinner {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  z-index: 2;
+
+  i {
+    font-size: 6rem
+  }
+}
+
 @media screen and (max-width: 991px) {
   :host ::ng-deep {
     .p-datatable {
@@ -95,5 +113,5 @@
     }
   }
 
-}
 
+}

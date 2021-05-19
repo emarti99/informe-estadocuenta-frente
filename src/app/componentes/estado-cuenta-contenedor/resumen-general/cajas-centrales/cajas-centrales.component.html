@@ -3,17 +3,18 @@
 
   <div class="p-d-flex saldos-aportes" *ngFor="let item of contenido">
     <div class="p-col p-as-end caja-izquierda">
-      <div *ngIf="estado == true" class="p-col">
+      <div *ngIf="estado" class="p-col">
         <p class="datos-primarios">{{ item.valor1 }}</p>
         <p class="datos-secundarios">{{ item.subTitulo1 }}</p>
       </div>
       <div class="p-col">
-        <p class="datos-primarios">{{ item.valor2 }}</p>
+        <p *ngIf="estado" class="datos-primarios">{{ item.valor2 | formatoFecha }}</p>
+        <p *ngIf="!estado" class="datos-primarios">{{ item.valor2 }}</p>
         <p class="datos-secundarios">{{ item.subTitulo2 }}</p>
       </div>
     </div>
     <div class="p-col p-as-end caja-derecha">
-      <div *ngIf="estado == false" class="p-col">
+      <div *ngIf="!estado" class="p-col">
         <p class="datos-primarios">{{ item.valor1 }}</p>
         <p class="datos-secundarios">{{ item.subTitulo1 }}</p>
       </div>

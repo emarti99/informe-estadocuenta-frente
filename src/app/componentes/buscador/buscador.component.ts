@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { FondoService } from '../../servicios/fondo.service';
 
 @Component({
   selector: 'app-buscador',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buscador.component.scss']
 })
 export class BuscadorComponent implements OnInit {
-
-  constructor() { }
+  // @Input() identificador!: number;
+  // identificador = new FormControl()
+  
+  constructor( ) { }
 
   ngOnInit(): void {
   }
-
+  
+  
 }

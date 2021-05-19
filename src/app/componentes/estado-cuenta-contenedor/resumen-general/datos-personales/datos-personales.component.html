@@ -1,6 +1,6 @@
 <section class="p-col-12 p-md-12 p-lg-6 p-grid p-mt-2 p-shadow-2 p-jc-between datos-personales-contenedor"
   [class]="{socio: estado==true, conyuge: estado==false}">
-  <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
+  <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda ">
       <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_nombre }}</p>
       <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_apellido }}</p>
@@ -23,22 +23,22 @@
 
 <section class="p-col-12 p-md-12 p-lg-6 p-grid p-mt-2 p-shadow-2 p-jc-between datos-personales-contenedor"
   [class]="{socio: estado==true, conyuge: estado==false}">
-  <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
-    <div class="p-col caja-superior caja-izquierda">
-      <p *ngIf="estado==true" class="datos-primarios">Socio {{ datosPersonales.dape_estado }}</p>
-      <p *ngIf="estado==false" class="datos-primarios">Cónyuge</p>
+  <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
+    <div class="caja-superior caja-izquierda">
+      <p *ngIf="estado" class="datos-primarios">Socio {{ datosPersonales.dape_estado }}</p>
+      <p *ngIf="!estado" class="datos-primarios">Cónyuge</p>
     </div>
-    <div class="p-col caja-inferior caja-izquierda">
+    <div class="caja-inferior caja-izquierda">
       <p class="datos-secundarios">Ingreso</p>
-      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha}} ({{ datosPersonales.dape_antiguedad }})</p>
+      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha}} ({{ datosPersonales.dape_antiguedad }} )</p>
     </div>
   </div>
   <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
-    <div class="p-col caja-superior caja-derecha">
+    <div class="caja-superior caja-derecha">
       <p class="datos-primarios numero-socio">{{ datosPersonales.dape_socio_nro | number:'1.0':'py' }}</p>
       <p class="datos-secundarios">Socio N॰</p>
     </div>
-    <div class="p-col caja-inferior caja-derecha">
+    <div class="caja-inferior caja-derecha">
       <p class="datos-secundarios">Último antecedente</p>
       <p class="datos-primarios">{{ datosPersonales.dape_ultimo_antecedente }}</p>
     </div>
