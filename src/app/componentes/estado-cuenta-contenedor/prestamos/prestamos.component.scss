@@ -9,10 +9,28 @@
 .rojo {
   background-color: #ffcdd2 !important;
 }
+
 .verde {
   background-color: #c8e6c9 !important;
 }
+
 .amarillo {
   background-color: #feedaf !important;
 }
 
+@media print {
+  * {
+    font-size: 0.8rem !important;
+  }
+
+  .fielset {
+    padding: 0;
+  }
+
+
+  
+
+  // .p-table {
+  //   width: 110% !important;
+  // }
+}

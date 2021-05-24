@@ -6,3 +6,8 @@
   background-color: #a6d5fa;
 }
 
+@media print {
+  * {
+    font-size: 0.7rem !important;
+  }
+}

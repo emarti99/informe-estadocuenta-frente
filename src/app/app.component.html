@@ -1,16 +1,28 @@
 <!-- <app-buscador class=""></app-buscador> -->
-<div class="p-grid col-12 p-jc-center p-mb-2 p-shadow-2">
-  <p-inputNumber #identificador (keyup.enter)="buscar(identificador.value)"></p-inputNumber>
+<div class="p-grid col-12 p-jc-center p-mb-2 p-shadow-2 buscador">
+  <p-inputNumber #identificador (keyup.enter)="buscar(identificador.value)">
+  </p-inputNumber>
+  <p-button icon="pi pi-search" (click)="buscar(identificador.value)"></p-button>
 </div>
 
 <p-scrollTop [threshold]="2"></p-scrollTop>
 
+<div class="p-d-flex imprimir">
+  <button pButton pRipple type="button" label=" " (click)="expandirTodo()" class="p-button-raised"
+    [class]="{'p-button-success': expandir, 'p-button-danger': !expandir}">
+    <a *ngIf="expandir">Expandir</a>
+    <a *ngIf="!expandir">Contraer</a>
+  </button>
+
+  <button pButton pRipple type="button" icon="pi pi-print" class="p-button-raised" (click)=" imprimir()"></button>
+</div>
+
 <!-- Cargando -->
-<div *ngIf="!cargando" class="contenedor-spinner">
+<div *ngIf="!cargando" class="contenedor-cargando">
   <i class="pi pi-spin pi-spinner"></i>
 </div>
 
-<div *ngIf="cargando" class="contenedor-principal p-grid p-m-auto">
+<div *ngIf="cargando" class="contenedor-principal p-grid p-m-auto" id="contenedor-principal">
 
   <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
     [datosAnaliticos]="estadoCuenta.datos_analiticos" class="p-d-flex p-jc-center p-mb-4 p-mt-4 resumenGeneral">

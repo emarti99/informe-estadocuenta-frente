@@ -40,3 +40,14 @@
         }
       }
     }
+
+    @media print { 
+      h2{
+        font-size: 1rem;
+      }
+      .saldos-aportes {
+        .datos-primarios {
+          font-size: 1rem;
+        }
+      }
+    }

@@ -1,9 +1,9 @@
-<!-- <h2>Tarjetas</h2> -->
 <p-table [value]="tarjetas" dataKey="tarj_fecha_ultimo_pago" styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="tarj_fecha_ultimo_pago">Fecha últ. pago <p-sortIcon field="tarj_fecha_ultimo_pago">
+      <th pSortableColumn="tarj_fecha_ultimo_pago" class="flecha">Fecha últ. pago <p-sortIcon
+          field="tarj_fecha_ultimo_pago">
         </p-sortIcon>
       </th>
       <th pSortableColumn="tarj_monto_ultimo_pago">Monto últ. pago <p-sortIcon field="tarj_monto_ultimo_pago">
@@ -14,7 +14,7 @@
       <th pSortableColumn="tarj_dias_vencimiento">Días de venc. <p-sortIcon field="tarj_dias_vencimiento">
         </p-sortIcon>
       <th pSortableColumn="tarj_refinanciamiento_pendiente">Ref. Pendiente <p-sortIcon
-          field="tarj_refinanciamiento_pendiente">
+          field="tarj_refinanciamiento_pendiente" class="flecha">
         </p-sortIcon>
       <th pSortableColumn="tarj_estado">Estado <p-sortIcon field="tarj_estado">
         </p-sortIcon>

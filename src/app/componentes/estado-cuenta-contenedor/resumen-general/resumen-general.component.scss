@@ -54,3 +54,27 @@ h2 {
     justify-content: center;
   }
 }
+
+@media print {
+
+  .contenedor-cartas {
+    margin-top: 0;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .p-col-12 {
+      box-sizing: border-box;
+      width: 33.3% !important;
+      padding: 3px;
+      // height: 30%;
+      // height: 9.8rem;
+    }
+
+    .datos-primarios,
+    .resaltado {
+      font-size: 1rem;
+    }
+  }
+}

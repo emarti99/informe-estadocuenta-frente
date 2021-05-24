@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { EstadoCuenta } from './interfaces/estadoCuenta.interface';
 import { FondoService } from './servicios/fondo.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,16 +15,32 @@ export class AppComponent implements OnInit {
   constructor(private _estadoCuenta: FondoService) {}
 
   @ViewChild('identificador') identificador!: ElementRef<HTMLInputElement>;
+  expandir: boolean = true;
 
-  ngOnInit(): void {} 
+  ngOnInit(): void {}
+
+  imprimir() {
+    window.print();
+  }
   
-  buscar( termino: number ) {
+  expandirTodo() {
+    this.expandir = !this.expandir;
+    let boton = document.getElementsByClassName(
+      'p-button-text p-button-rounded p-button-plain'
+    );
+    for (const i in boton) {
+      let element: HTMLElement = boton[i] as HTMLElement;
+      element.click();
+    }
+  }
+
+  buscar(termino: number) {
     this.cargando = false;
     this._estadoCuenta.devuelveIdentificador(termino);
     this.cargaDatos();
   }
 
-  cargaDatos(){
+  cargaDatos() {
     this._estadoCuenta.devuelveEstado().subscribe(
       (resp) => {
         this.estadoCuenta = resp;
@@ -37,6 +52,5 @@ export class AppComponent implements OnInit {
         this.hayError = true;
       }
     ).unsubscribe;
-    
   }
 }

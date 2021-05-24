@@ -1,5 +1,5 @@
 <section class="p-col-12 p-md-12 p-lg-6 p-grid p-mt-2 p-shadow-2 p-jc-between datos-personales-contenedor"
-  [class]="{socio: estado==true, conyuge: estado==false}">
+  [class]="{socio: estado, conyuge: !estado}">
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda ">
       <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_nombre }}</p>
@@ -22,7 +22,7 @@
 
 
 <section class="p-col-12 p-md-12 p-lg-6 p-grid p-mt-2 p-shadow-2 p-jc-between datos-personales-contenedor"
-  [class]="{socio: estado==true, conyuge: estado==false}">
+  [class]="{socio: estado, conyuge: !estado}">
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda">
       <p *ngIf="estado" class="datos-primarios">Socio {{ datosPersonales.dape_estado }}</p>

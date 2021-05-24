@@ -12,6 +12,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { DialogModule } from 'primeng/dialog';
 import { SkeletonModule } from 'primeng/skeleton';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [],
@@ -28,6 +29,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
     DialogModule,
     SkeletonModule,
     InputNumberModule,
+    RippleModule,
   ],
 })
 export class PrimeNgModule {}

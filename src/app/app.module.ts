@@ -9,7 +9,6 @@ import localePy from '@angular/common/locales/es-PY';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localePy, 'py');
 
-
 import { AppComponent } from './app.component';
 import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { DatosLaboralesComponent } from './componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component';
@@ -35,7 +34,7 @@ import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor
     FormatoFechaPipe,
     CajasCentralesComponent,
     AhorrosComponent,
-    GestionCobranzaComponent
+    GestionCobranzaComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,3 +9,9 @@
 .estado {
     background-color: #c8e6c9 !important;
 }
+
+@media print {
+  * {
+    font-size: 0.8rem !important;
+  }
+}
