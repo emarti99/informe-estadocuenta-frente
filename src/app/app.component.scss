@@ -47,6 +47,10 @@
   background-color: #e9ecef !important;
 }
 
+:host ::ng-deep .contenedor-desplegable td {
+  padding: 0 !important;
+}
+
 .p-p-3 {
   background-color: #e9ecef !important;
 }
@@ -78,6 +82,11 @@
   i {
     font-size: 6rem
   }
+}
+
+// buscador
+:host ::ng-deep .p-inputnumber .p-component {
+  width: 100% !important;
 }
 
 // Responsive de las tablas
@@ -128,6 +137,9 @@
 
 
 @media print {
+  * {
+    font-size: 0.688rem !important;
+  }
 
   .buscador {
     display: none;
@@ -135,10 +147,6 @@
 
   .imprimir {
     display: none !important;
-  }
-
-  :host ::ng-deep .p-fieldset {
-    margin-bottom: 1.5rem !important;
   }
 
   .flecha {
@@ -150,10 +158,32 @@
 
   }
 
+  :host ::ng-deep .p-datatable-tbody tr td button {
+    display: none;
+  }
+
+  .p-datatable.p-datatable-sm .p-datatable-tbody {
+    display: block;
+  }
+
   :host ::ng-deep .p-sortable-column-icon {
     display: none !important;
   }
-  :host ::ng-deep .p-fieldset{
-    margin-bottom: 2rem !important;
+
+  :host ::ng-deep .p-fieldset {
+    padding: 0;
+  }
+
+  :host ::ng-deep .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+    padding: 0;
+    height: min-content;
+  }
+
+  :host ::ng-deep .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a .p-fieldset-toggler {
+    display: none;
+  }
+
+  .resumenGeneral {
+    margin-bottom: 0 !important;
   }
 }

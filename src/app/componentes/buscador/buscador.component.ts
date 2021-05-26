@@ -1,5 +1,5 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { FondoService } from '../../servicios/fondo.service';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-buscador',

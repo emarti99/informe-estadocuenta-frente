@@ -2,8 +2,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import localePy from '@angular/common/locales/es-PY';
 import { registerLocaleData } from '@angular/common';
@@ -20,6 +22,7 @@ import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 import { CajasCentralesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component';
 import { AhorrosComponent } from './componentes/estado-cuenta-contenedor/ahorros/ahorros.component';
 import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/gestion-cobranza/gestion-cobranza.component';
+
 
 
 @NgModule({
@@ -42,8 +45,11 @@ import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor
     HttpClientModule,
     PrimeNgModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

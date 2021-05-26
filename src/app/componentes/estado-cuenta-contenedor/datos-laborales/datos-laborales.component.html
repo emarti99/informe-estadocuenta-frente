@@ -1,5 +1,5 @@
 <!-- <h2>Datos laborales</h2> -->
-<p-table [value]="datosLaborales" dataKey="dala_socio_empresa" styleClass="p-datatable-sm p-datatable-responsive-demo">
+<p-table [value]="datosLaborales" dataKey="dala_socio_id_empresa" styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -31,7 +31,7 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="rowexpansion" let-campo>
-    <tr>
+    <tr class="contenedor-desplegable">
       <td colspan="4">
         <div class="p-p-0">
 

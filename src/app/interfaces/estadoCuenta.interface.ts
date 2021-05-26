@@ -60,11 +60,11 @@ export interface Calificaciones {
 export interface DatosLaborales {
   dala_socio_empresa: string;
   dala_socio_direccion: string;
- dala_socio_telefono: string;
- dala_socio_salario: number;
- dala_socio_fecha_ingreso: string;
- dala_socio_fecha_egreso: string | null;
- dala_socio_fecha_grabacion: string;
+  dala_socio_telefono: string;
+  dala_socio_salario: number;
+  dala_socio_fecha_ingreso: string;
+  dala_socio_fecha_egreso: string | null;
+  dala_socio_id_empresa: number;
 }
 export interface Prestamos {
   pres_socio_nro_pmo: number;
@@ -109,7 +109,6 @@ export interface Ahorros {
   ahor_tipo_cuenta: string;
   ahor_cantidad: number;
 }
-
 export interface GestionCobranza {
   geco_sistema: string;
   geco_capital: number;
@@ -117,4 +116,12 @@ export interface GestionCobranza {
   geco_honorarios: number;
   geco_gastos_administrativos: number;
   geco_tipo: string;
+}
+
+export interface SocioSugerido {
+  sosu_nombre: string;
+  sosu_apellido: string;
+  sosu_nro_socio: number;
+  sosu_nro_cedula: number;
+  sosu_telefono: number;
 }

@@ -2,11 +2,11 @@
   [class]="{socio: estado, conyuge: !estado}">
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda ">
-      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_nombre }}</p>
-      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_apellido }}</p>
+      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_nombre | titlecase}}</p>
+      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_apellido | titlecase }}</p>
     </div>
     <div class="caja-inferior caja-izquierda">
-      <p class="datos-secundarios direccion">{{ datosPersonales.dape_direccion }}</p>
+      <p class="datos-secundarios direccion">{{ datosPersonales.dape_direccion | titlecase }}</p>
     </div>
   </div>
   <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
@@ -30,7 +30,8 @@
     </div>
     <div class="caja-inferior caja-izquierda">
       <p class="datos-secundarios">Ingreso</p>
-      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha}} ({{ datosPersonales.dape_antiguedad }} )</p>
+      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha}}
+        ({{ datosPersonales.dape_antiguedad }} )</p>
     </div>
   </div>
   <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">

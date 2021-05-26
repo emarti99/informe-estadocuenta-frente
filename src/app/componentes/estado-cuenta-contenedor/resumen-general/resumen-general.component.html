@@ -61,7 +61,7 @@
   <p-card class="p-col-12 p-md-6 p-lg-4">
     <h2>Ahorros</h2>
     <div class="p-d-flex p-flex-column">
-      <p class="resaltado p-mb-0 p-mt-0">
+      <p class="datos-primarios p-mb-0 p-mt-0">
         {{ datosAnaliticos.daan_total_ahorros | currency:'PYG':'symbol-narrow':'1.0':'py'
  }}</p>
       <p class="datos-secundarios p-mt-0 p-mb-0">Total</p>
@@ -74,11 +74,11 @@
 
     <div class="p-d-flex p-flex-wrap">
       <div class="p-d-flex p-flex-column p-col">
-        <p class="resaltado p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_calif_ult }}</p>
+        <p class="datos-primarios p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_calif_ult }}</p>
         <p class="datos-secundarios p-m-0">Última</p>
       </div>
       <div class="p-d-flex p-flex-column p-col">
-        <p class="resaltado p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_promedio }}</p>
+        <p class="datos-primarios p-m-0">{{ datosAnaliticos.daan_calificaciones.cali_promedio }}</p>
         <p class="datos-secundarios p-m-0">Promedio</p>
       </div>
     </div>

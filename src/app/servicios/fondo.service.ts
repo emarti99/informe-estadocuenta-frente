@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
-import { EstadoCuenta } from '../interfaces/estadoCuenta.interface';
+import {
+  EstadoCuenta,
+  SocioSugerido,
+} from '../interfaces/estadoCuenta.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,29 +15,42 @@ export class FondoService {
 
   constructor(private http: HttpClient) {}
 
-  identificador!: number;
-  urlBase: string = 'https://71eec1a05507.ngrok.io/api/v1/informe?';
+  identificador!: string;
+  urlBase: string = 'https://c5e8f8cbda4f.ngrok.io/api/v1/';
 
-  devuelveIdentificador(termino: number) {
+  devuelveIdentificador(termino: string) {
     this.identificador = termino;
   }
 
-  devuelveEstado() {
-    // return this.pideDatoUsuario(this.identificador);
-    return this.pideDatoUsuario();
+  devuelveEstadoCuenta() {
+    return this.pideEstadoCuenta(this.identificador);
+    // return this.pideDatoUsuario();
   }
 
-  pideDatoUsuariox(identificador: number): Observable<EstadoCuenta> {
+  devuelveSociosSugeridos() {
+    return this.pideSociosSugeridos(this.identificador);
+  }
+
+  pideEstadoCuenta(identificador: string): Observable<EstadoCuenta> {
     const usuario = identificador.toString();
     const usuarioPrueba = '2198598';
 
-    return this.http.get<EstadoCuenta>(this.urlBase, {
+    return this.http.get<EstadoCuenta>(this.urlBase + 'informe?', {
       headers: { 'Content-Type': 'application/json' },
       params: { ci: usuario },
     });
   }
 
-  pideDatoUsuario(): Observable<EstadoCuenta> {
+  pideSociosSugeridos(identificador: string): Observable<SocioSugerido[]> {
+    const sociosSugeridos = identificador.toString();
+    const dato = '123';
+    return this.http.get<SocioSugerido[]>(this.urlBase + 'sugerencias?', {
+      headers: { 'Content-Type': 'application/json' },
+      params: { dato: sociosSugeridos },
+    });
+  }
+
+  pideDatoUsuariox(): Observable<EstadoCuenta> {
     return from([
       {
         datos_personales: {
@@ -95,7 +111,7 @@ export class FondoService {
             dala_socio_salario: 7000000,
             dala_socio_fecha_ingreso: '1998-08-28',
             dala_socio_fecha_egreso: '2006-12-31',
-            dala_socio_fecha_grabacion: '2011-11-19',
+            dala_socio_id_empresa: 1,
           },
           {
             dala_socio_empresa: 'Protek',
@@ -104,7 +120,7 @@ export class FondoService {
             dala_socio_salario: 8800000,
             dala_socio_fecha_ingreso: '2007-10-19',
             dala_socio_fecha_egreso: '2009-01-01',
-            dala_socio_fecha_grabacion: '2011-01-01',
+            dala_socio_id_empresa: 2,
           },
           {
             dala_socio_empresa: 'Cooperativa Medalla Milagrosa',
@@ -113,7 +129,7 @@ export class FondoService {
             dala_socio_salario: 8800000,
             dala_socio_fecha_ingreso: '2013-01-01',
             dala_socio_fecha_egreso: '2009-12-01',
-            dala_socio_fecha_grabacion: '2011-11-19',
+            dala_socio_id_empresa: 3,
           },
           {
             dala_socio_empresa: 'Merkaton',
@@ -122,7 +138,7 @@ export class FondoService {
             dala_socio_salario: 10000000,
             dala_socio_fecha_ingreso: '2013-01-03',
             dala_socio_fecha_egreso: '2017-12-31',
-            dala_socio_fecha_grabacion: '2013-04-01',
+            dala_socio_id_empresa: 4,
           },
           {
             dala_socio_empresa: 'Jubilado',
@@ -131,7 +147,7 @@ export class FondoService {
             dala_socio_salario: 7900000,
             dala_socio_fecha_ingreso: '2018-01-01',
             dala_socio_fecha_egreso: null,
-            dala_socio_fecha_grabacion: '2018-02-01',
+            dala_socio_id_empresa: 5,
           },
         ],
         prestamos: [

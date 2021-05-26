@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TableModule } from 'primeng/table';
@@ -13,6 +13,8 @@ import { DialogModule } from 'primeng/dialog';
 import { SkeletonModule } from 'primeng/skeleton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { RippleModule } from 'primeng/ripple';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [],
@@ -30,6 +32,9 @@ import { RippleModule } from 'primeng/ripple';
     SkeletonModule,
     InputNumberModule,
     RippleModule,
+    AutoCompleteModule,
+    InputTextModule,
   ],
+  
 })
 export class PrimeNgModule {}

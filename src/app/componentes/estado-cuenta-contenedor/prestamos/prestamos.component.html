@@ -2,7 +2,7 @@
 
 <!-- Tabla principal -->
 
-<p-table [value]="prestamos" dataKey="pres_socio_aprobado_fecha"
+<p-table [value]="prestamos" dataKey="pres_socio_nro_pmo"
   styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
@@ -86,7 +86,7 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="rowexpansion" let-campo>
-    <tr>
+    <tr class="contenedor-desplegable">
       <td colspan="10">
         <div class="p-p-0">
 
