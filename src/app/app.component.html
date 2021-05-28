@@ -5,13 +5,20 @@
 
 
 <!-- buscador -->
-<div class="p-grid p-col-12 p-jc-center p-mb-2 p-shadow-2 buscador">
+<div class="p-d-flex p-col-12 p-jc-center p-mb-2 buscador">
+  <!-- <button type="button" pButton pRipple label="Buscar"></button> -->
+  <p-autoComplete [(ngModel)]="socioSeleccionado" [suggestions]="sociosSugeridos"
+    (completeMethod)="autoCompletado($event)" [size]="15" [showEmptyMessage]="true" emptyMessage="Datos no encontrados"
+    field="sosu_nombre" [minLength]="3" [virtualScroll]="false" [dropdown]="true" placeholder="Buscá">
 
-  <p-autoComplete [(ngModel)]="socioSeleccionado"  [suggestions]="sociosSugeridos"
-    (completeMethod)="autoCompletado($event)" field="sosu_nombre" [minLength]="3" (key.enter)="verSeleccionado"
-    [virtualScroll]="true">
-    </p-autoComplete>
-  <!-- <p-button icon="pi pi-search" (click)="buscar()"></p-button> -->
+    <ng-template let-socio pTemplate="item">
+      <div style="font-size:11px; width:100%" (click)="buscar(socio.sosu_nro_cedula)">{{ socio.sosu_nombre }}
+        {{ socio.sosu_apellido }} - CI:
+        {{ socio.sosu_nro_cedula | number:'1.0':'py' }} - SOC: {{ socio.sosu_nro_socio | number:'1.0':'py' }} - TEL:
+        {{ socio.sosu_telefono }}
+      </div>
+    </ng-template>
+  </p-autoComplete>
 </div>
 
 <p-scrollTop [threshold]="2"></p-scrollTop>

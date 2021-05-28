@@ -5,6 +5,7 @@ import {
   SocioSugerido,
 } from './interfaces/estadoCuenta.interface';
 import { FondoService } from './servicios/fondo.service';
+import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,48 +16,49 @@ export class AppComponent implements OnInit {
 
   estadoCuenta!: EstadoCuenta;
   sociosSugeridos!: SocioSugerido[];
-  socioSeleccionado: any;
+  socioSeleccionado!: SocioSugerido;
+  prueba!: SocioSugerido[];
   // filteredCountries!: any[];
-  
+
   hayError!: boolean;
   cargando: boolean = true;
   expandir: boolean = true;
 
   constructor(private _estadoCuenta: FondoService) {}
 
-  @ViewChild('identificador') identificador!: ElementRef<HTMLInputElement>;
+  // @ViewChild('identificador') identificador!: ElementRef<HTMLInputElement>;
 
   ngOnInit(): void {}
 
-  verSeleccionado() {
-    console.log( 'seleccionado', this.socioSeleccionado )
+  verSeleccionado(dato: any) {
+    console.log(dato);
+    console.log('seleccionado', this.socioSeleccionado);
   }
   autoCompletado(event: any) {
-
+    this.cargando = true;
     let query = event.query;
     console.log('evento', event);
     this._estadoCuenta.devuelveIdentificador(query);
-    this.cargaSociosSugeridos()
-
-    // console.log('filtrados', this.filteredCountries);
+    this.cargaSociosSugeridos();
   }
 
-  buscar() {
-    const termino = this.identificador.nativeElement.value;
-    console.log(termino.length);
-    // if (termino.length == 1) {
-    //   this.cargando = false;
-    //   this._estadoCuenta.devuelveIdentificador(termino);
-    //   this.cargaSociosSugeridos();
-    //   console.log('aviso');
-    // } else {
-    //   console.log('No hay nada');
-    // }
-    // setTimeout(() => {
-    //   this.autoCompletado(termino);
-    //   console.log('filterCountry');
-    // }, 6000);
-    // this.cargaEstadoCuenta();
+  buscar(identificador: number) {
+    if (this.socioSeleccionado) {
+      this.cargando = false;
+      // const identificador = dato.sosu_nro_cedula;
+      this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
+        (resp) => {
+          this.estadoCuenta = resp;
+          console.log(this.estadoCuenta);
+          this.cargando = true;
+        },
+        (err) => {
+          console.warn('Hay un error', err.message);
+          this.hayError = true;
+        }
+      ).unsubscribe;
+      console.log(identificador);
+    }
   }
 
   imprimir() {
@@ -74,29 +76,32 @@ export class AppComponent implements OnInit {
     }
   }
 
-  cargaEstadoCuenta() {
-    this._estadoCuenta.devuelveEstadoCuenta().subscribe(
-      (resp) => {
-        this.estadoCuenta = resp;
-        console.log(this.estadoCuenta);
-        this.cargando = true;
-      },
-      (err) => {
-        console.warn('Hay un error', err.message);
-        this.hayError = true;
-      }
-    ).unsubscribe;
-  }
-
   cargaSociosSugeridos() {
-    this._estadoCuenta.devuelveSociosSugeridos().subscribe(
-      (resp) => {
-        this.sociosSugeridos = resp;
-        console.log(this.sociosSugeridos);
-      },
-      (err) => {
-        console.warn(err.message);
-      }
-    ).unsubscribe;
+    this._estadoCuenta
+      .devuelveSociosSugeridos()
+      .subscribe(
+        (resp) => {
+          this.sociosSugeridos = resp;
+          console.log(resp);
+          if (this.sociosSugeridos.length == 1)
+            this.buscar(this.sociosSugeridos[0].sosu_nro_cedula);
+        },
+        (err) => {
+          console.warn(err.message);
+        }
+      ).unsubscribe;
   }
+  // cargaEstadoCuenta() {
+  //   this._estadoCuenta.devuelveEstadoCuenta().subscribe(
+  //     (resp) => {
+  //       this.estadoCuenta = resp;
+  //       console.log(this.estadoCuenta);
+  //       this.cargando = true;
+  //     },
+  //     (err) => {
+  //       console.warn('Hay un error', err.message);
+  //       this.hayError = true;
+  //     }
+  //   ).unsubscribe;
+  // }
 }

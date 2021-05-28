@@ -29,11 +29,11 @@
 
 :host ::ng-deep .p-fieldset {
   margin: 0;
+  .p-fieldset-content {
+    padding: 0;
+  }
 }
 
-:host ::ng-deep .p-fieldset .p-fieldset-content {
-  padding: 0;
-}
 
 // Tablas
 
@@ -84,9 +84,15 @@
   }
 }
 
-// buscador
-:host ::ng-deep .p-inputnumber .p-component {
-  width: 100% !important;
+// auto completado
+:host ::ng-deep .p-autocomplete {
+  width: 30rem;
+  .p-inputtext {
+    width: 100%;
+  }
+  .p-autocomplete-panel {
+    width: 100%;
+  }
 }
 
 // Responsive de las tablas
