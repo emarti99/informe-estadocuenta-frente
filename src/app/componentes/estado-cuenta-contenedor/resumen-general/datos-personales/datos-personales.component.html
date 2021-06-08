@@ -26,12 +26,12 @@
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda">
       <p *ngIf="estado" class="datos-primarios">Socio {{ datosPersonales.dape_estado }}</p>
-      <p *ngIf="!estado" class="datos-primarios">Cónyuge</p>
+      <p *ngIf="!estado" class="datos-primarios">Cónyuge {{ datosPersonales.dape_estado }}</p>
     </div>
     <div class="caja-inferior caja-izquierda">
       <p class="datos-secundarios">Ingreso</p>
-      <p class="datos-secundarios">( {{ datosPersonales.dape_antiguedad }} )</p>
-      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha}}</p>
+      <p class="datos-secundarios">( {{ datosPersonales.dape_antiguedad | formatoDatosNulos }} )</p>
+      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha }}</p>
     </div>
   </div>
   <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
@@ -41,7 +41,7 @@
     </div>
     <div class="caja-inferior caja-derecha">
       <p class="datos-secundarios">Último antecedente</p>
-      <p class="datos-primarios">{{ datosPersonales.dape_ultimo_antecedente }}</p>
+      <p class="datos-primarios">{{ datosPersonales.dape_ultimo_antecedente | formatoDatosNulos }}</p>
     </div>
   </div>
 </section>

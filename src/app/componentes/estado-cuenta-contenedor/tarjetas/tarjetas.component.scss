@@ -1,13 +1,7 @@
 .resalta-filas {
   cursor: pointer;
+  &:hover {
+     background-color: #a6d5fa;
+  };
 }
 
-.resalta-filas:hover {
-  background-color: #a6d5fa;
-}
-
-@media print {
-  * {
-    font-size: 0.688rem !important;
-  }
-}

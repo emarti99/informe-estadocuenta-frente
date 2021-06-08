@@ -3,10 +3,89 @@
 /* Estilo general de la página */
 html,
 body {
-
+  margin: 0;
+  padding: 0;
   background-color: var(--surface-b);
   font-family: var(--font-family);
   color: var(--text-color);
   box-sizing: border-box;
 }
 
+@media print {
+  * {
+    font-size: 0.688rem !important;
+    page-break-before: avoid;
+  }
+  body, html {
+    background-color: white;
+
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  i {
+    display: none !important;
+  }
+
+  .cabecera,
+  .buscador,
+  .imprimir,
+  .scroll-top {
+    display: none !important;
+  }
+
+  .contenedor-principal {
+    display: block !important;
+
+    .resumenGeneral {
+      display: block !important;
+      margin-bottom: 0 !important;
+
+        .datos-personales-contenedor {
+          box-sizing: border-box;
+          margin-top: 0 !important;
+          width: 50%;
+        }
+    }
+
+    .p-fieldset {
+      display: block !important;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  .sumatoria {
+    display: block !important;
+  }
+
+  .contenedor-resumenes {
+    display: block !important;
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  .p-sorticon {
+    display: none !important;
+  }
+
+  .p-datatable-tbody tr td button {
+    display: none;
+  }
+
+  .p-fieldset .p-fieldset-toggleable .p-fieldset-legend a {
+    padding: 0;
+    height: min-content;
+  }
+
+  .contenedor-fielset {
+    margin-top: 2.5rem !important;
+  }
+}

@@ -1,5 +1,6 @@
 <!-- <h2>Datos laborales</h2> -->
-<p-table [value]="datosLaborales" dataKey="dala_socio_id_empresa" styleClass="p-datatable-sm p-datatable-responsive-demo">
+<p-table *ngIf="datosLaborales" [value]="datosLaborales" dataKey="dala_socio_id_empresa"
+  styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
@@ -21,7 +22,7 @@
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Empresa</span>
-        {{ campo.dala_socio_empresa }}</td>
+        {{ campo.dala_socio_empresa | titlecase}}</td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Salario</span>
         {{ campo.dala_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}</td>
@@ -50,7 +51,7 @@
     <tr *ngIf="rowIndex == 1">
       <td>
         <span class="p-column-title">Dirección</span>
-       {{ campo.dala_socio_direccion  }}
+       {{ campo.dala_socio_direccion | titlecase }}
       </td>
       <td>
         <span class="p-column-title">Teléfono</span>

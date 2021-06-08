@@ -1,3 +1,15 @@
+// cabecera
+
+.cabecera {
+  display: block;
+  padding: 2rem;
+  .logo {
+    width: clamp(40vw, 464px, 95vw);
+  }
+}
+
+// contenedor principal
+
 .contenedor-principal {
   width: clamp(50vw, 1300px, 97vw);
   flex-flow: column wrap;
@@ -29,6 +41,7 @@
 
 :host ::ng-deep .p-fieldset {
   margin: 0;
+
   .p-fieldset-content {
     padding: 0;
   }
@@ -84,15 +97,32 @@
   }
 }
 
-// auto completado
+// autocompletado
 :host ::ng-deep .p-autocomplete {
-  width: 30rem;
+  width: 40rem;
+
   .p-inputtext {
     width: 100%;
   }
+
   .p-autocomplete-panel {
     width: 100%;
   }
+
+  .p-autocomplete-item {
+    padding: 0;
+
+    div {
+    padding: 0.5rem 1rem;
+    }
+  }
+}
+
+
+// botones imprimir/expandir
+.botones {
+  width: 90%;
+  justify-content: right;
 }
 
 // Responsive de las tablas
@@ -141,55 +171,3 @@
   }
 }
 
-
-@media print {
-  * {
-    font-size: 0.688rem !important;
-  }
-
-  .buscador {
-    display: none;
-  }
-
-  .imprimir {
-    display: none !important;
-  }
-
-  .flecha {
-    display: none !important;
-  }
-
-  :host ::ng-deep .p-sorticon {
-    display: none !important;
-
-  }
-
-  :host ::ng-deep .p-datatable-tbody tr td button {
-    display: none;
-  }
-
-  .p-datatable.p-datatable-sm .p-datatable-tbody {
-    display: block;
-  }
-
-  :host ::ng-deep .p-sortable-column-icon {
-    display: none !important;
-  }
-
-  :host ::ng-deep .p-fieldset {
-    padding: 0;
-  }
-
-  :host ::ng-deep .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
-    padding: 0;
-    height: min-content;
-  }
-
-  :host ::ng-deep .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a .p-fieldset-toggler {
-    display: none;
-  }
-
-  .resumenGeneral {
-    margin-bottom: 0 !important;
-  }
-}

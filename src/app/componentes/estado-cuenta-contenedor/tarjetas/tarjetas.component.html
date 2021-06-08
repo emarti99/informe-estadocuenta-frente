@@ -2,7 +2,7 @@
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="tarj_fecha_ultimo_pago" class="flecha">Fecha últ. pago <p-sortIcon
+      <th pSortableColumn="tarj_fecha_ultimo_pago">Fecha últ. pago <p-sortIcon
           field="tarj_fecha_ultimo_pago">
         </p-sortIcon>
       </th>
@@ -79,7 +79,7 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
-    <tr>
+    <tr *ngIf="rowIndex == 1">
       <td>
         <span class="p-column-title">Línea de crédito</span>
         {{campo.tarj_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}

@@ -50,8 +50,8 @@
   <p-card class="p-col-12 p-md-6 p-lg-4">
     <h2>Tasa preferida</h2>
 
-    <div class="p-d-flex p-flex-column">
-      <p class="resaltado p-m-0">{{ datosAnaliticos.daan_tasa_pref }}</p>
+    <div class="p-d-flex p-flex-column p-col">
+      <p class="datos-primarios p-m-0">{{ datosAnaliticos.daan_tasa_pref }}</p>
       <p class="datos-secundarios p-m-0">Sujeto a tipo de crédito y paraḿetros de la Resolución 36/17</p>
     </div>
 
@@ -60,7 +60,7 @@
   <!-- Seccion/ahorro -->
   <p-card class="p-col-12 p-md-6 p-lg-4">
     <h2>Ahorros</h2>
-    <div class="p-d-flex p-flex-column">
+    <div class="p-d-flex p-flex-column p-col">
       <p class="datos-primarios p-mb-0 p-mt-0">
         {{ datosAnaliticos.daan_total_ahorros | currency:'PYG':'symbol-narrow':'1.0':'py'
  }}</p>

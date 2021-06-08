@@ -6,6 +6,8 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NgxPrintModule } from 'ngx-print';
+
 
 import localePy from '@angular/common/locales/es-PY';
 import { registerLocaleData } from '@angular/common';
@@ -22,6 +24,7 @@ import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 import { CajasCentralesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/cajas-centrales/cajas-centrales.component';
 import { AhorrosComponent } from './componentes/estado-cuenta-contenedor/ahorros/ahorros.component';
 import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/gestion-cobranza/gestion-cobranza.component';
+import { FormatoDatosNulosPipe } from './pipes/formato-datos-nulos.pipe';
 
 
 
@@ -38,6 +41,7 @@ import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor
     CajasCentralesComponent,
     AhorrosComponent,
     GestionCobranzaComponent,
+    FormatoDatosNulosPipe,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,7 @@ import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPrintModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
