@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
         this.estadoCuenta = resp;
         this.cargando = this.expandir = true;
         localStorage.setItem( 'historial', JSON.stringify(this.estadoCuenta) );
-        console.log( this.estadoCuenta );
+      console.log( this.estadoCuenta );
       },
       (err) => {
         console.warn('Hay un error', err.message);

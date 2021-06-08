@@ -16,7 +16,9 @@ body {
     font-size: 0.688rem !important;
     page-break-before: avoid;
   }
-  body, html {
+
+  body,
+  html {
     background-color: white;
 
   }
@@ -37,7 +39,8 @@ body {
   .cabecera,
   .buscador,
   .imprimir,
-  .scroll-top {
+  .scroll-top,
+  .botones {
     display: none !important;
   }
 
@@ -48,11 +51,11 @@ body {
       display: block !important;
       margin-bottom: 0 !important;
 
-        .datos-personales-contenedor {
-          box-sizing: border-box;
-          margin-top: 0 !important;
-          width: 50%;
-        }
+      .datos-personales-contenedor {
+        box-sizing: border-box;
+        margin-top: 0 !important;
+        width: 50%;
+      }
     }
 
     .p-fieldset {

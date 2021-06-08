@@ -8,13 +8,14 @@
 <!-- buscador -->
 <div class="p-d-flex p-col-12 p-jc-center p-mb-2 buscador">
   <p-autoComplete [(ngModel)]="socioSeleccionado" [suggestions]="sociosSugeridos"
-    (completeMethod)="autoCompletado($event)" [showEmptyMessage]="true" emptyMessage="Datos no encontrados"
-    field="sosu_nombre" [minLength]="3" [virtualScroll]="true" [dropdown]="true" placeholder="Buscá">
+    (completeMethod)="autoCompletado($event)" [showEmptypMessage]="true" emptyMessage="Datos no encontrados"
+    field="sosu_nombre" [minLength]="3" [virtualScroll]="true" [dropdown]="true" placeholder="Buscá"
+    dropdownIcon="pi pi-search">
     <ng-template let-socio pTemplate="item">
       <div style="font-size: 11px; width: 100%" (click)="busca(socio.sosu_nro_cedula)">
-        {{ socio.sosu_nombre }} {{ socio.sosu_apellido }} - CI:
-        {{ socio.sosu_nro_cedula | number: "1.0":"py" }} - SOC:
-        {{ socio.sosu_nro_socio | number: "1.0":"py" }} - TEL:
+        {{ socio.sosu_nombre | titlecase }} {{ socio.sosu_apellido | titlecase }} - <span class="sugerencias">CI</span>:
+        {{ socio.sosu_nro_cedula | number: "1.0":"py" }} - <span class="sugerencias">SOC</span>:
+        {{ socio.sosu_nro_socio | number: "1.0":"py" }} - <span class="sugerencias">TEL</span>:
         {{ socio.sosu_telefono }}
       </div>
     </ng-template>
@@ -32,7 +33,7 @@
     <a *ngIf="!expandir">Contraer</a>
   </button>
 
-  <button pButton pRipple type="button" icon="pi pi-print" class="p-button-raised" (click)="imprimir()"></button>
+  <button pButton pRipple type="button" icon="pi pi-print" class="p-button-help" (click)="imprimir()"></button>
 </div>
 
 
@@ -51,14 +52,17 @@
 
   <!-- Datos laborales  -->
   <p-fieldset [toggleable]="true" [collapsed]="prueba">
-    <ng-template pTemplate="header" class="sumatoria">
-      <p class="titulo" class="p-mr-2">Datos Laborales</p>
-      <p pTooltip="Salario actual">
-        {{
-            estadoCuenta.datos_analiticos.daan_salario_actual
-              | currency: "PYG":"symbol-narrow":"1.0":"py"
-        }}
-      </p>
+    <ng-template pTemplate="header" class="sumatoria" >
+      <div class="p-d-flex contenedor-resumenes" pTooltip="Salario actual">
+
+        <p class="titulo" class="p-mr-2">Datos Laborales</p>
+        <p>
+          {{
+             estadoCuenta.datos_analiticos.daan_salario_actual
+             | currency: "PYG":"symbol-narrow":"1.0":"py"
+            }}
+        </p>
+      </div>
     </ng-template>
     <app-datos-laborales [datosLaborales]="estadoCuenta.datos_laborales"
       class="p-d-flex p-flex-column p-ai-center p-shadow-2">

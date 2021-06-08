@@ -106,10 +106,10 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
-    <tr *ngIf="rowIndex == 1">
+    <tr *ngIf="rowIndex == 0">
       <td>
         <span class="p-column-title">Saldo restante</span>
-        {{campo.pres_socio_saldo_restante}}
+        {{campo.pres_socio_saldo_restante | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Tasa de interés</span>

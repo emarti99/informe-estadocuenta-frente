@@ -79,7 +79,7 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-rowIndex="rowIndex">
-    <tr *ngIf="rowIndex == 1">
+    <tr *ngIf="rowIndex == 0">
       <td>
         <span class="p-column-title">Línea de crédito</span>
         {{campo.tarj_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}
