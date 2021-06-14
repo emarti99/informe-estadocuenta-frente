@@ -55,6 +55,27 @@ body {
         box-sizing: border-box;
         margin-top: 0 !important;
         width: 50%;
+        box-shadow: none;
+        border: 1px solid rgb(44, 44, 44);
+
+
+        .datos-personales {
+          padding: 0;
+
+          .caja-inferior {
+            height: 3.5rem;
+          }
+        }
+      }
+
+      .contenedor-cartas {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .p-card {
+        box-shadow: none;
+        border: 1px solid rgb(44, 44, 44);
       }
     }
 
@@ -83,12 +104,22 @@ body {
     display: none;
   }
 
-  .p-fieldset .p-fieldset-toggleable .p-fieldset-legend a {
+  .p-datatable.p-datatable-sm .p-datatable-thead>tr>th {
     padding: 0;
-    height: min-content;
+  }
+  .p-datatable.p-datatable-sm .p-datatable-tbody>tr>td {
+    padding: 0.2rem 0.2rem;
+  }
+
+  .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+    padding: 0.1rem;
   }
 
   .contenedor-fielset {
     margin-top: 2.5rem !important;
+  }
+
+  .p-datatable-wrapper {
+    border: 1px solid;
   }
 }

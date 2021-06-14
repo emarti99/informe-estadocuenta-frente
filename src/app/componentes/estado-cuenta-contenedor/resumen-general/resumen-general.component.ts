@@ -20,7 +20,6 @@ export class ResumenGeneralComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-
     this.aportesContenido = [
       {
         subTitulo1: 'Total',

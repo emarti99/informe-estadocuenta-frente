@@ -1,5 +1,4 @@
-
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -10,7 +9,7 @@ import { FondoService } from './servicios/fondo.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'estadoCuenta';
 
   estadoCuenta!: EstadoCuenta;
@@ -19,64 +18,20 @@ export class AppComponent implements OnInit {
 
   hayError!: boolean;
   cargando: boolean = true;
-  expandir: boolean = true;
-  prueba: boolean = false;
 
   constructor(private _estadoCuenta: FondoService) {
-    this.estadoCuenta = JSON.parse( localStorage.getItem( 'historial') ! )
+    this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
-  ngOnInit(): void {
-    // this._estadoCuenta.pideEstadoCuenta().subscribe(
-    //   (resp) => {
-    //     this.estadoCuenta = resp;
-    //     console.log(this.estadoCuenta);
-    //     this.cargando = true;
-    //   },
-    //   (err) => {
-    //     console.warn('Hay un error', err.message);
-    //     this.hayError = true;
-    //   }
-    // ).unsubscribe;
-  }
 
   autoCompletado(event: any) {
     this.cargando = true;
+
     let query = event.query;
+
     this._estadoCuenta.devuelveIdentificador(query);
     this.cargaSociosSugeridos();
-  }
-
-  busca(identificador: number) {
-    this.cargando = false;
-    this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
-      (resp) => {
-        this.estadoCuenta = resp;
-        this.cargando = this.expandir = true;
-        localStorage.setItem( 'historial', JSON.stringify(this.estadoCuenta) );
-      console.log( this.estadoCuenta );
-      },
-      (err) => {
-        console.warn('Hay un error', err.message);
-        this.hayError = true;
-      }
-    ).unsubscribe;
-  }
-
-  imprimir() {
-    window.print();
-  }
-
-  expandirTodo() {
-    this.expandir = !this.expandir;
-
-    let boton = document.getElementsByClassName(
-      'p-button-text p-button-rounded p-button-plain'
-    );
-    for (const i in boton) {
-      let element: HTMLElement = boton[i] as HTMLElement;
-      element.click();
-    }
+    console.log(this.socioSeleccionado);
   }
 
   cargaSociosSugeridos() {
@@ -92,4 +47,68 @@ export class AppComponent implements OnInit {
     ).unsubscribe;
   }
 
+  busca(identificador: number) {
+    this.cargando = false;
+    this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
+      (resp) => {
+        this.estadoCuenta = resp;
+        this.cargando = this.abrirCerrarFilasSecundarias = true;
+
+        localStorage.setItem('historial', JSON.stringify(this.estadoCuenta));
+
+        setTimeout(() => {
+          document.getElementById('buscador')!.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
+        }, 200);
+      },
+      (err) => {
+        console.warn('Hay un error', err.message);
+        this.hayError = true;
+      }
+    ).unsubscribe;
+  }
+
+  // boton impresión
+  imprimir() {
+    window.print();
+  }
+
+  // boton expandir/contraer
+  abrirCerrarFilasSecundarias: boolean = true;
+  abrirCerrarAcordeon: boolean = false;
+  estado: number = 3;
+  botonTexto: string = 'General';
+
+  expandirContraer() {
+    if (this.estado == 3) {
+      this.abrirCerrarFilasSecundarias = this.abrirCerrarAcordeon = false;
+      this.simulaClick();
+      this.estado = 1;
+      this.botonTexto = 'Detalle';
+    } else if (this.estado == 1) {
+      this.abrirCerrarAcordeon = this.abrirCerrarFilasSecundarias = true;
+      this.simulaClick();
+      this.estado = 2;
+      this.botonTexto = 'Total';
+    } else if (this.estado == 2) {
+      this.abrirCerrarAcordeon = false;
+      this.abrirCerrarFilasSecundarias = true;
+      this.estado = 3;
+      this.botonTexto = 'General';
+    }
+  }
+
+  simulaClick() {
+    let boton = document.getElementsByClassName(
+      'p-button-text p-button-rounded p-button-plain'
+    );
+
+    for (let i = 0; i < boton.length; i++) {
+      let element: HTMLElement = boton[i] as HTMLElement;
+      element.click();
+    }
+  }
 }

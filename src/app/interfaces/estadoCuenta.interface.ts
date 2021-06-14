@@ -125,3 +125,4 @@ export interface SocioSugerido {
   sosu_nro_cedula: number;
   sosu_telefono: number;
 }
+
