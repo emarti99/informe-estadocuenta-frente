@@ -20,7 +20,7 @@ export class FondoService {
   ) {}
 
   identificador!: string;
-  urlBase: string = 'https://3319a216e409.ngrok.io/api/v1/';
+  urlBase: string = 'http://192.168.100.171:8080/api/v1/';
 
   devuelveIdentificador(termino: string) {
     this.identificador = termino;

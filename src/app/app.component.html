@@ -12,7 +12,7 @@
     (completeMethod)="autoCompletado($event)" [showEmptypMessage]="true" emptyMessage="Datos no encontrados"
     field="sosu_nombre" [minLength]="3" [virtualScroll]="true" [dropdown]="true"
     placeholder="Ingrese datos para buscar un socio" dropdownIcon="pi pi-search"
-    (keyup.enter)="busca(socioSeleccionado.sosu_nro_cedula)">
+    (keyup.enter)="busca(socioSeleccionado.sosu_nro_cedula)" class="autocompletado">
     <ng-template let-socio pTemplate="item">
       <div style="font-size: 11px; width: 100%" (click)="busca(socio.sosu_nro_cedula)"
         (onSelect)="busca(socio.sosu_nro_cedula)">
@@ -24,6 +24,7 @@
     </ng-template>
   </p-autoComplete>
 </div>
+
 
 <p-scrollTop [threshold]="2" class="scroll-top"></p-scrollTop>
 

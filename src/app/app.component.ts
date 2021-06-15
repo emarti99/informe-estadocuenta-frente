@@ -23,15 +23,12 @@ export class AppComponent {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
-
   autoCompletado(event: any) {
     this.cargando = true;
 
     let query = event.query;
-
-    this._estadoCuenta.devuelveIdentificador(query);
-    this.cargaSociosSugeridos();
-    console.log(this.socioSeleccionado);
+      this._estadoCuenta.devuelveIdentificador(query);
+      this.cargaSociosSugeridos();
   }
 
   cargaSociosSugeridos() {
@@ -55,7 +52,7 @@ export class AppComponent {
         this.cargando = this.abrirCerrarFilasSecundarias = true;
 
         localStorage.setItem('historial', JSON.stringify(this.estadoCuenta));
-
+        console.log( this.estadoCuenta)
         setTimeout(() => {
           document.getElementById('buscador')!.scrollIntoView({
             behavior: 'smooth',

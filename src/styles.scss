@@ -11,9 +11,39 @@ body {
   box-sizing: border-box;
 }
 
- .p-p-0 {
-   border: 1px solid;
- }
+// Tablas
+
+// borde de las tablas secundarias
+.p-p-0 {
+  border: 1px solid;
+}
+
+// hover a las filas primarias
+.resalta-filas {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #a6d5fa !important;
+  }
+}
+
+
+.rojo {
+  background-color: #ffcdd2 !important;
+}
+
+.verde {
+  background-color: #c8e6c9 !important;
+}
+
+.amarillo {
+  background-color: #feedaf !important;
+}
+
+.estado {
+  background-color: #c8e6c9 !important;
+}
+
 
 @media print {
   * {
@@ -111,6 +141,7 @@ body {
   .p-datatable.p-datatable-sm .p-datatable-thead>tr>th {
     padding: 0;
   }
+
   .p-datatable.p-datatable-sm .p-datatable-tbody>tr>td {
     padding: 0.2rem 0.2rem;
   }
@@ -126,4 +157,20 @@ body {
   .p-datatable-wrapper {
     border: 1px solid;
   }
+}
+
+@media screen and (max-width: 992px) {
+
+  .datoPersonal {
+    justify-content: center !important;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+    .nombre-apellido,
+    .datos-primarios {
+      font-size: 1rem !important;
+    }
 }

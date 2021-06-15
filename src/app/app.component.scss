@@ -3,6 +3,7 @@
 .cabecera {
   display: block;
   padding: 2rem;
+
   .logo {
     width: clamp(40vw, 464px, 95vw);
   }
@@ -113,7 +114,7 @@
     padding: 0;
 
     div {
-    padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -140,6 +141,18 @@
 }
 
 @media screen and (max-width: 992px) {
+  :host ::ng-deep .p-autocomplete {
+    width: 100% !important;
+  }
+
+  .buscador {
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+
+    .autocompletado {
+      width: 100%;
+    }
+  }
+
   :host ::ng-deep {
     .p-datatable {
       &.p-datatable-responsive-demo {

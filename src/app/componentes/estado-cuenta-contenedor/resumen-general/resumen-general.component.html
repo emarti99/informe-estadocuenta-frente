@@ -1,14 +1,14 @@
 <!-- Seccion/informacion del socio -->
 
 <app-datos-personales [datosPersonales]="datosPersonales.dapg_socio_datos" [estado]="true"
-  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap">
+  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap datoPersonal">
 </app-datos-personales>
 
 <!-- Seccion/informacion del conyuge -->
 
 <app-datos-personales *ngIf="datosPersonales.dapg_conyuge_datos.dape_estado"
   [datosPersonales]="datosPersonales.dapg_conyuge_datos" [estado]="false"
-  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap">
+  class="p-d-flex p-col-12 p-mb-0 p-jc-between p-flex-wrap datoPersonal">
 </app-datos-personales>
 
 

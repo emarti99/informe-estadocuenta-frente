@@ -22,13 +22,16 @@
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Empresa</span>
-        {{ campo.dala_socio_empresa | titlecase}}</td>
+        {{ campo.dala_socio_empresa | titlecase}}
+      </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Salario</span>
-        {{ campo.dala_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}</td>
+        {{ campo.dala_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+      </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha de ingreso</span>
-        {{ campo.dala_socio_fecha_ingreso | formatoFecha }}</td>
+        {{ campo.dala_socio_fecha_ingreso | formatoFecha }}
+      </td>
     </tr>
   </ng-template>
   <ng-template pTemplate="rowexpansion" let-campo>
@@ -51,7 +54,7 @@
     <tr *ngIf="rowIndex == 0">
       <td>
         <span class="p-column-title">Dirección</span>
-       {{ campo.dala_socio_direccion | titlecase }}
+        {{ campo.dala_socio_direccion | titlecase }}
       </td>
       <td>
         <span class="p-column-title">Teléfono</span>
@@ -63,9 +66,9 @@
       </td>
     </tr>
   </ng-template>
-  <ng-template pTemplate="emptymessage">
+  <ng-template pTemplate="emptymessage" let-columns>
     <tr>
-      <td colspan="6">No hay datos.</td>
+      <td colspan="1">No hay datos.</td>
     </tr>
   </ng-template>
 </p-table>
