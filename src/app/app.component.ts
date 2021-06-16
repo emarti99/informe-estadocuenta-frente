@@ -18,7 +18,7 @@ export class AppComponent {
 
   hayError!: boolean;
   cargando: boolean = true;
-
+  
   constructor(private _estadoCuenta: FondoService) {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
@@ -35,6 +35,7 @@ export class AppComponent {
     this._estadoCuenta.devuelveSociosSugeridos().subscribe(
       (resp) => {
         this.sociosSugeridos = resp;
+
         if (this.sociosSugeridos.length == 1)
           this.busca(this.sociosSugeridos[0].sosu_nro_cedula);
       },
@@ -52,7 +53,7 @@ export class AppComponent {
         this.cargando = this.abrirCerrarFilasSecundarias = true;
 
         localStorage.setItem('historial', JSON.stringify(this.estadoCuenta));
-        console.log( this.estadoCuenta)
+
         setTimeout(() => {
           document.getElementById('buscador')!.scrollIntoView({
             behavior: 'smooth',

@@ -51,21 +51,9 @@
 
 // Tablas
 
-:host ::ng-deep .p-datatable-sm td,
-:host ::ng-deep .p-datatable-sm th {
-  text-align: right !important;
-}
 
 :host ::ng-deep .desplegable td,
 :host ::ng-deep .desplegable th {
-  background-color: #e9ecef !important;
-}
-
-// :host ::ng-deep .contenedor-desplegable td {
-//   padding: 0 !important;
-// }
-
-.p-p-3 {
   background-color: #e9ecef !important;
 }
 
@@ -80,23 +68,7 @@
   font-size: 0.8rem;
 }
 
-// spinner
-.contenedor-cargando {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: max-content;
-  height: max-content;
-  margin: auto;
-  z-index: 2;
 
-  i {
-    font-size: 6rem
-  }
-}
 
 // autocompletado
 :host ::ng-deep .p-autocomplete {
@@ -121,7 +93,6 @@
 
 .sugerencias {
   font-weight: bold;
-  // border-bottom: 1px solid rgb(71, 70, 70);
 }
 
 // botones imprimir/expandir
