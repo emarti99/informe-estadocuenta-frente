@@ -15,6 +15,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { RippleModule } from 'primeng/ripple';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputTextModule } from 'primeng/inputtext';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -34,7 +35,7 @@ import { InputTextModule } from 'primeng/inputtext';
     RippleModule,
     AutoCompleteModule,
     InputTextModule,
+    ProgressSpinnerModule,
   ],
-  
 })
 export class PrimeNgModule {}

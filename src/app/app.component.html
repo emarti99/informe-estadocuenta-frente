@@ -27,6 +27,9 @@
 
 <p-scrollTop [threshold]="2" class="scroll-top"></p-scrollTop>
 
+<!-- cargando-hayError -->
+<app-cargando-hay-error></app-cargando-hay-error>
+
 
 <!-- botones -->
 <div *ngIf="estadoCuenta" class="p-d-flex botones">
@@ -38,15 +41,8 @@
   <button pButton pRipple type="button" icon="pi pi-print" class="p-button-primary" (click)="imprimir()"></button>
 </div>
 
-
-<!-- Cargando -->
-<div *ngIf="!cargando" class="contenedor-cargando">
-  <i class="pi pi-spin pi-spinner"></i>
-</div>
-
-
 <!-- contenedor principal -->
-<div *ngIf="cargando && estadoCuenta" class="contenedor-principal p-grid p-m-auto" id="contenedor-principal">
+<div *ngIf="estadoCuenta" class="contenedor-principal p-grid p-m-auto" id="contenedor-principal">
   <app-resumen-general [datosPersonales]="estadoCuenta.datos_personales"
     [datosAnaliticos]="estadoCuenta.datos_analiticos" class="p-d-flex p-jc-center p-mb-2 resumenGeneral"
     id="resumen-general">

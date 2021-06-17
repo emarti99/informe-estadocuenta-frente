@@ -17,18 +17,20 @@ export class AppComponent {
   socioSeleccionado!: SocioSugerido;
 
   hayError!: boolean;
-  cargando: boolean = true;
-  
-  constructor(private _estadoCuenta: FondoService) {
+
+  constructor(
+    private _estadoCuenta: FondoService,
+    
+  ) {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
   autoCompletado(event: any) {
-    this.cargando = true;
+   
 
     let query = event.query;
-      this._estadoCuenta.devuelveIdentificador(query);
-      this.cargaSociosSugeridos();
+    this._estadoCuenta.devuelveIdentificador(query);
+    this.cargaSociosSugeridos();
   }
 
   cargaSociosSugeridos() {
@@ -46,11 +48,10 @@ export class AppComponent {
   }
 
   busca(identificador: number) {
-    this.cargando = false;
     this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
       (resp) => {
         this.estadoCuenta = resp;
-        this.cargando = this.abrirCerrarFilasSecundarias = true;
+        this.abrirCerrarFilasSecundarias = true;
 
         localStorage.setItem('historial', JSON.stringify(this.estadoCuenta));
 
@@ -109,4 +110,6 @@ export class AppComponent {
       element.click();
     }
   }
+
+
 }

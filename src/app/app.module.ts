@@ -14,7 +14,6 @@ import { registerLocaleData } from '@angular/common';
 registerLocaleData(localePy, 'py');
 
 import { AppComponent } from './app.component';
-import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import { DatosLaboralesComponent } from './componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component';
 import { DatosPersonalesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component';
 import { PrestamosComponent } from './componentes/estado-cuenta-contenedor/prestamos/prestamos.component';
@@ -25,13 +24,13 @@ import { CajasCentralesComponent } from './componentes/estado-cuenta-contenedor/
 import { AhorrosComponent } from './componentes/estado-cuenta-contenedor/ahorros/ahorros.component';
 import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/gestion-cobranza/gestion-cobranza.component';
 import { FormatoDatosNulosPipe } from './pipes/formato-datos-nulos.pipe';
+import { CargandoHayErrorComponent } from './componentes/compartido/cargando-hay-error/cargando-hay-error.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BuscadorComponent,
     DatosLaboralesComponent,
     DatosPersonalesComponent,
     PrestamosComponent,
@@ -42,6 +41,7 @@ import { FormatoDatosNulosPipe } from './pipes/formato-datos-nulos.pipe';
     AhorrosComponent,
     GestionCobranzaComponent,
     FormatoDatosNulosPipe,
+    CargandoHayErrorComponent,
   ],
   imports: [
     BrowserModule,

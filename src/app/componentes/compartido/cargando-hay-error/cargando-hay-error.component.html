@@ -1,0 +1,11 @@
+<!-- Cargando -->
+<div class="contenedor-cargando">
+  <p-progressSpinner strokeWidth="4" *ngIf="comunicacionSupervisor.comunicacionActiva"></p-progressSpinner>
+</div>
+
+<!-- hay error -->
+<p-dialog id="error-dialogo" header="Atención" [(visible)]="comunicacionSupervisor.hayError" (onHide)="recarga()">
+  <p>Ha habido un inconveniente. Por favor intente más tarde nuevamente.</p>
+  <p><em>Al cerrar este mensaje, la página se recargará automáticamente.</em></p>
+</p-dialog>
+
