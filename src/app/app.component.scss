@@ -5,8 +5,7 @@
   padding: 2rem;
 
   .imagotipo-eslogan {
-    width: clamp(40vw, 464px, 95vw);
-    padding-right: calc(4rem);
+    width: clamp(35vw, 464px, 95vw);
   }
 }
 
@@ -15,6 +14,7 @@
 .contenedor-principal {
   width: clamp(50vw, 1300px, 97vw);
   flex-flow: column wrap;
+  margin-bottom: 4.3rem !important;
 
   .resumenGeneral {
     flex-flow: row wrap;
@@ -70,7 +70,6 @@
 }
 
 
-
 // autocompletado
 :host ::ng-deep .p-autocomplete {
   width: 40rem;
@@ -96,11 +95,6 @@
   font-weight: bold;
 }
 
-// botones imprimir/expandir
-.botones {
-  width: 90%;
-  justify-content: right;
-}
 
 // Responsive de las tablas
 
@@ -113,17 +107,6 @@
 }
 
 @media screen and (max-width: 992px) {
-  :host ::ng-deep .p-autocomplete {
-    width: 100% !important;
-  }
-
-  .buscador {
-    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-
-    .autocompletado {
-      width: 100%;
-    }
-  }
 
   :host ::ng-deep {
     .p-datatable {
