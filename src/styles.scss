@@ -17,6 +17,10 @@ body {
 .p-p-0 {
   border: 1px solid;
 }
+.p-p-3 {
+  background-color: #e9ecef !important;
+}
+
 
 // hover a las filas primarias
 .resalta-filas {
@@ -42,6 +46,35 @@ body {
 
 .estado {
   background-color: #c8e6c9 !important;
+}
+
+
+
+// spinner
+.contenedor-cargando {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  z-index: 2;
+
+  i {
+    font-size: 6rem
+  }
+}
+
+// Tablas
+.p-datatable-sm td,
+.p-datatable-sm th {
+ text-align: right !important;
+}
+.p-datatable-sm .mensajeNoDatos {
+  text-align: center !important;
 }
 
 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { from, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -20,7 +21,6 @@ export class FondoService {
   ) {}
 
   identificador!: string;
-  urlBase: string = 'http://192.168.100.171:8080/api/v1/';
 
   devuelveIdentificador(termino: string) {
     this.identificador = termino;
@@ -33,7 +33,7 @@ export class FondoService {
   pideEstadoCuenta(identificador: number): Observable<EstadoCuenta> {
     const socio = identificador.toString();
     return this.comunicacion.supervisa(
-      this.http.get<EstadoCuenta>(this.urlBase + 'informe?', {
+      this.http.get<EstadoCuenta>(environment.apiEstadoCuentaUrl + 'informe?', {
         headers: { 'Content-Type': 'application/json' },
         observe: 'events',
         params: { ci: socio },
@@ -45,7 +45,7 @@ export class FondoService {
     const sociosSugeridos = identificador.toString();
 
     return this.comunicacion.supervisa(
-      this.http.get<SocioSugerido[]>(this.urlBase + 'sugerencias?', {
+      this.http.get<SocioSugerido[]>(environment.apiEstadoCuentaUrl + 'sugerencias?', {
         headers: { 'Content-Type': 'application/json' },
         observe: 'events',
         params: { dato: sociosSugeridos },
