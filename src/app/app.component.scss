@@ -4,8 +4,9 @@
   display: block;
   padding: 2rem;
 
-  .logo {
+  .imagotipo-eslogan {
     width: clamp(40vw, 464px, 95vw);
+    padding-right: calc(4rem);
   }
 }
 
