@@ -1,13 +1,4 @@
-// cabecera
 
-.cabecera {
-  display: block;
-  padding: 2rem;
-
-  .imagotipo-eslogan {
-    width: clamp(35vw, 464px, 95vw);
-  }
-}
 
 // contenedor principal
 
@@ -82,6 +73,10 @@
     width: 100%;
   }
 
+  .p-autocomplete-loader {
+    margin-right: 2rem;
+  }
+
   .p-autocomplete-item {
     padding: 0;
 
@@ -89,6 +84,23 @@
       padding: 0.5rem 1rem;
     }
   }
+}
+
+:host {
+  --limpiaBoton-ancho: 2.2rem;
+  --limpiaBoton-ampliacion-area-sensible: 0.3rem;
+}
+#limpiaBoton {
+  font-size: 1.5rem;
+  opacity: 0.3;
+  margin-left: -4.5rem;
+  padding: var(--limpiaBoton-ampliacion-area-sensible);
+  cursor: pointer;
+  line-height: 1.8rem;
+}
+
+#limpiaBoton:hover {
+  opacity: 0.6;
 }
 
 .sugerencias {
@@ -142,4 +154,3 @@
     }
   }
 }
-

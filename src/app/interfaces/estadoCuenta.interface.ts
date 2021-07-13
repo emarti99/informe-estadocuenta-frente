@@ -124,5 +124,6 @@ export interface SocioSugerido {
   sosu_nro_socio: number;
   sosu_nro_cedula: number;
   sosu_telefono: number;
+  sosu_input?: string;
 }
 

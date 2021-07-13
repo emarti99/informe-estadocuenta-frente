@@ -17,6 +17,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
+
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -37,5 +38,6 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     InputTextModule,
     ProgressSpinnerModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class PrimeNgModule {}

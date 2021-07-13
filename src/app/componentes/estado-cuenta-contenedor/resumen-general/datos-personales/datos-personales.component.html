@@ -25,7 +25,7 @@
   [class]="{socio: estado, conyuge: !estado}">
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda">
-      <p *ngIf="estado" class="datos-primarios">Socio {{ datosPersonales.dape_estado }}</p>
+      <p *ngIf="estado" class="datos-primarios">{{ datosPersonales.dape_estado }}</p>
       <p *ngIf="!estado" class="datos-primarios">Cónyuge {{ datosPersonales.dape_estado }}</p>
     </div>
     <div class="caja-inferior caja-izquierda">

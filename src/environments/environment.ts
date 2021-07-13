@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEstadoCuentaUrl: 'https://05b836312223.ngrok.io/api/v1/',
+  apiEstadoCuentaUrl: 'https://fc6918922d5e.ngrok.io/api/v1/',
 };
 
 /*

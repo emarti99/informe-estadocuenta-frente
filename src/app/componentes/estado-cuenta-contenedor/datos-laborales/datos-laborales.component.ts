@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DatosLaborales } from '../../../interfaces/estadoCuenta.interface';
 import {
   trigger,
@@ -31,12 +31,11 @@ import {
     ]),
   ],
 })
-export class DatosLaboralesComponent implements OnInit {
+export class DatosLaboralesComponent implements OnChanges {
   @Input() datosLaborales!: DatosLaborales[];
 
   constructor() {}
-
-  ngOnInit(): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.datosLaborales.sort((a, b) => {
       if (a.dala_socio_fecha_ingreso > b.dala_socio_fecha_ingreso) {
         return -1;

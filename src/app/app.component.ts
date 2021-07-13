@@ -11,35 +11,48 @@ import { FondoService } from './servicios/fondo.service';
 })
 export class AppComponent {
   title = 'estadoCuenta';
+  valorInterno = 'prueba';
 
   estadoCuenta!: EstadoCuenta;
   sociosSugeridos!: SocioSugerido[];
-  socioSeleccionado!: SocioSugerido;
+  socioSeleccionado!: any;
 
   hayError!: boolean;
 
-  constructor(
-    private _estadoCuenta: FondoService,
-    
-  ) {
+  constructor(private _estadoCuenta: FondoService) {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
-  autoCompletado(event: any) {
+  
+  // Borra la entrada del buscador
    
-
-    let query = event.query;
-    this._estadoCuenta.devuelveIdentificador(query);
-    this.cargaSociosSugeridos();
+  limpiar(): void {
+    this.socioSeleccionado = '';
   }
 
-  cargaSociosSugeridos() {
+
+  // evento del autocompletado
+  ultimaBusqueda!: string;
+  autoCompletado(event: any) {
+    let query = event.query;
+
+    if (query == '') {
+      this.cargaSociosSugeridos(this.ultimaBusqueda);
+    } else {
+      this.cargaSociosSugeridos(query);
+      this.ultimaBusqueda = query;
+    }
+    
+  }
+
+  cargaSociosSugeridos(identificador: string) {
+    this._estadoCuenta.devuelveIdentificador(identificador);
     this._estadoCuenta.devuelveSociosSugeridos().subscribe(
       (resp) => {
         this.sociosSugeridos = resp;
-
-        if (this.sociosSugeridos.length == 1)
-          this.busca(this.sociosSugeridos[0].sosu_nro_cedula);
+        this.sociosSugeridos.forEach((elemento) => {
+          elemento.sosu_input = identificador;
+        });
       },
       (err) => {
         console.warn(err.message);
@@ -47,6 +60,8 @@ export class AppComponent {
     ).unsubscribe;
   }
 
+
+  // busca el informe de estado de cuenta
   busca(identificador: number) {
     this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
       (resp) => {
@@ -110,6 +125,4 @@ export class AppComponent {
       element.click();
     }
   }
-
-
 }

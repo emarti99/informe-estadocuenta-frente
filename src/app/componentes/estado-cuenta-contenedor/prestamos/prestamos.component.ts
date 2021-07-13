@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Prestamos } from '../../../interfaces/estadoCuenta.interface';
 import {
   trigger,
@@ -32,19 +32,17 @@ import {
     ]),
   ],
 })
-
-export class PrestamosComponent implements OnInit {
+export class PrestamosComponent implements OnChanges {
   @Input() prestamos!: Prestamos[];
 
   constructor() {}
-
-  ngOnInit(): void {
-     this.prestamos.sort((a, b) => {
-       if (a.pres_socio_aprobado_fecha > b.pres_socio_aprobado_fecha) {
-         return -1;
-       } else {
-         return 1;
-       }
-     });
+  ngOnChanges(changes: SimpleChanges): void {
+    this.prestamos.sort((a, b) => {
+      if (a.pres_socio_aprobado_fecha > b.pres_socio_aprobado_fecha) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
   }
 }

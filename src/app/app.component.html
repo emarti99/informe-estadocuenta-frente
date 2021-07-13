@@ -5,15 +5,15 @@
 
 
 <!-- buscador -->
-<div class="p-d-flex p-col-12 p-ai-center p-flex-column p-mb-0 buscador" id="buscador">
-
-  <p-autoComplete [(ngModel)]="socioSeleccionado" [suggestions]="sociosSugeridos"
+<div class="p-d-flex p-col-12 p-jc-center p-mb-0 buscador" id="buscador">
+  <p-autoComplete [(ngModel)]="socioSeleccionado" type="search" [suggestions]="sociosSugeridos"
     (completeMethod)="autoCompletado($event)" [showEmptypMessage]="true" emptyMessage="Datos no encontrados"
-    field="sosu_nombre" [minLength]="3" [virtualScroll]="true" [dropdown]="true"
+    field="sosu_input" [minLength]="3" [virtualScroll]="true" [dropdown]="true"
     placeholder="Ingrese datos para buscar un socio" dropdownIcon="pi pi-search"
-    (keyup.enter)="busca(socioSeleccionado.sosu_nro_cedula)" class="autocompletado">
+   class="autocompletado" (keyup.enter)="busca(socioSeleccionado.sosu_nro_cedula)">
     <ng-template let-socio pTemplate="item">
       <div style="font-size: 11px; width: 100%" (click)="busca(socio.sosu_nro_cedula)"
+        
         (onSelect)="busca(socio.sosu_nro_cedula)">
         {{ socio.sosu_nombre | titlecase }} {{ socio.sosu_apellido | titlecase }} - <span class="sugerencias">CI</span>:
         {{ socio.sosu_nro_cedula | number: "1.0":"py" }} - <span class="sugerencias">SOC</span>:
@@ -22,6 +22,7 @@
       </div>
     </ng-template>
   </p-autoComplete>
+  <i id="limpiaBoton" class="pi pi-times-circle" (click)="limpiar()"></i>
 </div>
 
 

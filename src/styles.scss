@@ -11,7 +11,27 @@ body {
   box-sizing: border-box;
 }
 
+// cabecera
+
+.cabecera {
+  display: block;
+  padding: 2rem;
+
+  .imagotipo-eslogan {
+    width: clamp(32vw, 464px, 95vw);
+  }
+}
+
 // Tablas
+
+.p-datatable-sm td,
+.p-datatable-sm th {
+  text-align: right !important;
+}
+
+.p-datatable-sm .mensajeNoDatos {
+  text-align: center !important;
+}
 
 // borde de las tablas secundarias
 .p-p-0 {
@@ -79,15 +99,6 @@ body {
   justify-content: right;
 }
 
-// Tablas
-.p-datatable-sm td,
-.p-datatable-sm th {
-  text-align: right !important;
-}
-
-.p-datatable-sm .mensajeNoDatos {
-  text-align: center !important;
-}
 
 
 @media print {
@@ -221,10 +232,15 @@ body {
   }
 
   .buscador {
-    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    // padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    justify-content: space-between;
 
     .autocompletado {
       width: 100%;
+    }
+
+    #limpiaBoton {
+      margin-right: 2.5rem;
     }
   }
 }

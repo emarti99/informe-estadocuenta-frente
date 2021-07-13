@@ -21,7 +21,10 @@ export class FondoService {
   ) {}
 
   identificador!: string;
-
+  
+  set devuelveme(val:any) {
+    this.identificador = val;
+  }
   devuelveIdentificador(termino: string) {
     this.identificador = termino;
   }
