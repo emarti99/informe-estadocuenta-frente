@@ -1,20 +1,20 @@
 <!-- <h2>Datos laborales</h2> -->
-<p-table *ngIf="datosLaborales" [value]="datosLaborales" dataKey="dala_socio_id_empresa"
+<p-table *ngIf="datosLaborales" [value]="datosLaborales" dataKey="datos_laborales_socio_id_empresa"
   styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="dala_socio_empresa">Empresa </th>
-      <th pSortableColumn="dala_socio_salario">Salario <p-sortIcon field="dala_socio_salario">
+      <th pSortableColumn="datos_laborales_socio_empresa">Empresa </th>
+      <th pSortableColumn="datos_laborales_socio_salario">Salario <p-sortIcon field="dala_socio_salario">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="dala_socio_fecha_ingreso">Fecha de ingreso <p-sortIcon field="dala_socio_fecha_ingreso">
+      <th pSortableColumn="datos_laborales_socio_fecha_ingreso">Fecha de ingreso <p-sortIcon field="dala_socio_fecha_ingreso">
         </p-sortIcon>
       </th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-campo let-expanded="expanded">
-    <tr class="resalta-filas" [class]="campo.dala_socio_fecha_egreso == null ? 'estado' : ''">
+    <tr class="resalta-filas" [class]="campo.datos_laborales_socio_fecha_egreso == null ? 'estado' : ''">
       <td>
         <button type="button" pButton pRipple [pRowToggler]="campo"
           class="p-button-text p-button-rounded p-button-plain"
@@ -22,15 +22,15 @@
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Empresa</span>
-        {{ campo.dala_socio_empresa | titlecase}}
+        {{ campo.datos_laborales_socio_empresa | titlecase}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Salario</span>
-        {{ campo.dala_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        {{ campo.datos_laborales_socio_salario | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha de ingreso</span>
-        {{ campo.dala_socio_fecha_ingreso | formatoFecha }}
+        {{ campo.datos_laborales_socio_fecha_ingreso | formatoFecha }}
       </td>
     </tr>
   </ng-template>
@@ -41,7 +41,7 @@
 
           <!-- Tabla secundaria -->
 
-          <p-table [value]="datosLaborales" dataKey="dala_socio_direccion" styleClass="p-datatable-sm desplegable p-datatable-responsive-demo
+          <p-table [value]="datosLaborales" dataKey="datos_laborales_socio_direccion" styleClass="p-datatable-sm desplegable p-datatable-responsive-demo
           ">
             <ng-template pTemplate="header">
     <tr>
@@ -54,15 +54,15 @@
     <tr *ngIf="rowIndex == 0">
       <td>
         <span class="p-column-title">Dirección</span>
-        {{ campo.dala_socio_direccion | titlecase }}
+        {{ campo.datos_laborales_socio_direccion | titlecase }}
       </td>
       <td>
         <span class="p-column-title">Teléfono</span>
-        {{ campo.dala_socio_telefono  }}
+        {{ campo.datos_laborales_socio_telefono  }}
       </td>
       <td>
         <span class="p-column-title">Fecha de egreso</span>
-        {{ campo.dala_socio_fecha_egreso | formatoFecha  }}
+        {{ campo.datos_laborales_socio_fecha_egreso | formatoFecha  }}
       </td>
     </tr>
   </ng-template>

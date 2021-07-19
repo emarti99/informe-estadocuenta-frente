@@ -1,83 +1,83 @@
 <!-- Tabla principal -->
 
-<p-table *ngIf="prestamos" [value]="prestamos" dataKey="pres_socio_nro_pmo"
+<p-table *ngIf="prestamos" [value]="prestamos" dataKey="prestamos_socio_nro_pmo"
   styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="pres_socio_aprobado_fecha">Fecha apro. <p-sortIcon
-          field="pres_socio_aprobado_fecha">
+      <th pSortableColumn="prestamos_socio_aprobado_fecha">Fecha apro. <p-sortIcon
+          field="prestamos_socio_aprobado_fecha">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="pres_socio_monto">Monto <p-sortIcon field="pres_socio_monto">
+      <th pSortableColumn="prestamos_socio_monto">Monto <p-sortIcon field="prestamos_socio_monto">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="pres_socio_sistema">Sistema <p-sortIcon field="pres_socio_sistema">
+      <th pSortableColumn="prestamos_socio_sistema">Sistema <p-sortIcon field="prestamos_socio_sistema">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="pres_socio_cuotas">Cuotas 
+      <th pSortableColumn="prestamos_socio_cuotas">Cuotas 
       </th>
-      <th pSortableColumn="pres_socio_tipo_pmo">Tipo 
+      <th pSortableColumn="prestamos_socio_tipo_pmo">Tipo 
       </th>
-      <th pSortableColumn="pres_socio_calificacion">Calificación <p-sortIcon
-          field="pres_socio_calificacion">
+      <th pSortableColumn="prestamos_socio_calificacion">Calificación <p-sortIcon
+          field="prestamos_socio_calificacion">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="pres_socio_atrasos">Atrasos <p-sortIcon field="pres_socio_atrasos">
+      <th pSortableColumn="prestamos_socio_atrasos">Atrasos <p-sortIcon field="prestamos_socio_atrasos">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="pres_socio_fecha_vencimiento">Vencimiento <p-sortIcon
-          field="pres_socio_fecha_vencimiento">
+      <th pSortableColumn="prestamos_socio_fecha_vencimiento">Vencimiento <p-sortIcon
+          field="prestamos_socio_fecha_vencimiento">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="pres_socio_estado_pmo">Estado <p-sortIcon field="pres_socio_estado_pmo">
+      <th pSortableColumn="prestamos_socio_estado_pmo">Estado <p-sortIcon field="prestamos_socio_estado_pmo">
         </p-sortIcon>
       </th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-campo let-expanded="expanded">
     <tr class="resalta-filas"
-      [class]="campo.pres_socio_estado_pmo == 'Cobro normal' && campo.pres_socio_aprobado_fecha != null ? 'verde' : campo.pres_socio_estado_pmo ==
-      'Juicio/Cob' ? 'rojo' :  campo.pres_socio_estado_pmo == 'Solicitud' ? 'amarillo' : '' ">
+      [class]="campo.prestamos_socio_estado_pmo == 'Cobro normal' && campo.prestamos_socio_aprobado_fecha != null ? 'verde' : campo.prestamos_socio_estado_pmo ==
+      'Juicio/Cob' ? 'rojo' :  campo.prestamos_socio_estado_pmo == 'Solicitud' ? 'amarillo' : '' ">
       <td>
         <button type="button" pButton pRipple [pRowToggler]="campo"
           class="p-button-text p-button-rounded p-button-plain"
           [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
       </td>
       <td [pRowToggler]="campo">
-        <span class="p-column-title">Fecha aprobación</span>{{campo.pres_socio_aprobado_fecha | formatoFecha}}
+        <span class="p-column-title">Fecha aprobación</span>{{campo.prestamos_socio_aprobado_fecha | formatoFecha}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Monto</span>
-        {{campo.pres_socio_monto | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.prestamos_socio_monto | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Sistema</span>
-        {{campo.pres_socio_sistema}}
+        {{campo.prestamos_socio_sistema}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Cuotas</span>
-        {{campo.pres_socio_cuotas}}
+        {{campo.prestamos_socio_cuotas}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Tipo</span>
-        {{campo.pres_socio_tipo_pmo | titlecase}}
+        {{campo.prestamos_socio_tipo_pmo | titlecase}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Calificación</span>
-        {{campo.pres_socio_calificacion}}
+        {{campo.prestamos_socio_calificacion}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Atrasos</span>
-        {{campo.pres_socio_atrasos}}
+        {{campo.prestamos_socio_atrasos}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Vencimiento</span>
-        {{campo.pres_socio_fecha_vencimiento | formatoFecha}}
+        {{campo.prestamos_socio_fecha_vencimiento | formatoFecha}}
       </td>
       <td>
         <span class="p-column-title">Estado</span>
-        {{campo.pres_socio_estado_pmo | titlecase}}
+        {{campo.prestamos_socio_estado_pmo | titlecase}}
       </td>
     </tr>
   </ng-template>
@@ -88,7 +88,7 @@
 
           <!-- Tabla secundaria ( desplegable ) -->
 
-          <p-table [value]="prestamos" dataKey="pres_socio_saldo_restante"
+          <p-table [value]="prestamos" dataKey="prestamos_socio_saldo_restante"
             styleClass="p-datatable-sm desplegable p-datatable-responsive-demo">
             <ng-template pTemplate="header">
     <tr>
@@ -107,39 +107,39 @@
     <tr *ngIf="rowIndex == 0">
       <td>
         <span class="p-column-title">Saldo restante</span>
-        {{campo.pres_socio_saldo_restante | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.prestamos_socio_saldo_restante | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Tasa de interés</span>
-        {{campo.pres_socio_tasa_interes}}
+        {{campo.prestamos_socio_tasa_interes}}
       </td>
       <td>
         <span class="p-column-title">Situación</span>
-        {{campo.pres_socio_situacion | titlecase}}
+        {{campo.prestamos_socio_situacion | titlecase}}
       </td>
       <td>
         <span class="p-column-title">Cuotas adelantadas</span>
-        {{campo.pres_socio_adelantado}}
+        {{campo.prestamos_socio_adelantado}}
       </td>
       <td>
         <span class="p-column-title">Cuotas en fecha</span>
-        {{campo.pres_socio_en_fecha}}
+        {{campo.prestamos_socio_en_fecha}}
       </td>
       <td>
         <span class="p-column-title">Max días de atraso</span>
-        {{campo.pres_socio_max_dias_atraso}}
+        {{campo.prestamos_socio_max_dias_atraso}}
       </td>
       <td>
         <span class="p-column-title">Tipo de Garantía</span>
-        {{campo.pres_socio_tipo_garantia | titlecase}}
+        {{campo.prestamos_socio_tipo_garantia | titlecase}}
       </td>
       <td>
         <span class="p-column-title">Socio garante</span>
-        {{campo.pres_socio_socio_garante}}
+        {{campo.prestamos_socio_socio_garante}}
       </td>
       <td>
         <span class="p-column-title">Observación</span>
-        {{campo.pres_socio_observacion | titlecase}}
+        {{campo.prestamos_socio_observacion | titlecase}}
       </td>
     </tr>
   </ng-template>
@@ -150,7 +150,7 @@
 </ng-template>
 <ng-template pTemplate="emptymessage">
   <tr>
-    <td colspan="10" class="mensajeNoDatos">No hay prestamos</td>
+    <td colspan="10" class="mensajeNoDatos">No hay prestamostamos</td>
   </tr>
 </ng-template>
 </p-table>

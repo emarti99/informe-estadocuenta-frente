@@ -11,27 +11,27 @@
         <tr>
           <td>
             <span class="p-column-title">Sistema</span>
-            {{ item.geco_sistema }}
+            {{ item.gestion_cobranza_sistema }}
           </td>
           <td>
             <span class="p-column-title">Capital</span>
-            {{ item.geco_capital | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+            {{ item.gestion_cobranza_capital | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
             <span class="p-column-title">Gastos Judiciales</span>
-            {{ item.geco_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+            {{ item.gestion_cobranza_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
             <span class="p-column-title">Honorarios</span>
-            {{ item.geco_honorarios | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+            {{ item.gestion_cobranza_honorarios | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
             <span class="p-column-title">Gastos admin</span>
-            {{ item.geco_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+            {{ item.gestion_cobranza_gastos_administrativos | currency:'PYG':'symbol-narrow':'1.0':'py' }}
           </td>
           <td>
             <span class="p-column-title">Tipo</span>
-            {{ item.geco_tipo }}
+            {{ item.gestion_cobranza_tipo }}
           </td>
         </tr>
       </ng-template>

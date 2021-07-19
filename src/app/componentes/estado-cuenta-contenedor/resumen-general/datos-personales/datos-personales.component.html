@@ -2,20 +2,20 @@
   [class]="{socio: estado, conyuge: !estado}">
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda ">
-      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_nombre | titlecase}}</p>
-      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.dape_apellido | titlecase }}</p>
+      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.datos_personales_nombre | titlecase}}</p>
+      <p class="nombre-apellido p-mb-0 p-mt-0">{{ datosPersonales.datos_personales_apellido | titlecase }}</p>
     </div>
     <div class="caja-inferior caja-izquierda">
-      <p class="datos-secundarios direccion">{{ datosPersonales.dape_direccion | titlecase }}</p>
+      <p class="datos-secundarios direccion">{{ datosPersonales.datos_personales_direccion | titlecase }}</p>
     </div>
   </div>
   <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
     <div class="caja-superior caja-derecha">
-      <p class="datos-primarios">{{ datosPersonales.dape_cedula_nro | number:'1.0':'py'}}</p>
+      <p class="datos-primarios">{{ datosPersonales.datos_personales_cedula_nro | number:'1.0':'py'}}</p>
       <p class="datos-secundarios">Cédula de identidad</p>
     </div>
     <div class="caja-inferior caja-derecha">
-      <p class="datos-primarios">{{ datosPersonales.dape_telefono }}</p>
+      <p class="datos-primarios">{{ datosPersonales.datos_personales_telefono }}</p>
     </div>
   </div>
 </section>
@@ -25,23 +25,23 @@
   [class]="{socio: estado, conyuge: !estado}">
   <div class="p-col p-d-flex p-flex-wrap p-flex-column p-jc-between datos-personales">
     <div class="caja-superior caja-izquierda">
-      <p *ngIf="estado" class="datos-primarios">{{ datosPersonales.dape_estado }}</p>
-      <p *ngIf="!estado" class="datos-primarios">Cónyuge {{ datosPersonales.dape_estado }}</p>
+      <p *ngIf="estado" class="datos-primarios">{{ datosPersonales.datos_personales_estado }}</p>
+      <p *ngIf="!estado" class="datos-primarios">Cónyuge {{ datosPersonales.datos_personales_estado }}</p>
     </div>
     <div class="caja-inferior caja-izquierda">
       <p class="datos-secundarios">Ingreso</p>
-      <p class="datos-secundarios">( {{ datosPersonales.dape_antiguedad | formatoDatosNulos }} )</p>
-      <p class="datos-primarios">{{ datosPersonales.dape_fecha_ingreso | formatoFecha }}</p>
+      <p class="datos-secundarios">( {{ datosPersonales.datos_personales_antiguedad | formatoDatosNulos }} )</p>
+      <p class="datos-primarios">{{ datosPersonales.datos_personales_fecha_ingreso | formatoFecha }}</p>
     </div>
   </div>
   <div class="p-col p-d-flex p-flex-wrap p-flex-column datos-personales">
     <div class="caja-superior caja-derecha">
-      <p class="datos-primarios numero-socio">{{ datosPersonales.dape_socio_nro | number:'1.0':'py' }}</p>
+      <p class="datos-primarios numero-socio">{{ datosPersonales.datos_personales_socio_nro | number:'1.0':'py' }}</p>
       <p class="datos-secundarios">Socio N॰</p>
     </div>
     <div class="caja-inferior caja-derecha">
       <p class="datos-secundarios">Último antecedente</p>
-      <p class="datos-primarios">{{ datosPersonales.dape_ultimo_antecedente | formatoDatosNulos }}</p>
+      <p class="datos-primarios">{{ datosPersonales.datos_personales_ultimo_antecedente | formatoDatosNulos }}</p>
     </div>
   </div>
 </section>

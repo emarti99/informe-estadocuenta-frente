@@ -1,23 +1,23 @@
-<p-table [value]="tarjetas" dataKey="tarj_fecha_ultimo_pago" styleClass="p-datatable-sm p-datatable-responsive-demo">
+<p-table [value]="tarjetas" dataKey="tarjetas_fecha_ultimo_pago" styleClass="p-datatable-sm p-datatable-responsive-demo">
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 3rem"></th>
-      <th pSortableColumn="tarj_fecha_ultimo_pago">Fecha últ. pago <p-sortIcon field="tarj_fecha_ultimo_pago">
+      <th pSortableColumn="tarjetas_fecha_ultimo_pago">Fecha últ. pago <p-sortIcon field="tarjetas_fecha_ultimo_pago">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="tarj_monto_ultimo_pago">Monto últ. pago <p-sortIcon field="tarj_monto_ultimo_pago">
+      <th pSortableColumn="tarjetas_monto_ultimo_pago">Monto últ. pago <p-sortIcon field="tarjetas_monto_ultimo_pago">
         </p-sortIcon>
       </th>
-      <th pSortableColumn="tarj_saldo_cuota">Saldo cuota <p-sortIcon field="tarj_saldo_cuota">
+      <th pSortableColumn="tarjetas_saldo_cuota">Saldo cuota <p-sortIcon field="tarjetas_saldo_cuota">
         </p-sortIcon>
-      <th pSortableColumn="tarj_dias_vencimiento">Días de venc. <p-sortIcon field="tarj_dias_vencimiento">
+      <th pSortableColumn="tarjetas_dias_vencimiento">Días de venc. <p-sortIcon field="tarjetas_dias_vencimiento">
         </p-sortIcon>
-      <th pSortableColumn="tarj_refinanciamiento_pendiente">Ref. Pendiente <p-sortIcon
-          field="tarj_refinanciamiento_pendiente" class="flecha">
+      <th pSortableColumn="tarjetas_refinanciamiento_pendiente">Ref. Pendiente <p-sortIcon
+          field="tarjetas_refinanciamiento_pendiente" class="flecha">
         </p-sortIcon>
-      <th pSortableColumn="tarj_estado">Estado <p-sortIcon field="tarj_estado">
+      <th pSortableColumn="tarjetas_estado">Estado <p-sortIcon field="tarjetas_estado">
         </p-sortIcon>
-      <th pSortableColumn="tarj_fecha_vencimiento">Fecha de venc. <p-sortIcon field="tarj_fecha_vencimiento">
+      <th pSortableColumn="tarjetas_fecha_vencimiento">Fecha de venc. <p-sortIcon field="tarjetas_fecha_vencimiento">
         </p-sortIcon>
       </th>
     </tr>
@@ -31,31 +31,31 @@
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha últ. pago</span>
-        {{campo.tarj_fecha_ultimo_pago | formatoFecha}}
+        {{campo.tarjetas_fecha_ultimo_pago | formatoFecha}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Monto últ. pago</span>
-        {{campo.tarj_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}
+        {{campo.tarjetas_monto_ultimo_pago | currency:'PYG':'symbol-narrow':'1.0':'py' }}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Saldo cuota</span>
-        {{campo.tarj_saldo_cuota}}
+        {{campo.tarjetas_saldo_cuota}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Días de venc.</span>
-        {{campo.tarj_dias_vencimiento}}
+        {{campo.tarjetas_dias_vencimiento}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Ref. Pendiente</span>
-        {{campo.tarj_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarjetas_refinanciamiento_pendiente | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Estado</span>
-        {{campo.tarj_estado | titlecase}}
+        {{campo.tarjetas_estado | titlecase}}
       </td>
       <td [pRowToggler]="campo">
         <span class="p-column-title">Fecha de venc.</span>
-        {{campo.tarj_fecha_vencimiento | formatoFecha}}
+        {{campo.tarjetas_fecha_vencimiento | formatoFecha}}
       </td>
     </tr>
   </ng-template>
@@ -66,7 +66,7 @@
 
           <!-- Tabla secundaria -->
 
-          <p-table [value]="tarjetas" dataKey="tarj_linea_credito"
+          <p-table [value]="tarjetas" dataKey="tarjetas_linea_credito"
             styleClass="p-datatable-sm desplegable p-datatable-responsive-demo">
             <ng-template pTemplate="header">
     <tr>
@@ -81,23 +81,23 @@
     <tr *ngIf="rowIndex == 0">
       <td>
         <span class="p-column-title">Línea de crédito</span>
-        {{campo.tarj_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarjetas_linea_credito | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Pago mínimo</span>
-        {{campo.tarj_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarjetas_pago_minimo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Saldo</span>
-        {{campo.tarj_saldo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarjetas_saldo | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
       <td>
         <span class="p-column-title">Ajuste mínimo TC</span>
-        {{campo.tarj_ajuste_TCR}}
+        {{campo.tarjetas_ajuste_TCR}}
       </td>
       <td>
         <span class="p-column-title">Línea especial</span>
-        {{campo.tarj_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py'}}
+        {{campo.tarjetas_linea_especial | currency:'PYG':'symbol-narrow':'1.0':'py'}}
       </td>
     </tr>
   </ng-template>
@@ -108,7 +108,7 @@
 </ng-template>
 <ng-template pTemplate="emptymessage">
   <tr>
-    <td colspan="8" class="mensajeNoDatos">No hay tarjetas</td>
+    <td colspan="8" class="mensajeNoDatos">No hay tarjetasetas</td>
   </tr>
 </ng-template>
 </p-table>

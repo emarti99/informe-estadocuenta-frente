@@ -9,121 +9,121 @@ export interface EstadoCuenta {
 }
 
 export interface DatosPersonalesGeneral {
-  dapg_socio_datos: DatosPersonales;
-  dapg_conyuge_datos: DatosPersonales;
+  datos_personales_general_socio_datos: DatosPersonales;
+  datos_personales_general_conyuge_datos: DatosPersonales;
 }
 export interface DatosPersonales {
-  dape_nombre: string;
-  dape_apellido: string;
-  dape_cedula_nro: number;
-  dape_direccion: string;
-  dape_telefono: string;
-  dape_estado: string;
-  dape_socio_nro: number;
-  dape_fecha_ingreso: string;
-  dape_antiguedad: string;
-  dape_ultimo_antecedente: string;
+  datos_personales_nombre: string;
+  datos_personales_apellido: string;
+  datos_personales_cedula_nro: number;
+  datos_personales_direccion: string;
+  datos_personales_telefono: string;
+  datos_personales_estado: string;
+  datos_personales_socio_nro: number;
+  datos_personales_fecha_ingreso: string;
+  datos_personales_antiguedad: string;
+  datos_personales_ultimo_antecedente: string;
 }
 
 export interface DatosAnaliticos {
-  daan_tasa_pref: number;
-  daan_aportes: Aportes;
-  daan_solidaridad: Solidaridad;
-  daan_saldos_pendientes: SaldosPendientes;
-  daan_calificaciones: Calificaciones;
-  daan_total_ahorros: number;
-  daan_salario_actual: number;
+  datos_analiticos_tasa_pref: number;
+  datos_analiticos_aportes: Aportes;
+  datos_analiticos_solidaridad: Solidaridad;
+  datos_analiticos_saldos_pendientes: SaldosPendientes;
+  datos_analiticos_calificaciones: Calificaciones;
+  datos_analiticos_total_ahorros: number;
+  datos_analiticos_salario_actual: number;
 }
 
 export interface Aportes {
-  apor_monto: number;
-  apor_cant_pend: number;
-  apor_ult_pag: string;
+  aportes_monto: number;
+  aportes_cant_pend: number;
+  aportes_ult_pag: string;
 }
 
 export interface Solidaridad {
-  soli_cant_pend: number;
-  soli_ult_pag: string;
+  solidaridad_cant_pend: number;
+  solidaridad_ult_pag: string;
 }
 
 export interface SaldosPendientes {
-  sape_prestamos: number;
-  sape_cobranzas: number;
-  sape_tarjetas: number;
+  saldos_pendientes_prestamos: number;
+  saldos_pendientes_cobranzas: number;
+  saldos_pendientes_tarjetas: number;
 }
 
 export interface Calificaciones {
-  cali_calif_ult: string;
-  cali_promedio: number;
+  calificaciones_calif_ult: string;
+  calificaciones_promedio: number;
 }
 
 export interface DatosLaborales {
-  dala_socio_empresa: string;
-  dala_socio_direccion: string;
-  dala_socio_telefono: string;
-  dala_socio_salario: number;
-  dala_socio_fecha_ingreso: string;
-  dala_socio_fecha_egreso: string | null;
-  dala_socio_id_empresa: number;
+  datos_laborales_socio_empresa: string;
+  datos_laborales_socio_direccion: string;
+  datos_laborales_socio_telefono: string;
+  datos_laborales_socio_salario: number;
+  datos_laborales_socio_fecha_ingreso: string;
+  datos_laborales_socio_fecha_egreso: string | null;
+  datos_laborales_socio_id_empresa: number;
 }
 export interface Prestamos {
-  pres_socio_nro_pmo: number;
-  pres_socio_aprobado_fecha: string;
-  pres_socio_monto: number;
-  pres_socio_sistema: string;
-  pres_socio_cuotas: string;
-  pres_socio_tipo_pmo: string;
-  pres_socio_calificacion: string;
-  pres_socio_atrasos: number;
-  pres_socio_fecha_vencimiento: string;
-  pres_socio_estado_pmo: string;
-  pres_socio_saldo_restante: number;
-  pres_socio_tasa_interes: number;
-  pres_socio_tipo_garantia: string;
-  pres_socio_situacion: string;
-  pres_socio_adelantado: number;
-  pres_socio_en_fecha: number;
-  pres_socio_max_dias_atraso: number;
-  pres_socio_promedio: number;
-  pres_socio_socio_garante: string;
-  pres_socio_observacion: string;
+  prestamos_socio_nro_pmo: number;
+  prestamos_socio_aprobado_fecha: string;
+  prestamos_socio_monto: number;
+  prestamos_socio_sistema: string;
+  prestamos_socio_cuotas: string;
+  prestamos_socio_tipo_pmo: string;
+  prestamos_socio_calificacion: string;
+  prestamos_socio_atrasos: number;
+  prestamos_socio_fecha_vencimiento: string;
+  prestamos_socio_estado_pmo: string;
+  prestamos_socio_saldo_restante: number;
+  prestamos_socio_tasa_interes: number;
+  prestamos_socio_tipo_garantia: string;
+  prestamos_socio_situacion: string;
+  prestamos_socio_adelantado: number;
+  prestamos_socio_en_fecha: number;
+  prestamos_socio_max_dias_atraso: number;
+  prestamos_socio_promedio: number;
+  prestamos_socio_socio_garante: string;
+  prestamos_socio_observacion: string;
 }
 
 export interface Tarjetas {
-  tarj_linea_credito: number;
-  tarj_linea_especial: number;
-  tarj_saldo: number;
-  tarj_pago_minimo: number;
-  tarj_fecha_ultimo_pago: string;
-  tarj_dias_vencimiento: number;
-  tarj_saldo_cuota: number;
-  tarj_fecha_vencimiento: string;
-  tarj_estado: string;
-  tarj_refinanciamiento_pendiente: number;
-  tarj_monto_ultimo_pago: number;
-  tarj_ajuste_TCR: number;
+  tarjetas_linea_credito: number;
+  tarjetas_linea_especial: number;
+  tarjetas_saldo: number;
+  tarjetas_pago_minimo: number;
+  tarjetas_fecha_ultimo_pago: string;
+  tarjetas_dias_vencimiento: number;
+  tarjetas_saldo_cuota: number;
+  tarjetas_fecha_vencimiento: string;
+  tarjetas_estado: string;
+  tarjetas_refinanciamiento_pendiente: number;
+  tarjetas_monto_ultimo_pago: number;
+  tarjetas_ajuste_TCR: number;
 }
 
 export interface Ahorros {
-  ahor_cuenta_nro: number;
-  ahor_tipo_cuenta: string;
-  ahor_cantidad: number;
+  ahorros_cuenta_nro: number;
+  ahorros_tipo_cuenta: string;
+  ahorros_cantidad: number;
 }
 export interface GestionCobranza {
-  geco_sistema: string;
-  geco_capital: number;
-  geco_gastos_judiciales: number;
-  geco_honorarios: number;
-  geco_gastos_administrativos: number;
-  geco_tipo: string;
+  gestion_cobranza_sistema: string;
+  gestion_cobranza_capital: number;
+  gestion_cobranza_gastos_judiciales: number;
+  gestion_cobranza_honorarios: number;
+  gestion_cobranza_gastos_administrativos: number;
+  gestion_cobranza_tipo: string;
 }
 
 export interface SocioSugerido {
-  sosu_nombre: string;
-  sosu_apellido: string;
-  sosu_nro_socio: number;
-  sosu_nro_cedula: number;
-  sosu_telefono: number;
-  sosu_input?: string;
+  socio_sugerido_nombre: string;
+  socio_sugerido_apellido: string;
+  socio_sugerido_nro_socio: number;
+  socio_sugerido_nro_cedula: number;
+  socio_sugerido_telefono: number;
+  socio_sugerido_input?: string;
 }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -23,13 +23,11 @@ export class AppComponent {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
-  
   // Borra la entrada del buscador
-   
   limpiar(): void {
     this.socioSeleccionado = '';
   }
-
+  
 
   // evento del autocompletado
   ultimaBusqueda!: string;
@@ -42,7 +40,6 @@ export class AppComponent {
       this.cargaSociosSugeridos(query);
       this.ultimaBusqueda = query;
     }
-    
   }
 
   cargaSociosSugeridos(identificador: string) {
@@ -51,7 +48,7 @@ export class AppComponent {
       (resp) => {
         this.sociosSugeridos = resp;
         this.sociosSugeridos.forEach((elemento) => {
-          elemento.sosu_input = identificador;
+          elemento.socio_sugerido_input = identificador;
         });
       },
       (err) => {
@@ -59,7 +56,6 @@ export class AppComponent {
       }
     ).unsubscribe;
   }
-
 
   // busca el informe de estado de cuenta
   busca(identificador: number) {

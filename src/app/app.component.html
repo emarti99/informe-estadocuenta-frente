@@ -1,6 +1,6 @@
 <!-- cabecera -->
 <div class="cabecera p-d-flex p-jc-center p-mb-0">
-    <img class="imagotipo-eslogan" src="assets/imagenes/csc-imagotipo-eslogan.svg" alt="logo">
+  <img class="imagotipo-eslogan" src="assets/imagenes/csc-imagotipo-eslogan.svg" alt="logo">
 </div>
 
 
@@ -8,17 +8,16 @@
 <div class="p-d-flex p-col-12 p-jc-center p-mb-0 buscador" id="buscador">
   <p-autoComplete [(ngModel)]="socioSeleccionado" type="search" [suggestions]="sociosSugeridos"
     (completeMethod)="autoCompletado($event)" [showEmptypMessage]="true" emptyMessage="Datos no encontrados"
-    field="sosu_input" [minLength]="3" [virtualScroll]="true" [dropdown]="true"
-    placeholder="Ingrese datos para buscar un socio" dropdownIcon="pi pi-search"
-   class="autocompletado" (keyup.enter)="busca(socioSeleccionado.sosu_nro_cedula)">
+    field="socio_sugerido_input" [minLength]="3" [virtualScroll]="true" [dropdown]="true"
+    placeholder="Ingrese datos para buscar un socio" dropdownIcon="pi pi-search" class="autocompletado"
+    (keyup.enter)="busca(socioSeleccionado.socio_sugerido_nro_cedula)">
     <ng-template let-socio pTemplate="item">
-      <div style="font-size: 11px; width: 100%" (click)="busca(socio.sosu_nro_cedula)"
-        
-        (onSelect)="busca(socio.sosu_nro_cedula)">
-        {{ socio.sosu_nombre | titlecase }} {{ socio.sosu_apellido | titlecase }} - <span class="sugerencias">CI</span>:
-        {{ socio.sosu_nro_cedula | number: "1.0":"py" }} - <span class="sugerencias">SOC</span>:
-        {{ socio.sosu_nro_socio | number: "1.0":"py" }} - <span class="sugerencias">TEL</span>:
-        {{ socio.sosu_telefono }}
+      <div style="font-size: 14px; width: 100%" (click)="busca(socio.socio_sugerido_nro_cedula)"
+        (onSelect)="busca(socio.socio_sugerido_nro_cedula)">
+        {{ socio.socio_sugerido_nombre | titlecase }} {{ socio.sosu_apellido | titlecase }} - <span class="sugerencias">CI</span>:
+        {{ socio.socio_sugerido_nro_cedula | number: "1.0":"py" }} - <span class="sugerencias">SOC</span>:
+        {{ socio.socio_sugerido_nro_socio | number: "1.0":"py" }} - <span class="sugerencias">TEL</span>:
+        {{ socio.socio_sugerido_telefono }}
       </div>
     </ng-template>
   </p-autoComplete>
@@ -58,7 +57,7 @@
         <p class="titulo" class="p-mr-2">Datos Laborales</p>
         <p>
           {{
-             estadoCuenta.datos_analiticos.daan_salario_actual
+             estadoCuenta.datos_analiticos.datos_analiticos_salario_actual
              | currency: "PYG":"symbol-narrow":"1.0":"py"
             }}
         </p>
@@ -76,8 +75,8 @@
         <p class="p-mr-2">Préstamos</p>
         <p>
           {{
-              estadoCuenta.datos_analiticos.daan_saldos_pendientes
-                .sape_prestamos | currency: "PYG":"symbol-narrow":"1.0":"py"
+              estadoCuenta.datos_analiticos.datos_analiticos_saldos_pendientes
+                .saldos_pendientes_prestamos | currency: "PYG":"symbol-narrow":"1.0":"py"
           }}
         </p>
       </div>
@@ -94,7 +93,7 @@
         <p class="p-mr-2">Tarjetas</p>
         <p>
           {{
-              estadoCuenta.datos_analiticos.daan_saldos_pendientes.sape_tarjetas
+              estadoCuenta.datos_analiticos.datos_analiticos_saldos_pendientes.saldos_pendientes_tarjetas
                 | currency: "PYG":"symbol-narrow":"1.0":"py"
           }}
         </p>
@@ -112,7 +111,7 @@
         <p class="p-mr-2">Ahorros</p>
         <p>
           {{
-              estadoCuenta.datos_analiticos.daan_total_ahorros
+              estadoCuenta.datos_analiticos.datos_analiticos_total_ahorros
                 | currency: "PYG":"symbol-narrow":"1.0":"py"
           }}
         </p>
@@ -128,8 +127,8 @@
         <p class="p-mr-2">Gestión cobranza</p>
         <p>
           {{
-              estadoCuenta.datos_analiticos.daan_saldos_pendientes
-                .sape_cobranzas | currency: "PYG":"symbol-narrow":"1.0":"py"
+              estadoCuenta.datos_analiticos.datos_analiticos_saldos_pendientes
+                .saldos_pendientes_cobranzas | currency: "PYG":"symbol-narrow":"1.0":"py"
           }}
         </p>
       </div>

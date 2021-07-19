@@ -37,7 +37,7 @@ export class DatosLaboralesComponent implements OnChanges {
   constructor() {}
   ngOnChanges(changes: SimpleChanges): void {
     this.datosLaborales.sort((a, b) => {
-      if (a.dala_socio_fecha_ingreso > b.dala_socio_fecha_ingreso) {
+      if (a.datos_laborales_socio_fecha_ingreso > b.datos_laborales_socio_fecha_ingreso) {
         return -1;
       } else {
         return 1;

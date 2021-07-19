@@ -38,7 +38,7 @@ export class PrestamosComponent implements OnChanges {
   constructor() {}
   ngOnChanges(changes: SimpleChanges): void {
     this.prestamos.sort((a, b) => {
-      if (a.pres_socio_aprobado_fecha > b.pres_socio_aprobado_fecha) {
+      if (a.prestamos_socio_aprobado_fecha > b.prestamos_socio_aprobado_fecha) {
         return -1;
       } else {
         return 1;

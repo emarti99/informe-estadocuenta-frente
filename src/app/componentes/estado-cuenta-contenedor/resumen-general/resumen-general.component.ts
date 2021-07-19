@@ -24,17 +24,17 @@ export class ResumenGeneralComponent implements OnInit {
       {
         subTitulo1: 'Total',
         valor1: formatCurrency(
-          this.datosAnaliticos.daan_aportes.apor_monto,
+          this.datosAnaliticos.datos_analiticos_aportes.aportes_monto,
           'py',
           '₲',
           'PYG',
           '1.0'
         ),
         subTitulo2: 'Últ. Pagado',
-        valor2: this.datosAnaliticos.daan_aportes.apor_ult_pag,
+        valor2: this.datosAnaliticos.datos_analiticos_aportes.aportes_ult_pag,
         subTitulo3: 'Pendiente',
         valor3: formatCurrency(
-          this.datosAnaliticos.daan_aportes.apor_cant_pend,
+          this.datosAnaliticos.datos_analiticos_aportes.aportes_cant_pend,
           'py',
           '₲',
           'PYG',
@@ -47,7 +47,7 @@ export class ResumenGeneralComponent implements OnInit {
       {
         subTitulo1: 'Préstamos',
         valor1: formatCurrency(
-          this.datosAnaliticos.daan_saldos_pendientes.sape_prestamos,
+          this.datosAnaliticos.datos_analiticos_saldos_pendientes.saldos_pendientes_prestamos,
           'py',
           '₲',
           'PYG',
@@ -55,7 +55,7 @@ export class ResumenGeneralComponent implements OnInit {
         ),
         subTitulo2: 'Cobranzas',
         valor2: formatCurrency(
-          this.datosAnaliticos.daan_saldos_pendientes.sape_cobranzas,
+          this.datosAnaliticos.datos_analiticos_saldos_pendientes.saldos_pendientes_cobranzas,
           'py',
           '₲',
           'PYG',
@@ -63,7 +63,7 @@ export class ResumenGeneralComponent implements OnInit {
         ),
         subTitulo3: 'Tarjeta de crédito',
         valor3: formatCurrency(
-          this.datosAnaliticos.daan_saldos_pendientes.sape_tarjetas,
+          this.datosAnaliticos.datos_analiticos_saldos_pendientes.saldos_pendientes_tarjetas,
           'py',
           '₲',
           'PYG',
