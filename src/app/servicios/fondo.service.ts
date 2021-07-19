@@ -46,6 +46,7 @@ export class FondoService {
 
   pideSociosSugeridos(identificador: string): Observable<SocioSugerido[]> {
     const sociosSugeridos = identificador.toString();
+    console.log(sociosSugeridos)
 
     return this.comunicacion.supervisa(
       this.http.get<SocioSugerido[]>(environment.apiEstadoCuentaUrl + 'sugerencias?', {

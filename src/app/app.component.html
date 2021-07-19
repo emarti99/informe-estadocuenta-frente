@@ -14,7 +14,7 @@
     <ng-template let-socio pTemplate="item">
       <div style="font-size: 14px; width: 100%" (click)="busca(socio.socio_sugerido_nro_cedula)"
         (onSelect)="busca(socio.socio_sugerido_nro_cedula)">
-        {{ socio.socio_sugerido_nombre | titlecase }} {{ socio.sosu_apellido | titlecase }} - <span class="sugerencias">CI</span>:
+        {{ socio.socio_sugerido_nombre | titlecase }} {{ socio.socio_sugerido_apellido | titlecase }} - <span class="sugerencias">CI</span>:
         {{ socio.socio_sugerido_nro_cedula | number: "1.0":"py" }} - <span class="sugerencias">SOC</span>:
         {{ socio.socio_sugerido_nro_socio | number: "1.0":"py" }} - <span class="sugerencias">TEL</span>:
         {{ socio.socio_sugerido_telefono }}
