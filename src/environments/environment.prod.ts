@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiEstadoCuentaUrl: ''
+  apiEstadoCuentaUrl: 'http://d1vp4362g1txha.cloudfront.net/'
 };
