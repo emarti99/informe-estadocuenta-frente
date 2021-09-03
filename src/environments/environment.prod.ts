@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiEstadoCuentaUrl: 'https://d1vp4362g1txha.cloudfront.net/informe-estadocuenta-srv/api/v1/'
+  apiEstadoCuentaUrl:
+    'http://internal-balanceador-interno-471456100.sa-east-1.elb.amazonaws.com/informe-estadocuenta-srv/api/v1/',
 };
