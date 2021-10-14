@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgxPrintModule } from 'ngx-print';
 
-
 import localePy from '@angular/common/locales/es-PY';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localePy, 'py');
@@ -25,8 +24,6 @@ import { AhorrosComponent } from './componentes/estado-cuenta-contenedor/ahorros
 import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/gestion-cobranza/gestion-cobranza.component';
 import { FormatoDatosNulosPipe } from './pipes/formato-datos-nulos.pipe';
 import { CargandoHayErrorComponent } from './componentes/compartido/cargando-hay-error/cargando-hay-error.component';
-
-
 
 @NgModule({
   declarations: [
@@ -55,6 +52,5 @@ import { CargandoHayErrorComponent } from './componentes/compartido/cargando-hay
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

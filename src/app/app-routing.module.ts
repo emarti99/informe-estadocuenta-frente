@@ -3,10 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 
-
 const routes: Routes = [
-  { path: 'estadoCuenta', component: AppComponent },
-  { path: '**', redirectTo: 'estadoCuenta', pathMatch: 'full' },
+  {
+    path: 'CSC',
+    loadChildren: () =>
+      import(
+        './componentes/estado-cuenta-contenedor/estado-cuenta.module'
+      ).then((m) => m.EstadoCuentaModule),
+  },
+  { path: '**', redirectTo: 'CSC', pathMatch: 'full' },
 ];
 
 @NgModule({
