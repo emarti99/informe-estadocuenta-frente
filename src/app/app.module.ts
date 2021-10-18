@@ -1,8 +1,12 @@
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HttpClientModule } from '@angular/common/http';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -24,10 +28,17 @@ import { AhorrosComponent } from './componentes/estado-cuenta-contenedor/ahorros
 import { GestionCobranzaComponent } from './componentes/estado-cuenta-contenedor/gestion-cobranza/gestion-cobranza.component';
 import { FormatoDatosNulosPipe } from './pipes/formato-datos-nulos.pipe';
 import { CargandoHayErrorComponent } from './componentes/compartido/cargando-hay-error/cargando-hay-error.component';
+import { EstadoCuentaComponent } from './componentes/estado-cuenta-contenedor/estado-cuenta.component';
 
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+import { IncerceptorService } from './servicios/interceptor.service';
+Amplify.configure(awsconfig);
 @NgModule({
   declarations: [
     AppComponent,
+    EstadoCuentaComponent,
     DatosLaboralesComponent,
     DatosPersonalesComponent,
     PrestamosComponent,
@@ -49,8 +60,16 @@ import { CargandoHayErrorComponent } from './componentes/compartido/cargando-hay
     FormsModule,
     ReactiveFormsModule,
     NgxPrintModule,
+    AmplifyUIAngularModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: IncerceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

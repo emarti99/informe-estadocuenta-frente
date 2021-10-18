@@ -1,2 +1,27 @@
-<h2>hola mundo</h2>
-<router-outlet></router-outlet>
+<amplify-authenticator
+  hideDefault="{true}"
+  *ngIf="authState !== 'signedin'"
+  usernameAlias="email"
+>
+  <amplify-sign-up
+    header-text="Ingrese sus datos"
+    submit-button-text="Enviar"
+    slot="sign-up"
+    [formFields]="signup"
+  ></amplify-sign-up>
+
+  <amplify-sign-in [formFields]="signin" slot="sign-in"></amplify-sign-in>
+  <amplify-confirm-sign-up
+    slot="confirm-sign-up"
+    [formFields]="confimSignUp"
+  ></amplify-confirm-sign-up>
+</amplify-authenticator>
+
+<div *ngIf="authState === 'signedin' && user" class="App">
+  <div class="sign-out">
+    <amplify-sign-out class="sign-out-container"></amplify-sign-out>
+    <p>Bienvenido, {{ user.username }}</p>
+  </div>
+
+<app-estado-cuenta></app-estado-cuenta>
+</div>

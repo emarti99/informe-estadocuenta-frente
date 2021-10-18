@@ -1,0 +1,147 @@
+// contenedor principal
+
+.contenedor-principal {
+  width: clamp(50vw, 1300px, 97vw);
+  flex-flow: column wrap;
+  margin-bottom: 4.3rem !important;
+
+  .resumenGeneral {
+    flex-flow: row wrap;
+  }
+}
+
+// scrolltop
+
+:host ::ng-deep .custom-scrolltop {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+  }
+
+  .p-scrolltop-icon {
+    font-size: 1rem;
+    color: var(--primary-color-text);
+  }
+}
+
+// Acordeon
+
+:host ::ng-deep .p-fieldset {
+  margin: 0;
+
+  .p-fieldset-content {
+    padding: 0;
+  }
+}
+
+// Tablas
+
+:host ::ng-deep .desplegable td,
+:host ::ng-deep .desplegable th {
+  background-color: #e9ecef !important;
+}
+
+:host ::ng-deep {
+  .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+    display: none;
+  }
+}
+
+:host ::ng-deep .p-sortable-column-icon {
+  font-size: 0.8rem;
+}
+
+// autocompletado
+:host ::ng-deep .p-autocomplete {
+  width: 40rem;
+
+  .p-inputtext {
+    width: 100%;
+  }
+
+  .p-autocomplete-panel {
+    width: 100%;
+  }
+
+  .p-autocomplete-loader {
+    margin-right: 2rem;
+  }
+
+  .p-autocomplete-item {
+    padding: 0;
+
+    div {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+:host {
+  --limpiaBoton-ancho: 2.2rem;
+  --limpiaBoton-ampliacion-area-sensible: 0.3rem;
+}
+#limpiaBoton {
+  font-size: 1.5rem;
+  opacity: 0.3;
+  margin-left: -4.5rem;
+  padding: var(--limpiaBoton-ampliacion-area-sensible);
+  cursor: pointer;
+  line-height: 1.8rem;
+}
+
+#limpiaBoton:hover {
+  opacity: 0.6;
+}
+
+.sugerencias {
+  font-weight: bold;
+}
+
+// Responsive de las tablas
+
+@media screen and (max-width: 1100px) {
+  :host ::ng-deep {
+    .p-datatable {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :host ::ng-deep {
+    .p-datatable {
+      &.p-datatable-responsive-demo {
+        .p-datatable-thead > tr > th,
+        .p-datatable-tfoot > tr > td {
+          display: none !important;
+        }
+
+        .p-datatable-tbody > tr > td {
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          float: left;
+          clear: left;
+          border: 0 none;
+
+          .p-column-title {
+            padding: 0.4rem;
+            min-width: 30%;
+            display: inline-block;
+            margin: -0.4em 1em -0.4em -0.4rem;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            border-bottom: 1px solid var(--surface-d);
+          }
+        }
+      }
+    }
+  }
+}

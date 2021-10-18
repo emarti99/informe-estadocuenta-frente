@@ -6,10 +6,7 @@ import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 const routes: Routes = [
   {
     path: 'CSC',
-    loadChildren: () =>
-      import(
-        './componentes/estado-cuenta-contenedor/estado-cuenta.module'
-      ).then((m) => m.EstadoCuentaModule),
+    component: AppComponent,
   },
   { path: '**', redirectTo: 'CSC', pathMatch: 'full' },
 ];

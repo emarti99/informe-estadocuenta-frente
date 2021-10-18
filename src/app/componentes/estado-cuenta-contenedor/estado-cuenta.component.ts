@@ -17,7 +17,7 @@ export class EstadoCuentaComponent {
 
   hayError!: boolean;
 
-  constructor(private _estadoCuenta: FondoService) {
+  constructor(private _estadoCuenta:FondoService) {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 

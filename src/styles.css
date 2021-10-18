@@ -1,5 +1,12 @@
 @charset "UTF-8";
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --amplify-primary-color: #058325;
+  --amplify-primary-tint: #058325;
+  --amplify-primary-shade: #36864a;
+}
+
+
 /* Estilo general de la página */
 html,
 body {
