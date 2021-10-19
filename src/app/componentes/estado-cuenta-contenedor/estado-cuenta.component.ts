@@ -18,7 +18,7 @@ export class EstadoCuentaComponent {
   hayError!: boolean;
 
   constructor(private _estadoCuenta: FondoService) {
-    this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
+    // this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
   // Borra la entrada del buscador
@@ -30,7 +30,7 @@ export class EstadoCuentaComponent {
   ultimaBusqueda!: string;
   autoCompletado(event: any) {
     let query = event.query;
-
+    console.log(event.query);
     if (query == '') {
       this.cargaSociosSugeridos(this.ultimaBusqueda);
     } else {
@@ -40,9 +40,11 @@ export class EstadoCuentaComponent {
   }
 
   cargaSociosSugeridos(identificador: string) {
+    console.log(identificador);
     this._estadoCuenta.devuelveIdentificador(identificador);
     this._estadoCuenta.devuelveSociosSugeridos().subscribe(
       (resp) => {
+        console.log(resp);
         this.sociosSugeridos = resp;
         this.sociosSugeridos.forEach((elemento) => {
           elemento.socio_sugerido_input = identificador;

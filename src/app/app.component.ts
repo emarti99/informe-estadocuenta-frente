@@ -8,6 +8,10 @@ import {
 } from '@aws-amplify/ui-components';
 import { I18n } from 'aws-amplify';
 import dict from './amplifyConfiguracion/traduccion.js';
+import {
+  EstadoCuenta,
+  SocioSugerido,
+} from './interfaces/estadoCuenta.interface';
 
 I18n.setLanguage('es');
 
@@ -25,6 +29,13 @@ export class AppComponent {
   signup: FormFieldTypes;
   signin: FormFieldTypes;
   confimSignUp: FormFieldTypes;
+
+  estadoCuenta!: EstadoCuenta;
+  sociosSugeridos!: SocioSugerido[];
+  socioSeleccionado!: any;
+
+  hayError!: boolean;
+
   constructor(
     private ref: ChangeDetectorRef,
     private store: FrenteApiGatewayService
