@@ -58,6 +58,7 @@ export class EstadoCuentaComponent {
   busca(identificador: number) {
     this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
       (resp) => {
+        console.log(resp);
         this.estadoCuenta = resp;
         this.abrirCerrarFilasSecundarias = true;
 
