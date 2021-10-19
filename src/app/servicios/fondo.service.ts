@@ -21,8 +21,8 @@ export class FondoService {
   ) {}
 
   identificador!: string;
-  
-  set devuelveme(val:any) {
+
+  set devuelveme(val: any) {
     this.identificador = val;
   }
   devuelveIdentificador(termino: string) {
@@ -34,6 +34,7 @@ export class FondoService {
   }
 
   pideEstadoCuenta(identificador: number): Observable<EstadoCuenta> {
+    console.log(identificador.toString());
     const socio = identificador.toString();
     return this.comunicacion.supervisa(
       this.http.get<EstadoCuenta>(environment.apiEstadoCuentaUrl + 'informe?', {
@@ -46,14 +47,17 @@ export class FondoService {
 
   pideSociosSugeridos(identificador: string): Observable<SocioSugerido[]> {
     const sociosSugeridos = identificador.toString();
-    console.log(sociosSugeridos)
+    console.log(sociosSugeridos);
 
     return this.comunicacion.supervisa(
-      this.http.get<SocioSugerido[]>(environment.apiEstadoCuentaUrl + 'sugerencias?', {
-        headers: { 'Content-Type': 'application/json' },
-        observe: 'events',
-        params: { dato: sociosSugeridos },
-      })
+      this.http.get<SocioSugerido[]>(
+        environment.apiEstadoCuentaUrl + 'sugerencias?',
+        {
+          headers: { 'Content-Type': 'application/json' },
+          observe: 'events',
+          params: { dato: sociosSugeridos },
+        }
+      )
     );
   }
 }

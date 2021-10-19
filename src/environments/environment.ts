@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiEstadoCuentaUrl: 'https://bb72f8eb98fe.ngrok.io/api/v1/',
+  apiEstadoCuentaUrl:
+    'https://balanceador-interno.sancristobal.coop.py/informe-estadocuenta-srv/api/v1/',
 };
 
 /*
