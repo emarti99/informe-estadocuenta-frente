@@ -1,3 +1,4 @@
+import { FrenteApiGatewayService } from './servicios/frente-api-gateway.service';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormFieldTypes } from '@aws-amplify/ui-components';
 import {
@@ -7,7 +8,7 @@ import {
 } from '@aws-amplify/ui-components';
 import { I18n } from 'aws-amplify';
 import dict from './amplifyConfiguracion/traduccion.js';
-import { FrenteApiGatewayService } from './servicios/frente-api-gateway.service';
+
 I18n.setLanguage('es');
 
 I18n.putVocabularies(dict);
