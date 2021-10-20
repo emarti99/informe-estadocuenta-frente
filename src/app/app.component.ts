@@ -1,5 +1,5 @@
 import { FrenteApiGatewayService } from './servicios/frente-api-gateway.service';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { FormFieldTypes } from '@aws-amplify/ui-components';
 import {
   onAuthUIStateChange,
@@ -8,6 +8,7 @@ import {
 } from '@aws-amplify/ui-components';
 import { I18n } from 'aws-amplify';
 import dict from './amplifyConfiguracion/traduccion.js';
+import { FondoService } from './servicios/fondo.service';
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -36,10 +37,7 @@ export class AppComponent {
 
   hayError!: boolean;
 
-  constructor(
-    private ref: ChangeDetectorRef,
-    private store: FrenteApiGatewayService
-  ) {
+  constructor(private store: FondoService, private _zone: NgZone) {
     this.signin = [
       {
         type: 'username',
@@ -68,6 +66,7 @@ export class AppComponent {
         inputProps: { required: true, autocomplete: 'new-password' },
       },
     ];
+
     this.confimSignUp = [
       {
         type: 'username',
@@ -86,13 +85,15 @@ export class AppComponent {
 
   ngOnInit(): void {
     onAuthUIStateChange((authState, authData) => {
-      console.log(authState, authData);
-      // set user data in the store
-      this.store.authState = this.authState = authState;
-      this.store.user = this.user = authData as CognitoUserInterface;
+      this._zone.run(() => {
+        console.log(authState, authData);
+        // set user data in the store
+        this.store.authState = this.authState = authState;
+        this.store.user = this.user = authData as CognitoUserInterface;
 
-      // this.getIdTokenAndRedirect();
-      this.ref.detectChanges();
+        // this.getIdTokenAndRedirect();
+        // this.ref.detectChanges();
+      });
     });
   }
 

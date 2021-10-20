@@ -6,9 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FrenteApiGatewayService {
-  user!: CognitoUserInterface;
-  authState!: AuthState;
-
   constructor(private http: HttpClient) {}
 
   getTest(): Observable<any> {

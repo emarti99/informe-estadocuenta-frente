@@ -7,6 +7,7 @@ import {
   SocioSugerido,
 } from '../interfaces/estadoCuenta.interface';
 import { ComunicacionSupervisorService } from './comunicacion-supervisor.service';
+import { CognitoUserInterface, AuthState } from '@aws-amplify/ui-components';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +16,8 @@ export class FondoService {
   estadoCuenta!: EstadoCuenta;
   hayError!: boolean;
 
+  user!: CognitoUserInterface;
+  authState!: AuthState;
   constructor(
     private http: HttpClient,
     private comunicacion: ComunicacionSupervisorService

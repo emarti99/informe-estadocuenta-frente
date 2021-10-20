@@ -1,5 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -18,11 +17,8 @@ export class EstadoCuentaComponent {
 
   hayError!: boolean;
 
-  constructor(
-    private _estadoCuenta: FondoService,
-    private ref: ChangeDetectorRef
-  ) {
-    // this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
+  constructor(private _estadoCuenta: FondoService) {
+    this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
   // Borra la entrada del buscador
@@ -41,7 +37,6 @@ export class EstadoCuentaComponent {
       this.cargaSociosSugeridos(query);
       this.ultimaBusqueda = query;
     }
-    this.ref.detectChanges();
   }
 
   cargaSociosSugeridos(identificador: string) {
@@ -54,7 +49,6 @@ export class EstadoCuentaComponent {
         this.sociosSugeridos.forEach((elemento) => {
           elemento.socio_sugerido_input = identificador;
         });
-        this.ref.detectChanges();
       },
       (err) => {
         console.warn(err.message);
@@ -79,7 +73,6 @@ export class EstadoCuentaComponent {
             inline: 'nearest',
           });
         }, 200);
-        this.ref.detectChanges();
       },
       (err) => {
         console.warn('Hay un error', err.message);
@@ -116,7 +109,7 @@ export class EstadoCuentaComponent {
       this.estado = 3;
       this.botonTexto = 'General';
     }
-    this.ref.detectChanges();
+    // this.ref.detectChanges();
   }
 
   simulaClick() {
@@ -128,6 +121,5 @@ export class EstadoCuentaComponent {
       let element: HTMLElement = boton[i] as HTMLElement;
       element.click();
     }
-    this.ref.detectChanges();
   }
 }
