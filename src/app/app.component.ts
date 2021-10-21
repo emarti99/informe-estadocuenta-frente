@@ -1,4 +1,3 @@
-import { FrenteApiGatewayService } from './servicios/frente-api-gateway.service';
 import { Component, NgZone } from '@angular/core';
 import { FormFieldTypes } from '@aws-amplify/ui-components';
 import {
@@ -86,13 +85,9 @@ export class AppComponent {
   ngOnInit(): void {
     onAuthUIStateChange((authState, authData) => {
       this._zone.run(() => {
-        console.log(authState, authData);
-        // set user data in the store
+        // guardar los datos en el almacen
         this.store.authState = this.authState = authState;
         this.store.user = this.user = authData as CognitoUserInterface;
-
-        // this.getIdTokenAndRedirect();
-        // this.ref.detectChanges();
       });
     });
   }

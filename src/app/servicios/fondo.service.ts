@@ -37,7 +37,6 @@ export class FondoService {
   }
 
   pideEstadoCuenta(identificador: number): Observable<EstadoCuenta> {
-    console.log(identificador.toString());
     const socio = identificador.toString();
     return this.comunicacion.supervisa(
       this.http.get<EstadoCuenta>(environment.apiEstadoCuentaUrl + 'informe?', {

@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import {
   DatosAnaliticos,
   DatosPersonalesGeneral,
@@ -9,8 +15,7 @@ import { formatCurrency } from '@angular/common';
   templateUrl: './resumen-general.component.html',
   styleUrls: ['./resumen-general.component.scss'],
 })
-export class ResumenGeneralComponent implements OnInit {
-
+export class ResumenGeneralComponent implements OnInit, OnChanges {
   @Input() datosPersonales!: DatosPersonalesGeneral;
   @Input() datosAnaliticos!: DatosAnaliticos;
 
@@ -18,8 +23,7 @@ export class ResumenGeneralComponent implements OnInit {
   saldosContenido!: any[];
 
   constructor() {}
-
-  ngOnInit(): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.aportesContenido = [
       {
         subTitulo1: 'Total',
@@ -47,7 +51,8 @@ export class ResumenGeneralComponent implements OnInit {
       {
         subTitulo1: 'Préstamos',
         valor1: formatCurrency(
-          this.datosAnaliticos.datos_analiticos_saldos_pendientes.saldos_pendientes_prestamos,
+          this.datosAnaliticos.datos_analiticos_saldos_pendientes
+            .saldos_pendientes_prestamos,
           'py',
           '₲',
           'PYG',
@@ -55,7 +60,8 @@ export class ResumenGeneralComponent implements OnInit {
         ),
         subTitulo2: 'Cobranzas',
         valor2: formatCurrency(
-          this.datosAnaliticos.datos_analiticos_saldos_pendientes.saldos_pendientes_cobranzas,
+          this.datosAnaliticos.datos_analiticos_saldos_pendientes
+            .saldos_pendientes_cobranzas,
           'py',
           '₲',
           'PYG',
@@ -63,7 +69,8 @@ export class ResumenGeneralComponent implements OnInit {
         ),
         subTitulo3: 'Tarjeta de crédito',
         valor3: formatCurrency(
-          this.datosAnaliticos.datos_analiticos_saldos_pendientes.saldos_pendientes_tarjetas,
+          this.datosAnaliticos.datos_analiticos_saldos_pendientes
+            .saldos_pendientes_tarjetas,
           'py',
           '₲',
           'PYG',
@@ -71,6 +78,7 @@ export class ResumenGeneralComponent implements OnInit {
         ),
       },
     ];
-
   }
+
+  ngOnInit(): void {}
 }

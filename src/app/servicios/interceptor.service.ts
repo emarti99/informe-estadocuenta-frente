@@ -9,12 +9,12 @@ import {
 import { from, Observable, throwError } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
 import { Auth } from 'aws-amplify';
-import { FrenteApiGatewayService } from './frente-api-gateway.service';
+import { FondoService } from './fondo.service';
 @Injectable({
   providedIn: 'root',
 })
 export class IncerceptorService implements HttpInterceptor {
-  constructor(private estado: FrenteApiGatewayService) {}
+  constructor(private estado: FondoService) {}
 
   intercept(
     request: HttpRequest<any>,

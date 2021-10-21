@@ -16,6 +16,7 @@ import localePy from '@angular/common/locales/es-PY';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localePy, 'py');
 
+// componentes
 import { AppComponent } from './app.component';
 import { DatosLaboralesComponent } from './componentes/estado-cuenta-contenedor/datos-laborales/datos-laborales.component';
 import { DatosPersonalesComponent } from './componentes/estado-cuenta-contenedor/resumen-general/datos-personales/datos-personales.component';
@@ -33,8 +34,10 @@ import { EstadoCuentaComponent } from './componentes/estado-cuenta-contenedor/es
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from 'aws-amplify';
 import awsconfig from '../aws-exports';
-import { IncerceptorService } from './servicios/interceptor.service';
 Amplify.configure(awsconfig);
+
+import { IncerceptorService } from './servicios/interceptor.service';
+
 @NgModule({
   declarations: [
     AppComponent,
