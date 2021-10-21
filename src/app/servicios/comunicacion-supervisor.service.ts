@@ -6,7 +6,6 @@ import { filter, tap, map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
-
 export class ComunicacionSupervisorService {
   constructor() {}
   comunicacionActiva: number = 0;

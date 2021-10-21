@@ -38,12 +38,12 @@ export class FondoService {
 
   pideEstadoCuenta(identificador: number): Observable<EstadoCuenta> {
     const socio = identificador.toString();
-    return this.comunicacion.supervisa(
-      this.http.get<EstadoCuenta>(environment.apiEstadoCuentaUrl + 'informe?', {
+    return this.http.get<EstadoCuenta>(
+      environment.apiEstadoCuentaUrl + 'informe?',
+      {
         headers: { 'Content-Type': 'application/json' },
-        observe: 'events',
         params: { ci: socio },
-      })
+      }
     );
   }
 
@@ -51,15 +51,12 @@ export class FondoService {
     const sociosSugeridos = identificador.toString();
     console.log(sociosSugeridos);
 
-    return this.comunicacion.supervisa(
-      this.http.get<SocioSugerido[]>(
-        environment.apiEstadoCuentaUrl + 'sugerencias?',
-        {
-          headers: { 'Content-Type': 'application/json' },
-          observe: 'events',
-          params: { dato: sociosSugeridos },
-        }
-      )
+    return this.http.get<SocioSugerido[]>(
+      environment.apiEstadoCuentaUrl + 'sugerencias?',
+      {
+        headers: { 'Content-Type': 'application/json' },
+        params: { dato: sociosSugeridos },
+      }
     );
   }
 }

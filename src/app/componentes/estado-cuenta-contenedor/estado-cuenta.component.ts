@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -16,7 +16,7 @@ export class EstadoCuentaComponent {
   socioSeleccionado!: any;
 
   hayError!: boolean;
-
+  cargando: boolean = false;
   constructor(private _estadoCuenta: FondoService) {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
@@ -46,7 +46,7 @@ export class EstadoCuentaComponent {
       (resp) => {
         console.log(resp);
         this.sociosSugeridos = resp;
-        this.sociosSugeridos.forEach((elemento) => {
+        this.sociosSugeridos.find((elemento) => {
           elemento.socio_sugerido_input = identificador;
         });
       },
