@@ -3,7 +3,9 @@ import {
   EstadoCuenta,
   SocioSugerido,
 } from 'src/app/interfaces/estadoCuenta.interface';
+import { CargandoService } from 'src/app/servicios/cargando.service';
 import { FondoService } from 'src/app/servicios/fondo.service';
+import { IncerceptorService } from 'src/app/servicios/interceptor.service';
 
 @Component({
   selector: 'app-estado-cuenta',
@@ -17,7 +19,10 @@ export class EstadoCuentaComponent {
 
   hayError!: boolean;
   cargando: boolean = false;
-  constructor(private _estadoCuenta: FondoService) {
+  constructor(
+    private _estadoCuenta: FondoService,
+    public cargandoService: CargandoService
+  ) {
     this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
