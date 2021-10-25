@@ -1,11 +1,12 @@
 <p-progressSpinner
-  [style]="{ width: '50px', height: '50px' }"
+  [style]="{ width: '120px', height: '120px' }"
   styleClass="custom-spinner"
-  strokeWidth="8"
+  strokeWidth="5"
   fill="#EEEEEE"
   animationDuration=".5s"
   *ngIf="cargandoService.visible | async"
 ></p-progressSpinner>
+
 <!-- cabecera -->
 <div class="cabecera p-d-flex p-jc-center p-mb-0">
   <img
