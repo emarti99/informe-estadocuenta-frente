@@ -24,11 +24,12 @@ I18n.putVocabularies(dict);
 export class AppComponent {
   title = 'estadoCuenta';
   valorInterno = 'prueba';
-  user!: CognitoUserInterface;
+  public user!: CognitoUserInterface;
+  username?: string;
   authState!: AuthState;
   signup: FormFieldTypes;
   signin: FormFieldTypes;
-  confimSignUp: FormFieldTypes;
+  requireNewPassword: FormFieldTypes;
 
   estadoCuenta!: EstadoCuenta;
   sociosSugeridos!: SocioSugerido[];
@@ -66,18 +67,12 @@ export class AppComponent {
       },
     ];
 
-    this.confimSignUp = [
+    this.requireNewPassword = [
       {
-        type: 'username',
-        label: 'Usuario',
-        placeholder: 'Ingrese su usuario',
-        inputProps: { required: true, autocomplete: 'username' },
-      },
-      {
-        type: 'code',
-        label: 'Codigo de confirmación',
-        placeholder: 'Ingrese su codigo',
-        inputProps: { required: true, autocomplete: 'code' },
+        type: 'password',
+        label: 'Contraseña',
+        placeholder: 'Ingrese su contraseña',
+        inputProps: { required: true, autocomplete: 'password' },
       },
     ];
   }
@@ -88,6 +83,11 @@ export class AppComponent {
         // guardar los datos en el almacen
         this.store.authState = this.authState = authState;
         this.store.user = this.user = authData as CognitoUserInterface;
+        if (this.user) {
+          this.username = this.user.username;
+        }
+
+        console.log(this.user);
       });
     });
   }

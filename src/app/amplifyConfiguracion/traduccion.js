@@ -48,8 +48,12 @@ const dict = {
             'Nombre de usuario o contraseña incorrecta',
         'Invalid password format': 'Formato de contraseña inválido',
         'Invalid phone number format': `Formato de número de teléfono inválido.
-        Utilice el formato de número de teléfono +12345678900`,
-        'Incorrect username or password.': 'Usuario o contraseña incorrecta',
+        Utilice el formato de número de teléfono +595971111111`,
+        'Incorrect username or password.': 'Usuario o contraseña incorrecta.',
+        'SignUp is not permitted for this user pool': 'No está permitido crear una cuenta.',
+        'Contact administrator to reset password.': 'Contacte con el adminitradora para cambiar la contraseña.',
+        'New password': 'Nueva contraseña',
+        'Enter your new password': 'Ingresa tu nueva contraseña',
     },
 };
 export default dict;
