@@ -1,3 +1,4 @@
+// estan la gran mayoria de respuestas, verificar igualmente en el flujo si hay algo que no está traducido
 const dict = {
     'es': {
         'Sign In': 'Ingresar',
@@ -41,13 +42,14 @@ const dict = {
         'Account recovery requires verified contact information':
             'La recuperación de la cuenta requiere información de contacto verificada',
 
-        'User does not exist': 'el usuario no existe',
+        'User does not exist': 'El usuario no existe',
         'User already exists': 'El usuario ya existe',
         'Incorrect username or password':
             'Nombre de usuario o contraseña incorrecta',
         'Invalid password format': 'Formato de contraseña inválido',
         'Invalid phone number format': `Formato de número de teléfono inválido.
-  Utilice el formato de número de teléfono +12345678900`,
+        Utilice el formato de número de teléfono +12345678900`,
+        'Incorrect username or password.': 'Usuario o contraseña incorrecta',
     },
 };
 export default dict;

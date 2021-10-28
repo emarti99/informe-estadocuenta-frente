@@ -11,12 +11,10 @@ export class CargandoService {
   }
 
   mostrar() {
-    console.log('mostrar', this.visible);
     this.visible.next(true);
   }
 
   esconder() {
-    console.log('esconder', this.visible);
     this.visible.next(false);
   }
 }
