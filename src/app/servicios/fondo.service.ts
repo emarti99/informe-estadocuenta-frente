@@ -18,10 +18,7 @@ export class FondoService {
 
   user!: CognitoUserInterface;
   authState!: AuthState;
-  constructor(
-    private http: HttpClient,
-    private comunicacion: ComunicacionSupervisorService
-  ) {}
+  constructor(private http: HttpClient) {}
 
   identificador!: string;
 
@@ -49,7 +46,6 @@ export class FondoService {
 
   pideSociosSugeridos(identificador: string): Observable<SocioSugerido[]> {
     const sociosSugeridos = identificador.toString();
-    console.log(sociosSugeridos);
 
     return this.http.get<SocioSugerido[]>(
       environment.apiEstadoCuentaUrl + 'sugerencias?',

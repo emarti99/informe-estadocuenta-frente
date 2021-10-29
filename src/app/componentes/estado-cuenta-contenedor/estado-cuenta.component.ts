@@ -114,7 +114,6 @@ export class EstadoCuentaComponent {
       this.estado = 3;
       this.botonTexto = 'General';
     }
-    // this.ref.detectChanges();
   }
 
   simulaClick() {
