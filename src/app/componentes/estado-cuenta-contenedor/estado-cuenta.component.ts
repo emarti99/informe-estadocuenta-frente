@@ -5,7 +5,6 @@ import {
 } from 'src/app/interfaces/estadoCuenta.interface';
 import { CargandoService } from 'src/app/servicios/cargando.service';
 import { FondoService } from 'src/app/servicios/fondo.service';
-import { IncerceptorService } from 'src/app/servicios/interceptor.service';
 
 @Component({
   selector: 'app-estado-cuenta',
@@ -45,7 +44,6 @@ export class EstadoCuentaComponent {
   }
 
   cargaSociosSugeridos(identificador: string) {
-    console.log(identificador);
     this._estadoCuenta.devuelveIdentificador(identificador);
     this._estadoCuenta.devuelveSociosSugeridos().subscribe(
       (resp) => {

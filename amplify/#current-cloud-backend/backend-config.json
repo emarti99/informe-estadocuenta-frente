@@ -1,6 +1,6 @@
 {
   "auth": {
-    "informeestadocuentafe980a8b1": {
+    "informeestadocuentaf1e7013c7": {
       "service": "Cognito",
       "serviceType": "imported",
       "providerPlugin": "awscloudformation",

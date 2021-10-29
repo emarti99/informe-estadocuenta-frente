@@ -1,19 +1,19 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-informeestadocuentaf-dev-103825-authRole",
-      "UnauthRoleArn": "arn:aws:iam::806348080123:role/amplify-informeestadocuentaf-dev-103825-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::806348080123:role/amplify-informeestadocuentaf-dev-103825-authRole",
+      "AuthRoleName": "amplify-informeestadocuentaf-dev-84358-authRole",
+      "UnauthRoleArn": "arn:aws:iam::806348080123:role/amplify-informeestadocuentaf-dev-84358-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::806348080123:role/amplify-informeestadocuentaf-dev-84358-authRole",
       "Region": "sa-east-1",
-      "DeploymentBucketName": "amplify-informeestadocuentaf-dev-103825-deployment",
-      "UnauthRoleName": "amplify-informeestadocuentaf-dev-103825-unauthRole",
-      "StackName": "amplify-informeestadocuentaf-dev-103825",
-      "StackId": "arn:aws:cloudformation:sa-east-1:806348080123:stack/amplify-informeestadocuentaf-dev-103825/ad24c820-3018-11ec-a27e-023794786fcc",
-      "AmplifyAppId": "d1qm5kre9tb8r5"
+      "DeploymentBucketName": "amplify-informeestadocuentaf-dev-84358-deployment",
+      "UnauthRoleName": "amplify-informeestadocuentaf-dev-84358-unauthRole",
+      "StackName": "amplify-informeestadocuentaf-dev-84358",
+      "StackId": "arn:aws:cloudformation:sa-east-1:806348080123:stack/amplify-informeestadocuentaf-dev-84358/81850980-38ad-11ec-bdf2-06ad0b12b608",
+      "AmplifyAppId": "d2bxndo97h02rt"
     }
   },
   "auth": {
-    "informeestadocuentafe980a8b1": {
+    "informeestadocuentaf1e7013c7": {
       "service": "Cognito",
       "serviceType": "imported",
       "providerPlugin": "awscloudformation",
@@ -23,7 +23,9 @@
         "UserPoolId": "sa-east-1_dJUkBjq53",
         "UserPoolName": "estado-cuenta-usuarios",
         "AppClientID": "rq257mq5gepp8kjq95l7gjqiu",
-        "AppClientIDWeb": "rq257mq5gepp8kjq95l7gjqiu"
+        "AppClientIDWeb": "rq257mq5gepp8kjq95l7gjqiu",
+        "IdentityPoolId": "sa-east-1:bea71dbe-cd50-4583-a37f-9f04174a06d6",
+        "IdentityPoolName": "Grupo-de-identidades-oficial-estado-cuenta-v-01"
       },
       "frontendAuthConfig": {
         "loginMechanisms": [
@@ -36,7 +38,7 @@
         "mfaTypes": [],
         "verificationMechanisms": []
       },
-      "lastPushTimeStamp": "2021-10-18T13:47:55.127Z"
+      "lastPushTimeStamp": "2021-10-29T11:47:13.078Z"
     }
   }
 }
