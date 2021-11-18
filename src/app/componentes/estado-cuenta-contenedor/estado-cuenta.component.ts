@@ -22,7 +22,7 @@ export class EstadoCuentaComponent {
     private _estadoCuenta: FondoService,
     public cargandoService: CargandoService
   ) {
-    this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
+    // this.estadoCuenta = JSON.parse(localStorage.getItem('historial')!);
   }
 
   // Borra la entrada del buscador
@@ -32,6 +32,7 @@ export class EstadoCuentaComponent {
 
   // evento del autocompletado
   ultimaBusqueda!: string;
+
   autoCompletado(event: any) {
     let query = event.query;
     console.log(event.query);
@@ -45,29 +46,27 @@ export class EstadoCuentaComponent {
 
   cargaSociosSugeridos(identificador: string) {
     this._estadoCuenta.devuelveIdentificador(identificador);
-    this._estadoCuenta.devuelveSociosSugeridos().subscribe(
-      (resp) => {
-        console.log(resp);
-        this.sociosSugeridos = resp;
-        this.sociosSugeridos.find((elemento) => {
-          elemento.socio_sugerido_input = identificador;
-        });
-      },
-      (err) => {
-        console.warn(err.message);
-      }
-    ).unsubscribe;
+    this._estadoCuenta.devuelveSociosSugeridos().then(response => {
+      console.log(response);
+      this.sociosSugeridos = response;
+      this.sociosSugeridos.find((elemento) => {
+        elemento.socio_sugerido_input = identificador;
+      })
+    })
+    .catch(error => {
+      console.warn(error.message);
+    })
   }
 
   // busca el informe de estado de cuenta
   busca(identificador: number) {
-    this._estadoCuenta.pideEstadoCuenta(identificador).subscribe(
+    this._estadoCuenta.pideEstadoCuenta(identificador).then(
       (resp) => {
         console.log(resp);
         this.estadoCuenta = resp;
         this.abrirCerrarFilasSecundarias = true;
 
-        localStorage.setItem('historial', JSON.stringify(this.estadoCuenta));
+        // localStorage.setItem('historial', JSON.stringify(this.estadoCuenta));
 
         setTimeout(() => {
           document.getElementById('buscador')!.scrollIntoView({
@@ -76,12 +75,14 @@ export class EstadoCuentaComponent {
             inline: 'nearest',
           });
         }, 200);
-      },
+      }
+    )
+    .catch(
       (err) => {
         console.warn('Hay un error', err.message);
         this.hayError = true;
       }
-    ).unsubscribe;
+    )
   }
 
   // boton impresión

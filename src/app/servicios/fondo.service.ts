@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { API, Auth } from "aws-amplify";
 import {
   EstadoCuenta,
   SocioSugerido,
@@ -33,26 +34,54 @@ export class FondoService {
     return this.pideSociosSugeridos(this.identificador);
   }
 
-  pideEstadoCuenta(identificador: number): Observable<EstadoCuenta> {
+  async pideEstadoCuenta(identificador: number): Promise<EstadoCuenta> {
     const socio = identificador.toString();
-    return this.http.get<EstadoCuenta>(
-      environment.apiEstadoCuentaUrl + 'informe?',
-      {
-        headers: { 'Content-Type': 'application/json' },
-        params: { ci: socio },
-      }
-    );
+    const apiName = 'ClonAPIEstadoCuentaCSC';
+    const path = '/informe';
+    const myInit = { 
+      headers: {idToken: (await Auth.currentSession())
+        .getIdToken()
+        .getJwtToken()}, 
+      response: true,
+      queryStringParameters: {  
+      ci: socio,
+      },
+    };
+    return await API
+    .get(apiName, path, myInit)
+    .then(response => {
+      console.log(response);
+      return<EstadoCuenta> response.data;
+    })
+    .catch(error => {
+      console.log(error.response);
+      return <EstadoCuenta> error.response;
+    });
+
   }
 
-  pideSociosSugeridos(identificador: string): Observable<SocioSugerido[]> {
+  async pideSociosSugeridos(identificador: string): Promise<SocioSugerido[]> {
     const sociosSugeridos = identificador.toString();
-
-    return this.http.get<SocioSugerido[]>(
-      environment.apiEstadoCuentaUrl + 'sugerencias?',
-      {
-        headers: { 'Content-Type': 'application/json' },
-        params: { dato: sociosSugeridos },
-      }
-    );
+    const apiName = 'ClonAPIEstadoCuentaCSC';
+    const path = '/sugerencias';
+    const myInit = { 
+      headers: {idToken: (await Auth.currentSession())
+        .getIdToken()
+        .getJwtToken()}, 
+      response: true,
+      queryStringParameters: {  
+      dato: sociosSugeridos,
+      },
+    };    
+    return await API
+    .get(apiName, path, myInit)
+    .then(response => {
+      console.log(response);
+      return <SocioSugerido[]> response.data;
+    })
+    .catch(error => {
+      console.log(error.response);
+      return <SocioSugerido[]> error.response;
+    });
   }
 }

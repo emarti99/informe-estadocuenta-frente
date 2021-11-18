@@ -2,9 +2,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService, Intercepta } from './servicios/interceptor.service';
 import {
   CUSTOM_ELEMENTS_SCHEMA,
-  NgModule,
+  NgModule,APP_INITIALIZER,
   NO_ERRORS_SCHEMA,
 } from '@angular/core';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
@@ -36,7 +37,6 @@ import Amplify from 'aws-amplify';
 import awsconfig from '../aws-exports';
 Amplify.configure(awsconfig);
 
-import { IncerceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -67,10 +67,16 @@ import { IncerceptorService } from './servicios/interceptor.service';
   ],
   providers: [
     {
-      provide: HTTP_INTERCEPTORS,
-      useClass: IncerceptorService,
-      multi: true,
-    },
+      provide: APP_INITIALIZER, 
+      useFactory: Intercepta, 
+      deps: [InterceptorService],
+      multi:true
+    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: InterceptorService,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
