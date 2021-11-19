@@ -5,12 +5,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService, Intercepta } from './servicios/interceptor.service';
 import {
   CUSTOM_ELEMENTS_SCHEMA,
-  NgModule,APP_INITIALIZER,
+  NgModule,APP_INITIALIZER, ErrorHandler,
   NO_ERRORS_SCHEMA,
 } from '@angular/core';
 import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { SidebarModule } from 'primeng/sidebar';
 import { NgxPrintModule } from 'ngx-print';
 
 import localePy from '@angular/common/locales/es-PY';
@@ -36,8 +36,8 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from 'aws-amplify';
 import awsconfig from '../aws-exports';
 Amplify.configure(awsconfig);
-
-
+import { CustomErrorHandlerService} from './servicios/custom-error-handler.service';
+import { ErrorHandlerPopupComponent } from './componentes/compartido/error-handler-popup/error-handler-popup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,12 +71,8 @@ Amplify.configure(awsconfig);
       useFactory: Intercepta, 
       deps: [InterceptorService],
       multi:true
-    }
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: InterceptorService,
-    //   multi: true
-    // }
+    }, CustomErrorHandlerService,
+    { provide: ErrorHandler, useClass: CustomErrorHandlerService }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { CargandoService } from './cargando.service';
+import { ErrorInterceptorService } from './error-interceptor.service';
 @Injectable({
   providedIn: 'root'
 })
 export class InterceptorService {
 
-  constructor(private cargandoService: CargandoService) { }
+  constructor(private cargandoService: CargandoService, 
+    private errorInterceptorService: ErrorInterceptorService) { }
 
   intercept(){
     console.log("fuera del interceptor");
@@ -18,6 +20,7 @@ export class InterceptorService {
       console.log("error");
       console.log(errorObject.response);
       this.cargandoService.esconder();
+      this.errorInterceptorService.mostrar();
       return Promise.reject(errorObject.response);
     });
 
@@ -29,6 +32,7 @@ export class InterceptorService {
       console.log("error 2");
       console.log(errorObject.response.status);
       this.cargandoService.esconder();
+      this.errorInterceptorService.mostrar();
       return Promise.reject(errorObject.response);
     });
 

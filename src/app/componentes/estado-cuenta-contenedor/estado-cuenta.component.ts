@@ -35,7 +35,7 @@ export class EstadoCuentaComponent {
 
   autoCompletado(event: any) {
     let query = event.query;
-    console.log(event.query);
+    //console.log(event.query);
     if (query == '') {
       this.cargaSociosSugeridos(this.ultimaBusqueda);
     } else {
@@ -47,7 +47,7 @@ export class EstadoCuentaComponent {
   cargaSociosSugeridos(identificador: string) {
     this._estadoCuenta.devuelveIdentificador(identificador);
     this._estadoCuenta.devuelveSociosSugeridos().then(response => {
-      console.log(response);
+      //console.log(response);
       this.sociosSugeridos = response;
       this.sociosSugeridos.find((elemento) => {
         elemento.socio_sugerido_input = identificador;
@@ -75,12 +75,6 @@ export class EstadoCuentaComponent {
             inline: 'nearest',
           });
         }, 200);
-      }
-    )
-    .catch(
-      (err) => {
-        console.warn('Hay un error', err.message);
-        this.hayError = true;
       }
     )
   }

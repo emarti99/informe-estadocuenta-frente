@@ -1,11 +1,17 @@
 <!-- Cargando -->
-<div class="contenedor-cargando">
+<!-- <div class="contenedor-cargando">
   <p-progressSpinner strokeWidth="4" *ngIf="comunicacionSupervisor.comunicacionActiva"></p-progressSpinner>
-</div>
+</div> -->
 
 <!-- hay error -->
-<p-dialog id="error-dialogo" header="Atención" [(visible)]="comunicacionSupervisor.hayError" (onHide)="recarga()">
+<!-- <p-dialog id="error-dialogo" header="Atención" [(visible)]="comunicacionSupervisor.hayError" (onHide)="recarga()" (onHide)="vuelveALoguin()" >
   <p>Ha habido un inconveniente. Por favor intente más tarde nuevamente.</p>
   <p><em>Al cerrar este mensaje, la página se recargará automáticamente.</em></p>
-</p-dialog>
+</p-dialog> -->
+
+<div class = "div-error" *ngIf="popup$ | async" >
+  <button type="button" (click)="CierraSesion()" id="btn">Search</button>
+    <p>Ha habido un inconveniente. Por favor intente más tarde nuevamente.</p>
+    <p><em>Al cerrar este mensaje, la página se recargará automáticamente.</em></p>
+</div>
 
