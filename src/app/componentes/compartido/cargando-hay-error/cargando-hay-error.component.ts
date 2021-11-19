@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ComunicacionSupervisorService } from 'src/app/servicios/comunicacion-supervisor.service';
+import { Component } from '@angular/core';
 import { Auth } from 'aws-amplify';
 import { ErrorInterceptorService } from '../../../servicios/error-interceptor.service';
 
@@ -8,25 +7,22 @@ import { ErrorInterceptorService } from '../../../servicios/error-interceptor.se
   templateUrl: './cargando-hay-error.component.html',
   styleUrls: ['./cargando-hay-error.component.scss'],
 })
-export class CargandoHayErrorComponent implements OnInit {
+export class CargandoHayErrorComponent{
 
-  constructor(public comunicacionSupervisor: ComunicacionSupervisorService, 
-    private errorInterceptorService: ErrorInterceptorService) {}
+  constructor(private errorInterceptorService: ErrorInterceptorService) {}
+  
+  popup$= this.errorInterceptorService.popup$;
+  dialogCloseButton:any;
 
-    popup$= this.errorInterceptorService.popup$;
-
-  ngOnInit(): void {}
-
-  recarga(): void {
-    location.reload();
-
+  llamaLogout(){
+    this.dialogCloseButton = document.querySelector('.p-dialog-header-close')
+    this.dialogCloseButton.addEventListener('click', this.CierraSesion)
+    setTimeout(this.CierraSesion, 10000)
   }
 
-  vuelveALoguin() {
-    console.log("vuelveALoguin")
-  }
 
   async CierraSesion() {
+    
     console.log("signed out");
     try {
         await Auth.signOut({ global: true });
