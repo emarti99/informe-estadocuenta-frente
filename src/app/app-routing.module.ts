@@ -5,10 +5,10 @@ import { PrimeNgModule } from './modulos/prime-ng/prime-ng.module';
 
 const routes: Routes = [
   {
-    path: 'CSC',
+    path: '',
     component: AppComponent,
   },
-  { path: '**', redirectTo: 'CSC', pathMatch: 'full' },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -51,9 +51,10 @@ const dict = {
         Utilice el formato de número de teléfono +595971111111`,
         'Incorrect username or password.': 'Usuario o contraseña incorrecta.',
         'SignUp is not permitted for this user pool': 'No está permitido crear una cuenta.',
-        'Contact administrator to reset password.': 'Contacte con el adminitradora para cambiar la contraseña.',
+        'Contact administrator to reset password.': 'Contacte con el administrador para cambiar la contraseña.',
         'New password': 'Nueva contraseña',
         'Enter your new password': 'Ingresa tu nueva contraseña',
+        'Attempt limit exceeded, please try after some time.' : 'Se superó el límite de intentos',
     },
 };
 export default dict;

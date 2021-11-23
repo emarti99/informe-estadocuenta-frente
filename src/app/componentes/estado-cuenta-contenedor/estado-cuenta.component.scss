@@ -1,7 +1,9 @@
 :host ::ng-deep .custom-spinner {
-  position: absolute;
-  top: 45%;
+  position: fixed;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 500;
   .p-progress-spinner-circle {
     animation: custom-progress-spinner-dash 1.5s ease-in-out infinite,
       custom-progress-spinner-color 6s ease-in-out infinite;

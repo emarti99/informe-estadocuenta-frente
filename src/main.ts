@@ -35,7 +35,7 @@ Amplify.configure({
     endpoints: [
         {
             name: "ClonAPIEstadoCuentaCSC",
-            endpoint: "https://oeadppnvok.execute-api.sa-east-1.amazonaws.com/dev", //revisar el endpoint
+            endpoint: "https://95u5ottkrk.execute-api.sa-east-1.amazonaws.com/prod", //revisar el endpoint
             // custom_header: async () => ({
             //   Authorization: `Bearer ${(await Auth.currentSession())
             //     .getAccessToken()
